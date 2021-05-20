@@ -32,7 +32,7 @@ Vous pouvez directement utiliser les composants Windi CSS et Vue pour styliser e
 
 ## Front Matter & Layouts
 
-You can specify layouts and other metadata for each slide by converting the separators into [front matter blocks](https://jekyllrb.com/docs/front-matter/). Each front matter starts with a triple-dash and ends with another. Texts between them are data objects in [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) format. For example:
+Vous pouvez spécifier des mises en page et d'autres métadonnées pour chaque diapositive en convertissant les séparateurs en [blocs de présentation](https://jekyllrb.com/docs/front-matter/). Chaque avant-propos commence par un triple tiret et se termine par un autre. Les textes entre eux sont des objets de données au format [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/). Par exemple:
 
 ~~~md
 ---
@@ -87,7 +87,7 @@ function add(
 //```
 ~~~
 
-Pour changer la surbrillance en plusieurs étapes, vous pouvez utiliser `|` pour les séparer. Par example
+Pour changer la surbrillance en plusieurs étapes, vous pouvez utiliser `|` pour les séparer. Par exemple
 
 ~~~ts
 //```ts {2-3|5|all}
@@ -184,7 +184,7 @@ Ceci est une autre note
 
 Slidev vous permet d'accéder à presque tous les jeux d'icônes open-source populaires ** directement ** dans votre démarque. Propulsé par [`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons) et [Iconify](https://iconify.design/).
 
-Le nom suit la conversion de [Iconify](https://iconify.design/) `{collection-name}-{icon-name}`. Par example:
+Le nom suit la conversion de [Iconify](https://iconify.design/) `{collection-name}-{icon-name}`. Par exemple:
 
 - `<mdi-account-circle />` - <mdi-account-circle /> de [Material Design Icons](https://github.com/Templarian/MaterialDesign)
 - `<carbon-badge />` - <carbon-badge /> de [Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/icons)

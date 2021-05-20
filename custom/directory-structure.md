@@ -25,7 +25,7 @@ Conventions: `./components/*.{vue,js,ts,jsx,tsx}`
 
 Les composants à l'intérieur de ce répertoire peuvent être directement utilisés dans les diapositives Markdown avec le même nom de composant que le nom de fichier.
 
-Par example:
+Par exemple:
 
 ```bash
 your-slidev/
@@ -75,7 +75,7 @@ layout: my-cool-theme
 
 Si la mise en page que vous fournissez porte le même nom qu'une mise en page intégrée ou une mise en page de thème, votre mise en page personnalisée prévaudra sur la mise en page intégrée / thème. L'ordre de priorité est `local > thème > intégré`.
 
-Dans le composant de mise en page, utilisez `<slot />` pour le contenu de la diapositive. Par example:
+Dans le composant de mise en page, utilisez `<slot />` pour le contenu de la diapositive. Par exemple:
 
 ```html
 <!-- default.vue -->
@@ -116,7 +116,7 @@ import './code.css'
 import './layouts.css'
 ```
 
-Les styles seront traités par [Windi CSS](http://windicss.org/) et [PostCSS](https://postcss.org/), vous pouvez donc utiliser l'imbrication css et [at-directives](https://windicss.org/features/directives.html) prêt à l'emploi. Par example:
+Les styles seront traités par [Windi CSS](http://windicss.org/) et [PostCSS](https://postcss.org/), vous pouvez donc utiliser l'imbrication css et [at-directives](https://windicss.org/features/directives.html) prêt à l'emploi. Par exemple:
 
 ```less
 .slidev-layout {
