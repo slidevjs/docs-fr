@@ -60,11 +60,11 @@ const Theme = [
 
 const Translations = [
   {
-    text: 'English',
-    link: 'https://sli.dev{{pathname}}',
+    text: 'Français',
   },
   {
-    text: 'Français',
+    text: 'English',
+    link: 'https://sli.dev{{pathname}}',
   },
   {
     text: '简体中文',
@@ -170,7 +170,7 @@ module.exports = {
     ['link', { href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400;500&family=Inter:wght@200;400;500;600', rel: 'stylesheet' }],
   ],
   themeConfig: {
-    repo: 'slidevjs/docs',
+    repo: 'slidevjs/docs-fr',
     logo: '/logo.svg',
     docsDir: 'docs',
     docsBranch: 'main',
