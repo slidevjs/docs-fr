@@ -17,13 +17,8 @@
         </a>
       </div>
 
-<<<<<<< HEAD
-      <div class="item">
-        <a class="nav-btn" href="https://github.com/slidevjs/slidev"  target="_blank" aria-label="View GitHub Repo">
-=======
       <div v-if="repo" class="item">
-        <a class="nav-btn" href="https://github.com/slidevjs/slidev" target="_blank" aria-label="View GitHub Repo">
->>>>>>> c15fbaec822f4d7fb017d6041da8ac689a1d74ce
+        <a class="nav-btn" href="https://github.com/slidevjs/slidev"  target="_blank" aria-label="View GitHub Repo">
           <ri-github-line />
         </a>
       </div>
