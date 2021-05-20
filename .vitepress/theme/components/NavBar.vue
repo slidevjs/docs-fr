@@ -17,7 +17,7 @@
         </a>
       </div>
 
-      <div class="item">
+      <div v-if="repo" class="item">
         <a class="nav-btn" href="https://github.com/slidevjs/slidev"  target="_blank" aria-label="View GitHub Repo">
           <ri-github-line />
         </a>
