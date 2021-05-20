@@ -1,8 +1,8 @@
-# Markdown Syntax
+# Syntaxe de Markdown
 
-Slides are written within **a single markdown file** (by default `./slides.md`). 
+Les diapositives sont écrites dans **un seul fichier markdown** (par défaut `./slides.md`).
 
-You can use [the Markdown features](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) as you normally would, with the additional support of inlined HTML and Vue Components. Styling using [Windi CSS](https://windicss.org) is also supported. Use `---` padded with a new line to separate your slides. 
+Vous pouvez utiliser [les fonctionnalités Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) comme vous le feriez normalement, avec le support supplémentaire du HTML intégré et des composants Vue. Le style à l'aide de [Windi CSS](https://windicss.org) est également pris en charge. Utilisez `---` avec une nouvelle ligne pour séparer vos diapositives.
 
 ~~~md
 # Slidev
@@ -13,7 +13,7 @@ Hello, World!
 
 # Page 2
 
-Directly use code blocks for highlighting
+Utilisez directement des blocs de code pour la mise en évidence
 
 //```ts
 console.log('Hello, World!')
@@ -23,7 +23,7 @@ console.log('Hello, World!')
 
 # Page 3
 
-You can directly use Windi CSS and Vue components to style and enrich your slides.
+Vous pouvez directement utiliser les composants Windi CSS et Vue pour styliser et enrichir vos diapositives.
 
 <div class="p-3">
   <Tweet id="20" />
@@ -41,7 +41,7 @@ layout: cover
 
 # Slidev
 
-This is the cover page.
+Ceci est la page de garde.
 
 ---
 layout: center
@@ -51,20 +51,20 @@ class: 'text-white'
 
 # Page 2
 
-This is a page with the layout `center` and a background image.
+Ceci est une page avec la mise en page «centre» et une image d'arrière-plan.
 
 ---
 
 # Page 3
 
-This is a default page without any additional metadata.
+Il s'agit d'une page par défaut sans métadonnées supplémentaires.
 ~~~
 
-Refer to [customization](/custom/) for more details.
+Reportez-vous à [personnalisations](/custom/) pour plus de détails.
 
-## Code Blocks
+## Blocs de code
 
-One big reason I am building Slidev is needing to make my code look just right in the slides. So just as you expected, you can use Markdown flavored code block to highlight your code.
+L'une des principales raisons pour lesquelles je construis Slidev est de faire en sorte que mon code apparaisse parfaitement dans les diapositives. Donc, comme vous vous y attendiez, vous pouvez utiliser le bloc de code aromatisé Markdown pour mettre en évidence votre code.
 
 ~~~ts
 //```ts
@@ -72,9 +72,9 @@ console.log('Hello, World!')
 //```
 ~~~
 
-### Line Highlighting
+### Mise en évidence de ligne
 
-To highlight specific lines, simply add line numbers within bracket `{}`. Line numbers start counting from 1.
+Pour mettre en évidence des lignes spécifiques, ajoutez simplement des numéros de ligne entre crochets `{}`. Les numéros de ligne commencent à compter de 1.
 
 ~~~ts
 //```ts {2,3}
@@ -87,7 +87,7 @@ function add(
 //```
 ~~~
 
-To change the highlight in multiple steps, you can use `|` to separate them. For example
+Pour changer la surbrillance en plusieurs étapes, vous pouvez utiliser `|` pour les séparer. Par example
 
 ~~~ts
 //```ts {2-3|5|all}
@@ -100,11 +100,11 @@ function add(
 //```
 ~~~
 
-This will first highlight `a: Ref<number> | number` and `b: Ref<number> | number`, and then `return computed(() => unref(a) + unref(b))` after one click, and lastly, the whole block. Learn more in the [clicks animations guide](/guide/animations).
+Cela mettra d'abord en évidence `a: Ref <number> | number` et `b: Ref <number> | number`, puis `return computed (() => unref (a) + unref (b))` après un clic, et enfin, tout le bloc. Pour en savoir plus, consultez le [guide des animations de clics](/guide/animations).
 
-### Monaco Editor
+### Éditeur Monaco
 
-Whenever you want to do some modification in the presentation, simply add `{monaco}` after the language id — it turns the block into a fully-featured Monaco editor!
+Chaque fois que vous souhaitez apporter des modifications à la présentation, ajoutez simplement `{monaco}` après l'identifiant de la langue - cela transforme le bloc en un éditeur Monaco complet!
 
 ~~~ts
 //```ts {monaco}
@@ -112,14 +112,14 @@ console.log('HelloWorld')
 //```
 ~~~
 
-Learn more about [configuring Monaco](/custom/config-monaco).
+En savoir plus sur la [configuration de Monaco](/custom/config-monaco).
 
-## Embedded Styles
+## Styles intégrés
 
-You can use `<style>` tag in your Markdown directly to override styles for the **current slide**.
+Vous pouvez utiliser la balise `<style>` dans votre Markdown directement pour remplacer les styles de la **diapositive actuelle**.
 
 ```md
-# This is Red
+# C'est rouge
 
 <style>
 h1 {
@@ -129,12 +129,12 @@ h1 {
 
 ---
 
-# Next slide is not affected
+# La prochaine diapositive n'est pas affectée
 ```
 
-`<style>` tag in Markdown is always [scoped](https://vue-loader.vuejs.org/guide/scoped-css.html). To have global style overrides, check out the [customization section](/custom/directory-structure#style).
+La balise `<style>` dans Markdown est toujours [scoped](https://vue-loader.vuejs.org/guide/scoped-css.html). Pour avoir des remplacements de style globaux, consultez la [section de personnalisation](/custom/directory-structure#style).
 
-Powered by [Windi CSS](https://windicss.org), you can directly use nested css and [directives](https://windicss.org/features/directives.html) (e.g. `@apply`)
+Propulsé par [Windi CSS](https://windicss.org), vous pouvez utiliser directement des css imbriqués et des [répertoires](https://windicss.org/features/directives.html) (par exemple, `@apply`)
 
 ```md
 # Slidev
@@ -150,11 +150,11 @@ blockquote {
 </style>
 ```
 
-## Notes
+## Remarques
 
-You can also take notes for each slide. They will show up in [Presenter Mode](/guide/presenter-mode) for you to reference during presentations.
+Vous pouvez également prendre des notes pour chaque diapositive. Ils apparaîtront en [Mode Présentateur](/guide/presenter-mode) pour que vous puissiez vous y référer pendant les présentations.
 
-In Markdown, the last comment block in each slide will be treated as a note.
+Dans Markdown, le dernier bloc de commentaire de chaque diapositive sera traité comme une note.
 
 ~~~md
 ---
@@ -163,41 +163,41 @@ layout: cover
 
 # Page 1
 
-This is the cover page.
+Ceci est la page de garde.
 
-<!-- This is a note -->
+<!-- Ceci est une note -->
 
 ---
 
 # Page 2
 
-<!-- This is NOT a note because it precedes the content of the slide -->
+<!-- Ce n'est PAS une note car elle précède le contenu de la diapositive -->
 
-The second page
+La deuxième page
 
 <!--
-This is another note
+Ceci est une autre note
 -->
 ~~~
 
-## Icons
+## Icônes
 
-Slidev allows you to have the accessing to almost all the popular open-source iconsets **directly** in your markdown. Powered by [`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons) and [Iconify](https://iconify.design/).
+Slidev vous permet d'accéder à presque tous les jeux d'icônes open-source populaires ** directement ** dans votre démarque. Propulsé par [`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons) et [Iconify](https://iconify.design/).
 
-The naming follows [Iconify](https://iconify.design/)'s conversion `{collection-name}-{icon-name}`. For example:
+Le nom suit la conversion de [Iconify](https://iconify.design/) `{collection-name}-{icon-name}`. Par example:
 
-- `<mdi-account-circle />` - <mdi-account-circle /> from [Material Design Icons](https://github.com/Templarian/MaterialDesign)
-- `<carbon-badge />` - <carbon-badge /> from [Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/icons)
-- `<uim-rocket />` - <uim-rocket /> from [Unicons Monochrome](https://github.com/Iconscout/unicons)
-- `<twemoji-cat-with-tears-of-joy />` - <twemoji-cat-with-tears-of-joy /> from [Twemoji](https://github.com/twitter/twemoji)
-- `<logos-vue />` - <logos-vue /> from [SVG Logos](https://github.com/gilbarbara/logos)
-- And much more...
+- `<mdi-account-circle />` - <mdi-account-circle /> de [Material Design Icons](https://github.com/Templarian/MaterialDesign)
+- `<carbon-badge />` - <carbon-badge /> de [Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/icons)
+- `<uim-rocket />` - <uim-rocket /> de [Unicons Monochrome](https://github.com/Iconscout/unicons)
+- `<twemoji-chat-avec-des-larmes-de-joie />` - <twemoji-cat-with-tears-of-joy /> de [Twemoji](https://github.com/twitter/twemoji)
+- `<logos-vue />` - <logos-vue /> de [Logos SVG](https://github.com/gilbarbara/logos)
+- Et beaucoup plus...
 
-You can browse and search for all the icons available with [Icônes](https://icones.js.org/).
+Vous pouvez parcourir et rechercher toutes les icônes disponibles avec [Icônes](https://icones.js.org/).
 
-### Styling Icons
+### Icônes de style
 
-You can style the icons just like other HTML elements. For example:
+Vous pouvez styliser les icônes comme les autres éléments HTML. Par exemple:
 
 ```html
 <uim-rocket />
@@ -211,7 +211,7 @@ You can style the icons just like other HTML elements. For example:
 
 ## Configurations
 
-All configurations needed can be defined in the Markdown file. For example:
+Toutes les configurations nécessaires peuvent être définies dans le fichier Markdown. Par exemple:
 
 ```md
 ---
@@ -222,18 +222,18 @@ background: 'https://source.unsplash.com/1600x900/?nature,water'
 
 # Slidev
 
-This is the cover page.
+Ceci est la page de garde.
 ```
 
-Learn more about [frontmatter configurations](/custom/#frontmatter-configures).
+En savoir plus sur les [configurations frontmatter](/custom/#frontmatter-configures).
 
 ## LaTeX
 
-Slidev comes with LaTeX support out-of-box, powered by [KaTeX](https://katex.org/).
+Slidev est livré avec le support LaTeX prêt à l'emploi, alimenté par [KaTeX](https://katex.org/).
 
-### Inline
+### Rendu en ligne
 
-Surround your LaTeX with a single `$` on each side for inline rendering.
+Entourez votre LaTeX d'un seul `$` de chaque côté pour un rendu en ligne.
 
 ```md
 $\sqrt{3x-1}+(1+x)^2$
@@ -241,8 +241,8 @@ $\sqrt{3x-1}+(1+x)^2$
 
 ### Block
 
-Use two (`$$`) for block rendering. This mode uses bigger symbols and centers
-the result.
+Utilisez deux (`$$`) pour le rendu en bloc. Ce mode utilise des symboles plus grands et centre 
+le résultat.
 
 ```md
 $$
@@ -259,13 +259,13 @@ $$
 $$
 ```
 
-Learn more: [Demo](https://sli.dev/demo/starter/8) | [KaTeX](https://katex.org/) | [`markdown-it-katex`](https://github.com/waylonflinn/markdown-it-katex)
+En savoir plus: [Démo](https://sli.dev/demo/starter/8) | [KaTeX](https://katex.org/) | [`markdown-it-katex`](https://github.com/waylonflinn/markdown-it-katex)
 
-## Diagrams
+## Diagrammes
 
-You can also create diagrams / graphs from textual descriptions in your Markdown, powered by [Mermaid](https://mermaid-js.github.io/mermaid).
+Vous pouvez également créer des diagrammes / graphiques à partir de descriptions textuelles dans votre Markdown, alimenté par [Mermaid](https://mermaid-js.github.io/mermaid).
 
-Code blocks marked as `mermaid` will be converted to digrams, for example:
+Les blocs de code marqués comme `mermaid` seront convertis en digrammes, par exemple:
 
 ~~~md
 //```mermaid
@@ -275,7 +275,7 @@ sequenceDiagram
 //```
 ~~~
 
-You can further pass an options object to it to specify the scaling and theming. The syntax of the object is a JavaScript object literal, you will need to add quotes (`'`) for strings and use comma (`,`) between keys.
+Vous pouvez en outre lui transmettre un objet d'options pour spécifier la mise à l'échelle et la thématisation. La syntaxe de l'objet est un littéral d'objet JavaScript, vous devrez ajouter des guillemets (`` '') pour les chaînes et utiliser une virgule (`,`) entre les clés.
 
 ~~~md
 //```mermaid {theme: 'neutral', scale: 0.8}
@@ -286,4 +286,4 @@ C -->|Two| E[Result 2]
 //```
 ~~~
 
-Learn more: [Demo](https://sli.dev/demo/starter/9) | [Mermaid](https://mermaid-js.github.io/mermaid)
+En savoir plus: [Démo](https://sli.dev/demo/starter/9) | [Mermaid](https://mermaid-js.github.io/mermaid)

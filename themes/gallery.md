@@ -1,24 +1,24 @@
-# Themes Gallery
+# Galerie de thèmes
 
-Browse awesome themes available for Slidev here.
+Parcourez les thèmes géniaux disponibles pour Slidev ici.
 
-Read more about [how to use a theme](/themes/use), or [how to write your own](/themes/write-a-theme) and share with the community!
+En savoir plus sur [comment utiliser un thème](/themes/use), ou [comment écrire le vôtre](/themes/write-a-theme) et partagez avec la communauté !
 
-## Official Themes
+## Thèmes officiels
 
 <ClientOnly>
   <ThemeGallery collection="official"/>
 </ClientOnly>
 
-## Community Themes
+## Thèmes de la communauté
 
-Here are the curated themes made by the community.
+Voici les thèmes sélectionnés par la communauté.
 
-<!-- Edit in ./docs/.vitepress/themes.ts -->
+<!-- Modifier dans ./docs/.vitepress/themes.ts -->
 <ClientOnly>
   <ThemeGallery collection="community"/>
 </ClientOnly>
 
-## More Themes
+## Plus de thèmes
 
-Find all the [themes available on NPM](https://www.npmjs.com/search?q=keywords%3Aslidev-theme).
+Retrouvez tous les [thèmes disponibles sur NPM](https://www.npmjs.com/search?q=keywords%3Aslidev-theme).

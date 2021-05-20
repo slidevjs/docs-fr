@@ -1,15 +1,15 @@
-# Configure Windi CSS
+# Configurer Windi CSS
 
 <Environment type="node" />
 
-Markdown naturally supports embedded HTML markups. You can therefore style your content the way you want. To provide some convenience, we have [Windi CSS](https://github.com/windicss/windicss) built-in, so you can style markup directly using class utilities. 
+Markdown prend naturellement en charge les balises HTML intégrées. Vous pouvez donc styliser votre contenu comme vous le souhaitez. Pour plus de commodité, nous avons [Windi CSS](https://github.com/windicss/windicss) intégré, vous pouvez donc styliser le balisage directement à l'aide des utilitaires de classe.
 
-For example:
+Par example:
 
 ```html
 <div class="grid pt-4 gap-4 grids-cols-[100px,1fr]">
 
-### Name
+### Nom
 
 - Item 1
 - Item 2
@@ -17,16 +17,16 @@ For example:
 </div>
 ```
 
-The [Attributify Mode](https://windicss.org/posts/v30.html#attributify-mode) in [Windi CSS v3.0](https://windicss.org/posts/v30.html) is enabled by default.
+Le [Mode Attributify](https://windicss.org/posts/v30.html#attributify-mode) dans [Windi CSS v3.0](https://windicss.org/posts/v30.html) est activé par défaut.
 
 ## Configurations
 
-To configure Windi CSS, you will need to extend the Windi CSS base configuration.
+Pour configurer Windi CSS, vous devrez étendre la configuration de base Windi CSS.
 
 ```ts
 import { mergeWindicssConfig, defineConfig } from 'vite-plugin-windicss'
 import BaseConfig from '@slidev/client/windi.config'
-// or extending from the theme:
+// ou en prolongement du thème:
 /* import BaseConfig from '@slidev/theme-seriph/windi.config' */
 
 export default mergeWindicssConfig(

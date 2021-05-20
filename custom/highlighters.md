@@ -1,22 +1,22 @@
-# Highlighters
+Surligneurs
 
-Slidev comes with two syntax highlighter for you to choose from:
+Slidev est livré avec deux surligneurs de syntaxe parmi lesquels vous pouvez choisir:
 
 - [Prism](https://prismjs.com/)
 - [Shiki](https://github.com/shikijs/shiki)
 
-**Prism** is one of the most popular syntax highlighters. The highlighting is done by adding token classes to the code and it's colored using CSS. You can browse through their [official themes](https://github.com/PrismJS/prism-themes), or create/customize one yourself very easily using [`prism-theme-vars`](https://github.com/antfu/prism-theme-vars).
+**Prism** est l'un des surligneurs de syntaxe les plus populaires. La mise en évidence est effectuée en ajoutant des classes de jetons au code et il est coloré à l'aide de CSS. Vous pouvez parcourir leurs [thèmes officiels](https://github.com/PrismJS/prism-themes), ou en créer/personnaliser un vous-même très facilement en utilisant [`prism-theme-vars`](https://github.com/antfu/prism-theme-vars).
 
-**Shiki**, on the other hand, is a TextMate grammar-powered syntax highlighter. It generates colored tokens, so there is no additional CSS needed. Since it has great grammar support, the generated colors are very accurate, just like what you will see in VS Code. Shiki also comes with [a bunch of built-in themes](https://github.com/shikijs/shiki/blob/master/docs/themes.md). The downside of Shiki is that it also requires TextMate themes (compatible with VS Code theme) to do the highlighting, which can be a bit harder to customize.
+**Shiki**, d'autre part, est un surligneur de syntaxe basé sur la grammaire TextMate. Il génère des jetons colorés, il n'y a donc pas besoin de CSS supplémentaire. Comme il prend en charge la grammaire, les couleurs générées sont très précises, tout comme ce que vous verrez dans VS Code. Shiki est également livré avec [un tas de thèmes intégrés](https://github.com/shikijs/shiki/blob/master/docs/themes.md). L'inconvénient de Shiki est qu'il nécessite également des thèmes TextMate (compatibles avec le thème VS Code) pour faire la mise en évidence, ce qui peut être un peu plus difficile à personnaliser.
 
-Slidev themes usually support both Prism and Shiki, but depending on the theme you are using, it might only support one of them.
+Les thèmes Slidev prennent généralement en charge Prism et Shiki, mais selon le thème que vous utilisez, il se peut qu'il ne prenne en charge que l'un d'entre eux.
 
-When you have the choice, the tradeoff is basically:
+Lorsque vous avez le choix, le compromis est essentiellement:
 
-- **Prism** for easier customization
-- **Shiki** for more accurate highlighting
+- **Prism** pour une personnalisation plus facile
+- **Shiki** pour une mise en évidence plus précise
 
-By default, Slidev uses Prism. You can change it by modifying your frontmatter:
+Par défaut, Slidev utilise Prism. Vous pouvez le changer en modifiant votre frontmatter:
 
 ```yaml
 ---
@@ -24,15 +24,15 @@ highlighter: shiki
 ---
 ```
 
-## Configure Prism
+## Configurer Prism
 
-To configure your Prism, you can just import the theme css or use [`prism-theme-vars`](https://github.com/antfu/prism-theme-vars) to configure themes for both light and dark mode. Refer to its docs for more details.
+Pour configurer votre Prism, vous pouvez simplement importer le thème css ou utiliser [`prism-theme-vars`](https://github.com/antfu/prism-theme-vars) pour configurer des thèmes pour les modes clair et sombre. Reportez-vous à sa documentation pour plus de détails.
 
-## Configure Shiki
+## Configurer Shiki
 
 <Environment type="node" />
 
-Create `./setup/shiki.ts` file with the following content
+Créer un fichier `./setup/shiki.ts` avec le contenu suivant:
 
 ```ts
 /* ./setup/shiki.ts */
@@ -48,9 +48,9 @@ export default defineShikiSetup(() => {
 })
 ```
 
-Refer to [Shiki's docs](https://github.com/shikijs/shiki/blob/master/docs/themes.md#all-themes) for available theme names.
+Reportez-vous à la [documentation de Shiki](https://github.com/shikijs/shiki/blob/master/docs/themes.md#all-themes) pour les noms de thèmes disponibles.
 
-Or if you want to use your own theme:
+Ou si vous souhaitez utiliser votre propre thème:
 
 ```ts
 /* ./setup/shiki.ts */

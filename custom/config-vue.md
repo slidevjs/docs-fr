@@ -1,10 +1,10 @@
-# Configure Vue
+# Configurer Vue
 
 <Environment type="client" />
 
-Slidev uses [Vue 3](https://v3.vuejs.org/) to render the application on the client side. You can extend the app to add custom plugins or configurations.
+Slidev utilise [Vue 3](https://v3.vuejs.org/) pour rendre l'application côté client. Vous pouvez étendre l'application pour ajouter des plugins ou des configurations personnalisés.
 
-Create `./setup/main.ts` with the following content:
+Créer `./setup/main.ts` avec le contenu suivant :
 
 ```ts
 import { defineAppSetup } from '@slidev/types'
@@ -15,6 +15,6 @@ export default defineAppSetup(({ app, router }) => {
 })
 ```
 
-This could also be used as the main entrance of your Slidev app to do some initializations before the app starts.
+Cela peut également être utilisé comme entrée principale de votre application Slidev pour effectuer des initialisations avant le démarrage de l'application.
 
-Learn more: [Vue Application API](https://v3.vuejs.org/api/application-api.html#component).
+En savoir plus: [Vue Application API](https://v3.vuejs.org/api/application-api.html#component).

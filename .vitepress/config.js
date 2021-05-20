@@ -2,11 +2,11 @@
 
 const Guide = [
   {
-    text: 'Why Slidev',
+    text: 'Pourquoi Slidev',
     link: '/guide/why',
   },
   {
-    text: 'Getting Started',
+    text: 'Commencer',
     link: '/guide/',
   },
   {
@@ -14,7 +14,7 @@ const Guide = [
     link: '/guide/install',
   },
   {
-    text: 'Markdown Syntax',
+    text: 'Syntaxe Markdown',
     link: '/guide/syntax',
   },
   {
@@ -26,34 +26,34 @@ const Guide = [
     link: '/guide/animations',
   },
   {
-    text: 'Exporting',
+    text: 'Exportation',
     link: '/guide/exporting',
   },
   {
-    text: 'Record Presentation',
+    text: 'Enregistrer la présentation',
     link: '/guide/recording',
   },
   {
-    text: 'Presenter Mode',
+    text: 'Mode présentateur',
     link: '/guide/presenter-mode',
   },
   {
-    text: 'Editor Integrations',
+    text: 'Intégrations de l\'éditeur',
     link: '/guide/editors',
   },
 ]
 
 const Theme = [
   {
-    text: 'Use Theme',
+    text: 'Utiliser un thème',
     link: '/themes/use',
   },
   {
-    text: 'Theme Gallery',
+    text: 'Galerie de thèmes',
     link: '/themes/gallery',
   },
   {
-    text: 'Write a Theme',
+    text: 'Écrire un thème',
     link: '/themes/write-a-theme',
   },
 ]
@@ -61,6 +61,10 @@ const Theme = [
 const Translations = [
   {
     text: 'English',
+    link: 'https://sli.dev{{pathname}}',
+  },
+  {
+    text: 'Français',
   },
   {
     text: '简体中文',
@@ -70,50 +74,50 @@ const Translations = [
 
 const Customizations = [
   {
-    text: 'Customizations',
+    text: 'Personnalisations',
     link: '/custom/',
   },
   {
-    text: 'Directory Structure',
+    text: 'Structure des répertoires',
     link: '/custom/directory-structure',
   },
   {
-    text: 'Highlighters',
+    text: 'Surligneurs',
     link: '/custom/highlighters',
   },
   {
-    text: 'Configure Vue',
+    text: 'Configurer Vue',
     link: '/custom/config-vue',
   },
   {
-    text: 'Configure Vite',
+    text: 'Configurer Vite',
     link: '/custom/config-vite',
   },
   {
-    text: 'Configure Windi CSS',
+    text: 'Configurer Windi CSS',
     link: '/custom/config-windicss',
   },
   {
-    text: 'Configure Monaco',
+    text: 'Configurer Monaco',
     link: '/custom/config-monaco',
   },
   {
-    text: 'Configure KaTeX',
+    text: 'Configurer KaTeX',
     link: '/custom/config-katex',
   },
   {
-    text: 'Configure Mermaid',
+    text: 'Configurer Mermaid',
     link: '/custom/config-mermaid',
   },
 ]
 
 const Resources = [
   {
-    text: 'Showcases',
+    text: 'Vitrines',
     link: '/showcases',
   },
   {
-    text: 'Curated Covers',
+    text: 'Couvertures',
     link: '/resources/covers',
   },
 ]
@@ -124,22 +128,22 @@ const slidebars = [
     children: Guide,
   },
   {
-    text: 'Themes',
+    text: 'Thèmes',
     children: Theme,
   },
   {
-    text: 'Customizations',
+    text: 'Personnalisations',
     children: Customizations,
   },
   {
-    text: 'Built-in',
+    text: 'Intégrations',
     children: [
       {
-        text: 'Components',
+        text: 'Composants',
         link: '/builtin/components',
       },
       {
-        text: 'Layouts',
+        text: 'Mises en page',
         link: '/builtin/layouts',
       },
     ],
@@ -151,7 +155,7 @@ const slidebars = [
  */
 module.exports = {
   title: 'Slidev',
-  description: 'Presentation slides for developers',
+  description: 'Diapositives de présentation pour les développeurs',
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     ['meta', { name: 'author', content: 'Anthony Fu' }],
@@ -171,7 +175,7 @@ module.exports = {
     docsDir: 'docs',
     docsBranch: 'main',
     editLinks: true,
-    editLinkText: 'Suggest changes to this page',
+    editLinkText: 'Suggérer un changement sur cette page',
 
     nav: [
       {
@@ -179,19 +183,19 @@ module.exports = {
         items: Guide,
       },
       {
-        text: 'Theme',
+        text: 'Thème',
         items: Theme,
       },
       {
-        text: 'Customize',
+        text: 'Personnaliser',
         items: Customizations,
       },
       {
-        text: 'Resources',
+        text: 'Ressources',
         items: Resources,
       },
       {
-        text: 'Translations',
+        text: 'Traductions',
         items: Translations,
       },
     ],

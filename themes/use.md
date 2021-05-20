@@ -1,6 +1,6 @@
-# Use Theme
+# Utiliser le thème
 
-Changing the theme in Slidev is surprisingly easy. All you need to do is to add the `theme:` field in your frontmatter.
+Changer le thème dans Slidev est étonnamment facile. Tout ce que vous avez à faire est d'ajouter le champ `theme:` dans votre frontmatter.
 
 ```yaml
 ---
@@ -8,7 +8,7 @@ theme: seriph
 ---
 ```
 
-You can start the server, which will prompt you to install the theme automatically
+Vous pouvez démarrer le serveur, ce qui vous demandera d'installer le thème automatiquement
 
 <div class="language-md">
 <pre>
@@ -16,25 +16,25 @@ You can start the server, which will prompt you to install the theme automatical
 </pre>
 </div>
 
-or install the theme manually via
+ou installez le thème manuellement via
 
 ```bash
 $ npm install @slidev/theme-seriph
 ```
 
-And that's all, enjoy the new theme! For more details about the usage, you can refer to the theme's README.
+Et c'est tout, profitez du nouveau thème! Pour plus de détails sur l'utilisation, vous pouvez vous référer au fichier README du thème.
 
-Want to share your theme? Learn about [how to write a theme](/themes/write-a-theme).
+Envie de partager votre thème? Découvrez [comment écrire un thème](/themes/write-a-theme).
 
-## Eject Theme
+## Ejecter le thème
 
-If you want to get full control of the current theme, you can **eject** it to your local file system and modify it as you want. By running the following command
+Si vous souhaitez obtenir le contrôle total du thème actuel, vous pouvez **l'éjecter** sur votre système de fichiers local et le modifier à votre guise. En exécutant la commande suivante
 
 ```bash
 $ slidev theme eject
 ```
 
-It will eject the theme you are using currently into `./theme`, and changed your frontmatter to 
+Il éjectera le thème que vous utilisez actuellement dans `./theme`, et changera votre frontmatter en
 
 ```yaml
 ---
@@ -42,11 +42,11 @@ theme: ./theme
 ---
 ```
 
-This could also be helpful if you want to make a theme based on an existing one. If you do, remember to mention the original theme and the author :)
+Cela peut également être utile si vous souhaitez créer un thème basé sur un thème existant. Si vous le faites, n'oubliez pas de mentionner le thème d'origine et l'auteur :)
 
-## Local Theme
+## Thème local
 
-As you probably found out from the previous section, you can have a local theme for your project. By having a **relative path** in your theme field.
+Comme vous l'avez probablement découvert dans la section précédente, vous pouvez avoir un thème local pour votre projet. En ayant un **chemin relatif** dans votre champ de thème.
 
 ```yaml
 ---
@@ -54,4 +54,4 @@ theme: ./path/to/theme
 ---
 ```
 
-Refer to [how to write a theme](/themes/write-a-theme) for more details.
+Reportez-vous à [comment écrire un thème](/themes/write-a-theme) pour plus de détails.

@@ -29,7 +29,7 @@ export function useEditLink() {
   })
 
   const text = computed(() => {
-    return site.value.themeConfig.editLinkText || 'Edit this page'
+    return site.value.themeConfig.editLinkText || 'Modifier cette page'
   })
 
   return {

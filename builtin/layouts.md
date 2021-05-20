@@ -1,15 +1,15 @@
-# Layouts
+# Mises en page
 
-## Built-in Layouts
+## Mises en page intégrées
 
-> The documentations of this section is still working in progress. Before that, you can take a look at the [source code](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts) directly.
+> Les documentations de cette section sont toujours en cours d'élaboration. Avant cela, vous pouvez directement jeter un coup d'oeil au [code source](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts)
 
-## Custom Layouts
+## Mises en page customisées
 
-Create a directory `layouts/` under your project root, and simply put your custom Vue layout components under it.
+Créer un répertoire `layouts/` sous la racine de votre projet, et placez simplement vos composants Vue personnalisés sous celui-ci.
 
-Read more in the [Customization](/custom/directory-structure#layouts) section.
+Pour en savoir plus, consultez la section [Customisation](/custom/directory-structure#layouts).
 
-## Theme-provided Layouts
+## Mises en page fournies par thème
 
-Themes can provide layouts or override existing ones. Please read their documentation for what they have provided.
+Les thèmes peuvent fournir des mises en page ou remplacer celles existantes. Veuillez lire leurs documentations pour découvrir ce qu'ils fournissent.

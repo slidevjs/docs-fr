@@ -8,10 +8,9 @@
 
 <script setup lang="ts">
 const msgs = [
-  'There\'s nothing here.',
-  'How did we get here?',
-  'That\'s a Four-Oh-Four.',
-  'Looks like we\'ve got some broken links.',
+  'Il n\'y a rien par ici.',
+  'Comment sommes-nous arrivé ici ?',
+  'On dirait que nous avons des liens rompus.',
 ]
 
 function getMsg() {

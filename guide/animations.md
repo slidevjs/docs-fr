@@ -1,43 +1,43 @@
 # Animations
 
-## Click Animations
+## Animations de Clics
 
 ### `v-click`
 
-To apply "click animations" for elements, you can use the `v-click` directive or `<v-click>` components
+Pour appliquer des "animations de clic" aux éléments, vous pouvez utiliser la directive `v-click` ou les composants` <v-click> `
 
 ```md
 # Hello
 
-<!-- Component usage: this will be invisible until you press "next" -->
+<!-- Utilisation des composants: ce sera invisible jusqu'à ce que vous appuyiez sur "suivant" -->
 <v-click>
 
 Hello World
 
 </v-click>
 
-<!-- Directive usage: this will be invisible until you press "next" the second time -->
+<!-- Utilisation de la directive: elle sera invisible jusqu'à ce que vous appuyiez sur "suivant" la deuxième fois -->
 <div v-click class="text-xl p-2">
 
-Hey!
+Bonjour!
 
 </div>
 ```
 
 ### `v-after`
 
-The usage of `v-after` is similar to `v-click` but it will turn the element visible when the previous `v-click` is triggered.
+L'utilisation de `v-after` est similaire à` v-click` mais cela rendra l'élément visible lorsque le `v-click` précédent sera déclenché.
 
 ```md
 <div v-click>Hello</div>
 <div v-after>World</div>
 ```
 
-When you click the "next" button, both `Hello` and `World` will show up together.
+Lorsque vous cliquez sur le bouton "suivant", `Hello` et `World` s'affichent ensemble.
 
 ### `v-clicks`
 
-`v-clicks` is only provided as a component. It's a shorthand to apply the `v-click` directive to all its child elements. It is especially useful when working with lists.
+`v-clicks` n'est fourni qu'en tant que composant. C'est un raccourci pour appliquer la directive `v-click` à tous ses éléments enfants. C'est particulièrement utile lorsque vous travaillez avec des listes.
 
 ```md
 <v-clicks>
@@ -50,11 +50,11 @@ When you click the "next" button, both `Hello` and `World` will show up together
 </v-clicks>
 ```
 
-An item will become visible each time you click "next".
+Un élément deviendra visible à chaque fois que vous cliquerez sur "suivant".
 
-### Custom Clicks Count
+### Nombre de clics personnalisés
 
-By default, Slidev counts how many steps are needed before going to the next slide. You can override this setting by passing the `clicks` frontmatter option:
+Par défaut, Slidev compte le nombre d'étapes nécessaires avant de passer à la diapositive suivante. Vous pouvez remplacer ce paramètre en passant l'option frontmatter `clicks`:
 
 ```yaml
 ---
@@ -63,9 +63,9 @@ clicks: 10
 ---
 ```
 
-### Ordering
+### Ordre
 
-Passing the click index to your directives, you can customize the order of the revealing
+En passant l'index de clic à vos directives, vous pouvez personnaliser l'ordre de la révélation
 
 ```md
 <div v-click>1</div>
@@ -85,27 +85,27 @@ Passing the click index to your directives, you can customize the order of the r
 clicks: 3
 ---
 
-<!-- visible after 3 clicks -->
+<!-- visible après 3 clics -->
 <v-clicks at="3">
-  <div>Hi</div>
+  <div>Bonjour</div>
 </v-clicks>
 ```
 
-### Element Transitions
+### Transitions d'éléments
 
-When you apply the `v-click` directive to your elements, it will attach the class name `slidev-vclick-target` to it. When the elements are hidden, the class name `slidev-vclick-hidden` will also be attached. For example:
+Lorsque vous appliquez la directive `v-click` à vos éléments, elle y attache le nom de classe` slidev-vclick-target`. Lorsque les éléments sont masqués, le nom de classe `slidev-vclick-hidden` sera également attaché. Par exemple:
 
 ```html
 <div class="slidev-vclick-target slidev-vclick-hidden">Text</div>
 ```
 
-After a click, it will become
+Après un clic, il deviendra
 
 ```html
 <div class="slidev-vclick-target">Text</div>
 ```
 
-By default, a subtle opacity transition is applied to those classes:
+Par défaut, une transition d'opacité subtile est appliquée à ces classes:
 
 ```css
 // the default
@@ -120,9 +120,9 @@ By default, a subtle opacity transition is applied to those classes:
 }
 ```
 
-You can override them to customize the transition effects in your custom stylesheets. 
+Vous pouvez les remplacer pour personnaliser les effets de transition dans vos feuilles de style personnalisées.
 
-For example, you can achieve the scaling up transitions by: 
+Par exemple, vous pouvez réaliser les transitions de mise à l'échelle en:
 
 ```css
 // styles.css
@@ -136,7 +136,7 @@ For example, you can achieve the scaling up transitions by:
 }
 ```
 
-To specify animations for only certain slide or layout
+Pour spécifier des animations uniquement pour certaines diapositives ou mises en page
 
 ```scss
 .slidev-page-7,
@@ -151,11 +151,11 @@ To specify animations for only certain slide or layout
 }
 ```
 
-Learn more about [customizing styles](/custom/directory-structure#style).
+En savoir plus sur la [personnalisation des styles](/custom/directory-structure#style).
 
-## Motion
+## Mouvement
 
-Slidev has [@vueuse/motion](https://motion.vueuse.org/) built-in. You can use the `v-motion` directive to any elements to make apply motion on them. For example
+Slidev a [@vueuse/motion](https://motion.vueuse.org/) intégré. Vous pouvez utiliser la directive `v-motion` sur n'importe quel élément pour y appliquer un mouvement. Par exemple
 
 ```html
 <div
@@ -166,9 +166,9 @@ Slidev has [@vueuse/motion](https://motion.vueuse.org/) built-in. You can use th
 </div>
 ```
 
-The text `Slidev` will move from `-80px` to its original position on initialization.
+Le texte `Slidev` passera de` -80px` à sa position d'origine lors de l'initialisation.
 
-> Note: Slidev preloads the next slide for performance, which means the animations might start before you navigate to the page. To get it works properly, you can disable the preloading for the particular slide
+> Remarque: Slidev précharge la diapositive suivante pour les performances, ce qui signifie que les animations peuvent démarrer avant que vous ne naviguiez vers la page. Pour que cela fonctionne correctement, vous pouvez désactiver le préchargement pour la diapositive particulière
 >
 > ```md
 > ---
@@ -176,7 +176,7 @@ The text `Slidev` will move from `-80px` to its original position on initializat
 > ---
 > ```
 >
-> Or control the element life-cycle with `v-if` to have fine-grained controls
+> Ou contrôlez le cycle de vie de l'élément avec `v-if` pour avoir des contrôles fins
 >
 > ```html
 > <div
@@ -188,8 +188,8 @@ The text `Slidev` will move from `-80px` to its original position on initializat
 > </div>
 > ```
 
-Learn mode: [Demo](https://sli.dev/demo/starter/7) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/directive-usage.html) | [Presets](https://motion.vueuse.org/presets.html)
+Mode d'apprentissage: [Démo](https://sli.dev/demo/starter/7) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/directive-usage.html) | [Préréglages]f(https://motion.vueuse.org/presets.html)
 
-## Pages Transitions
+## Transitions de pages
 
-> Built-in support for slides is NOT YET provided in the current version. We are planning to add support for them in the next major version. Before that, you can still use your custom styles and libraries to do that.
+> La prise en charge intégrée des diapositives n'est PAS ENCORE fournie dans la version actuelle. Nous prévoyons d'ajouter un support pour eux dans la prochaine version majeure. Avant cela, vous pouvez toujours utiliser vos styles et bibliothèques personnalisés pour ce faire.

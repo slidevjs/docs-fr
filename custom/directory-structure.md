@@ -1,31 +1,31 @@
-# Directory Structure
+# Structure du répertoire
 
-Slidev employs some directory structure conventions to minimize the configuration surface and to make the functionality extensions flexible and intuitive.
+Slidev utilise certaines conventions de structure de répertoires pour minimiser la surface de configuration et rendre les extensions de fonctionnalités flexibles et intuitives.
 
-The basic structure is as follows:
+La structure de base est la suivante:
 
 ```bash
 your-slidev/
-  ├── components/       # custom components
-  ├── layouts/          # custom layouts
-  ├── public/           # static assets
-  ├── setup/            # custom setup / hooks
-  ├── styles/           # custom style
-  ├── index.html        # injections to index.html
-  ├── slides.md         # the main slides entry
-  ├── vite.config.ts    # extending vite config
-  └── windi.config.ts   # extending windicss config
+  ├── components/       # composants customisés
+  ├── layouts/          # mises en page customisées
+  ├── public/           # assets statiques
+  ├── setup/            # configuration personnalisée / hooks
+  ├── styles/           # style personnalisé
+  ├── index.html        # injections dans index.html
+  ├── slides.md         # l'entrée principale des diapositives
+  ├── vite.config.ts    # extension de vite config
+  └── windi.config.ts   # extension de windicss config
 ```
 
-All of them are optional.
+Tous sont facultatifs.
 
-## Components
+## Composants
 
 Conventions: `./components/*.{vue,js,ts,jsx,tsx}`
 
-Components inside this directory can be directly used in the slides Markdown with the same component name as the file name.
+Les composants à l'intérieur de ce répertoire peuvent être directement utilisés dans les diapositives Markdown avec le même nom de composant que le nom de fichier.
 
-For example:
+Par example:
 
 ```bash
 your-slidev/
@@ -42,18 +42,18 @@ your-slidev/
 
 <MyComponent :count="4"/>
 
-<!-- both namings work -->
+<!-- Les deux appellations fonctionnent -->
 
 <hello-world foo="bar">
   Slot
 </hello-world>
 ```
 
-This feature is powered by [`vite-plugin-components`](https://github.com/antfu/vite-plugin-components), learn more there.
+Cette fonctionnalité est alimentée par [`vite-plugin-components`](https://github.com/antfu/vite-plugin-components), apprenez-en plus ici.
 
-Slidev also provides some [built-in components](/builtin/components) for you to use.
+Slidev fournit également des [composants intégrés](/builtin/components) que vous pouvez utiliser.
 
-## Layouts
+## Mises en page
 
 Conventions: `./layouts/*.{vue,js,ts,jsx,tsx}`
 
@@ -65,7 +65,7 @@ your-slidev/
       └── my-cool-theme.vue
 ```
 
-You can use any filename for your layout. You then reference your layout in you YAML header using the filename.
+Vous pouvez utiliser n'importe quel nom de fichier pour votre mise en page. Vous référencez ensuite votre mise en page dans votre en-tête YAML en utilisant le nom de fichier.
 
 ```yaml
 ---
@@ -73,9 +73,9 @@ layout: my-cool-theme
 ---
 ```
 
-If the layout you provide has the same name as a built-in layout or a theme layout, your custom layout will take precedence over the built-in/theme layout. The priority order is `local > theme > built-in`.
+Si la mise en page que vous fournissez porte le même nom qu'une mise en page intégrée ou une mise en page de thème, votre mise en page personnalisée prévaudra sur la mise en page intégrée / thème. L'ordre de priorité est `local > thème > intégré`.
 
-In the layout component, use `<slot/>` for the slide content. For example:
+Dans le composant de mise en page, utilisez `<slot />` pour le contenu de la diapositive. Par example:
 
 ```html
 <!-- default.vue -->
@@ -90,13 +90,13 @@ In the layout component, use `<slot/>` for the slide content. For example:
 
 Conventions: `./public/*`
 
-Assets in this directory will be served at root path `/` during dev, and copied to the root of the dist directory as-is. Read more about [Vite's `public` directory](https://vitejs.dev/guide/assets.html#the-public-directory).
+Les actifs de ce répertoire seront servis à la racine du chemin `/` pendant le développement, et copiés à la racine du répertoire dist tels quels. En savoir plus sur [le répertoire `public` de Vite](https://vitejs.dev/guide/assets.html#the-public-directory).
 
 ## Style
 
 Conventions: `./style.css` | `./styles/index.{css,js,ts}`
 
-Files following this convention will be injected to the App root. If you need to import multiple css entries, you can create the following structure and managing the import order yourself.
+Les fichiers suivant cette convention seront injectés à la racine de l'application. Si vous devez importer plusieurs entrées CSS, vous pouvez créer la structure suivante et gérer vous-même l'ordre d'importation.
 
 ```bash
 your-slidev/
@@ -116,7 +116,7 @@ import './code.css'
 import './layouts.css'
 ```
 
-Styles will be processed by [Windi CSS](http://windicss.org/) and [PostCSS](https://postcss.org/), so you can use css nesting and [at-directives](https://windicss.org/features/directives.html) out-of-box. For example:
+Les styles seront traités par [Windi CSS](http://windicss.org/) et [PostCSS](https://postcss.org/), vous pouvez donc utiliser l'imbrication css et [at-directives](https://windicss.org/features/directives.html) prêt à l'emploi. Par example:
 
 ```less
 .slidev-layout {
@@ -136,15 +136,15 @@ Styles will be processed by [Windi CSS](http://windicss.org/) and [PostCSS](http
 }
 ```
 
-[Learn more about the syntax](https://windicss.org/features/directives.html).
+[En savoir plus sur la syntaxe](https://windicss.org/features/directives.html).
 
 ## `index.html`
 
 Conventions: `index.html`
 
-The `index.html` provides the ability to inject meta tags and/or scripts to the main `index.html`
+Le `index.html` offre la possibilité d'injecter des balises meta et/ou des scripts dans le` index.html` principal
 
-For example, for the following custom `index.html`:
+Par exemple, pour le `index.html` personnalisé suivant:
 
 ```html
 <!-- ./index.html -->
@@ -158,7 +158,7 @@ For example, for the following custom `index.html`:
 </body>
 ```
 
-The final hosted `index.html` will be:
+Le fichier `index.html` final hébergé sera:
 
 ```html
 <!DOCTYPE html>

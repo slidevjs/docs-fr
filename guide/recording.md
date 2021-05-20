@@ -1,15 +1,15 @@
-# Recording
+# Enregistrement
 
-Slidev has a built-in recording and camera view. You can use them to record your presentation easily in one place.
+Slidev a un enregistrement intégré et une vue de la caméra. Vous pouvez les utiliser pour enregistrer facilement votre présentation en un seul endroit.
 
-## Camera View
+## Vue de la caméra
 
-Click the <carbon-user-avatar class="inline-icon-btn"/> button in the navigation panel to show your camera view in the presentation. You can drag to move it, and use the handler on the right bottom corner to resize it. The size and position will persist in `localStorage` and will therefore be consistent across multiple refreshes, so no need to worry about that.
+Cliquez sur le bouton <carbon-user-avatar class="inline-icon-btn"/> dans le panneau de navigation pour afficher la vue de votre caméra dans la présentation. Vous pouvez faire glisser pour le déplacer et utiliser le gestionnaire dans le coin inférieur droit pour le redimensionner. La taille et la position persisteront dans `localStorage` et seront donc cohérentes sur plusieurs actualisations, donc pas besoin de s'inquiéter à ce sujet.
 
-## Recording
+## Enregistrement
 
-Clicking the <carbon-video class="inline-icon-btn"/> button in the navigation panel will bring up a dialog for you. Here you can choose to either record your camera embedded in your slides or to separate them into two video files.
+Cliquez sur le bouton <carbon-video class="inline-icon-btn"/> dans le panneau de navigation pour ouvrir une boîte de dialogue. Ici, vous pouvez choisir d'enregistrer votre caméra intégrée dans vos diapositives ou de les séparer en deux fichiers vidéo.
 
-This feature is powered by [RecordRTC](https://github.com/muaz-khan/RecordRTC) and uses the [WebRTC API](https://webrtc.org/).
+Cette fonctionnalité est alimentée par [RecordRTC](https://github.com/muaz-khan/RecordRTC) et utilise l '[API WebRTC](https://webrtc.org/).
 
 ![](/screenshots/recording.png)
