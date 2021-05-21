@@ -231,13 +231,9 @@ En savoir plus sur les [configurations frontmatter](/custom/#frontmatter-configu
 
 Slidev est livré avec le support LaTeX prêt à l'emploi, alimenté par [KaTeX](https://katex.org/).
 
-<<<<<<< HEAD
-### Rendu en ligne
-=======
 <Tweet id="1392246507793915904" />
 
-### Inline
->>>>>>> b282fff7911c81dbc2b9ac6af2329b228df3bd7c
+### Rendu en ligne
 
 Entourez votre LaTeX d'un seul `$` de chaque côté pour un rendu en ligne.
 
