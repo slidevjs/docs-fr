@@ -21,7 +21,7 @@ Tous sont facultatifs.
 
 ## Composants
 
-Conventions: `./components/*.{vue,js,ts,jsx,tsx}`
+Conventions: `./components/*.{vue,js,ts,jsx,tsx,md}`
 
 Les composants à l'intérieur de ce répertoire peuvent être directement utilisés dans les diapositives Markdown avec le même nom de composant que le nom de fichier.
 
