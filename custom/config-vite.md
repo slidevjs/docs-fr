@@ -15,8 +15,4 @@ Slidev a les plugins suivants préconfigurés:
 - [vite-plugin-icons](https://github.com/antfu/vite-plugin-icons)
 - [vite-plugin-remote-assets](https://github.com/antfu/vite-plugin-remote-assets)
 
-<<<<<<< HEAD
 Découvrez le mode sur les [pré-configurations ici](https://github.com/slidevjs/slidev/blob/main/packages/slidev/node/plugins/preset.ts).
-=======
-Learn more about the [pre-configurations here](https://github.com/slidevjs/slidev/blob/main/packages/slidev/node/plugins/preset.ts).
->>>>>>> 953ee5694ffc44df8da634f1e6123cc1b411229b
