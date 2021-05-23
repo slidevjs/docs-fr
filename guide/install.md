@@ -15,7 +15,7 @@ $ npm init slidev@latest
 Avec Yarn:
 
 ```bash
-$ yarn create slidev@latest
+$ yarn create slidev
 ```
 
 Suivez les invites et il ouvrira le diaporama à http://localhost:3030/ automatiquement pour vous.
