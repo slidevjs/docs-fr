@@ -74,6 +74,17 @@ const Translations = [
     text: '简体中文',
     link: 'https://cn.sli.dev{{pathname}}',
   },
+<<<<<<< HEAD
+=======
+  {
+    text: 'Français',
+    link: 'https://fr.sli.dev{{pathname}}',
+  },
+  {
+    text: 'Español',
+    link: 'https://es.sli.dev{{pathname}}',
+  },
+>>>>>>> 020807979e900233b46bedad66ff1b813242ae9a
 ]
 
 const Customizations = [
