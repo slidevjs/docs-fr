@@ -74,6 +74,10 @@ const Translations = [
     text: '简体中文',
     link: 'https://cn.sli.dev{{pathname}}',
   },
+  {
+    text: 'Español',
+    link: 'https://es.sli.dev{{pathname}}',
+  }
 ]
 
 const Customizations = [
