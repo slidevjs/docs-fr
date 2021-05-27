@@ -42,7 +42,27 @@ $ npx slidev
 > echo 'shamefully-flatten=true' >> .npmrc
 > ```
 
+<<<<<<< HEAD
 ## Installer sur Docker
+=======
+## Install Globally
+
+From v0.14.0, we shipped **experimental** global installation support. You can install it with the following command 
+
+```bash
+$ npm i -g @slidev/cli
+```
+
+And then use `slidev` everywhere without creating a project every time.
+
+```bash
+$ slidev
+```
+
+This command will also try to use local `@slidev/cli` if it has been found in the `node_modules`.
+
+## Install on Docker
+>>>>>>> 2725558a0fdb273102dde01cb9b3cfb80a5a7b43
 
 Si vous avez besoin d'un moyen rapide d'exécuter une présentation avec des conteneurs, vous pouvez utiliser l'image prédéfinie [docker](https://hub.docker.com/r/stig124/slidev) maintenue par [stig124](https://github.com/Stig124), ou créez le vôtre.
 

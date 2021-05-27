@@ -6,6 +6,7 @@ La structure de base est la suivante:
 
 ```bash
 your-slidev/
+<<<<<<< HEAD
   ├── components/       # composants customisés
   ├── layouts/          # mises en page customisées
   ├── public/           # assets statiques
@@ -15,6 +16,16 @@ your-slidev/
   ├── slides.md         # l'entrée principale des diapositives
   ├── vite.config.ts    # extension de vite config
   └── windi.config.ts   # extension de windicss config
+=======
+  ├── components/       # custom components
+  ├── layouts/          # custom layouts
+  ├── public/           # static assets
+  ├── setup/            # custom setup / hooks
+  ├── styles/           # custom style
+  ├── index.html        # injections to index.html
+  ├── slides.md         # the main slides entry
+  └── vite.config.ts   # extending vite config
+>>>>>>> 2725558a0fdb273102dde01cb9b3cfb80a5a7b43
 ```
 
 Tous sont facultatifs.
