@@ -14,7 +14,6 @@ your-slidev/
   ├── index.html        # injections dans index.html
   ├── slides.md         # l'entrée principale des diapositives
   ├── vite.config.ts    # extension de vite config
-  └── windi.config.ts   # extension de windicss config
 ```
 
 Tous sont facultatifs.

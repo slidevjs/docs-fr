@@ -21,26 +21,29 @@ Le [Mode Attributify](https://windicss.org/posts/v30.html#attributify-mode) dans
 
 ## Configurations
 
-Pour configurer Windi CSS, vous devrez étendre la configuration de base Windi CSS.
+Pour configurer Windi CSS, créez `setup/windicss.ts` avec le contenu suivant pour étendre les configurations intégrées
 
 ```ts
-import { mergeWindicssConfig, defineConfig } from 'vite-plugin-windicss'
-import BaseConfig from '@slidev/client/windi.config'
-// ou en prolongement du thème:
-/* import BaseConfig from '@slidev/theme-seriph/windi.config' */
+// setup/windicss.ts
 
-export default mergeWindicssConfig(
-  BaseConfig,
-  defineConfig({
-    theme: {
-      extend: {
-        colors: {
-          primary: {
-            DEFAULT: '#42b883'
-          }
-        }
-      }
-    }
-  })
-)
+import { defineWindiSetup } from '@slidev/types'
+
+// étendre les configurations de windics intégrées
+export default defineWindiSetup(() => ({
+  shortcuts: {
+    // personnaliser l'arrière-plan par défaut
+    'bg-main': 'bg-white text-[#181818] dark:(bg-[#121212] text-[#ddd])',
+  },
+  theme: {
+    extend: {
+      // les polices peuvent être remplacées ici, n'oubliez pas de mettre à jour les liens de polices Web dans `index.html`
+      fontFamily: {
+        sans: 'ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
+        mono: '"Fira Code", monospace',
+      },
+    },
+  },
+}))
 ```
+
+En savoir plus sur les [configurations WindiCSS](https://windicss.org/guide/configuration.html)

@@ -52,3 +52,13 @@ Reportez-vous à la section [Configure Vite](/custom/config-vite).
 ## `windicss.config.ts`
 
 Reportez-vous à la section [Configurer Windi CSS](/custom/config-windicss).
+=======
+## Config Tools
+
+- [Highlighters](/custom/highlighters)
+- [Configure Vue](/custom/config-vue)
+- [Configure Vite](/custom/config-vite)
+- [Configure Windi CSS](/custom/config-windicss)
+- [Configure Monaco](/custom/config-monaco)
+- [Configure KaTeX](/custom/config-katex)
+- [Configure Mermaid](/custom/config-mermaid)
