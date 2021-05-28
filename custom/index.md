@@ -45,7 +45,6 @@ Slidev utilise des conventions de structure de répertoires pour minimiser la su
 
 Reportez-vous à la section [Structure des répertoires](/custom/directory-structure).
 
-<<<<<<< HEAD
 ## `vite.config.ts`
 
 Reportez-vous à la section [Configure Vite](/custom/config-vite).
@@ -63,4 +62,3 @@ Reportez-vous à la section [Configurer Windi CSS](/custom/config-windicss).
 - [Configure Monaco](/custom/config-monaco)
 - [Configure KaTeX](/custom/config-katex)
 - [Configure Mermaid](/custom/config-mermaid)
->>>>>>> 2725558a0fdb273102dde01cb9b3cfb80a5a7b43
