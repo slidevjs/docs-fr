@@ -288,41 +288,39 @@ C -->|Two| E[Result 2]
 //```
 ~~~
 
-<<<<<<< HEAD
 En savoir plus: [Démo](https://sli.dev/demo/starter/9) | [Mermaid](https://mermaid-js.github.io/mermaid)
-=======
-Learn more: [Demo](https://sli.dev/demo/starter/9) | [Mermaid](https://mermaid-js.github.io/mermaid)
 
-## Multiple Entries
+## Entrées multiples
 
-From v0.15.0, we shipped multi-entries support. This means you can split your `slides.md` into multiple files and organize them as you want.
+Depuis la version v0.15.0, we shipped multi-entries support. This means you can split your `slides.md` into multiple files and organize them as you want.
+Depuis la version v0.15.0, nous avons livré le support multi-entrées. Cela signifie que vous pouvez diviser votre `slides.md` en plusieurs fichiers and les organiser comme vous le souhaitez.
 
 `slides.md` :
 
 ```md
 # Page 1
 
-This is a normal page
+Ceci est une page normale
 
 ---
-src: ./subpage2.md
+src: ./sous-page2.md
 ---
 
-<!-- this page will be loaded from './subpage2.md' -->
-Inline content will be ignored
+<!-- Cette page sera chargée depuis './subpage2.md' -->
+Le contenu en ligne sera ignoré
 ```
 
-`subpage2.md` :
+`sous-page2.md` :
 
 ```md
 # Page 2
 
-This page is from another file
+Cette page provient d'un autre fichier
 ```
 
-### Frontmatter Merging
+### Fusion de frontmatter
 
-You can provide frontmatters from both your main entry and external markdown pages. If there are the same keys in them, the ones from the **main entry have the higher priority**. For example
+Vous pouvez fournir des frontmatters depuis l'entrée principale mais également depuis une page markdown externe. S'il y a les mêmes clés, celles de l'**entrée principale ont la priorité la plus élevée**. Par exemple
 
 `slides.md` :
 
@@ -342,12 +340,12 @@ layout: cover
 background: https://sli.dev/foo.png
 ---
 
-# Cover
+# Couverture
 
-Cover Page
+Page de couverture
 ```
 
-They will end up being equivalent of the following page:
+Ils finiront par être équivalents à la page suivante:
 
 ```md
 ---
@@ -356,14 +354,14 @@ background: https://sli.dev/bar.png
 class: text-center
 ---
 
-# Cover
+# Couverture
 
-Cover Page
+Page de couverture
 ```
 
-### Page Reusing
+### Réutilisation de la page
 
-With the multi-entries support, reusing pages could be straightforward. For example:
+Avec la prise en charge des entrées multiples, la réutilisation des pages peut être simple. Par exemple:
 
 ```yaml
 ---
@@ -379,8 +377,7 @@ src: ./content.md
 ---
 
 ---
-# reuse
+# réutilisation
 src: ./content.md
 ---
 ```
->>>>>>> 6c65fa5e51f6c3d0dec02c647eaa82edecc6a81a
