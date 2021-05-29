@@ -289,3 +289,95 @@ C -->|Two| E[Result 2]
 ~~~
 
 En savoir plus: [Démo](https://sli.dev/demo/starter/9) | [Mermaid](https://mermaid-js.github.io/mermaid)
+
+## Entrées multiples
+
+Depuis la version v0.15.0, we shipped multi-entries support. This means you can split your `slides.md` into multiple files and organize them as you want.
+Depuis la version v0.15.0, nous avons livré le support multi-entrées. Cela signifie que vous pouvez diviser votre `slides.md` en plusieurs fichiers and les organiser comme vous le souhaitez.
+
+`slides.md` :
+
+```md
+# Page 1
+
+Ceci est une page normale
+
+---
+src: ./sous-page2.md
+---
+
+<!-- Cette page sera chargée depuis './subpage2.md' -->
+Le contenu en ligne sera ignoré
+```
+
+`sous-page2.md` :
+
+```md
+# Page 2
+
+Cette page provient d'un autre fichier
+```
+
+### Fusion de frontmatter
+
+Vous pouvez fournir des frontmatters depuis l'entrée principale mais également depuis une page markdown externe. S'il y a les mêmes clés, celles de l'**entrée principale ont la priorité la plus élevée**. Par exemple
+
+`slides.md` :
+
+```md
+---
+src: ./cover.md
+background: https://sli.dev/bar.png
+class: text-center
+---
+```
+
+`cover.md` :
+
+```md
+---
+layout: cover
+background: https://sli.dev/foo.png
+---
+
+# Couverture
+
+Page de couverture
+```
+
+Ils finiront par être équivalents à la page suivante:
+
+```md
+---
+layout: cover
+background: https://sli.dev/bar.png
+class: text-center
+---
+
+# Couverture
+
+Page de couverture
+```
+
+### Réutilisation de la page
+
+Avec la prise en charge des entrées multiples, la réutilisation des pages peut être simple. Par exemple:
+
+```yaml
+---
+src: ./cover.md
+---
+
+---
+src: ./intro.md
+---
+
+---
+src: ./content.md
+---
+
+---
+# réutilisation
+src: ./content.md
+---
+```
