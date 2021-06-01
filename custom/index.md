@@ -37,6 +37,7 @@ info: |
   Ma première présentation [Slidev](http://sli.dev/)!
 ```
 
+<<<<<<< HEAD
 Consultez les [définitions de type](https://github.com/slidevjs/slidev/blob/main/packages/types/src/types.ts#L16) pour plus d'options.
 
 ## Structure du répertoire
@@ -44,6 +45,9 @@ Consultez les [définitions de type](https://github.com/slidevjs/slidev/blob/mai
 Slidev utilise des conventions de structure de répertoires pour minimiser la surface de configuration et rendre les extensions de fonctionnalités flexibles et intuitives.
 
 Reportez-vous à la section [Structure des répertoires](/custom/directory-structure).
+=======
+Check out the [type definitions](https://github.com/slidevjs/slidev/blob/main/packages/types/src/types.ts#L29) for more options.
+>>>>>>> 441775ca56eade87b9dcfe9fc9b673f3e5a29ce1
 
 ## `vite.config.ts`
 
