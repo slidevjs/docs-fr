@@ -47,18 +47,18 @@ Reportez-vous à la section [Structure des répertoires](/custom/directory-struc
 
 ## `vite.config.ts`
 
-Reportez-vous à la section [Configure Vite](/custom/config-vite).
+Reportez-vous à la section [Configurer Vite](/custom/config-vite).
 
 ## `windicss.config.ts`
 
 Reportez-vous à la section [Configurer Windi CSS](/custom/config-windicss).
-=======
-## Config Tools
 
-- [Highlighters](/custom/highlighters)
-- [Configure Vue](/custom/config-vue)
-- [Configure Vite](/custom/config-vite)
-- [Configure Windi CSS](/custom/config-windicss)
-- [Configure Monaco](/custom/config-monaco)
-- [Configure KaTeX](/custom/config-katex)
-- [Configure Mermaid](/custom/config-mermaid)
+## Configuration des outils
+
+- [Surligneurs](/custom/highlighters)
+- [Configurer Vue](/custom/config-vue)
+- [Configurer Vite](/custom/config-vite)
+- [Configurer Windi CSS](/custom/config-windicss)
+- [Configurer Monaco](/custom/config-monaco)
+- [Configurer KaTeX](/custom/config-katex)
+- [Configurer Mermaid](/custom/config-mermaid)
