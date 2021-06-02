@@ -37,7 +37,7 @@ info: |
   Ma première présentation [Slidev](http://sli.dev/)!
 ```
 
-Consultez les [définitions de type](https://github.com/slidevjs/slidev/blob/main/packages/types/src/types.ts#L16) pour plus d'options.
+Consultez les [définitions de type](https://github.com/slidevjs/slidev/blob/main/packages/types/src/types.ts#L29) pour plus d'options.
 
 ## Structure du répertoire
 
