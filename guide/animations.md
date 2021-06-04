@@ -35,6 +35,14 @@ L'utilisation de `v-after` est similaire à` v-click` mais cela rendra l'éléme
 
 Lorsque vous cliquez sur le bouton "suivant", `Hello` et `World` s'affichent ensemble.
 
+### `v-click-hide`
+
+Same as `v-click` but instead of making the element appear, it makes the element invisible after clicking.
+
+```md
+<div v-click-hide>Hello</div>
+```
+
 ### `v-clicks`
 
 `v-clicks` n'est fourni qu'en tant que composant. C'est un raccourci pour appliquer la directive `v-click` à tous ses éléments enfants. C'est particulièrement utile lorsque vous travaillez avec des listes.
