@@ -6,13 +6,13 @@
 
 La meilleure façon de commencer est d'utiliser notre modèle de démarrage officiel.
 
-Avec NPM:
+Avec NPM :
 
 ```bash
 $ npm init slidev@latest
 ```
 
-Avec Yarn:
+Avec Yarn :
 
 ```bash
 $ yarn create slidev
@@ -24,7 +24,7 @@ Il contient également la configuration de base et une courte démo avec des ins
 
 ## Installer manuellement
 
-Si vous préférez toujours installer Slidev manuellement ou souhaitez l'intégrer dans vos projets existants, vous pouvez faire:
+Si vous préférez toujours installer Slidev manuellement ou souhaitez l'intégrer dans vos projets existants, vous pouvez faire :
 
 ```bash
 $ npm install @slidev/cli @slidev/theme-default

@@ -12,6 +12,6 @@ Cliquez sur le bouton <carbon-user-avatar class="inline-icon-btn"/> dans le pann
 
 Cliquez sur le bouton <carbon-video class="inline-icon-btn"/> dans le panneau de navigation pour ouvrir une boîte de dialogue. Ici, vous pouvez choisir d'enregistrer votre caméra intégrée dans vos diapositives ou de les séparer en deux fichiers vidéo.
 
-Cette fonctionnalité est alimentée par [RecordRTC](https://github.com/muaz-khan/RecordRTC) et utilise l '[API WebRTC](https://webrtc.org/).
+Cette fonctionnalité est alimentée par [RecordRTC](https://github.com/muaz-khan/RecordRTC) et utilise l'[API WebRTC](https://webrtc.org/).
 
 ![](/screenshots/recording.png)

@@ -41,13 +41,13 @@ Slidev est rendu possible en combinant ces outils et technologies.
 
 ### Création de votre première présentation
 
-Avec NPM:
+Avec NPM :
 
 ```bash
 $ npm init slidev
 ```
 
-Avec Yarn:
+Avec Yarn :
 
 ```bash
 $ yarn create slidev
@@ -79,7 +79,7 @@ Exécutez `slidev --help` pour plus d'options disponibles.
 
 ### Syntaxe de Markdown
 
-Slidev lit votre fichier `slides.md` sous la racine de votre projet et les convertit en diapositives. Chaque fois que vous y apportez des modifications, le contenu des diapositives est mis à jour immédiatement. Par exemple:
+Slidev lit votre fichier `slides.md` sous la racine de votre projet et les convertit en diapositives. Chaque fois que vous y apportez des modifications, le contenu des diapositives est mis à jour immédiatement. Par exemple :
 
 ~~~md
 # Slidev

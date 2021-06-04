@@ -32,7 +32,7 @@ Vous pouvez directement utiliser les composants Windi CSS et Vue pour styliser e
 
 ## Front Matter & Layouts
 
-Vous pouvez spécifier des mises en page et d'autres métadonnées pour chaque diapositive en convertissant les séparateurs en [blocs de présentation](https://jekyllrb.com/docs/front-matter/). Chaque avant-propos commence par un triple tiret et se termine par un autre. Les textes entre eux sont des objets de données au format [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/). Par exemple:
+Vous pouvez spécifier des mises en page et d'autres métadonnées pour chaque diapositive en convertissant les séparateurs en [blocs de présentation](https://jekyllrb.com/docs/front-matter/). Chaque avant-propos commence par un triple tiret et se termine par un autre. Les textes entre eux sont des objets de données au format [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/). Par exemple :
 
 ~~~md
 ---
@@ -197,7 +197,7 @@ Vous pouvez parcourir et rechercher toutes les icônes disponibles avec [Icônes
 
 ### Icônes de style
 
-Vous pouvez styliser les icônes comme les autres éléments HTML. Par exemple:
+Vous pouvez styliser les icônes comme les autres éléments HTML. Par exemple :
 
 ```html
 <uim-rocket />
@@ -211,7 +211,7 @@ Vous pouvez styliser les icônes comme les autres éléments HTML. Par exemple:
 
 ## Configurations
 
-Toutes les configurations nécessaires peuvent être définies dans le fichier Markdown. Par exemple:
+Toutes les configurations nécessaires peuvent être définies dans le fichier Markdown. Par exemple :
 
 ```md
 ---
@@ -267,7 +267,7 @@ En savoir plus: [Démo](https://sli.dev/demo/starter/8) | [KaTeX](https://katex.
 
 Vous pouvez également créer des diagrammes / graphiques à partir de descriptions textuelles dans votre Markdown, alimenté par [Mermaid](https://mermaid-js.github.io/mermaid).
 
-Les blocs de code marqués comme `mermaid` seront convertis en digrammes, par exemple:
+Les blocs de code marqués comme `mermaid` seront convertis en digrammes, par exemple :
 
 ~~~md
 //```mermaid
@@ -345,7 +345,7 @@ background: https://sli.dev/foo.png
 Page de couverture
 ```
 
-Ils finiront par être équivalents à la page suivante:
+Ils finiront par être équivalents à la page suivante :
 
 ```md
 ---
@@ -361,7 +361,7 @@ Page de couverture
 
 ### Réutilisation de la page
 
-Avec la prise en charge des entrées multiples, la réutilisation des pages peut être simple. Par exemple:
+Avec la prise en charge des entrées multiples, la réutilisation des pages peut être simple. Par exemple :
 
 ```yaml
 ---

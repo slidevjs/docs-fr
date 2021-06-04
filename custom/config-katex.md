@@ -2,7 +2,7 @@
 
 <Environment type="node" />
 
-Créer `./setup/katex.ts` avec le contenu suivant:
+Créer `./setup/katex.ts` avec le contenu suivant :
 
 ```ts
 import { defineKatexSetup } from '@slidev/types'

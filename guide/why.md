@@ -10,7 +10,7 @@ Lorsque vous travaillez avec des éditeurs WYSIWYG, il est facile de se laisser 
 
 ![](/screenshots/cover.png)
 
-Voici quelques-unes des fonctionnalités les plus intéressantes de Slidev:
+Voici quelques-unes des fonctionnalités les plus intéressantes de Slidev :
 
 ## Basé sur Markdown
 
@@ -58,13 +58,13 @@ Apprenez-en plus à ce sujet dans la [documentation d'exportation](/guide/export
 
 ## Essaie
 
-Jouer avec Slidev vous en dira plus que mille mots. Vous n'êtes qu'à une seule commande:
+Jouer avec Slidev vous en dira plus que mille mots. Vous n'êtes qu'à une seule commande :
 
 ```bash
 $ npm init slidev
 ```
 
-Ou en avoir un aperçu rapide:
+Ou en avoir un aperçu rapide :
 
 <div class="aspect-9/16 relative">
 <iframe class="rounded w-full shadow-md border-none" src="https://www.youtube.com/embed/eW7v-2ZKZOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
