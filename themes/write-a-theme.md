@@ -12,12 +12,21 @@ Ensuite, vous pouvez le modifier et jouer avec. Vous pouvez également vous réf
 
 Un thème peut contribuer aux points suivants:
 
+<<<<<<< HEAD
 - Styles globaux
 - Fournir des polices Web
 - Fournir des mises en page personnalisées ou remplacer celle existante
 - Fournir des composants personnalisés ou remplacer l'existant
 - Étendre les configurations CSS Windi
 - Configurer des outils comme Monaco et Prism
+=======
+- Global styles
+- Provide default configurations (fonts, color schema, highlighters, etc.)
+- Provide custom layouts or override the existing one
+- Provide custom components or override the existing one
+- Extend Windi CSS configurations
+- Configure tools like Monaco and Prism
+>>>>>>> ebf9abaa42c2dbfabfc2218bf88daf49b3b82ec3
 
 ## Conventions
 
@@ -28,11 +37,15 @@ Les thèmes sont publiés dans le registre npm et doivent respecter les conventi
 
 ## Installer
 
+<<<<<<< HEAD
 Pour configurer le terrain de jeu de test pour votre thème, vous pouvez créer `example.md` avec le frontmatter suivant, pour indiquer à Slidev que vous n'héritez d'aucun thème existant.
+=======
+To set up the testing playground for your theme, you can create `example.md` with the following frontmatter, to tell Slidev you are using the current directory as a theme.
+>>>>>>> ebf9abaa42c2dbfabfc2218bf88daf49b3b82ec3
 
 ```md
 ---
-theme: none
+theme: ./
 ---
 ```
 
@@ -54,7 +67,39 @@ Pour publier votre thème, lancez simplement `npm publish` et vous êtes prêt �
 
 Les points de contribution de thème suivent les mêmes conventions que la personnalisation locale, veuillez vous référer à [la documentation pour les conventions](/custom/).
 
+<<<<<<< HEAD
 ## Schéma de couleurs
+=======
+## Default Configurations
+
+> Available since v0.19
+
+A theme can provide default [configurations](/custom/#frontmatter-configures) via `package.json`.
+
+```json
+// package.json
+{
+  "slidev": {
+    "default": {
+      "aspectRatio": "16/9",
+      "canvasWidth": 980,
+      "fonts": {
+        "sans": "Robot",
+        "mono": "Fira Code"
+      }
+    }
+  }
+}
+```
+
+Fonts will be auto imported from [Google Fonts](https://fonts.google.com/).
+
+Learn more about [fonts](/custom/fonts) and [frontmatter configurations](/custom/#frontmatter-configures).
+
+## Theme Metadata
+
+### Color Schema
+>>>>>>> ebf9abaa42c2dbfabfc2218bf88daf49b3b82ec3
 
 Par défaut, Slidev suppose que les thèmes prennent en charge à la fois le mode clair et le mode sombre. Si vous voulez seulement que votre thème soit présenté dans un schéma de couleurs conçu, vous devrez le spécifier explicitement dans `package.json`
 
@@ -88,7 +133,11 @@ html.dark {
 
 Slidev bascule une classe `dark` sur l'élément` html` de la page pour changer de schéma de couleur.
 
+<<<<<<< HEAD
 ## Surligneur
+=======
+### Highlighter
+>>>>>>> ebf9abaa42c2dbfabfc2218bf88daf49b3b82ec3
 
 Les couleurs de mise en évidence de la syntaxe sont également fournies dans le thème. Nous prenons en charge à la fois [Prism](https://prismjs.com/) et [Shiki](https://github.com/shikijs/shiki). Pour plus d'informations, veuillez consulter [la documentation sur la coloration syntaxique](/custom/highlighters).
 
@@ -104,3 +153,18 @@ N'oubliez pas non plus de spécifier les surligneurs pris en charge dans votre `
   }
 }
 ```
+
+### Slidev Version
+
+If the theme is relying on a specific feature of Slidev that are newly introduced, you can set the minimal Slidev version required to have your theme working properly:
+
+```json
+// package.json
+{
+  "engines": {
+    "slidev": ">=0.19.3"
+  }
+}
+```
+
+If users are using older versions of Slidev, an error will be thrown.

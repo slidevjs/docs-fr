@@ -26,7 +26,19 @@ routerMode: 'history'
 aspectRatio: '16/9'
 # largeur réelle du canevas, unité en px
 canvasWidth: 980
+<<<<<<< HEAD
 # Le frontmatter par défaut s'applique à toutes les diapositives
+=======
+
+# fonts will be auto imported from Google fonts
+# Learn more: https://sli.dev/custom/fonts
+fonts:
+  sans: 'Roboto'
+  serif: 'Roboto Slab'
+  mono: 'Fira Code'
+
+# default frontmatter applies to all slides
+>>>>>>> ebf9abaa42c2dbfabfc2218bf88daf49b3b82ec3
 defaults:
   layout: 'default'
   # ...
