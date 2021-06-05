@@ -10,23 +10,14 @@ Ensuite, vous pouvez le modifier et jouer avec. Vous pouvez également vous réf
 
 ## Aptitude
 
-Un thème peut contribuer aux points suivants:
+Un thème peut contribuer aux points suivants :
 
-<<<<<<< HEAD
 - Styles globaux
-- Fournir des polices Web
+- Fournir des configurations par défaut (police, schéma de couleurs, surligneurs, etc.)
 - Fournir des mises en page personnalisées ou remplacer celle existante
 - Fournir des composants personnalisés ou remplacer l'existant
-- Étendre les configurations CSS Windi
+- Étendre les configurations de WindiCSS 
 - Configurer des outils comme Monaco et Prism
-=======
-- Global styles
-- Provide default configurations (fonts, color schema, highlighters, etc.)
-- Provide custom layouts or override the existing one
-- Provide custom components or override the existing one
-- Extend Windi CSS configurations
-- Configure tools like Monaco and Prism
->>>>>>> ebf9abaa42c2dbfabfc2218bf88daf49b3b82ec3
 
 ## Conventions
 
@@ -37,11 +28,7 @@ Les thèmes sont publiés dans le registre npm et doivent respecter les conventi
 
 ## Installer
 
-<<<<<<< HEAD
-Pour configurer le terrain de jeu de test pour votre thème, vous pouvez créer `example.md` avec le frontmatter suivant, pour indiquer à Slidev que vous n'héritez d'aucun thème existant.
-=======
-To set up the testing playground for your theme, you can create `example.md` with the following frontmatter, to tell Slidev you are using the current directory as a theme.
->>>>>>> ebf9abaa42c2dbfabfc2218bf88daf49b3b82ec3
+Pour configurer le terrain de jeu de test pour votre thème, vous pouvez créer `example.md` avec le frontmatter suivant, pour dire à Slidev que vous utilisez le répertoire actuel comme thème.
 
 ```md
 ---
@@ -67,14 +54,11 @@ Pour publier votre thème, lancez simplement `npm publish` et vous êtes prêt �
 
 Les points de contribution de thème suivent les mêmes conventions que la personnalisation locale, veuillez vous référer à [la documentation pour les conventions](/custom/).
 
-<<<<<<< HEAD
-## Schéma de couleurs
-=======
-## Default Configurations
+## Configurations par défaut
 
-> Available since v0.19
+> Disponible depuis v0.19
 
-A theme can provide default [configurations](/custom/#frontmatter-configures) via `package.json`.
+Un thème peut fournir des [configurations par défaut](/custom/#frontmatter-configures) via `package.json`
 
 ```json
 // package.json
@@ -92,14 +76,13 @@ A theme can provide default [configurations](/custom/#frontmatter-configures) vi
 }
 ```
 
-Fonts will be auto imported from [Google Fonts](https://fonts.google.com/).
+Les polices seront importées automatiquement depuis [Google Fonts](https://fonts.google.com/).
 
-Learn more about [fonts](/custom/fonts) and [frontmatter configurations](/custom/#frontmatter-configures).
+En savoir plus sur les [polices](/custom/fonts) et sur les [configurations frontmatter](/custom/#frontmatter-configures).
 
-## Theme Metadata
+## Métadonnées du thème
 
 ### Color Schema
->>>>>>> ebf9abaa42c2dbfabfc2218bf88daf49b3b82ec3
 
 Par défaut, Slidev suppose que les thèmes prennent en charge à la fois le mode clair et le mode sombre. Si vous voulez seulement que votre thème soit présenté dans un schéma de couleurs conçu, vous devrez le spécifier explicitement dans `package.json`
 
@@ -120,24 +103,20 @@ Par défaut, Slidev suppose que les thèmes prennent en charge à la fois le mod
 Pour accéder au mode sombre lors de la création de vos styles de thème, vous pouvez envelopper le css spécifique au mode sombre dans une classe `dark`:
 
 ```css
-/* general css here */
+/* css general ici */
 
 html:not(.dark) {
-  /* light mode css here */
+  /* css mode clair ici */
 }
 
 html.dark {
-  /* dark mode css here */
+  /* css mode sombre ici */
 }
 ```
 
-Slidev bascule une classe `dark` sur l'élément` html` de la page pour changer de schéma de couleur.
+Slidev bascule une classe `dark` sur l'élément `html` de la page pour changer de schéma de couleur.
 
-<<<<<<< HEAD
 ## Surligneur
-=======
-### Highlighter
->>>>>>> ebf9abaa42c2dbfabfc2218bf88daf49b3b82ec3
 
 Les couleurs de mise en évidence de la syntaxe sont également fournies dans le thème. Nous prenons en charge à la fois [Prism](https://prismjs.com/) et [Shiki](https://github.com/shikijs/shiki). Pour plus d'informations, veuillez consulter [la documentation sur la coloration syntaxique](/custom/highlighters).
 
@@ -154,9 +133,9 @@ N'oubliez pas non plus de spécifier les surligneurs pris en charge dans votre `
 }
 ```
 
-### Slidev Version
+### Version de Slidev
 
-If the theme is relying on a specific feature of Slidev that are newly introduced, you can set the minimal Slidev version required to have your theme working properly:
+Si le thème repose sur une fonctionnalité spécifique de Slidev récemment introduite, vous pouvez définir la version minimale de Slidev requise pour que votre thème fonctionne correctement :
 
 ```json
 // package.json
@@ -167,4 +146,4 @@ If the theme is relying on a specific feature of Slidev that are newly introduce
 }
 ```
 
-If users are using older versions of Slidev, an error will be thrown.
+Si les utilisateurs utilisent des versions plus anciennes de Slidev, une erreur sera générée.
