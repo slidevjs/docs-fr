@@ -8,7 +8,7 @@ Slidev fournit deux couches pour cet usage, créez `global-top.vue` ou `global-b
 
 Relation des couches :
 
-- Sommet mondial (`global-top.vue`)
+- Global Top (`global-top.vue`)
 - Diapositives
 - Global Bottom (`global-bottom.vue`)
 
