@@ -32,7 +32,7 @@ Vous pouvez directement utiliser les composants Windi CSS et Vue pour styliser e
 
 ## Front Matter & Layouts
 
-Vous pouvez spécifier des mises en page et d'autres métadonnées pour chaque diapositive en convertissant les séparateurs en [blocs de présentation](https://jekyllrb.com/docs/front-matter/). Chaque avant-propos commence par un triple tiret et se termine par un autre. Les textes entre eux sont des objets de données au format [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/). Par exemple:
+Vous pouvez spécifier des mises en page et d'autres métadonnées pour chaque diapositive en convertissant les séparateurs en [blocs de présentation](https://jekyllrb.com/docs/front-matter/). Chaque avant-propos commence par un triple tiret et se termine par un autre. Les textes entre eux sont des objets de données au format [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/). Par exemple :
 
 ~~~md
 ---
@@ -47,7 +47,7 @@ Ceci est la page de garde.
 layout: center
 background: './images/background-1.png'
 class: 'text-white'
----​
+---
 
 # Page 2
 
@@ -197,7 +197,7 @@ Vous pouvez parcourir et rechercher toutes les icônes disponibles avec [Icônes
 
 ### Icônes de style
 
-Vous pouvez styliser les icônes comme les autres éléments HTML. Par exemple:
+Vous pouvez styliser les icônes comme les autres éléments HTML. Par exemple :
 
 ```html
 <uim-rocket />
@@ -209,9 +209,88 @@ Vous pouvez styliser les icônes comme les autres éléments HTML. Par exemple:
 <uim-rocket class="text-3xl text-red-400 mx-2" />
 <uim-rocket class="text-3xl text-orange-400 animate-ping ml-2" />
 
+## Emplacements
+
+> Disponible depuis v0.18
+
+Certaines mises en page peuvent fournir de multiples points de contributions utilisant [Les emplacements nommés de Vue](https://v3.vuejs.org/guide/component-slots.html). 
+
+Par exemple, dans [la mise en page `two-cols`](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts/two-cols.vue), vous pouvez avoir deux colonnes à gauche (emplacement `par défaut`) et à droite (emplacement de `droite`) côte à côte.
+
+```md
+---
+layout: two-cols
+---
+
+<template v-slot:default>
+
+# Gauche
+
+Cela apparaît sur la gauche
+
+</template>
+<template v-slot:right>
+
+# Droite
+
+Cela apparaît sur la droite
+
+<template>
+```
+
+<div class="grid grid-cols-2 rounded border border-gray-400 border-opacity-50 px-10 pb-4">
+<div>
+
+<h3>Gauche</h3>
+<p>Cela apparaît sur la gauche</p>
+</div>
+<div>
+<h3>Droite</h3>
+<p>Cela apparaît sur la droite</p>
+</div>
+</div>
+
+Nous fournissons également une syntaxe abrégée `::name :: ` pour le nom de l'emplacement. L'exemple suivant fonctionne exactement de la même manière que le précédent.
+
+```md
+---
+layout: two-cols
+---
+
+# Gauche
+
+Cela apparaît sur la gauche
+
+::right::
+
+# Droite
+
+Cela apparaît sur la droite
+```
+
+Vous pouvez également spécifier explicitement l'emplacement par défaut et fournir dans un ordre personnalisé
+
+```md
+---
+layout: two-cols
+---
+
+::right::
+
+# Droite
+
+Cela apparaît sur la droite
+
+::default::
+
+# Gauche
+
+Cela apparaît sur la gauche
+```
+
 ## Configurations
 
-Toutes les configurations nécessaires peuvent être définies dans le fichier Markdown. Par exemple:
+Toutes les configurations nécessaires peuvent être définies dans le fichier Markdown. Par exemple :
 
 ```md
 ---
@@ -267,7 +346,7 @@ En savoir plus: [Démo](https://sli.dev/demo/starter/8) | [KaTeX](https://katex.
 
 Vous pouvez également créer des diagrammes / graphiques à partir de descriptions textuelles dans votre Markdown, alimenté par [Mermaid](https://mermaid-js.github.io/mermaid).
 
-Les blocs de code marqués comme `mermaid` seront convertis en digrammes, par exemple:
+Les blocs de code marqués comme `mermaid` seront convertis en digrammes, par exemple :
 
 ~~~md
 //```mermaid
@@ -292,8 +371,11 @@ En savoir plus: [Démo](https://sli.dev/demo/starter/9) | [Mermaid](https://merm
 
 ## Entrées multiples
 
-Depuis la version v0.15.0, we shipped multi-entries support. This means you can split your `slides.md` into multiple files and organize them as you want.
 Depuis la version v0.15.0, nous avons livré le support multi-entrées. Cela signifie que vous pouvez diviser votre `slides.md` en plusieurs fichiers and les organiser comme vous le souhaitez.
+
+> Disponible depuis v0.15
+
+Vous pouvez diviser votre `slides.md` en plusieurs fichiers et les organiser comme vous le souhaitez.
 
 `slides.md` :
 
@@ -345,7 +427,7 @@ background: https://sli.dev/foo.png
 Page de couverture
 ```
 
-Ils finiront par être équivalents à la page suivante:
+Ils finiront par être équivalents à la page suivante :
 
 ```md
 ---
@@ -361,7 +443,7 @@ Page de couverture
 
 ### Réutilisation de la page
 
-Avec la prise en charge des entrées multiples, la réutilisation des pages peut être simple. Par exemple:
+Avec la prise en charge des entrées multiples, la réutilisation des pages peut être simple. Par exemple :
 
 ```yaml
 ---

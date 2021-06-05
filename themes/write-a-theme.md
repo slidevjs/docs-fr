@@ -1,6 +1,6 @@
 # Ecrire un thème
 
-Pour commencer, nous vous recommandons d'utiliser notre générateur pour échafauder votre premier thème
+Pour commencer, nous vous recommandons d'utiliser notre générateur pour créer votre premier thème
 
 ```bash
 $ npm init slidev-theme
@@ -10,29 +10,29 @@ Ensuite, vous pouvez le modifier et jouer avec. Vous pouvez également vous réf
 
 ## Aptitude
 
-Un thème peut contribuer aux points suivants:
+Un thème peut contribuer aux points suivants :
 
 - Styles globaux
-- Fournir des polices Web
+- Fournir des configurations par défaut (police, schéma de couleurs, surligneurs, etc.)
 - Fournir des mises en page personnalisées ou remplacer celle existante
 - Fournir des composants personnalisés ou remplacer l'existant
-- Étendre les configurations CSS Windi
+- Étendre les configurations de WindiCSS 
 - Configurer des outils comme Monaco et Prism
 
 ## Conventions
 
-Les thèmes sont publiés dans le registre npm et doivent respecter les conventions ci-dessous:
+Les thèmes sont publiés dans le registre npm et doivent respecter les conventions ci-dessous :
 
 - Le nom du package doit commencer par `slidev-theme-`, par exemple: `slidev-theme-awesome`
-- Ajoutez `slidev-theme` et` slidev` dans le champ `keywords` de votre` package.json`
+- Ajoutez `slidev-theme` et `slidev` dans le champ `keywords` de votre `package.json`
 
 ## Installer
 
-Pour configurer le terrain de jeu de test pour votre thème, vous pouvez créer `example.md` avec le frontmatter suivant, pour indiquer à Slidev que vous n'héritez d'aucun thème existant.
+Pour configurer le terrain de jeu de test pour votre thème, vous pouvez créer `example.md` avec le frontmatter suivant, pour dire à Slidev que vous utilisez le répertoire actuel comme thème.
 
 ```md
 ---
-theme: none
+theme: ./
 ---
 ```
 
@@ -50,11 +50,39 @@ En option, vous pouvez également ajouter des scripts à votre `package.json`
 }
 ```
 
-Pour publier votre thème, lancez simplement `npm publish` et vous êtes prêt à partir. Il n'y a pas de processus de construction requis (ce qui signifie que vous pouvez publier directement les fichiers `.vue` et` .ts`, Slidev est assez intelligent pour les comprendre).
+Pour publier votre thème, lancez simplement `npm publish` et vous êtes prêt à partir. Il n'y a pas de processus de construction requis (ce qui signifie que vous pouvez publier directement les fichiers `.vue` et `.ts`, Slidev est assez intelligent pour les comprendre).
 
 Les points de contribution de thème suivent les mêmes conventions que la personnalisation locale, veuillez vous référer à [la documentation pour les conventions](/custom/).
 
-## Schéma de couleurs
+## Configurations par défaut
+
+> Disponible depuis v0.19
+
+Un thème peut fournir des [configurations par défaut](/custom/#frontmatter-configures) via `package.json`
+
+```json
+// package.json
+{
+  "slidev": {
+    "default": {
+      "aspectRatio": "16/9",
+      "canvasWidth": 980,
+      "fonts": {
+        "sans": "Robot",
+        "mono": "Fira Code"
+      }
+    }
+  }
+}
+```
+
+Les polices seront importées automatiquement depuis [Google Fonts](https://fonts.google.com/).
+
+En savoir plus sur les [polices](/custom/fonts) et sur les [configurations frontmatter](/custom/#frontmatter-configures).
+
+## Métadonnées du thème
+
+### Color Schema
 
 Par défaut, Slidev suppose que les thèmes prennent en charge à la fois le mode clair et le mode sombre. Si vous voulez seulement que votre thème soit présenté dans un schéma de couleurs conçu, vous devrez le spécifier explicitement dans `package.json`
 
@@ -75,18 +103,18 @@ Par défaut, Slidev suppose que les thèmes prennent en charge à la fois le mod
 Pour accéder au mode sombre lors de la création de vos styles de thème, vous pouvez envelopper le css spécifique au mode sombre dans une classe `dark`:
 
 ```css
-/* general css here */
+/* css general ici */
 
 html:not(.dark) {
-  /* light mode css here */
+  /* css mode clair ici */
 }
 
 html.dark {
-  /* dark mode css here */
+  /* css mode sombre ici */
 }
 ```
 
-Slidev bascule une classe `dark` sur l'élément` html` de la page pour changer de schéma de couleur.
+Slidev bascule une classe `dark` sur l'élément `html` de la page pour changer de schéma de couleur.
 
 ## Surligneur
 
@@ -104,3 +132,18 @@ N'oubliez pas non plus de spécifier les surligneurs pris en charge dans votre `
   }
 }
 ```
+
+### Version de Slidev
+
+Si le thème repose sur une fonctionnalité spécifique de Slidev récemment introduite, vous pouvez définir la version minimale de Slidev requise pour que votre thème fonctionne correctement :
+
+```json
+// package.json
+{
+  "engines": {
+    "slidev": ">=0.19.3"
+  }
+}
+```
+
+Si les utilisateurs utilisent des versions plus anciennes de Slidev, une erreur sera générée.

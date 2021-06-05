@@ -90,6 +90,10 @@ const Customizations = [
     link: '/custom/directory-structure',
   },
   {
+    text: 'Polices',
+    link: '/custom/fonts',
+  },
+  {
     text: 'Surligneurs',
     link: '/custom/highlighters',
   },
@@ -117,6 +121,14 @@ const Customizations = [
     text: 'Configurer Mermaid',
     link: '/custom/config-mermaid',
   },
+  {
+    text: 'Vue Global Context',
+    link: '/custom/vue-context',
+  },
+  {
+    text: 'Global Layers',
+    link: '/custom/global-layers',
+  }
 ]
 
 const Resources = [

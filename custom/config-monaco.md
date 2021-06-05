@@ -4,7 +4,7 @@
 
 > Par défaut, uniquement Monaco est activé uniquement en mode développement. Pour le faire fonctionner sur la version SPA, ajoutez `monaco: true` à vos configurations frontmatter.
 
-Créer `./setup/monaco.ts` avec le contenu suivant:
+Créer `./setup/monaco.ts` avec le contenu suivant :
 
 ```ts
 import { defineMonacoSetup } from '@slidev/types'
@@ -18,7 +18,7 @@ En savoir plus sur [la configuration de Monaco](https://github.com/Microsoft/mon
 
 ## Utilisation
 
-Pour utiliser Monaco dans vos diapositives, ajoutez simplement `{monaco}` à vos extraits de code:
+Pour utiliser Monaco dans vos diapositives, ajoutez simplement `{monaco}` à vos extraits de code :
 
 ~~~js
 //```js
@@ -46,7 +46,7 @@ plusOne.value++ // error
 
 ## Exporter
 
-Par défaut, Monaco fonctionnera UNIQUEMENT en mode `dev`. Si vous souhaitez également l'avoir disponible dans le SPA exporté, vous pouvez le configurer dans votre frontmatter:
+Par défaut, Monaco fonctionnera UNIQUEMENT en mode `dev`. Si vous souhaitez également l'avoir disponible dans le SPA exporté, vous pouvez le configurer dans votre frontmatter :
 
 ```yaml
 ---
