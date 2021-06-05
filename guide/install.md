@@ -6,13 +6,13 @@
 
 La meilleure façon de commencer est d'utiliser notre modèle de démarrage officiel.
 
-Avec NPM:
+Avec NPM :
 
 ```bash
 $ npm init slidev@latest
 ```
 
-Avec Yarn:
+Avec Yarn :
 
 ```bash
 $ yarn create slidev
@@ -44,13 +44,7 @@ $ npx slidev
 
 ## Installer globalement
 
-<<<<<<< HEAD
-Depuis la version v0.14.0, nous avons livré un support d'installation global **expérimental**. Vous pouvez l'installer avec la commande suivante
-=======
-> Available since v0.14
-
-You can install Slidev globally with the following command
->>>>>>> aa3bde2c57d659efb1d2071a573574c0a9e545c6
+Vous pouvez installer SLidev globallement avec la commande suivante :
 
 ```bash
 $ npm i -g @slidev/cli

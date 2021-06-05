@@ -47,7 +47,7 @@ Ceci est la page de garde.
 layout: center
 background: './images/background-1.png'
 class: 'text-white'
----​
+---
 
 # Page 2
 
@@ -209,13 +209,13 @@ Vous pouvez styliser les icônes comme les autres éléments HTML. Par exemple:
 <uim-rocket class="text-3xl text-red-400 mx-2" />
 <uim-rocket class="text-3xl text-orange-400 animate-ping ml-2" />
 
-## Slots
+## Emplacements
 
-> Available since v0.18
+> Disponible depuis v0.18
 
-Some layouts can provide multiple contributing points using [Vue's named slots](https://v3.vuejs.org/guide/component-slots.html).
+Certaines mises en page peuvent fournir de multiples points de contributions utilisant [Les emplacements nommés de Vue](https://v3.vuejs.org/guide/component-slots.html). 
 
-For example, in [`two-cols` layout](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts/two-cols.vue), you can have two columns left (`default` slot) and right (`right` slot) side by side.
+Par exemple, dans [la mise en page `two-cols`](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts/two-cols.vue), vous pouvez avoir deux colonnes à gauche (emplacement `par défaut`) et à droite (emplacement de `droite`) côte à côte.
 
 ```md
 ---
@@ -224,50 +224,51 @@ layout: two-cols
 
 <template v-slot:default>
 
-# Left
+# Gauche
 
-This shows on the left
+Cela apparaît sur la gauche
 
 </template>
 <template v-slot:right>
 
-# Right
+# Droite
 
-This shows on the right
+Cela apparaît sur la droite
 
 <template>
 ```
 
 <div class="grid grid-cols-2 rounded border border-gray-400 border-opacity-50 px-10 pb-4">
 <div>
-<h3>Left</h3>
-<p>This shows on the left</p>
+<h3>Gauche</h3>
+<p>Cela apparaît sur la gauche</p>
 </div>
 <div>
-<h3>Right</h3>
-<p>This shows on the right</p>
+<h3>Droite</h3>
+<p>Cela apparaît sur la droite</p>
 </div>
 </div>
 
-We also provide a shorthand syntax sugar `::name::` for slot name. The following example works exactly the same as the previous one.
+Nous fournissons également une syntaxe abrégée `::name :: ` pour le nom de l'emplacement. L'exemple suivant fonctionne exactement de la même manière que le précédent.
+
 
 ```md
 ---
 layout: two-cols
 ---
 
-# Left
+# Gauche
 
-This shows on the left
+Cela apparaît sur la gauche
 
 ::right::
 
-# Right
+# Droite
 
-This shows on the right
+Cela apparaît sur la droite
 ```
 
-You can also explicitly specify the default slot and provide in custom order
+Vous pouvez également spécifier explicitement l'emplacement par défaut et fournir dans un ordre personnalisé
 
 ```md
 ---
@@ -276,20 +277,20 @@ layout: two-cols
 
 ::right::
 
-# Right
+# Droite
 
-This shows on the right
+Cela apparaît sur la droite
 
 ::default::
 
-# Left
+# Gauche
 
-This shows on the left
+Cela apparaît sur la gauche
 ```
 
 ## Configurations
 
-Toutes les configurations nécessaires peuvent être définies dans le fichier Markdown. Par exemple:
+Toutes les configurations nécessaires peuvent être définies dans le fichier Markdown. Par exemple :
 
 ```md
 ---
