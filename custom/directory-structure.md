@@ -179,9 +179,9 @@ Le fichier `index.html` final hébergé sera :
 </html>
 ```
 
-## Global Layers
+## Couches globales
 
-Conventions: `global-top.vue` / `global-bottom.vue`
+Conventions : `global-top.vue` | `global-bottom.vue`
 
-Learn more: [Global Layers](/custom/global-layers)
+En savoir plus: [Couches globales](/custom/global-layers)
 

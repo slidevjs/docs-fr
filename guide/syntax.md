@@ -240,6 +240,7 @@ Cela apparaît sur la droite
 
 <div class="grid grid-cols-2 rounded border border-gray-400 border-opacity-50 px-10 pb-4">
 <div>
+
 <h3>Gauche</h3>
 <p>Cela apparaît sur la gauche</p>
 </div>
@@ -250,7 +251,6 @@ Cela apparaît sur la droite
 </div>
 
 Nous fournissons également une syntaxe abrégée `::name :: ` pour le nom de l'emplacement. L'exemple suivant fonctionne exactement de la même manière que le précédent.
-
 
 ```md
 ---
@@ -371,14 +371,11 @@ En savoir plus: [Démo](https://sli.dev/demo/starter/9) | [Mermaid](https://merm
 
 ## Entrées multiples
 
-<<<<<<< HEAD
-Depuis la version v0.15.0, we shipped multi-entries support. This means you can split your `slides.md` into multiple files and organize them as you want.
 Depuis la version v0.15.0, nous avons livré le support multi-entrées. Cela signifie que vous pouvez diviser votre `slides.md` en plusieurs fichiers and les organiser comme vous le souhaitez.
-=======
-> Available since v0.15
 
-You can split your `slides.md` into multiple files and organize them as you want.
->>>>>>> aa3bde2c57d659efb1d2071a573574c0a9e545c6
+> Disponible depuis v0.15
+
+Vous pouvez diviser votre `slides.md` en plusieurs fichiers et les organiser comme vous le souhaitez.
 
 `slides.md` :
 

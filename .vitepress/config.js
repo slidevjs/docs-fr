@@ -90,6 +90,10 @@ const Customizations = [
     link: '/custom/directory-structure',
   },
   {
+    text: 'Polices',
+    link: '/custom/fonts',
+  },
+  {
     text: 'Surligneurs',
     link: '/custom/highlighters',
   },

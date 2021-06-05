@@ -46,6 +46,10 @@ $ npx slidev
 
 Vous pouvez installer SLidev globallement avec la commande suivante :
 
+> Disponible depuis v0.14
+
+Vous pouvez installer Slidev globalement avec la commande suivante
+
 ```bash
 $ npm i -g @slidev/cli
 ```
