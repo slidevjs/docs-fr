@@ -29,7 +29,7 @@ $ slidev export --format png
 
 ## Single-Page Application (SPA)
 
-Vous pouvez également créer les diapositives dans un SPA auto-hébergeable:
+Vous pouvez également créer les diapositives dans un SPA auto-hébergeable :
 
 ```bash
 $ slidev build
@@ -39,7 +39,7 @@ L'application générée sera disponible sous `dist/` et vous pourrez ensuite l'
 
 ### Chemin de base
 
-Pour déployer vos diapositives sous des sous-itinéraires, vous devrez passer l'option `--base`. Par exemple:
+Pour déployer vos diapositives sous des sous-itinéraires, vous devrez passer l'option `--base`. Par exemple :
 
 ```bash
 $ slidev build --base /talks/my-cool-talk/
@@ -49,7 +49,7 @@ Reportez-vous à la [documentation de Vite](https://vitejs.dev/guide/build.html#
 
 ### Fournir un PDF téléchargeable
 
-Vous pouvez fournir un PDF téléchargeable aux téléspectateurs de votre SPA. Vous pouvez l'activer avec la configuration suivante:
+Vous pouvez fournir un PDF téléchargeable aux téléspectateurs de votre SPA. Vous pouvez l'activer avec la configuration suivante :
 
 ```md
 ---

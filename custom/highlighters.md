@@ -1,6 +1,6 @@
 Surligneurs
 
-Slidev est livré avec deux surligneurs de syntaxe parmi lesquels vous pouvez choisir:
+Slidev est livré avec deux surligneurs de syntaxe parmi lesquels vous pouvez choisir :
 
 - [Prism](https://prismjs.com/)
 - [Shiki](https://github.com/shikijs/shiki)
@@ -11,12 +11,12 @@ Slidev est livré avec deux surligneurs de syntaxe parmi lesquels vous pouvez ch
 
 Les thèmes Slidev prennent généralement en charge Prism et Shiki, mais selon le thème que vous utilisez, il se peut qu'il ne prenne en charge que l'un d'entre eux.
 
-Lorsque vous avez le choix, le compromis est essentiellement:
+Lorsque vous avez le choix, le compromis est essentiellement :
 
 - **Prism** pour une personnalisation plus facile
 - **Shiki** pour une mise en évidence plus précise
 
-Par défaut, Slidev utilise Prism. Vous pouvez le changer en modifiant votre frontmatter:
+Par défaut, Slidev utilise Prism. Vous pouvez le changer en modifiant votre frontmatter :
 
 ```yaml
 ---
@@ -32,7 +32,7 @@ Pour configurer votre Prism, vous pouvez simplement importer le thème css ou ut
 
 <Environment type="node" />
 
-Créer un fichier `./setup/shiki.ts` avec le contenu suivant:
+Créer un fichier `./setup/shiki.ts` avec le contenu suivant :
 
 ```ts
 /* ./setup/shiki.ts */
@@ -50,7 +50,7 @@ export default defineShikiSetup(() => {
 
 Reportez-vous à la [documentation de Shiki](https://github.com/shikijs/shiki/blob/master/docs/themes.md#all-themes) pour les noms de thèmes disponibles.
 
-Ou si vous souhaitez utiliser votre propre thème:
+Ou si vous souhaitez utiliser votre propre thème :
 
 ```ts
 /* ./setup/shiki.ts */

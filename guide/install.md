@@ -24,7 +24,7 @@ Il contient également la configuration de base et une courte démo avec des ins
 
 ## Installer manuellement
 
-Si vous préférez toujours installer Slidev manuellement ou souhaitez l'intégrer dans vos projets existants, vous pouvez faire:
+Si vous préférez toujours installer Slidev manuellement ou souhaitez l'intégrer dans vos projets existants, vous pouvez faire :
 
 ```bash
 $ npm install @slidev/cli @slidev/theme-default
@@ -44,7 +44,7 @@ $ npx slidev
 
 ## Installer globalement
 
-Depuis la version v0.14.0, nous avons livré un support d'installation global **expérimental**. Vous pouvez l'installer avec la commande suivante
+Vous pouvez installer SLidev globallement avec la commande suivante :
 
 > Disponible depuis v0.14
 
