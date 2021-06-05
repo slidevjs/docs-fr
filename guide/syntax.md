@@ -47,7 +47,7 @@ Ceci est la page de garde.
 layout: center
 background: './images/background-1.png'
 class: 'text-white'
----​
+---
 
 # Page 2
 
@@ -209,6 +209,85 @@ Vous pouvez styliser les icônes comme les autres éléments HTML. Par exemple :
 <uim-rocket class="text-3xl text-red-400 mx-2" />
 <uim-rocket class="text-3xl text-orange-400 animate-ping ml-2" />
 
+## Emplacements
+
+> Disponible depuis v0.18
+
+Certaines mises en page peuvent fournir de multiples points de contributions utilisant [Les emplacements nommés de Vue](https://v3.vuejs.org/guide/component-slots.html). 
+
+Par exemple, dans [la mise en page `two-cols`](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts/two-cols.vue), vous pouvez avoir deux colonnes à gauche (emplacement `par défaut`) et à droite (emplacement de `droite`) côte à côte.
+
+```md
+---
+layout: two-cols
+---
+
+<template v-slot:default>
+
+# Gauche
+
+Cela apparaît sur la gauche
+
+</template>
+<template v-slot:right>
+
+# Droite
+
+Cela apparaît sur la droite
+
+<template>
+```
+
+<div class="grid grid-cols-2 rounded border border-gray-400 border-opacity-50 px-10 pb-4">
+<div>
+<h3>Gauche</h3>
+<p>Cela apparaît sur la gauche</p>
+</div>
+<div>
+<h3>Droite</h3>
+<p>Cela apparaît sur la droite</p>
+</div>
+</div>
+
+Nous fournissons également une syntaxe abrégée `::name :: ` pour le nom de l'emplacement. L'exemple suivant fonctionne exactement de la même manière que le précédent.
+
+
+```md
+---
+layout: two-cols
+---
+
+# Gauche
+
+Cela apparaît sur la gauche
+
+::right::
+
+# Droite
+
+Cela apparaît sur la droite
+```
+
+Vous pouvez également spécifier explicitement l'emplacement par défaut et fournir dans un ordre personnalisé
+
+```md
+---
+layout: two-cols
+---
+
+::right::
+
+# Droite
+
+Cela apparaît sur la droite
+
+::default::
+
+# Gauche
+
+Cela apparaît sur la gauche
+```
+
 ## Configurations
 
 Toutes les configurations nécessaires peuvent être définies dans le fichier Markdown. Par exemple :
@@ -292,8 +371,14 @@ En savoir plus: [Démo](https://sli.dev/demo/starter/9) | [Mermaid](https://merm
 
 ## Entrées multiples
 
+<<<<<<< HEAD
 Depuis la version v0.15.0, we shipped multi-entries support. This means you can split your `slides.md` into multiple files and organize them as you want.
 Depuis la version v0.15.0, nous avons livré le support multi-entrées. Cela signifie que vous pouvez diviser votre `slides.md` en plusieurs fichiers and les organiser comme vous le souhaitez.
+=======
+> Available since v0.15
+
+You can split your `slides.md` into multiple files and organize them as you want.
+>>>>>>> aa3bde2c57d659efb1d2071a573574c0a9e545c6
 
 `slides.md` :
 
