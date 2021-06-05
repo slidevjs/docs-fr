@@ -1,6 +1,6 @@
 # Ecrire un thème
 
-Pour commencer, nous vous recommandons d'utiliser notre générateur pour échafauder votre premier thème
+Pour commencer, nous vous recommandons d'utiliser notre générateur pour créer votre premier thème
 
 ```bash
 $ npm init slidev-theme
@@ -10,7 +10,7 @@ Ensuite, vous pouvez le modifier et jouer avec. Vous pouvez également vous réf
 
 ## Aptitude
 
-Un thème peut contribuer aux points suivants:
+Un thème peut contribuer aux points suivants :
 
 - Styles globaux
 - Fournir des polices Web
@@ -21,10 +21,10 @@ Un thème peut contribuer aux points suivants:
 
 ## Conventions
 
-Les thèmes sont publiés dans le registre npm et doivent respecter les conventions ci-dessous:
+Les thèmes sont publiés dans le registre npm et doivent respecter les conventions ci-dessous :
 
 - Le nom du package doit commencer par `slidev-theme-`, par exemple: `slidev-theme-awesome`
-- Ajoutez `slidev-theme` et` slidev` dans le champ `keywords` de votre` package.json`
+- Ajoutez `slidev-theme` et `slidev` dans le champ `keywords` de votre `package.json`
 
 ## Installer
 
@@ -50,7 +50,7 @@ En option, vous pouvez également ajouter des scripts à votre `package.json`
 }
 ```
 
-Pour publier votre thème, lancez simplement `npm publish` et vous êtes prêt à partir. Il n'y a pas de processus de construction requis (ce qui signifie que vous pouvez publier directement les fichiers `.vue` et` .ts`, Slidev est assez intelligent pour les comprendre).
+Pour publier votre thème, lancez simplement `npm publish` et vous êtes prêt à partir. Il n'y a pas de processus de construction requis (ce qui signifie que vous pouvez publier directement les fichiers `.vue` et `.ts`, Slidev est assez intelligent pour les comprendre).
 
 Les points de contribution de thème suivent les mêmes conventions que la personnalisation locale, veuillez vous référer à [la documentation pour les conventions](/custom/).
 
@@ -86,7 +86,7 @@ html.dark {
 }
 ```
 
-Slidev bascule une classe `dark` sur l'élément` html` de la page pour changer de schéma de couleur.
+Slidev bascule une classe `dark` sur l'élément `html` de la page pour changer de schéma de couleur.
 
 ## Surligneur
 

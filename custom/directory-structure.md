@@ -2,7 +2,7 @@
 
 Slidev utilise certaines conventions de structure de répertoires pour minimiser la surface de configuration et rendre les extensions de fonctionnalités flexibles et intuitives.
 
-La structure de base est la suivante:
+La structure de base est la suivante :
 
 ```bash
 your-slidev/
@@ -24,7 +24,7 @@ Conventions: `./components/*.{vue,js,ts,jsx,tsx,md}`
 
 Les composants à l'intérieur de ce répertoire peuvent être directement utilisés dans les diapositives Markdown avec le même nom de composant que le nom de fichier.
 
-Par exemple:
+Par exemple :
 
 ```bash
 your-slidev/
@@ -54,7 +54,7 @@ Slidev fournit également des [composants intégrés](/builtin/components) que v
 
 ## Mises en page
 
-Conventions: `./layouts/*.{vue,js,ts,jsx,tsx}`
+Conventions : `./layouts/*.{vue,js,ts,jsx,tsx}`
 
 ```
 your-slidev/
@@ -74,7 +74,7 @@ layout: my-cool-theme
 
 Si la mise en page que vous fournissez porte le même nom qu'une mise en page intégrée ou une mise en page de thème, votre mise en page personnalisée prévaudra sur la mise en page intégrée / thème. L'ordre de priorité est `local > thème > intégré`.
 
-Dans le composant de mise en page, utilisez `<slot />` pour le contenu de la diapositive. Par exemple:
+Dans le composant de mise en page, utilisez `<slot />` pour le contenu de la diapositive. Par exemple :
 
 ```html
 <!-- default.vue -->
@@ -87,13 +87,13 @@ Dans le composant de mise en page, utilisez `<slot />` pour le contenu de la dia
 
 ## Public
 
-Conventions: `./public/*`
+Conventions : `./public/*`
 
 Les actifs de ce répertoire seront servis à la racine du chemin `/` pendant le développement, et copiés à la racine du répertoire dist tels quels. En savoir plus sur [le répertoire `public` de Vite](https://vitejs.dev/guide/assets.html#the-public-directory).
 
 ## Style
 
-Conventions: `./style.css` | `./styles/index.{css,js,ts}`
+Conventions : `./style.css` | `./styles/index.{css,js,ts}`
 
 Les fichiers suivant cette convention seront injectés à la racine de l'application. Si vous devez importer plusieurs entrées CSS, vous pouvez créer la structure suivante et gérer vous-même l'ordre d'importation.
 
@@ -115,7 +115,7 @@ import './code.css'
 import './layouts.css'
 ```
 
-Les styles seront traités par [Windi CSS](http://windicss.org/) et [PostCSS](https://postcss.org/), vous pouvez donc utiliser l'imbrication css et [at-directives](https://windicss.org/features/directives.html) prêt à l'emploi. Par exemple:
+Les styles seront traités par [Windi CSS](http://windicss.org/) et [PostCSS](https://postcss.org/), vous pouvez donc utiliser l'imbrication css et [at-directives](https://windicss.org/features/directives.html) prêt à l'emploi. Par exemple :
 
 ```less
 .slidev-layout {
@@ -139,11 +139,11 @@ Les styles seront traités par [Windi CSS](http://windicss.org/) et [PostCSS](ht
 
 ## `index.html`
 
-Conventions: `index.html`
+Conventions : `index.html`
 
-Le `index.html` offre la possibilité d'injecter des balises meta et/ou des scripts dans le` index.html` principal
+Le `index.html` offre la possibilité d'injecter des balises meta et/ou des scripts dans le `index.html` principal
 
-Par exemple, pour le `index.html` personnalisé suivant:
+Par exemple, pour le `index.html` personnalisé suivant :
 
 ```html
 <!-- ./index.html -->
@@ -157,7 +157,7 @@ Par exemple, pour le `index.html` personnalisé suivant:
 </body>
 ```
 
-Le fichier `index.html` final hébergé sera:
+Le fichier `index.html` final hébergé sera :
 
 ```html
 <!DOCTYPE html>

@@ -2,7 +2,7 @@
 
 <Environment type="client" />
 
-Créer `./setup/mermaid.ts` avec le contenu suivant:
+Créer `./setup/mermaid.ts` avec le contenu suivant :
 
 ```ts
 import { defineMermaidSetup } from '@slidev/types'

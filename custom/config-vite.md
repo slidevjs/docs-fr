@@ -6,7 +6,7 @@ Slidev est alimenté par [Vite](http://vitejs.dev/) sous le capot. Cela signifie
 
 La configuration `vite.config.ts` sera respectée si vous en avez une.
 
-Slidev a les plugins suivants préconfigurés:
+Slidev a les plugins suivants préconfigurés :
 
 - [@vitejs/plugin-vue](https://github.com/vitejs/vite/tree/main/packages/plugin-vue)
 - [vite-plugin-md](https://github.com/antfu/vite-plugin-md)

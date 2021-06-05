@@ -4,7 +4,7 @@
 
 ### `v-click`
 
-Pour appliquer des "animations de clic" aux éléments, vous pouvez utiliser la directive `v-click` ou les composants` <v-click> `
+Pour appliquer des "animations de clic" aux éléments, vous pouvez utiliser la directive `v-click` ou les composants `<v-click>`
 
 ```md
 # Hello
@@ -26,7 +26,7 @@ Bonjour!
 
 ### `v-after`
 
-L'utilisation de `v-after` est similaire à` v-click` mais cela rendra l'élément visible lorsque le `v-click` précédent sera déclenché.
+L'utilisation de `v-after` est similaire à `v-click` mais cela rendra l'élément visible lorsque le `v-click` précédent sera déclenché.
 
 ```md
 <div v-click>Hello</div>
@@ -54,7 +54,7 @@ Un élément deviendra visible à chaque fois que vous cliquerez sur "suivant".
 
 ### Nombre de clics personnalisés
 
-Par défaut, Slidev compte le nombre d'étapes nécessaires avant de passer à la diapositive suivante. Vous pouvez remplacer ce paramètre en passant l'option frontmatter `clicks`:
+Par défaut, Slidev compte le nombre d'étapes nécessaires avant de passer à la diapositive suivante. Vous pouvez remplacer ce paramètre en passant l'option frontmatter `clicks` :
 
 ```yaml
 ---
@@ -93,7 +93,7 @@ clicks: 3
 
 ### Transitions d'éléments
 
-Lorsque vous appliquez la directive `v-click` à vos éléments, elle y attache le nom de classe` slidev-vclick-target`. Lorsque les éléments sont masqués, le nom de classe `slidev-vclick-hidden` sera également attaché. Par exemple:
+Lorsque vous appliquez la directive `v-click` à vos éléments, elle y attache le nom de classe` slidev-vclick-target`. Lorsque les éléments sont masqués, le nom de classe `slidev-vclick-hidden` sera également attaché. Par exemple :
 
 ```html
 <div class="slidev-vclick-target slidev-vclick-hidden">Text</div>
@@ -105,7 +105,7 @@ Après un clic, il deviendra
 <div class="slidev-vclick-target">Text</div>
 ```
 
-Par défaut, une transition d'opacité subtile est appliquée à ces classes:
+Par défaut, une transition d'opacité subtile est appliquée à ces classes :
 
 ```css
 // the default
@@ -122,7 +122,7 @@ Par défaut, une transition d'opacité subtile est appliquée à ces classes:
 
 Vous pouvez les remplacer pour personnaliser les effets de transition dans vos feuilles de style personnalisées.
 
-Par exemple, vous pouvez réaliser les transitions de mise à l'échelle en:
+Par exemple, vous pouvez réaliser les transitions de mise à l'échelle en :
 
 ```css
 // styles.css
@@ -166,9 +166,9 @@ Slidev a [@vueuse/motion](https://motion.vueuse.org/) intégré. Vous pouvez uti
 </div>
 ```
 
-Le texte `Slidev` passera de` -80px` à sa position d'origine lors de l'initialisation.
+Le texte `Slidev` passera de `-80px` à sa position d'origine lors de l'initialisation.
 
-> Remarque: Slidev précharge la diapositive suivante pour les performances, ce qui signifie que les animations peuvent démarrer avant que vous ne naviguiez vers la page. Pour que cela fonctionne correctement, vous pouvez désactiver le préchargement pour la diapositive particulière
+> Remarque : Slidev précharge la diapositive suivante pour les performances, ce qui signifie que les animations peuvent démarrer avant que vous ne naviguiez vers la page. Pour que cela fonctionne correctement, vous pouvez désactiver le préchargement pour la diapositive particulière
 >
 > ```md
 > ---
