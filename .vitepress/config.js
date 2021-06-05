@@ -122,11 +122,11 @@ const Customizations = [
     link: '/custom/config-mermaid',
   },
   {
-    text: 'Vue Global Context',
+    text: 'Contexte Global Vue',
     link: '/custom/vue-context',
   },
   {
-    text: 'Global Layers',
+    text: 'Couches Globales',
     link: '/custom/global-layers',
   }
 ]
