@@ -1,63 +1,63 @@
 # FAQ
 
-## Grids
+## Grilles
 
-Since Slidev is based on the Web, you can apply any grid layouts as you want. [CSS Grids](https://css-tricks.com/snippets/css/complete-guide-grid/), [flexboxes](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), or even [Masonry](https://css-tricks.com/native-css-masonry-layout-in-css-grid/), you get the full controls.
+Étant donné que Slidev est basé sur le Web, vous pouvez appliquer n'importe quelle disposition de grille à votre guise. [Grilles CSS](https://css-tricks.com/snippets/css/complete-guide-grid/), [flexboxes](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), ou même [Masonry](https://css-tricks.com/native-css-masonry-layout-in-css-grid/), vous obtenez tous les contrôles.
 
-Since we have [Windi CSS](https://windicss.org/) built-in, here is one simple way for you to reference:
+Puisque nous avons [Windi CSS](https://windicss.org/) intégré, voici un moyen simple de référence :
 
 ```html
 <div class="grid grid-cols-2 gap-4">
 <div>
 
-The first column
+La première colonne
 
 </div>
 <div>
 
-The second column
+La seconde colonne
 
 </div>
 </div>
 ```
 
-Go further, you can customize the size of each columns like:
+Pour allez plus loin, vous pouvez personnaliser la taille de chaque colonne comme :
 
 ```html
 <div class="grid grid-cols-[200px,1fr,10%] gap-4">
 <div>
-
-The first column (200px)
-
-</div>
-<div>
-
-The second column (auto fit)
+    
+La première colonne (200px)
 
 </div>
 <div>
 
-The third column (10% width to parent container)
+La seconde colonne (ajustement automatique)
+
+</div>
+<div>
+
+La troisième colonne (10% de largeur jusqu'au conteneur parent)
 
 </div>
 </div>
 ```
 
-Learn more about [Windi CSS Grids](https://windicss.org/utilities/grid.html).
+En savoir plus sur [les grilles Windi CSS](https://windicss.org/utilities/grid.html).
 
-## Positioning
+## Positionnement
 
-Slides are defined in fixed sizes (default `980x552px`) and scale to fit with the user screen. You can safely use absolute position in your slides as they will scale along with the screen.
+Les diapositives sont définies dans des tailles fixes (par défaut `980x552px`) et à l'échelle pour s'adapter à l'écran de l'utilisateur. Vous pouvez utiliser en toute sécurité la position absolue dans vos diapositives car elles évolueront avec l'écran.
 
-For example:
+Par exemple :
 
 ```html
 <div class="absolute left-30px bottom-30px">
-This is a left-bottom aligned footer
+Ceci est un pied de page aligné en bas à gauche
 </div>
 ```
 
-To change the canvas' actual size, you can pass the `canvasWidth` options in your first frontmatter:
+Pour changer la taille réelle du canvas, vous pouvez passer les options `canvasWidth` dans votre premier frontmatter :
 
 ```yaml
 ---
@@ -65,13 +65,13 @@ canvasWidth: 800
 ---
 ```
 
-## Font Size
+## Taille de police
 
-If you feel the font size in your slides are too small, you can adjust it in a few ways:
+Si vous pensez que la taille de la police de vos diapositives est trop petite, vous pouvez l'ajuster de plusieurs manières :
 
-### Override Local Style
+### Remplacer le style local
 
-You can override styles for each slide with the inlined `<style>` tag.
+Vous pouvez remplacer les styles de chaque diapositive avec la balise `<style>` en ligne.
 
 ```md
 # Page 1
@@ -86,14 +86,14 @@ h1 {
 
 # Page 2
 
-This will not be affected.
+Cela ne sera pas affecté.
 ```
 
-Learn more: [Embedded Styles](/guide/syntax.html#embedded-styles)
+En savoir plus: [Styles intégrés](/guide/syntax.html#embedded-styles)
 
-### Override Global Style
+### Remplacer le style global
 
-You can provide custom global styles by creating `./style.css`, for example
+Vous pouvez fournir des styles globaux personnalisés en créant `./style.css`, par exemple
 
 ```css
 /* style.css */ 
@@ -103,23 +103,23 @@ h1 {
 }
 ```
 
-Learn more: [Global Style](/custom/directory-structure.html#style)
+En savoir plus: [Style Global](/custom/directory-structure.html#style)
 
-### Scale the Canvas
+### Mettre à l'échelle le canvas
 
-Changing the canvas' actual size will scale all your contents(text, images, components, etc.) and slides
+Changer la taille réelle du canvas mettra à l'échelle tout votre contenu (texte, images, composants, etc.) et les diapositives
 
 ```yaml
 ---
-# default: 980
-# since the canvas gets smaller, the visual size will become larger
+# defaut : 980
+# puisque la toile devient plus petite, la taille visuelle deviendra plus grande
 canvasWidth: 800
 ---
 ```
 
-### Use Transform
+### Utiliser la transformation
 
-We provide a built-in component `<Transform />`, which is a thin wrapper of CSS transform property.
+Nous fournissons un composant intégré `<Transform />`, qui est un wrapper de la propriété de transformation CSS.
 
 ```md
 <Tranform :scale="1.4">

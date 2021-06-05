@@ -1,17 +1,17 @@
-# Vue Global Context
+# Contexte Global Vue 
 
-Slidev injected a [global Vue context](https://v3.vuejs.org/api/application-config.html#globalproperties) `$slidev` for advanced conditions or navigation controls.
+Slidev a injecté un [contexte global Vue](https://v3.vuejs.org/api/application-config.html#globalproperties) `$slidev` pour les conditions avancées ou les commandes de navigation.
 
 ## Usage
 
-You can access it anywhere in your markdown and Vue template, with the ["Mustache" syntax](https://v3.vuejs.org/guide/template-syntax.html#interpolations).
+Vous pouvez y accéder n'importe où dans votre markdown et modèle Vue, avec la [syntaxe "Mustache"](https://v3.vuejs.org/guide/template-syntax.html#interpolations).
 
 ```md
 <!-- slides.md -->
 
 # Page 1
 
-Current page is: {{ $slidev.nav.currentPage }}
+La page actuelle est : {{ $slidev.nav.currentPage }}
 ```
 
 ```html
@@ -19,55 +19,55 @@ Current page is: {{ $slidev.nav.currentPage }}
 
 <template>
   <div>Title: {{ $slidev.configs.title }}</div>
-  <button @click="$slidev.nav.next">Next Page</button>
+  <button @click="$slidev.nav.next">Page suivante</button>
 </template>
 ```
 
-## Properties
+## Propriétés
 
 ### `$slidev.nav`
 
-A reactive object holding the properties and controls of the slides navigation. For examples:
+Un objet réactif contenant les propriétés et les contrôles de la navigation des diapositives. Par exemple :
 
 ```js
-$slidev.nav.next() // go next step
+$slidev.nav.next() // passer à l'étape suivante
 
-$slidev.nav.nextSlide() // go next slide (skip v-clicks)
+$slidev.nav.nextSlide() // passer à la diapositive suivante (saute les v-clicks)
 
-$slidev.nav.go(10) // go slide #10
+$slidev.nav.go(10) // aller à la diapositive #10
 ```
 
 ```js
-$slidev.nav.currentPage // current slide number
+$slidev.nav.currentPage // numéro de la diapositive actuelle
 
-$slidev.nav.currentLayout // current layout id
+$slidev.nav.currentLayout // ID de mise en page actuelle
 
-$slidev.nav.clicks // current clicks count
+$slidev.nav.clicks // nombre de clics en cours
 ```
 
-For more properties available, refer to the [nav.ts](https://github.com/slidevjs/slidev/blob/main/packages/client/logic/nav.ts) exports.
+Pour plus de propriétés disponibles, reportez-vous aux exportations [nav.ts](https://github.com/slidevjs/slidev/blob/main/packages/client/logic/nav.ts).
 
 ### `$slidev.configs`
 
-A reactive object holding the parsed [configurations in the first frontmatter](/custom/#frontmatter-configures) of your `slides.md`. For example
+Un objet réactif contenant les [configurations analysées dans le premier frontmatter](/custom/#frontmatter-configures) de votre `slides.md`. Par example :
 
 ```yaml
 ---
-title: My First Slidev!
+title: Ma première Slidev
 ---
 ```
 
 ```
-{{ $slidev.configs.title }} // 'My First Slidev!'
+{{ $slidev.configs.title }} // Ma première Slidev
 ```
 
 ### `$slidev.themeConfigs`
 
-A reactive object holding the parsed theme configurations.
+Un objet réactif contenant les configurations de thème analysées.
 
 ```yaml
 ---
-title: My First Slidev!
+title: Ma première Slidev
 themeConfig:
   primary: #213435
 ---

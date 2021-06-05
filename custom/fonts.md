@@ -1,44 +1,44 @@
-# Fonts
+# Polices
 
-> Available since v0.19.3
+> Disponile depuis v0.19.3
 
-While you can use HTML and CSS to custom the fonts and style for your slides as you want, Slidev also provides a convenient way to use them effortlessly.
+Bien que vous puissiez utiliser HTML et CSS pour personnaliser les polices et le style de vos diapositives à votre guise, Slidev offre également un moyen pratique de les utiliser sans effort.
 
-In your fontmatter, configure as following
+Dans votre fontmatter, configurez comme suit :
 
 ```yaml
 ---
 fonts:
-  # basically the text
+  # le texte
   sans: 'Robot'
-  # use with `font-serif` css class from windicss
+  # utiliser avec la classe css `font-serif` de windicss
   serif: 'Robot Slab'
-  # for code blocks, inline code, etc.
+  # pour les blocs de code, le code en ligne, etc.
   mono: 'Fira Code'
 ---
 ```
 
-And that's all.
+Et c'est tout.
 
-Fonts will be **imported automatically from [Google Fonts](https://fonts.google.com/)**. That means you can use any fonts available on Google Fonts directly.
+Les polices seront **importées automatiquement depuis [Google Fonts](https://fonts.google.com/)**. Cela signifie que vous pouvez utiliser directement toutes les polices disponibles sur Google Fonts.
 
-## Local Fonts
+## Polices locales
 
-By default, Slidev assumes all the fonts specified via `fonts` configurations come from Google Fonts. If you want to use local fonts, specify the `fonts.local` to opt-out the auto-importing. 
+Par défaut, Slidev suppose que toutes les polices spécifiées via les configurations `fonts` proviennent de Google Fonts. Si vous souhaitez utiliser des polices locales, spécifiez `fonts.local` pour désactiver l'importation automatique. 
 
 ```yaml
 ---
 fonts:
-  # like font-family in css, you can use `,` to separate multiple fonts for fallback
+  # comme font-family en css, vous pouvez utiliser `,` pour séparer plusieurs polices de secours
   sans: 'Helvetica Neue,Robot'
-  # mark 'Helvetica Neue' as local font
+  # marquer 'Helvetica Neue' comme police locale
   local: 'Helvetica Neue'
 ---
 ```
 
-## Fallback Fonts
+## Polices de remplacement
 
-For most of the scenarios, you only need to specify the "special font" and Slidev will append the fallback fonts for you, for example:
+Pour la plupart des scénarios, il vous suffit de spécifier la "police spéciale" et Slidev ajoutera les polices de secours pour vous, par exemple :
 
 ```yaml
 ---
@@ -49,7 +49,7 @@ fonts:
 ---
 ```
 
-will result in 
+aura pour résultat
 
 ```css
 .font-sans {
@@ -63,7 +63,7 @@ will result in
 }
 ```
 
-If you want to disable the fallback fonts, configure as following
+Si vous souhaitez désactiver les polices de secours, configurez comme suit
 
 ```yaml
 ---
@@ -73,12 +73,12 @@ fonts:
 ---
 ```
 
-## Providers
+## Fournisseurs
 
-- Options: `google` | `none`
-- Default: `google`
+- Options : `google` | `none`
+- Par défaut : `google`
 
-Currently, only Google Fonts is supported, we are planned to add more providers in the future. Specify to `none` will disable the auto-importing feature entirely and treat all the fonts local.
+Actuellement, seules les polices Google sont prises en charge, nous prévoyons d'ajouter d'autres fournisseurs à l'avenir. Spécifier `none` désactivera complètement la fonction d'importation automatique et traitera toutes les polices en local.
 
 ```yaml
 ---
