@@ -23,8 +23,13 @@ Un thème peut contribuer aux points suivants :
 
 Les thèmes sont publiés dans le registre npm et doivent respecter les conventions ci-dessous :
 
+<<<<<<< HEAD
 - Le nom du package doit commencer par `slidev-theme-`, par exemple: `slidev-theme-awesome`
 - Ajoutez `slidev-theme` et `slidev` dans le champ `keywords` de votre `package.json`
+=======
+- Package name should start with `slidev-theme-`, for example: `slidev-theme-awesome`
+- Add `slidev-theme` and `slidev` in the `keywords` field of your `package.json`
+>>>>>>> 010799691b5c572dba187a5a8bdae3ba6abb319d
 
 ## Installer
 
