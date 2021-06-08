@@ -38,7 +38,7 @@ En savoir plus sur [notre pile technologique](/guide/#pile-technologique).
 
 ## Interactif et expressif
 
-Vous pouvez écrire des composants Vue personnalisés et les utiliser directement dans votre fichier markdown. Vous pouvez également interagir avec eux dans la présentation pour exprimer votre idée de manière plus intersertive et intuitive.
+Vous pouvez écrire des composants Vue personnalisés et les utiliser directement dans votre fichier markdown. Vous pouvez également interagir avec eux dans la présentation pour exprimer votre idée de manière plus intéressante et intuitive.
 
 ## Prise en charge de l'enregistrement
 
