@@ -10,21 +10,32 @@
       <NavLinks />
     </div>
 
-    <div class="nav-icons">
-      <div class="item mr-1.5">
-        <a class="nav-btn" href="https://twitter.com/Slidevjs" target="_blank" aria-label="Twitter">
-          <ri-twitter-line />
-        </a>
-      </div>
-
-      <div v-if="repo" class="item">
-        <a class="nav-btn" href="https://github.com/slidevjs/slidev"  target="_blank" aria-label="View GitHub Repo">
-          <ri-github-line />
+    <div class="nav-icons mr-2">
+      <div class="item">
+        <a class="nav-btn" href="https://chat.sli.dev" target="_blank" aria-label="Discord">
+          <ri-discord-fill />
         </a>
       </div>
 
       <div class="item">
-        <dark-mode-switch />
+        <a class="nav-btn" href="https://twitter.com/Slidevjs" target="_blank" aria-label="Twitter">
+          <ri-twitter-fill />
+        </a>
+      </div>
+
+      <div v-if="repo" class="item">
+<<<<<<< HEAD
+        <a class="nav-btn" href="https://github.com/slidevjs/slidev"  target="_blank" aria-label="View GitHub Repo">
+          <ri-github-line />
+=======
+        <a class="nav-btn" href="https://github.com/slidevjs/slidev" target="_blank" aria-label="View GitHub Repo">
+          <ri-github-fill />
+>>>>>>> e3f2b5b9036a3ee3ae4affad7388d21f15208d7d
+        </a>
+      </div>
+
+      <div class="item">
+        <dark-mode-switch class="m-0 p-0"/>
       </div>
     </div>
 
@@ -98,14 +109,9 @@ defineProps({
 }
 
 .nav-icons {
-  display: flex;
-  padding: 2px 0 0;
   align-items: center;
   border-bottom: 0;
   margin-left: 12px;
-}
-
-.nav-icons .item {
-  padding-left: 12px;
+  @apply flex gap-3 pl-2;
 }
 </style>

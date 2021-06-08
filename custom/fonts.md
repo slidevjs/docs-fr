@@ -1,6 +1,10 @@
 # Polices
 
+<<<<<<< HEAD
 > Disponile depuis v0.19.3
+=======
+> Available since v0.20
+>>>>>>> e3f2b5b9036a3ee3ae4affad7388d21f15208d7d
 
 Bien que vous puissiez utiliser HTML et CSS pour personnaliser les polices et le style de vos diapositives à votre guise, Slidev offre également un moyen pratique de les utiliser sans effort.
 
@@ -36,7 +40,28 @@ fonts:
 ---
 ```
 
+<<<<<<< HEAD
 ## Polices de remplacement
+=======
+## Weights & Italic
+
+By default, Slidev imports three weights `200`,`400`,`600` for each font. You can configure them by:
+
+```yaml
+---
+fonts:
+  sans: 'Robot'
+  # default
+  weights: '200,400,600'
+  # import italic fonts, default `false`
+  italic: false
+---
+```
+
+This configuration applies to all web fonts. For more fine-grained controls of each font's weights, you will need to manually import them with [HTML](/custom/directory-structure.html#index-html) and CSS.
+
+## Fallback Fonts
+>>>>>>> e3f2b5b9036a3ee3ae4affad7388d21f15208d7d
 
 Pour la plupart des scénarios, il vous suffit de spécifier la "police spéciale" et Slidev ajoutera les polices de secours pour vous, par exemple :
 
