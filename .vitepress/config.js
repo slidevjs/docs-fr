@@ -126,15 +126,11 @@ const Customizations = [
     link: '/custom/config-mermaid',
   },
   {
-<<<<<<< HEAD
-    text: 'Contexte Global Vue',
-=======
-    text: 'Configure Shortcuts',
+    text: 'Configurer les Raccourcis',
     link: '/custom/config-shortcuts',
   },
   {
-    text: 'Vue Global Context',
->>>>>>> e3f2b5b9036a3ee3ae4affad7388d21f15208d7d
+    text: 'Contexte Global Vue',
     link: '/custom/vue-context',
   },
   {

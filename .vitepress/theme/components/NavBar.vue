@@ -24,13 +24,8 @@
       </div>
 
       <div v-if="repo" class="item">
-<<<<<<< HEAD
-        <a class="nav-btn" href="https://github.com/slidevjs/slidev"  target="_blank" aria-label="View GitHub Repo">
-          <ri-github-line />
-=======
         <a class="nav-btn" href="https://github.com/slidevjs/slidev" target="_blank" aria-label="View GitHub Repo">
           <ri-github-fill />
->>>>>>> e3f2b5b9036a3ee3ae4affad7388d21f15208d7d
         </a>
       </div>
 
@@ -46,10 +41,6 @@
 <script setup lang="ts">
 import { defineEmit, defineProps } from 'vue'
 import { useRepo } from '../composables/repo'
-import NavBarTitle from './NavBarTitle.vue'
-import NavLinks from './NavLinks.vue'
-import ToggleSideBarButton from './ToggleSideBarButton.vue'
-import DarkModeSwitch from './DarkModeSwitch.vue'
 
 const repo = useRepo()
 
