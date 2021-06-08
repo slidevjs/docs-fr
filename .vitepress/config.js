@@ -77,15 +77,11 @@ const Translations = [
   {
     text: 'Español',
     link: 'https://es.sli.dev{{pathname}}',
-<<<<<<< HEAD
-  }
-=======
   },
   {
     text: 'Русский',
     link: 'https://ru.sli.dev{{pathname}}',
-  },
->>>>>>> 010799691b5c572dba187a5a8bdae3ba6abb319d
+  }
 ]
 
 const Customizations = [
