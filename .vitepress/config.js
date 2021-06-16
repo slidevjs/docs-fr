@@ -209,6 +209,15 @@ module.exports = {
     editLinks: true,
     editLinkText: 'Suggérer un changement sur cette page',
 
+    algolia: {
+      apiKey: '1a5c5a504139c58f428974c78c55291d',
+      indexName: 'slidev',
+      searchParameters: {
+        // for translations maintainers: change the filter to your locale code (subdomain name)
+        facetFilters: ['language:en']
+      }
+    },
+
     nav: [
       {
         text: 'Guide',
