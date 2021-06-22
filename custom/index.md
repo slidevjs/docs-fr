@@ -12,14 +12,10 @@ Vous pouvez configurer Slidev dans le frontmatter de votre première diapositive
 theme: 'default'
 # titre de votre diapositive, sera automatiquement déduit du premier en-tête s'il n'est pas spécifié
 title: ''
-<<<<<<< HEAD
-# téléchargement de pdf activé dans la version SPA, peut également être une URL personnalisée
-=======
-# titleTemplate for the webpage, `%s` will be replaced by the page's title
+# titre pour la page Web, `%s` sera remplacé par le titre de la page
 titleTemplate: '%s - Slidev'
 
-# enabled pdf downloading in SPA build, can also be a custom url
->>>>>>> 83d754553616372f9655366cd91e125b8d17f855
+# téléchargement de pdf activé dans la version SPA, peut également être une URL personnalisée
 download: true
 # surligneur de syntaxe, peut être 'prism' ou 'shiki'
 highlighter: 'prism'
@@ -32,6 +28,7 @@ routerMode: 'history'
 # rapport hauteur/largeur des diapositives
 aspectRatio: '16/9'
 # largeur réelle du canevas, unité en px
+
 canvasWidth: 980
 # les polices seront importées automatiquement depuis Google fonts
 # En savoir plus : https://fr.sli.dev/custom/fonts
@@ -39,10 +36,12 @@ fonts:
   sans: 'Roboto'
   serif: 'Roboto Slab'
   mono: 'Fira Code'
+  
 # Le frontmatter par défaut s'applique à toutes les diapositives
 defaults:
   layout: 'default'
   # ...
+  
 # informations pour vos diapositives, peut être une chaîne de démarque
 info: |
   ## Slidev

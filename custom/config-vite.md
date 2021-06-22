@@ -15,16 +15,13 @@ Slidev a les plugins suivants préconfigurés :
 - [vite-plugin-icons](https://github.com/antfu/vite-plugin-icons)
 - [vite-plugin-remote-assets](https://github.com/antfu/vite-plugin-remote-assets)
 
-<<<<<<< HEAD
 Découvrez le mode sur les [pré-configurations ici](https://github.com/slidevjs/slidev/blob/main/packages/slidev/node/plugins/preset.ts).
-=======
-Learn more about the [pre-configurations here](https://github.com/slidevjs/slidev/blob/main/packages/slidev/node/plugins/preset.ts).
 
-## Configure Internal Plugins
+## Configurer les plugins internes
 
-> Available since v0.21
+> Disponible depuis v0.21
 
-To configure the built-in plugins list above, create `vite.config.ts` with the following content. Please note Slidev has some preconfigure options for those plugins, this usage will override some of them, which could potentially cause the app to break. Please treat this as **an advanced feature**, make sure you know what you are doing before moving on.
+Pour configurer la liste des plugins intégrés ci-dessus, créez `vite.config.ts` avec le contenu suivant. Veuillez noter que Slidev a quelques options de préconfiguration pour ces plugins, cette utilisation remplacera certaines d'entre elles, ce qui pourrait potentiellement provoquer la panne de l'application. Veuillez considérer cela comme **une fonctionnalité avancée**, assurez-vous de savoir ce que vous faites avant de continuer.
 
 ```ts
 import { defineConfig } from 'vite'
@@ -46,5 +43,4 @@ export default defineConfig({
 })
 ```
 
-See the [type decalrations](https://github.com/slidevjs/slidev/blob/main/packages/slidev/node/options.ts#L50) for more options.
->>>>>>> 83d754553616372f9655366cd91e125b8d17f855
+Voir la [déclarations des types](https://github.com/slidevjs/slidev/blob/main/packages/slidev/node/options.ts#L50) pour plus d'options.
