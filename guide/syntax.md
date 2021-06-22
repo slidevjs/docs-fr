@@ -150,6 +150,28 @@ blockquote {
 </style>
 ```
 
+## Assets statiques
+
+Tout comme vous le feriez dans Markdown, vous pouvez utiliser des images pointant vers une URL distante ou locale.
+
+Pour les assets statiques, le [`vite-plugin-remote-assets`](https://github.com/antfu/vite-plugin-remote-assets) intégré les mettra en cache sur le disque à la première exécution afin que vous puissiez avoir un chargement instantané même pour de grandes images plus tard.
+
+```md
+![Image distante](https://sli.dev/favicon.png)
+```
+
+Pour les ressources locales, placez-les dans le [dossier `public`](/custom/directory-structure.html#public) et référencez-les avec **la barre oblique principale**.
+
+```md
+![Image locale](/pic.png)
+```
+
+Si vous souhaitez appliquer des tailles ou des styles personnalisés, vous pouvez les convertir en balise `<img>`
+
+```html
+<img src="/pic.png" class="m-40 h-40 rounded shadow" />
+```
+
 ## Remarques
 
 Vous pouvez également prendre des notes pour chaque diapositive. Ils apparaîtront en [Mode Présentateur](/guide/presenter-mode) pour que vous puissiez vous y référer pendant les présentations.
