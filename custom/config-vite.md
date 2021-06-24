@@ -43,4 +43,4 @@ export default defineConfig({
 })
 ```
 
-Voir la [déclarations des types](https://github.com/slidevjs/slidev/blob/main/packages/slidev/node/options.ts#L50) pour plus d'options.
+Voir les [déclarations de types](https://github.com/slidevjs/slidev/blob/main/packages/slidev/node/options.ts#L50) pour plus d'options.
