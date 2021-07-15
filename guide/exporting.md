@@ -23,7 +23,11 @@ Après quelques secondes, vos diapositives seront prêtes dans `./slides-exports
 
 > Disponible depuis v0.21
 
+<<<<<<< HEAD
 Par défaut, Slide export une page par diapositive avec les animations de clics désactivées. Si vous souhaitez exporter des diapositives avec plusieurs étapes dans plusieurs pages, passez l'option `--with-clicks`.
+=======
+By default, Slidev exports one page per slide with clicks animations disabled. If you want export slides with multiple steps into multiple pages, pass the `--with-clicks` options.
+>>>>>>> d362bf9d1d39600d5b41e992cd9a76f234d9cc80
 
 ```bash
 $ slidev export --with-clicks
@@ -59,7 +63,11 @@ Reportez-vous à la [documentation de Vite](https://vitejs.dev/guide/build.html#
 
 ### Fournir un PDF téléchargeable
 
+<<<<<<< HEAD
 Vous pouvez fournir un PDF téléchargeable aux téléspectateurs de votre SPA. Vous pouvez l'activer avec la configuration suivante :
+=======
+You can provide a downloadable PDF to the viewers of your SPA with the following config:
+>>>>>>> d362bf9d1d39600d5b41e992cd9a76f234d9cc80
 
 ```md
 ---
@@ -67,7 +75,11 @@ download: true
 ---
 ```
 
+<<<<<<< HEAD
 Maintenant, Slidev générera un fichier pdf avec la construction et un bouton de téléchargement apparaîtra dans le SPA.
+=======
+Slidev will generate a pdf file along with the build and a download button will be displayed in the SPA.
+>>>>>>> d362bf9d1d39600d5b41e992cd9a76f234d9cc80
 
 Vous pouvez également fournir une URL personnalisée au PDF. Dans ce cas, le processus de rendu sera ignoré.
 
