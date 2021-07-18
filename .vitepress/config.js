@@ -86,7 +86,14 @@ const Translations = [
     text: 'Việt Nam',
     link: 'https://vn.sli.dev{{pathname}}',
   },
+<<<<<<< HEAD
 
+=======
+  {
+    text: 'Deutsch',
+    link: 'https://de.sli.dev{{pathname}}',
+  },
+>>>>>>> 9ed9a0405e1553cea7cf84885bd0fee4e0c863ac
 ]
 
 const Customizations = [
