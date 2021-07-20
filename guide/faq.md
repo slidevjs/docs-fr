@@ -122,7 +122,7 @@ canvasWidth: 800
 Nous fournissons un composant intégré `<Transform />`, qui est un wrapper de la propriété de transformation CSS.
 
 ```md
-<Tranform :scale="1.4">
+<Transform :scale="1.4">
 
 - Item 1
 - Item 2
