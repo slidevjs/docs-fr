@@ -32,7 +32,11 @@ Vous pouvez directement utiliser les composants Windi CSS et Vue pour styliser e
 
 ## Front Matter & Layouts
 
+<<<<<<< HEAD
 Vous pouvez spécifier des mises en page et d'autres métadonnées pour chaque diapositive en convertissant les séparateurs en [blocs de présentation](https://jekyllrb.com/docs/front-matter/). Chaque avant-propos commence par un triple tiret et se termine par un autre. Les textes entre eux sont des objets de données au format [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/). Par exemple :
+=======
+Specify layouts and other metadata for each slide by converting the separators into [front matter blocks](https://jekyllrb.com/docs/front-matter/). Each frontmatter starts with a triple-dash and ends with another. Texts between them are data objects in [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) format. For example:
+>>>>>>> 2afefee64ac67bac36a521f6fcda3a7af165d377
 
 ~~~md
 ---
@@ -72,7 +76,13 @@ console.log('Hello, World!')
 //```
 ~~~
 
+<<<<<<< HEAD
 ### Mise en évidence de ligne
+=======
+We support [Prism](http://prismjs.com) and [Shiki](https://github.com/shiki/shiki) as syntax highlighters. Refer to [the highlighters section](/custom/highlighters) for more details.
+
+### Line Highlighting
+>>>>>>> 2afefee64ac67bac36a521f6fcda3a7af165d377
 
 Pour mettre en évidence des lignes spécifiques, ajoutez simplement des numéros de ligne entre crochets `{}`. Les numéros de ligne commencent à compter de 1.
 
@@ -215,7 +225,11 @@ Le nom suit la conversion de [Iconify](https://iconify.design/) `{collection-nam
 - `<logos-vue />` - <logos-vue /> de [Logos SVG](https://github.com/gilbarbara/logos)
 - Et beaucoup plus...
 
+<<<<<<< HEAD
 Vous pouvez parcourir et rechercher toutes les icônes disponibles avec [Icônes](https://icones.js.org/).
+=======
+Browse and search for all the icons available with [Icônes](https://icones.js.org/).
+>>>>>>> 2afefee64ac67bac36a521f6fcda3a7af165d377
 
 ### Icônes de style
 
@@ -257,7 +271,7 @@ Cela apparaît sur la gauche
 
 Cela apparaît sur la droite
 
-<template>
+</template>
 ```
 
 <div class="grid grid-cols-2 rounded border border-gray-400 border-opacity-50 px-10 pb-4">
@@ -290,7 +304,11 @@ Cela apparaît sur la gauche
 Cela apparaît sur la droite
 ```
 
+<<<<<<< HEAD
 Vous pouvez également spécifier explicitement l'emplacement par défaut et fournir dans un ordre personnalisé
+=======
+You can also explicitly specify the default slot and provide in the custom order
+>>>>>>> 2afefee64ac67bac36a521f6fcda3a7af165d377
 
 ```md
 ---
