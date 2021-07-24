@@ -68,3 +68,45 @@ const counter = ref(0)
 ~~~
 
 Dans l'exemple ci-dessus, assurez-vous simplement que `vue` et` @vueuse/core` sont installés localement en tant que dependencies / devDependencies, Slidev s'occupera du reste et votre éditeur fonctionnera !
+
+## Configure Themes
+
+Le thème est controllé par Slidev basé sur le thème clair/sombre. Si vous souhaitez le customiser, vous pouvez passer l'identifiant du thème dans la fonction setup :
+
+```ts
+// ./setup/monaco.ts
+import { defineMonacoSetup } from '@slidev/types'
+
+export default defineMonacoSetup(() => {
+  return {
+    theme: {
+      dark: 'vs-dark',
+      light: 'vs',
+    },
+  }
+})
+```
+
+Si vous souhaitez charger des thèmes customisés :
+
+```ts
+import { defineMonacoSetup } from '@slidev/types'
+
+// change to your themes
+import dark from 'theme-vitesse/themes/vitesse-dark.json'
+import light from 'theme-vitesse/themes/vitesse-light.json'
+
+export default defineMonacoSetup((monaco) => {
+  monaco.editor.defineTheme('vitesse-light', light as any)
+  monaco.editor.defineTheme('vitesse-dark', dark as any)
+
+  return {
+    theme: {
+      light: 'vitesse-light',
+      dark: 'vitesse-dark',
+    },
+  }
+})
+```
+
+> Si vous créez un thème pour Slidev, utilisez dynamiquement `import()` au sein de la fonction de setup afin d'avoir le meilleur résultat d'arborescence et de fractionnement de code possible.
