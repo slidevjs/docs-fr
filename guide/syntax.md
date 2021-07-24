@@ -32,11 +32,7 @@ Vous pouvez directement utiliser les composants Windi CSS et Vue pour styliser e
 
 ## Front Matter & Layouts
 
-<<<<<<< HEAD
 Vous pouvez spécifier des mises en page et d'autres métadonnées pour chaque diapositive en convertissant les séparateurs en [blocs de présentation](https://jekyllrb.com/docs/front-matter/). Chaque avant-propos commence par un triple tiret et se termine par un autre. Les textes entre eux sont des objets de données au format [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/). Par exemple :
-=======
-Specify layouts and other metadata for each slide by converting the separators into [front matter blocks](https://jekyllrb.com/docs/front-matter/). Each frontmatter starts with a triple-dash and ends with another. Texts between them are data objects in [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) format. For example:
->>>>>>> 2afefee64ac67bac36a521f6fcda3a7af165d377
 
 ~~~md
 ---
@@ -76,13 +72,9 @@ console.log('Hello, World!')
 //```
 ~~~
 
-<<<<<<< HEAD
-### Mise en évidence de ligne
-=======
-We support [Prism](http://prismjs.com) and [Shiki](https://github.com/shiki/shiki) as syntax highlighters. Refer to [the highlighters section](/custom/highlighters) for more details.
+Nous supportons [Prism](http://prismjs.com) et [Shiki](https://github.com/shiki/shiki) en tant que surligneurs de syntaxe. Se référer à [la section Surligneurs](/custom/highlighters) pour plus de détails.
 
-### Line Highlighting
->>>>>>> 2afefee64ac67bac36a521f6fcda3a7af165d377
+### Mise en évidence de ligne
 
 Pour mettre en évidence des lignes spécifiques, ajoutez simplement des numéros de ligne entre crochets `{}`. Les numéros de ligne commencent à compter de 1.
 
