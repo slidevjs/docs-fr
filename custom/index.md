@@ -19,7 +19,13 @@ titleTemplate: '%s - Slidev'
 download: true
 # surligneur de syntaxe, peut être 'prism' ou 'shiki'
 highlighter: 'prism'
+<<<<<<< HEAD
 # activer l'éditeur de monaco, par défaut sur dev uniquement
+=======
+# show line numbers in code blocks
+lineNumbers: false
+# enable monaco editor, default to dev only
+>>>>>>> 7fcdfb6d7dee75f411c762b8d223645a5b35ab29
 monaco: 'dev'
 # forcer le schéma de couleur pour les diapositives, peut être 'auto', 'light' ou 'dark'
 colorSchema: 'auto'
@@ -49,6 +55,7 @@ info: |
   Ma première présentation [Slidev](http://sli.dev/)!
 ```
 
+<<<<<<< HEAD
 Consultez les [définitions de type](https://github.com/slidevjs/slidev/blob/main/packages/types/src/types.ts#L29) pour plus d'options.
 
 ## Structure du répertoire
@@ -58,6 +65,9 @@ Slidev utilise des conventions de structure de répertoires pour minimiser la su
 Reportez-vous à la section [Structure des répertoires](/custom/directory-structure).
 
 ## `vite.config.ts`
+=======
+Check out the [type definitions](https://github.com/slidevjs/slidev/blob/main/packages/types/src/config.ts) for more options.
+>>>>>>> 7fcdfb6d7dee75f411c762b8d223645a5b35ab29
 
 Reportez-vous à la section [Configurer Vite](/custom/config-vite).
 
