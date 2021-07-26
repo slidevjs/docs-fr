@@ -19,6 +19,8 @@ titleTemplate: '%s - Slidev'
 download: true
 # surligneur de syntaxe, peut être 'prism' ou 'shiki'
 highlighter: 'prism'
+# afficher le numéro de ligne dans les blocs de code
+lineNumbers: false
 # activer l'éditeur de monaco, par défaut sur dev uniquement
 monaco: 'dev'
 # forcer le schéma de couleur pour les diapositives, peut être 'auto', 'light' ou 'dark'
