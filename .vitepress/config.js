@@ -161,7 +161,15 @@ const Resources = [
     link: '/showcases',
   },
   {
+<<<<<<< HEAD
     text: 'Couvertures',
+=======
+    text: 'Learning Resources',
+    link: '/resources/learning',
+  },
+  {
+    text: 'Curated Covers',
+>>>>>>> 9ea35932b94caae076abe8c4e0df6914298d4ebe
     link: '/resources/covers',
   },
 ]

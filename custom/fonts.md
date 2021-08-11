@@ -4,7 +4,11 @@
 
 Bien que vous puissiez utiliser HTML et CSS pour personnaliser les polices et le style de vos diapositives à votre guise, Slidev offre également un moyen pratique de les utiliser sans effort.
 
+<<<<<<< HEAD
 Dans votre fontmatter, configurez comme suit :
+=======
+In your frontmatter, configure as following
+>>>>>>> 9ea35932b94caae076abe8c4e0df6914298d4ebe
 
 ```yaml
 ---
