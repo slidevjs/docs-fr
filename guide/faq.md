@@ -21,11 +21,7 @@ La seconde colonne
 </div>
 ```
 
-<<<<<<< HEAD
 Pour allez plus loin, vous pouvez personnaliser la taille de chaque colonne comme :
-=======
-Go further, you can customize the size of each column like:
->>>>>>> 1167e7a94ea649de6b3cd27aec6585258f0d477e
 
 ```html
 <div class="grid grid-cols-[200px,1fr,10%] gap-4">

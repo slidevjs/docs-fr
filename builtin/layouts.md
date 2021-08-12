@@ -2,39 +2,35 @@
 
 ## Mises en page intégrées
 
-<<<<<<< HEAD
-> Les documentations de cette section sont toujours en cours d'élaboration. Avant cela, vous pouvez directement jeter un coup d'oeil au [code source](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts)
-=======
-> As themes may override layouts behaviour, the best way to know exactly the usage, parameters and examples is referring their documentation.
-
+> Comme les thèmes peuvent remplacer le comportement des mises en page, le meilleur moyen de connaître exactement l'usage, les paramètres et les exemples est de se référer à leur documentation
 
 ### `center`
 
-Displays the content in the middle of the sreen.
+Affiche le contenu au milieu de l'écran.
 
 ### `cover`
 
-Used to display the cover page for the presentation, may contain the presentation title, contextualization, etc.
+Utilisé pour afficher la page de couverture pour la présentation, peut contenir le titre de la présentation, la contextualisation, etc.
 
 ### `default`
 
-The most baisc layout, to display any kind of content.
+La mise en page la plus basique, pour afficher n'importe quel type de contenu.
 
 ### `end`
 
-The final page for the presentation.
+La page finale de la présentation.
 
 ### `fact`
 
-To show some fact or data with a lot of prominence on the screen.
+Pour montrer un fait ou des données avec beaucoup d'importance à l'écran.
 
 ### `full`
 
-Use all the space of the screen to display the content.
+Utilise tout l'espace de l'écran pour afficher le contenu.
 
 ### `image-left`
 
-Shows an image on the left side of the screen, the content will be placed on the right side.
+Affiche une image sur le côté gauche de l'écran, le contenu sera placé sur le côté droit.
 
 #### Usage
 
@@ -42,17 +38,17 @@ Shows an image on the left side of the screen, the content will be placed on the
 ---
 layout: image-left
 
-# the image source
+# la source de l'image
 image: ./path/to/the/image
 
-# a custom class name to the content
+# un nom de classe customisé du contenu
 class: my-cool-content-on-the-right
 ---
 ```
 
 ### `image-right`
 
-Shows an image on the right side of the screen, the content will be placed on the left side.
+Affiche une image sur le côté droit de l'écran, le contenu sera placé sur le côté gauche.
 
 #### Usage
 
@@ -60,17 +56,17 @@ Shows an image on the right side of the screen, the content will be placed on th
 ---
 layout: image-right
 
-# the image source
+# la source de l'image
 image: ./path/to/the/image
 
-# a custom class name to the content
+# un nom de classe customisé du contenu
 class: my-cool-content-on-the-left
 ---
 ```
 
 ### `image`
 
-Shows an image as the main content of the page.
+Affiche une image comme contenu principal de la page.
 
 #### Usage
 
@@ -78,34 +74,34 @@ Shows an image as the main content of the page.
 ---
 layout: image
 
-# the image source
+# la source de l'image
 image: ./path/to/the/image
 ---
 ```
 
 ### `intro`
 
-To introduce the presentation, usually with the presentation title, a short description, the author, etc.
+Pour introduire la présentation, habituellement avec le titre de présentation, une courte description, l'auteur, etc.
 
 ### `none`
 
-A layout without any existent styling.
+Une mise en page sans style existant.
 
 ### `quote`
 
-To display a quotation with prominience.
+Pour afficher une citation avec proéminence.
 
 ### `section`
 
-Used to mark the beginning of a new presentation section.
+Utilisé pour marquer le début d'une nouvelle section de présentation.
 
 ### `statement`
 
-Make an affirmation/statement as the main page content.
+Faire une affirmation/déclaration comme contenu de la page principale.
 
 ### `two-cols`
 
-Separates the page content in two columns.
+Séparer le contenu de la page en deux colonnes.
 
 #### Usage
 
@@ -117,15 +113,14 @@ layout: two-cols
 
 # Left
 
-This shows on the left
+Cela apparait sur la gauche
 
 ::right::
 
 # Right
 
-This shows on the right
+Cela apparait sur la droite
 ```
->>>>>>> 1167e7a94ea649de6b3cd27aec6585258f0d477e
 
 ## Mises en page customisées
 
