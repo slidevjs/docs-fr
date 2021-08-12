@@ -217,11 +217,7 @@ Le nom suit la conversion de [Iconify](https://iconify.design/) `{collection-nam
 - `<logos-vue />` - <logos-vue /> de [Logos SVG](https://github.com/gilbarbara/logos)
 - Et beaucoup plus...
 
-<<<<<<< HEAD
 Vous pouvez parcourir et rechercher toutes les icônes disponibles avec [Icônes](https://icones.js.org/).
-=======
-Browse and search for all the icons available with [Icônes](https://icones.js.org/).
->>>>>>> 2afefee64ac67bac36a521f6fcda3a7af165d377
 
 ### Icônes de style
 
@@ -296,11 +292,7 @@ Cela apparaît sur la gauche
 Cela apparaît sur la droite
 ```
 
-<<<<<<< HEAD
 Vous pouvez également spécifier explicitement l'emplacement par défaut et fournir dans un ordre personnalisé
-=======
-You can also explicitly specify the default slot and provide in the custom order
->>>>>>> 2afefee64ac67bac36a521f6fcda3a7af165d377
 
 ```md
 ---
