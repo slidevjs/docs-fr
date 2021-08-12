@@ -2,11 +2,7 @@
 
 ## Mises en page intégrées
 
-<<<<<<< HEAD
-> Les documentations de cette section sont toujours en cours d'élaboration. Avant cela, vous pouvez directement jeter un coup d'oeil au [code source](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts)
-=======
 > As themes may override layouts behaviour, the best way to know exactly the usage, parameters and examples is referring their documentation.
-
 
 ### `center`
 
@@ -125,7 +121,6 @@ This shows on the left
 
 This shows on the right
 ```
->>>>>>> 9ea35932b94caae076abe8c4e0df6914298d4ebe
 
 ## Mises en page customisées
 
