@@ -30,7 +30,15 @@ const Guide = [
     link: '/guide/exporting',
   },
   {
+<<<<<<< HEAD
     text: 'Enregistrer la présentation',
+=======
+    text: 'Static Hosting',
+    link: '/guide/hosting',
+  },
+  {
+    text: 'Record Presentation',
+>>>>>>> 565eb6709aa69ec36842f22c104f90ef741d9440
     link: '/guide/recording',
   },
   {
@@ -38,7 +46,15 @@ const Guide = [
     link: '/guide/presenter-mode',
   },
   {
+<<<<<<< HEAD
     text: 'Intégrations de l\'éditeur',
+=======
+    text: 'Drawing & Annonations',
+    link: '/guide/drawing',
+  },
+  {
+    text: 'Editor Integrations',
+>>>>>>> 565eb6709aa69ec36842f22c104f90ef741d9440
     link: '/guide/editors',
   },
   {

@@ -39,6 +39,7 @@ $ slidev export --format png
 
 ## Single-Page Application (SPA)
 
+<<<<<<< HEAD
 Vous pouvez également créer les diapositives dans un SPA auto-hébergeable :
 
 ```bash
@@ -83,3 +84,6 @@ Voici quelques exemples du SPA exporté :
 
 - [Modèle de démarrage](https://sli.dev/demo/starter)
 - [Composable Vue](https://talks.antfu.me/2021/composable-vue) par [Anthony Fu](https://github.com/antfu)
+=======
+See [Static Hosting](/guide/hosting).
+>>>>>>> 565eb6709aa69ec36842f22c104f90ef741d9440
