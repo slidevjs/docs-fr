@@ -47,9 +47,13 @@ const Guide = [
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
     text: 'Intégrations de l\'éditeur',
 =======
     text: 'Drawing & Annonations',
+=======
+    text: 'Drawing & Annotations',
+>>>>>>> 5d92892e4c0e345ea45cde50316330f4c97117de
     link: '/guide/drawing',
   },
   {
