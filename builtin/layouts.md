@@ -14,7 +14,11 @@ Utilisé pour afficher la page de couverture pour la présentation, peut conteni
 
 ### `default`
 
+<<<<<<< HEAD
 La mise en page la plus basique, pour afficher n'importe quel type de contenu.
+=======
+The most basic layout, to display any kind of content.
+>>>>>>> fbc97d802e30cc663321c93b32fff3cee9ca7ff9
 
 ### `end`
 
