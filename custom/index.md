@@ -31,9 +31,16 @@ routerMode: 'history'
 aspectRatio: '16/9'
 # largeur réelle du canevas, unité en px
 
+<<<<<<< HEAD
 canvasWidth: 980
 # les polices seront importées automatiquement depuis Google fonts
 # En savoir plus : https://fr.sli.dev/custom/fonts
+=======
+# favicon, can be a local file path or URL
+favicon: 'https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/favicon.png'
+# fonts will be auto imported from Google fonts
+# Learn more: https://sli.dev/custom/fonts
+>>>>>>> 0daa359721a2cdbb0abac8fc5f5e1c00dd7b4452
 fonts:
   sans: 'Roboto'
   serif: 'Roboto Slab'
