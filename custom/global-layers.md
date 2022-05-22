@@ -4,13 +4,19 @@
 
 Les couches globales vous permettent d'avoir des composants personnalisés qui **persistent** sur les diapositives. Cela pourrait être utile pour avoir des pieds de page, des animations de diapositives croisées, des effets globaux, etc.
 
+<<<<<<< HEAD
 Slidev fournit deux couches pour cet usage, créez `global-top.vue` ou `global-bottom.vue` sous la racine de votre projet et il reprendra automatiquement.
+=======
+Slidev provides three layers for this usage, create `global-top.vue`, `global-bottom.vue` or `custom-nav-controls.vue` under your project root and it will pick up automatically.
+>>>>>>> 017f644e8a13bbfaaadda40c0b1fdf54ddb284a0
 
 Relation des couches :
 
 - Global Top (`global-top.vue`)
 - Diapositives
 - Global Bottom (`global-bottom.vue`)
+- NavControls
+  - Customized Navigation Controls (`custom-nav-controls.vue`)
 
 ## Exemple
 
@@ -23,7 +29,22 @@ Relation des couches :
 
 Le texte `Votre nom` apparaîtra sur toutes vos diapositives.
 
+<<<<<<< HEAD
 Pour l'activer conditionnellement, vous pouvez l'appliquer avec le [Contexte Global Vue](/custom/vue-context).
+=======
+```html
+<!-- custom-nav-controls -->
+<template>
+  <button class="icon-btn" title="Next" @click="$slidev.nav.next">
+    <carbon:arrow-right />
+  </button>
+</template>
+```
+
+The button `Next` will appear in NavControls.
+
+To enabled it conditionally, you can apply it with the [Vue Global Context](/custom/vue-context).
+>>>>>>> 017f644e8a13bbfaaadda40c0b1fdf54ddb284a0
 
 ```html
 <!-- masquer le pied de page de la page 4 -->
@@ -58,5 +79,15 @@ Pour l'activer conditionnellement, vous pouvez l'appliquer avec le [Contexte Glo
   >
     {{ $slidev.nav.currentPage }} / {{ $slidev.nav.total }}
   </footer>
+</template>
+```
+
+```html
+<!-- custom-nav-controls -->
+<!-- hide the button in Presenter model -->
+<template>
+  <button v-if="!$slidev.nav.isPresenter" class="icon-btn" title="Next" @click="$slidev.nav.next">
+    <carbon:arrow-right />
+  </button>
 </template>
 ```
