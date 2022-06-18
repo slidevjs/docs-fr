@@ -2,7 +2,11 @@
 
 ## Barre de navigation
 
+<<<<<<< HEAD
 Déplacez votre souris vers le coin inférieur gauche de la page Slidev, la barre de navigation apparaîtra.
+=======
+Move your mouse to the bottom left corner of Slidev page to make the navigation bar appear.
+>>>>>>> 893d0b65c494856dc47a8834adc01480dbf6a161
 
 ![](/screenshots/navbar.png)
 
