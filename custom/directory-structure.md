@@ -6,6 +6,7 @@ La structure de base est la suivante :
 
 ```bash
 your-slidev/
+<<<<<<< HEAD
   ├── components/       # composants customisés
   ├── layouts/          # mises en page customisées
   ├── public/           # assets statiques
@@ -14,6 +15,16 @@ your-slidev/
   ├── index.html        # injections dans index.html
   ├── slides.md         # l'entrée principale des diapositives
   ├── vite.config.ts    # extension de vite config
+=======
+  ├── components/       # custom components
+  ├── layouts/          # custom layouts
+  ├── public/           # static assets
+  ├── setup/            # custom setup / hooks
+  ├── styles/           # custom style
+  ├── index.html        # injections to index.html
+  ├── slides.md         # the main slides entry
+  └── vite.config.ts    # extending vite config
+>>>>>>> c8121c161efd5a726d336648d2b101540c346dd2
 ```
 
 Tous sont facultatifs.
@@ -115,7 +126,11 @@ import './code.css'
 import './layouts.css'
 ```
 
+<<<<<<< HEAD
 Les styles seront traités par [Windi CSS](http://windicss.org/) et [PostCSS](https://postcss.org/), vous pouvez donc utiliser l'imbrication css et [at-directives](https://windicss.org/features/directives.html) prêt à l'emploi. Par exemple :
+=======
+Styles will be processed by [Windi CSS](https://windicss.org/) and [PostCSS](https://postcss.org/), so you can use css nesting and [at-directives](https://windicss.org/features/directives.html) out-of-box. For example:
+>>>>>>> c8121c161efd5a726d336648d2b101540c346dd2
 
 ```less
 .slidev-layout {
