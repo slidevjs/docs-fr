@@ -17,7 +17,17 @@ Exportez maintenant vos diapositives au format PDF à l'aide de la commande suiv
 $ slidev export
 ```
 
+<<<<<<< HEAD
 Après quelques secondes, vos diapositives seront prêtes dans `./slides-exports.pdf`.
+=======
+After a few seconds, your slides will be ready at `./slides-export.pdf`.
+
+In case you want to export your slides using the dark version of the theme, use the `--dark` option:
+
+```bash
+$ slidev export --dark
+```
+>>>>>>> eca0155fb4af5e8138c24bec4161ae66d22663fe
 
 ### Étapes d'exportation des clics
 

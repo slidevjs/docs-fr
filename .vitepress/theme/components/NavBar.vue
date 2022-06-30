@@ -39,12 +39,11 @@
 </template>
 
 <script setup lang="ts">
-import { defineEmit, defineProps } from 'vue'
 import { useRepo } from '../composables/repo'
 
 const repo = useRepo()
 
-defineEmit(['toggle'])
+defineEmits(['toggle'])
 
 defineProps({
   showSidebar: { type: Boolean, required: true },

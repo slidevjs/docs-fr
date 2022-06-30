@@ -6,7 +6,11 @@
 
 ### `center`
 
+<<<<<<< HEAD
 Affiche le contenu au milieu de l'écran.
+=======
+Displays the content in the middle of the screen.
+>>>>>>> eca0155fb4af5e8138c24bec4161ae66d22663fe
 
 ### `cover`
 
@@ -14,7 +18,11 @@ Utilisé pour afficher la page de couverture pour la présentation, peut conteni
 
 ### `default`
 
+<<<<<<< HEAD
 La mise en page la plus basique, pour afficher n'importe quel type de contenu.
+=======
+The most basic layout, to display any kind of content.
+>>>>>>> eca0155fb4af5e8138c24bec4161ae66d22663fe
 
 ### `end`
 
