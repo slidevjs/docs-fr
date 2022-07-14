@@ -82,7 +82,7 @@ image: ./path/to/the/image
 
 ### `iframe-left`
 
-Shows a web page on the left side of the screen, the content will be placed on the right side.
+Affiche une page Web sur le côté gauche de l'écran, le contenu sera placé sur le côté droit.
 
 #### Usage
 
@@ -90,17 +90,17 @@ Shows a web page on the left side of the screen, the content will be placed on t
 ---
 layout: iframe-left
 
-# the web page source
+# la source de la page Web
 url: https://github.com/slidevjs/slidev
 
-# a custom class name to the content
+# un nom de classe personnalisé au contenu
 class: my-cool-content-on-the-right
 ---
 ```
 
 ### `iframe-right`
 
-Shows a web page on the right side of the screen, the content will be placed on the left side.
+Affiche une page Web sur le côté droit de l'écran, le contenu sera placé sur le côté gauche.
 
 #### Usage
 
@@ -108,17 +108,17 @@ Shows a web page on the right side of the screen, the content will be placed on 
 ---
 layout: iframe-right
 
-# the web page source
+# la source de la page Web
 url: https://github.com/slidevjs/slidev
 
-# a custom class name to the content
+# un nom de classe personnalisé au contenu
 class: my-cool-content-on-the-left
 ---
 ```
 
 ### `iframe`
 
-Shows a web page as the main content of the page.
+Affiche une page Web comme contenu principal de la page.
 
 #### Usage
 
