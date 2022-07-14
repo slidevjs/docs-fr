@@ -73,7 +73,7 @@ onMounted(() => {
       code.value = JSON.parse(JSON.stringify(block.value!.innerText.replace('|', '')))
     },
   })
-    .type('<br><span class="token title"># Bienvenue chez Slidev!</span><br><br>', { delay: 400 })
+    .type('<br><span class="token title"># Bienvenue sur Slidev!</span><br><br>', { delay: 400 })
     .type('Diapositives de présentation pour Développeurs', { delay: 400 })
     .move('START', { speed: 0 })
     .type('<br>')
