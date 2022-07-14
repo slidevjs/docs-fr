@@ -1,19 +1,19 @@
-# Use Addon
+# Utiliser un Addon
 
-Addons are sets of additional components, layouts, styles, configuration...etc. that you can use in your presentation.
+Les addons sont des ensembles de composants supplémentaires, de mises en page, de styles, de configuration, etc. que vous pouvez utiliser dans votre présentation.
 
-They are quite similar to [themes](/themes/use), but in general:
+Ils sont assez similaires à [themes](/themes/use), mais en général :
 
-* they don't affect the global styles of your slides
-* you can use multiple addons in one presentation
+* ils n'affectent pas les styles globaux de vos diapositives
+* vous pouvez utiliser plusieurs addons dans une présentation
 
-To use addons, you have to install them manually via:
+Pour utiliser les addons, vous devez les installer manuellement via :
 
 ```bash
 $ npm install [slidev-addon-package1] [slidev-addon-package2]
 ```
 
-And then declare the addons either in your frontmatter:
+Et ensuite déclarez les addons soit dans votre frontmatter :
 
 ```yaml
 ---
@@ -23,7 +23,7 @@ addons:
 ---
 ```
 
-Or in your `package.json` file:
+Ou dans votre fichier `package.json` :
 
 ```json
 // package.json
