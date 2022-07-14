@@ -2,11 +2,7 @@
   <div class="theme">
     <h1>404</h1>
     <blockquote>{{ getMsg() }}</blockquote>
-<<<<<<< HEAD
-    <a :href="$site.base" aria-label="go to home">Retournez à l'accueil</a>
-=======
-    <a :href="site.base" aria-label="go to home">Take me home.</a>
->>>>>>> 8b430eefeed2277fc07f273ce000804365333b56
+    <a :href="site.base" aria-label="go to home">Retournez à l'accueil</a>
   </div>
 </template>
 

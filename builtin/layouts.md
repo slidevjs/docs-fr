@@ -6,11 +6,7 @@
 
 ### `center`
 
-<<<<<<< HEAD
 Affiche le contenu au milieu de l'écran.
-=======
-Displays the content in the middle of the screen.
->>>>>>> 8b430eefeed2277fc07f273ce000804365333b56
 
 ### `cover`
 
@@ -18,11 +14,7 @@ Utilisé pour afficher la page de couverture pour la présentation, peut conteni
 
 ### `default`
 
-<<<<<<< HEAD
 La mise en page la plus basique, pour afficher n'importe quel type de contenu.
-=======
-The most basic layout, to display any kind of content.
->>>>>>> 8b430eefeed2277fc07f273ce000804365333b56
 
 ### `end`
 
@@ -90,7 +82,7 @@ image: ./path/to/the/image
 
 ### `iframe-left`
 
-Shows a web page on the left side of the screen, the content will be placed on the right side.
+Affiche une page Web sur le côté gauche de l'écran, le contenu sera placé sur le côté droit.
 
 #### Usage
 
@@ -98,17 +90,17 @@ Shows a web page on the left side of the screen, the content will be placed on t
 ---
 layout: iframe-left
 
-# the web page source
+# la source de la page Web
 url: https://github.com/slidevjs/slidev
 
-# a custom class name to the content
+# un nom de classe personnalisé au contenu
 class: my-cool-content-on-the-right
 ---
 ```
 
 ### `iframe-right`
 
-Shows a web page on the right side of the screen, the content will be placed on the left side.
+Affiche une page Web sur le côté droit de l'écran, le contenu sera placé sur le côté gauche.
 
 #### Usage
 
@@ -116,17 +108,17 @@ Shows a web page on the right side of the screen, the content will be placed on 
 ---
 layout: iframe-right
 
-# the web page source
+# la source de la page Web
 url: https://github.com/slidevjs/slidev
 
-# a custom class name to the content
+# un nom de classe personnalisé au contenu
 class: my-cool-content-on-the-left
 ---
 ```
 
 ### `iframe`
 
-Shows a web page as the main content of the page.
+Affiche une page Web comme contenu principal de la page.
 
 #### Usage
 
@@ -134,7 +126,7 @@ Shows a web page as the main content of the page.
 ---
 layout: iframe
 
-# the web page source
+# la source de la page Web
 url: https://github.com/slidevjs/slidev
 ---
 ```

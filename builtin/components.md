@@ -4,21 +4,18 @@
 
 > Les documentations de cette section sont toujours en cours d'élaboration. Avant cela, vous pouvez directement jeter un coup d'oeil au [code source](https://github.com/slidevjs/slidev/blob/main/packages/client/builtin)
 
-<<<<<<< HEAD
-## Composants Customisés
-=======
 ### `Toc`
 
-Insert a Table Of Content.
+Insérez une table des matières.
 
-If you want a slide to not appear in the `<Toc>` component, you can use in the front matter block of the slide:
+Si vous souhaitez qu'une diapositive n'apparaisse pas dans le composant `<Toc>`, vous pouvez utiliser dans le bloc de présentation de la diapositive :
 ```yml
 ---
 hideInToc: true
 ---
 ```
 
-Titles are displayed using the [`<Titles>` component](#titles)
+Les titres sont affichés à l'aide du composant [`<Titres>`](#titles)
 
 #### Usage
 
@@ -28,38 +25,38 @@ Titles are displayed using the [`<Titles>` component](#titles)
 
 Parameters:
 
-* `columns` (`string | number`, default: `1`): The number of columns of the display
-* `listClass` (`string | string[]`, default: `''`): Classes to apply to the table of contents list
-* `maxDepth` (`string | number`, default: `Infinity`): The maximum depth level of title to display
-* `minDepth` (`string | number`, default: `1`): The minimum depth level of title to display
+* `columns` (`string | number`, default: `1`): Le nombre de colonnes de l'affichage
+* `listClass` (`string | string[]`, default: `''`): Classes à appliquer à la table des matières
+* `maxDepth` (`string | number`, default: `Infinity`): Le niveau de profondeur maximum du titre à afficher
+* `minDepth` (`string | number`, default: `1`): Le niveau de profondeur minimum du titre à afficher
 * `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`, default: `'all'`):
-  * `'all'`: Display all items
-  * `'onlyCurrentTree'`: Display only items that are in current tree (active item, parents and children of active item)
-  * `'onlySiblings'`: Display only items that are in current tree and their direct siblings
+  * `'all'`: Afficher tous les articles
+  * `'onlyCurrentTree'`: Afficher uniquement les éléments qui sont dans l'arborescence actuelle (élément actif, parents et enfants de l'élément actif)
+  * `'onlySiblings'`: Afficher uniquement les éléments qui sont dans l'arborescence actuelle et leurs frères et sœurs directs
 
 ### `Link`
 
-Insert a link you can use to navigate to a given slide.
+Insérez un lien que vous pouvez utiliser pour accéder à une diapositive donnée.
 
 #### Usage
 
 ~~~md
-<Link to="42">Go to slide 42</Link>
-<Link to="42" title="Go to slide 42"/>
+<Link to="42">Aller à la diapositive 42</Link>
+<Link to="42" title="Aller à la diapositive 42"/>
 ~~~
 
-Parameters:
+Paramètres:
 
-* `to` (`string | number`): The path of the slide to navigate to (slides starts from `1`)
-* `title` (`string`): The title to display
+* `to` (`string | number`): Le chemin de la diapositive vers laquelle naviguer (les diapositives commencent à partir de "1")
+* `title` (`string`): Le titre à afficher
 
 ### `Titles`
 
-Insert the main title from a slide parsed as HTML.
+Insérez le titre principal d'une diapositive analysée au format HTML.
 
-Titles and title levels get automatically retrieved from the first title element of each slides.
+Les titres et les niveaux de titre sont automatiquement récupérés à partir du premier élément de titre de chaque diapositive.
 
-You can override this automatic behaviour for a slide by using the front matter syntax:
+Vous pouvez remplacer ce comportement automatique pour une diapositive à l'aide de la syntaxe frontale :
 ```yml
 ---
 title: Amazing slide title
@@ -69,22 +66,21 @@ level: 2
 
 #### Usage
 
-The `<Titles>` component is a virtual component you can import with:
+Le composant `<Titles>` est un composant virtuel avec lequel vous pouvez importer :
 ```js
 import Titles from '/@slidev/titles.md'
 ```
 
-Then you can use it with:
+Ensuite, vous pouvez l'utiliser avec :
 ~~~md
 <Titles no="42" />
 ~~~
 
-Parameters:
+Paramètres:
 
-* `no` (`string | number`): The number of the slide to display the title from (slides starts from `1`)
+* `no` (`string | number`): Le numéro de la diapositive à partir de laquelle afficher le titre (les diapositives commencent à partir de `1`)
 
-## Custom Components
->>>>>>> 8b430eefeed2277fc07f273ce000804365333b56
+## Composants Customisés
 
 Créer un répertoire `components/` sous la racine de votre projet, et placez simplement vos composants Vue personnalisés sous celui-ci, puis vous pouvez l'utiliser avec le même nom dans votre fichier markdown!
 

@@ -8,108 +8,69 @@ Vous pouvez configurer Slidev dans le frontmatter de votre première diapositive
 
 ```yaml
 ---
-<<<<<<< HEAD
 # identifiant du thème ou nom du package
+# En savoir plus : https://sli.dev/themes/use.html
 theme: 'default'
 # titre de votre diapositive, sera automatiquement déduit du premier en-tête s'il n'est pas spécifié
-title: ''
-# titre pour la page Web, `%s` sera remplacé par le titre de la page
-=======
-# theme id or package name
-# Learn more: https://sli.dev/themes/use.html
-theme: 'default'
-# title of your slide, will auto infer from the first header if not specified
 title: 'Slidev'
-# titleTemplate for the webpage, `%s` will be replaced by the page's title
->>>>>>> 8b430eefeed2277fc07f273ce000804365333b56
+# titleTemplate pour la page Web, `%s` sera remplacé par le titre de la page
 titleTemplate: '%s - Slidev'
-# information for your slides, can be a markdown string
+# informations pour vos diapositives, peut être une chaîne de démarquage
 info: false
 
-<<<<<<< HEAD
 # téléchargement de pdf activé dans la version SPA, peut également être une URL personnalisée
-download: true
-# surligneur de syntaxe, peut être 'prism' ou 'shiki'
-=======
-# enabled pdf downloading in SPA build, can also be a custom url
 download: false
-# filename of the export file
+# nom de fichier du fichier d'exportation
 exportFilename: 'slidev-exported.pdf'
-# syntax highlighter, can be 'prism' or 'shiki'
->>>>>>> 8b430eefeed2277fc07f273ce000804365333b56
+# surligneur de syntaxe, peut être 'prism' ou 'shiki'
 highlighter: 'prism'
-# afficher le numéro de ligne dans les blocs de code
+# afficher les numéros de ligne dans les blocs de code
 lineNumbers: false
-<<<<<<< HEAD
-# activer l'éditeur de monaco, par défaut sur dev uniquement
+# activer l'éditeur monaco, peut être booléen, 'dev' ou 'build'
 monaco: 'dev'
-# forcer le schéma de couleur pour les diapositives, peut être 'auto', 'light' ou 'dark'
-colorSchema: 'auto'
-# le mode routeur pour vue-router, peut être "history" ou "hash"
-=======
-# enable monaco editor, can be boolean, 'dev' or 'build'
-monaco: 'dev'
-# download remote assets in local using vite-plugin-remote-assets, can be boolean, 'dev' or 'build'
+# télécharger les actifs distants en local à l'aide de vite-plugin-remote-assets, peut être booléen, 'dev' ou 'build'
 remoteAssets: false
-# controls whether texts in slides are selectable
+# contrôle si les textes des diapositives sont sélectionnables
 selectable: true
-# enable slide recording, can be boolean, 'dev' or 'build'
+# activer l'enregistrement de diapositives, peut être booléen, 'dev' ou 'build'
 record: 'dev'
 
-# force color schema for the slides, can be 'auto', 'light', or 'dark'
+# forcer le schéma de couleur pour les diapositives, peut être 'auto', 'light' ou 'dark'
 colorSchema: 'auto'
-# router mode for vue-router, can be "history" or "hash"
->>>>>>> 8b430eefeed2277fc07f273ce000804365333b56
+# mode routeur pour vue-router, peut être 'history' ou 'hash'
 routerMode: 'history'
-# rapport hauteur/largeur des diapositives
+# ratio d'aspect pour les diapositives
 aspectRatio: '16/9'
-<<<<<<< HEAD
-# largeur réelle du canevas, unité en px
-
+# largeur réelle du canvas, unité en px
 canvasWidth: 980
-# les polices seront importées automatiquement depuis Google fonts
-# En savoir plus : https://fr.sli.dev/custom/fonts
-=======
-# real width of the canvas, unit in px
-canvasWidth: 980
-# used for theme customization, will inject root styles as `--slidev-theme-x` for attribute `x`
+# utilisé pour la personnalisation du thème, injectera les styles racine comme `--slidev-theme-x` pour l'attribut `x`
 themeConfig:
   primary: '#5d8392'
 
-# favicon, can be a local file path or URL
+# favicon, peut être un chemin de fichier local ou une URL
 favicon: 'https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/favicon.png'
-# URL of PlantUML server used to render diagrams
+# URL du serveur PlantUML utilisé pour afficher les diagrammes
 plantUmlServer: 'https://www.plantuml.com/plantuml'
-# fonts will be auto imported from Google fonts
-# Learn more: https://sli.dev/custom/fonts
->>>>>>> 8b430eefeed2277fc07f273ce000804365333b56
+# polices seront automatiquement importées à partir des polices Google
+# En savoir plus : https://sli.dev/custom/fonts
 fonts:
   sans: 'Roboto'
   serif: 'Roboto Slab'
   mono: 'Fira Code'
-  
-# Le frontmatter par défaut s'applique à toutes les diapositives
+
+# le frontmatter par défaut s'applique à toutes les diapositives
 defaults:
   layout: 'default'
   # ...
-<<<<<<< HEAD
-  
-# informations pour vos diapositives, peut être une chaîne de démarque
-info: |
-  ## Slidev
 
-  Ma première présentation [Slidev](http://sli.dev/)!
-=======
-
-# drawing options
-# Learn more: https://sli.dev/guide/drawing.html
+# options de dessin
+# En savoir plus : https://sli.dev/guide/drawing.html
 drawings:
   enabled: true
   persist: false
   presenterOnly: false
   syncAll: true
 ---
->>>>>>> 8b430eefeed2277fc07f273ce000804365333b56
 ```
 
 Consultez les [définitions de type](https://github.com/slidevjs/slidev/blob/main/packages/types/src/types.ts#L29) pour plus d'options.

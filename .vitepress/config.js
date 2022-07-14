@@ -30,15 +30,11 @@ const Guide = [
     link: '/guide/exporting',
   },
   {
-<<<<<<< HEAD
-    text: 'Enregistrer la présentation',
-=======
-    text: 'Static Hosting',
+    text: 'Hébergement statique',
     link: '/guide/hosting',
   },
   {
-    text: 'Record Presentation',
->>>>>>> ee7ae42035591cb6565a72f5217129c670a59b0c
+    text: 'Enregistrer la présentation',
     link: '/guide/recording',
   },
   {
@@ -46,19 +42,11 @@ const Guide = [
     link: '/guide/presenter-mode',
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    text: 'Intégrations de l\'éditeur',
-=======
-    text: 'Drawing & Annonations',
-=======
-    text: 'Drawing & Annotations',
->>>>>>> 8b430eefeed2277fc07f273ce000804365333b56
+    text: 'Dessins & Annotations',
     link: '/guide/drawing',
   },
   {
-    text: 'Editor Integrations',
->>>>>>> ee7ae42035591cb6565a72f5217129c670a59b0c
+    text: 'Intégrations de l\'éditeur',
     link: '/guide/editors',
   },
   {
@@ -84,11 +72,11 @@ const Theme = [
 
 const Addon = [
   {
-    text: 'Use Addon',
+    text: 'Utiliser un Addon',
     link: '/addons/use',
   },
   {
-    text: 'Write an Addon',
+    text: 'Écrire un Addon',
     link: '/addons/write-an-addon',
   },
 ]
@@ -215,15 +203,11 @@ const slidebars = [
     children: Theme,
   },
   {
-<<<<<<< HEAD
-    text: 'Personnalisations',
-=======
     text: 'Addons',
     children: Addon,
   },
   {
-    text: 'Customizations',
->>>>>>> 8b430eefeed2277fc07f273ce000804365333b56
+    text: 'Personnalisation',
     children: Customizations,
   },
   {
@@ -286,15 +270,11 @@ module.exports = {
         items: Theme,
       },
       {
-<<<<<<< HEAD
-        text: 'Personnaliser',
-=======
         text: 'Addon',
         items: Addon,
       },
       {
-        text: 'Customize',
->>>>>>> 8b430eefeed2277fc07f273ce000804365333b56
+        text: 'Personnaliser',
         items: Customizations,
       },
       {
