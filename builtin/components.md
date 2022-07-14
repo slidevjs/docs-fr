@@ -25,11 +25,11 @@ Les titres sont affichés à l'aide du composant [`<Titres>`](#titles)
 
 Parameters:
 
-* `columns` (`string | number`, default: `1`): Le nombre de colonnes de l'affichage
-* `listClass` (`string | string[]`, default: `''`): Classes à appliquer à la table des matières
-* `maxDepth` (`string | number`, default: `Infinity`): Le niveau de profondeur maximum du titre à afficher
-* `minDepth` (`string | number`, default: `1`): Le niveau de profondeur minimum du titre à afficher
-* `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`, default: `'all'`):
+* `columns` (`string | number`, défaut : `1`): Le nombre de colonnes de l'affichage
+* `listClass` (`string | string[]`, défaut : `''`): Classes à appliquer à la table des matières
+* `maxDepth` (`string | number`, défaut : `Infinity`): Le niveau de profondeur maximum du titre à afficher
+* `minDepth` (`string | number`, défaut : `1`): Le niveau de profondeur minimum du titre à afficher
+* `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`, défaut : `'all'`):
   * `'all'`: Afficher tous les articles
   * `'onlyCurrentTree'`: Afficher uniquement les éléments qui sont dans l'arborescence actuelle (élément actif, parents et enfants de l'élément actif)
   * `'onlySiblings'`: Afficher uniquement les éléments qui sont dans l'arborescence actuelle et leurs frères et sœurs directs
