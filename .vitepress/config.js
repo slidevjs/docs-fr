@@ -42,7 +42,7 @@ const Guide = [
     link: '/guide/presenter-mode',
   },
   {
-    text: 'Dessin et annotations',
+    text: 'Dessins & Annotations',
     link: '/guide/drawing',
   },
   {
@@ -67,6 +67,17 @@ const Theme = [
   {
     text: 'Écrire un thème',
     link: '/themes/write-a-theme',
+  },
+]
+
+const Addon = [
+  {
+    text: 'Utiliser un Addon',
+    link: '/addons/use',
+  },
+  {
+    text: 'Écrire un Addon',
+    link: '/addons/write-an-addon',
   },
 ]
 
@@ -105,6 +116,10 @@ const Translations = [
   {
     text: 'Ελληνικά',
     link: 'https://el.sli.dev{{pathname}}',
+  },
+  {
+    text: '日本語',
+    link: 'https://ja.sli.dev{{pathname}}',
   },
 ]
 
@@ -188,7 +203,11 @@ const slidebars = [
     children: Theme,
   },
   {
-    text: 'Personnalisations',
+    text: 'Addons',
+    children: Addon,
+  },
+  {
+    text: 'Personnalisation',
     children: Customizations,
   },
   {
@@ -251,6 +270,10 @@ module.exports = {
         items: Theme,
       },
       {
+        text: 'Addon',
+        items: Addon,
+      },
+      {
         text: 'Personnaliser',
         items: Customizations,
       },
@@ -267,6 +290,7 @@ module.exports = {
     sidebar: {
       '/guide/': slidebars,
       '/themes/': slidebars,
+      '/addons/': slidebars,
       '/custom/': slidebars,
       '/builtin/': slidebars,
       '/resources/': slidebars,

@@ -100,7 +100,7 @@ Actuellement, seules les polices Google sont prises en charge, nous prévoyons d
 ```yaml
 ---
 fonts:
-  provide: 'none'
+  provider: 'none'
 ---
 ```
 

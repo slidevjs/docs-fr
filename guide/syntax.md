@@ -102,6 +102,19 @@ function add(
 //```
 ~~~
 
+Pour ignorer la mise en surbrillance des lignes, vous pouvez définir le numéro de ligne sur "0". Par exemple
+
+~~~ts {0}
+//```ts {0}
+function add(
+  a: Ref<number> | number,
+  b: Ref<number> | number
+) {
+  return computed(() => unref(a) + unref(b))
+}
+//```
+~~~
+
 Cela mettra d'abord en évidence `a: Ref <number> | number` et `b: Ref <number> | number`, puis `return computed (() => unref (a) + unref (b))` après un clic, et enfin, tout le bloc. Pour en savoir plus, consultez le [guide des animations de clics](/guide/animations).
 
 ### Éditeur Monaco
@@ -206,7 +219,7 @@ Ceci est une autre note
 
 ## Icônes
 
-Slidev vous permet d'accéder à presque tous les jeux d'icônes open-source populaires ** directement ** dans votre démarque. Propulsé par [`vite-plugin-icons`](https://github.com/antfu/vite-plugin-icons) et [Iconify](https://iconify.design/).
+Slidev vous permet d'accéder à presque tous les jeux d'icônes open-source populaires **directement** dans votre markdown. Propulsé par [`unplugin-icons`](https://github.com/antfu/unplugin-icons) et [Iconify](https://iconify.design/).
 
 Le nom suit la conversion de [Iconify](https://iconify.design/) `{collection-name}-{icon-name}`. Par exemple:
 
@@ -274,7 +287,7 @@ Cela apparaît sur la droite
 </div>
 </div>
 
-Nous fournissons également une syntaxe abrégée `::name :: ` pour le nom de l'emplacement. L'exemple suivant fonctionne exactement de la même manière que le précédent.
+Nous fournissons également une syntaxe abrégée `::name::` pour le nom de l'emplacement. L'exemple suivant fonctionne exactement de la même manière que le précédent.
 
 ```md
 ---

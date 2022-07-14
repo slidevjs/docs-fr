@@ -9,14 +9,14 @@ Pour appliquer des "animations de clic" aux éléments, vous pouvez utiliser la 
 ```md
 # Hello
 
-<!-- Utilisation des composants: ce sera invisible jusqu'à ce que vous appuyiez sur "suivant" -->
+<!-- Utilisation des composants : ce sera invisible jusqu'à ce que vous appuyiez sur "suivant" -->
 <v-click>
 
 Hello World
 
 </v-click>
 
-<!-- Utilisation de la directive: elle sera invisible jusqu'à ce que vous appuyiez sur "suivant" la deuxième fois -->
+<!-- Utilisation de la directive : elle sera invisible jusqu'à ce que vous appuyiez sur "suivant" la deuxième fois -->
 <div v-click class="text-xl p-2">
 
 Bonjour!

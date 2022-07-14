@@ -126,7 +126,7 @@ Affiche une page Web comme contenu principal de la page.
 ---
 layout: iframe
 
-# the web page source
+# la source de la page Web
 url: https://github.com/slidevjs/slidev
 ---
 ```

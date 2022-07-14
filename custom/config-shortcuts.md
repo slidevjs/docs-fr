@@ -29,4 +29,20 @@ Avec la configuration, vous pouvez fournir le paramètre personnalisé pour les 
 
 La fonction de configuration reçoit un objet avec certaines méthodes de navigation et renvoie un tableau contenant une configuration de raccourci. Reportez-vous aux définitions de type pour plus de détails.
 
+Le type `key` n'autorise que les chaînes, mais vous pouvez toujours lier plusieurs clés en utilisant la convention suivante :
+
+```ts
+import { defineShortcutsSetup, NavOperations } from '@slidev/types'
+
+export default defineShortcutsSetup((nav: NavOperations) => {
+  return [
+    {
+      key: 'ShiftLeft+ArrowRight',
+      fn: () => nav.next(),
+      autoRepeat: true,
+    }
+  ]
+})
+```
+
 Reportez-vous à [useMagicKeys | VueUse](https://vueuse.org/core/useMagicKeys/) pour plus de détails sur l'événement de pression de touche.

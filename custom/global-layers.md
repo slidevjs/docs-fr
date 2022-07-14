@@ -4,13 +4,15 @@
 
 Les couches globales vous permettent d'avoir des composants personnalisés qui **persistent** sur les diapositives. Cela pourrait être utile pour avoir des pieds de page, des animations de diapositives croisées, des effets globaux, etc.
 
-Slidev fournit deux couches pour cet usage, créez `global-top.vue` ou `global-bottom.vue` sous la racine de votre projet et il reprendra automatiquement.
+Slidev fournit deux couches pour cet usage, créez `global-top.vue`, `global-bottom.vue` ou `custom-nav-controls.vue` sous la racine de votre projet et il reprendra automatiquement.
 
 Relation des couches :
 
 - Global Top (`global-top.vue`)
 - Diapositives
 - Global Bottom (`global-bottom.vue`)
+- NavControls
+  - Customized Navigation Controls (`custom-nav-controls.vue`)
 
 ## Exemple
 
@@ -22,6 +24,17 @@ Relation des couches :
 ```
 
 Le texte `Votre nom` apparaîtra sur toutes vos diapositives.
+
+```html
+<!-- custom-nav-controls -->
+<template>
+  <button class="icon-btn" title="Next" @click="$slidev.nav.next">
+    <carbon:arrow-right />
+  </button>
+</template>
+```
+
+Le bouton `Next` apparaîtra dans NavControls.
 
 Pour l'activer conditionnellement, vous pouvez l'appliquer avec le [Contexte Global Vue](/custom/vue-context).
 
@@ -58,5 +71,15 @@ Pour l'activer conditionnellement, vous pouvez l'appliquer avec le [Contexte Glo
   >
     {{ $slidev.nav.currentPage }} / {{ $slidev.nav.total }}
   </footer>
+</template>
+```
+
+```html
+<!-- custom-nav-controls -->
+<!-- hide the button in Presenter model -->
+<template>
+  <button v-if="!$slidev.nav.isPresenter" class="icon-btn" title="Next" @click="$slidev.nav.next">
+    <carbon:arrow-right />
+  </button>
 </template>
 ```

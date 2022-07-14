@@ -10,35 +10,36 @@ Vous pouvez en savoir plus sur la raison d'être du projet dans la section [Pour
 
 ### Caractéristiques
 
-- 📝 [**Basé sur Markdown**](/guide/syntax.html) - utilisez vos éditeurs et flux de travail préférés.
-- 🧑‍💻 [**Adapté aux développeurs**](/guide/syntax.html#code-blocks) - coloration syntaxique intégrée, codage en direct, etc.
-- 🎨 [**Thème**](/themes/gallery.html) - le thème peut être partagé et utilisé avec les packages npm.
-- 🌈 [**Stylisé**](/guide/syntax.html#embedded-styles) - [Windi CSS](https://windicss.org/) utilitaires à la demande, feuilles de style intégrées faciles à utiliser.
-- 🎙 [**Mode Présentateur**](/guide/presenter-mode.html) - utilisez une autre fenêtre, ou même votre téléphone pour contrôler vos diapositives.
-- 🎨 [**Dessins**](/guide/drawing.html) - Dessinez et annotez vos diapositives.
-- 🧮 [**LaTeX**](/guide/syntax.html#latex) - Prise en charge des équations mathématiques LaTeX intégrées.
-- 📰 [**Diagrammes**](/guide/syntax.html#diagrams) - Crée des diagrammes avec des descriptions textuelles.
-- 🌟 [**Icônes**](/guide/syntax.html#icons) - Accès aux icônes depuis n'importe quel jeu d'icônes directement.
-- 💻 [**Éditeurs**](/guide/editors.html) - Editeur intégré, ou [extension pour VS Code](https://github.com/slidevjs/slidev-vscode).
-- 🎥 [**Enregistrement**](/guide/recording.html) - enregistrement intégré et vue de la caméra.
-- 📤 [**Portable**](/guide/exporting.html) - exportation au format PDF, PNG ou même un SPA hébergeable.
-- ⚡️ [**Rapide**](https://vitejs.dev) - rechargement instantané alimenté par [Vite](https://vitejs.dev).
-- 🛠 [**Hackable**](/custom/config-vite.html) - en utilisant les plugins Vite, les composants Vue ou tout autre package npm.
+- 📝 [**basé sur Markdown**](/guide/syntax.html) - utilisez vos éditeurs et flux de travail préférés
+- 🧑‍💻 [**Convivial pour les développeurs**](/guide/syntax.html#code-blocks) - coloration syntaxique intégrée, codage en direct, etc.
+- 🎨 [**Themable**](/themes/gallery.html) - le thème peut être partagé et utilisé avec les packages npm
+- 🌈 [**Élégant**](/guide/syntax.html#embedded-styles) - utilitaires à la demande via [Windi CSS](https://windicss.org/) ou [UnoCSS](https:// github.com/unocss/unocss).
+- 🤹 [**Interactive**](/custom/directory-structure.html#components) - intégration transparente des composants Vue
+- 🎙 [**Mode Présentateur**](/guide/presenter-mode.html) - utilisez une autre fenêtre, ou même votre téléphone pour contrôler vos diapositives
+- 🎨 [**Dessin**](/guide/drawing.html) - dessinez et annotez sur vos diapositives
+- 🧮 [**LaTeX**](/guide/syntax.html#latex) - prise en charge intégrée des équations mathématiques LaTeX
+- 📰 [**Diagrams**](/guide/syntax.html#diagrams) - crée des diagrammes avec des descriptions textuelles
+- 🌟 [**Icons**](/guide/syntax.html#icons) - Accès direct aux icônes de n'importe quel jeu d'icônes
+- 💻 [**Editors**](/guide/editors.html) - éditeur intégré, ou [extension pour VS Code](https://github.com/slidevjs/slidev-vscode)
+- 🎥 [**Enregistrement**](/guide/recording.html) - enregistrement intégré et vue caméra
+- 📤 [**Portable**](/guide/exporting.html) - exportez en PDF, PNG ou même un SPA hébergeable
+- ⚡️ [**Fast**](https://vitejs.dev) - rechargement instantané alimenté par [Vite](https://vitejs.dev)
+- 🛠 [**Hackable**](/custom/config-vite.html) - en utilisant les plugins Vite, les composants Vue ou tout package npm
 
 ### Pile technologique
 
 Slidev est rendu possible en combinant ces outils et technologies.
 
 - [Vite](https://vitejs.dev) - Un outil frontal extrêmement rapide
-- [Vue 3](https://v3.vuejs.org/) powered [Markdown](https://daringfireball.net/projects/markdown/syntax) - Concentrez-vous sur le contenu tout en ayant la puissance des composants HTML et Vue chaque fois que nécessaire
-- [Windi CSS](https://github.com/windicss/windicss) - Framework CSS à la demande, premier utilitaire, stylisez vos diapositives à l'aise
-- [Prism](https://github.com/PrismJS/prism), [Shiki](https://github.com/shikijs/shiki), [Monaco Editor](https://github.com/Microsoft/monaco-editor) - Prise en charge des extraits de code de première classe avec capacité de codage en direct
-- [RecordRTC](https://recordrtc.org) - Enregistrement intégré et vue de la caméra
-- [VueUse](https://vueuse.org) family -  [`@vueuse/core`](https://github.com/vueuse/vueuse), [`@vueuse/head`](https://github.com/vueuse/head), [`@vueuse/motion`](https://github.com/vueuse/motion), etc.
-- [Iconify](https://iconify.design/) - Collection d'icônes.
-- [Drauu](https://github.com/antfu/drauu) - Prise en charge des dessins et des annotations.
+- [Vue 3](https://v3.vuejs.org/) propulsé [Markdown](https://daringfireball.net/projects/markdown/syntax) - Concentrez-vous sur le contenu tout en ayant la puissance des composants HTML et Vue chaque fois que nécessaire
+- [Windi CSS](https://github.com/windicss/windicss) ou [UnoCSS](https://github.com/unocss/unocss) - Utilitaire à la demande-premier cadre CSS, stylisez vos diapositives à l'aise
+- [Prism](https://github.com/PrismJS/prism), [Shiki](https://github.com/shikijs/shiki), [Monaco Editor](https://github.com/Microsoft/ monaco-editor) - Prise en charge des extraits de code de première classe avec capacité de codage en direct
+- [RecordRTC](https://recordrtc.org) - Enregistrement intégré et vue caméra
+- Famille [VueUse](https://vueuse.org) - [`@vueuse/core`](https://github.com/vueuse/vueuse), [`@vueuse/head`](https:// github.com/vueuse/head), [`@vueuse/motion`](https://github.com/vueuse/motion), etc.
+- [Iconify] (https://iconify.design/) - Collection d'ensembles d'icônes.
+- [Drauu](https://github.com/antfu/drauu) - Prise en charge du dessin et des annotations
 - [KaTeX](https://katex.org/) - Rendu mathématique LaTeX.
-- [Mermaid](https://mermaid-js.github.io/mermaid) - Diagrammes textuels.
+- [Mermaid] (https://mermaid-js.github.io/mermaid) - Diagrammes textuels.
 
 ### Création de votre première présentation
 
