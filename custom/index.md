@@ -9,46 +9,68 @@ Vous pouvez configurer Slidev dans le frontmatter de votre première diapositive
 ```yaml
 ---
 # identifiant du thème ou nom du package
-theme: 'default'
+# En savoir plus : https://sli.dev/themes/use.html
+thème : 'par défaut'
 # titre de votre diapositive, sera automatiquement déduit du premier en-tête s'il n'est pas spécifié
-title: ''
-# titre pour la page Web, `%s` sera remplacé par le titre de la page
-titleTemplate: '%s - Slidev'
+titre : 'Slidev'
+# titleTemplate pour la page Web, `%s` sera remplacé par le titre de la page
+titleTemplate : '%s - Slidev'
+# informations pour vos diapositives, peut être une chaîne de démarquage
+infos : faux
 
 # téléchargement de pdf activé dans la version SPA, peut également être une URL personnalisée
-download: true
-# surligneur de syntaxe, peut être 'prism' ou 'shiki'
-highlighter: 'prism'
-# afficher le numéro de ligne dans les blocs de code
-lineNumbers: false
-# activer l'éditeur de monaco, par défaut sur dev uniquement
-monaco: 'dev'
-# forcer le schéma de couleur pour les diapositives, peut être 'auto', 'light' ou 'dark'
-colorSchema: 'auto'
-# le mode routeur pour vue-router, peut être "history" ou "hash"
-routerMode: 'history'
-# rapport hauteur/largeur des diapositives
-aspectRatio: '16/9'
+téléchargement : faux
+# nom de fichier du fichier d'exportation
+exportFilename : 'slidev-exported.pdf'
+# surligneur de syntaxe, peut être 'prisme' ou 'shiki'
+surligneur : 'prisme'
+# afficher les numéros de ligne dans les blocs de code
+lineNumbers : faux
+# activer l'éditeur monaco, peut être booléen, 'dev' ou 'build'
+monaco : 'dev'
+# télécharger les actifs distants en local à l'aide de vite-plugin-remote-assets, peut être booléen, 'dev' ou 'build'
+remoteAssets : faux
+# contrôle si les textes des diapositives sont sélectionnables
+sélectionnable : vrai
+# activer l'enregistrement de diapositives, peut être booléen, 'dev' ou 'build'
+enregistrement : 'dev'
+
+# forcer le schéma de couleur pour les diapositives, peut être 'auto', 'clair' ou 'sombre'
+schéma de couleurs : 'auto'
+# mode routeur pour vue-router, peut être "history" ou "hash"
+routerMode : 'historique'
+# ratio d'aspect pour les diapositives
+rapport d'aspect : '16/9'
 # largeur réelle du canevas, unité en px
+toileLargeur: 980
+# utilisé pour la personnalisation du thème, injectera les styles racine comme `--slidev-theme-x` pour l'attribut `x`
+themeConfig :
+  primaire : '#5d8392'
 
-canvasWidth: 980
-# les polices seront importées automatiquement depuis Google fonts
-# En savoir plus : https://fr.sli.dev/custom/fonts
-fonts:
+# favicon, peut être un chemin de fichier local ou une URL
+favicon : 'https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/favicon.png'
+# URL du serveur PlantUML utilisé pour afficher les diagrammes
+plantUmlServer : 'https://www.plantuml.com/plantuml'
+# polices seront automatiquement importées à partir des polices Google
+# En savoir plus : https://sli.dev/custom/fonts
+polices :
   sans: 'Roboto'
-  serif: 'Roboto Slab'
-  mono: 'Fira Code'
-  
-# Le frontmatter par défaut s'applique à toutes les diapositives
-defaults:
-  layout: 'default'
-  # ...
-  
-# informations pour vos diapositives, peut être une chaîne de démarque
-info: |
-  ## Slidev
+  empattement : 'Roboto Slab'
+  mono : 'Fira Code'
 
-  Ma première présentation [Slidev](http://sli.dev/)!
+# le frontmatter par défaut s'applique à toutes les diapositives
+par défaut :
+  mise en page : 'par défaut'
+  # ...
+
+# options de dessin
+# En savoir plus : https://sli.dev/guide/drawing.html
+dessins:
+  activé : vrai
+  persister : faux
+  presenterOnly : faux
+  syncAll : vrai
+---
 ```
 
 Consultez les [définitions de type](https://github.com/slidevjs/slidev/blob/main/packages/types/src/types.ts#L29) pour plus d'options.
