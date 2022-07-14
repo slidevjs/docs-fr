@@ -70,7 +70,6 @@ drawings:
   persist: false
   presenterOnly: false
   syncAll: true
----
 ```
 
 Consultez les [définitions de type](https://github.com/slidevjs/slidev/blob/main/packages/types/src/types.ts#L29) pour plus d'options.

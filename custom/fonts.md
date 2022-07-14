@@ -1,6 +1,6 @@
 # Polices
 
-> Disponile depuis v0.20
+> Disponible depuis v0.20
 
 Bien que vous puissiez utiliser HTML et CSS pour personnaliser les polices et le style de vos diapositives à votre guise, Slidev offre également un moyen pratique de les utiliser sans effort.
 

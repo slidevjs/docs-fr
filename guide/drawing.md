@@ -1,20 +1,20 @@
-# Drawing & Annotations
+# Dessins & Annotations
 
-> Available since v0.23
+> Disponible depuis v0.23
 
-We have [drauu](https://github.com/antfu/drauu) built-in for drawing and annotation that could enhance your presentation further.
+Nous avons [drauu](https://github.com/antfu/drauu) intégré pour le dessin et l'annotation qui pourraient améliorer davantage votre présentation.
 
-To start, click the <carbon-pen class="inline-icon-btn"/> icon in the toolbar and start drawing. It's also available in the [Presenter Mode](/guide/presenter-mode). Drawings and annotations you created will be **synced up** automatically across all instances in real-time.
+Pour commencer, cliquez sur l'icône <carbon-pen class="inline-icon-btn"/> dans la barre d'outils et commencez à dessiner. Il est également disponible dans le [Mode Présentateur](/guide/presenter-mode). Les dessins et les annotations que vous avez créés seront **synchronisés** automatiquement sur toutes les instances en temps réel.
 
 <Tweet id="1424027510342250499" />
 
-## Use with Stylus Pen
+## Utiliser avec stylet
 
-When using a stylus pen on a tablet (for example, iPad with Apple Pencil), Slidev could smartly detect the input type. You can directly draw on your slides with the pen without turning on the drawing mode, while having your fingers or mouse control the navigation.
+Lors de l'utilisation d'un stylet sur une tablette (par exemple, iPad avec Apple Pencil), Slidev pourrait détecter intelligemment le type d'entrée. Vous pouvez dessiner directement sur vos diapositives avec le stylet sans activer le mode dessin, tout en laissant vos doigts ou votre souris contrôler la navigation.
 
-## Persist Drawings
+## Dessins persistants
 
-The following frontmatter configuration allows you to persist your drawings as SVGs under `.slidev/drawings` directory and have them inside your exported pdf or hosted site.
+La configuration frontmatter suivante vous permet de conserver vos dessins en tant que SVG sous le répertoire `.slidev/drawings` et de les avoir dans votre pdf exporté ou votre site hébergé.
 
 ```md
 ---
@@ -23,9 +23,9 @@ drawings:
 ---
 ```
 
-## Disable Drawings
+## Désactiver les dessins
 
-Entirely:
+Entièrement :
 
 ```md
 ---
@@ -34,7 +34,7 @@ drawings:
 ---
 ```
 
-Only in Development:
+Uniquement en développement :
 
 ```md
 ---
@@ -43,7 +43,7 @@ drawings:
 ---
 ```
 
-Only in Presenter Mode:
+Uniquement en mode Présentateur :
 
 ```md
 ---
@@ -52,9 +52,9 @@ drawings:
 ---
 ```
 
-## Drawing Syncing
+## Synchronisation des dessins
 
-By default, Slidev syncs up your drawings across all instances. If you are sharing your slides with others, you might want to disable the syncing by:
+Par défaut, Slidev synchronise vos dessins sur toutes les instances. Si vous partagez vos diapositives avec d'autres personnes, vous pouvez désactiver la synchronisation en :
 
 ```md
 ---
@@ -63,6 +63,4 @@ drawings:
 ---
 ```
 
-With this config, only the drawing from the presenter instance will be able to sync with others.
-
-
+Avec cette configuration, seul le dessin de l'instance du présentateur pourra se synchroniser avec les autres.

@@ -1,10 +1,10 @@
-# Configure Shortcuts
+# Configurer les raccourcis
 
-> Available since v0.20
+> Disponible depuis v0.20
 
 <Environment type="client" />
 
-Create `./setup/shortcuts.ts` with the following content:
+Créez `./setup/shortcuts.ts` avec le contenu suivant :
 
 ```ts
 import { defineShortcutsSetup, NavOperations } from '@slidev/types'
@@ -25,11 +25,11 @@ export default defineShortcutsSetup((nav: NavOperations) => {
 })
 ```
 
-With the setup, you can provide the custom setting for shortcuts mentioned in [Navigation](/guide/navigation#navigation-bar). The above configuration binds next animation or slide to <kbd>enter</kbd> and previous animation or slide to <kbd>backspace</kbd>.
+Avec la configuration, vous pouvez fournir le paramètre personnalisé pour les raccourcis mentionnés dans [Navigation](/guide/navigation#navigation-bar). La configuration ci-dessus lie l'animation ou la diapositive suivante à <kbd>enter</kbd> et l'animation ou la diapositive précédente à <kbd>backspace</kbd>.
 
-The configuration function receives an object with some navigation methods, and returns an array containing some shortcut configuration. Refer to the type definitions for more details.
+La fonction de configuration reçoit un objet avec certaines méthodes de navigation et renvoie un tableau contenant une configuration de raccourci. Reportez-vous aux définitions de type pour plus de détails.
 
-The `key` type only allows for strings, but you can still bind multiple keys by using following convention:
+Le type `key` n'autorise que les chaînes, mais vous pouvez toujours lier plusieurs clés en utilisant la convention suivante :
 
 ```ts
 import { defineShortcutsSetup, NavOperations } from '@slidev/types'
@@ -45,4 +45,4 @@ export default defineShortcutsSetup((nav: NavOperations) => {
 })
 ```
 
-Refer to [useMagicKeys | VueUse](https://vueuse.org/core/useMagicKeys/) for more details about key pressed event.
+Reportez-vous à [useMagicKeys | VueUse](https://vueuse.org/core/useMagicKeys/) pour plus de détails sur l'événement de pression de touche.
