@@ -4,7 +4,7 @@
 
 Markdown prend naturellement en charge les balises HTML intégrées. Vous pouvez donc styliser votre contenu comme vous le souhaitez. Pour plus de commodité, nous avons [Windi CSS](https://github.com/windicss/windicss) intégré, vous pouvez donc styliser le balisage directement à l'aide des utilitaires de classe.
 
-Par exemple:
+Par exemple :
 
 ```html
 <div class="grid pt-4 gap-4 grids-cols-[100px,1fr]">
