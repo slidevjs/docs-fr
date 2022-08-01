@@ -266,7 +266,7 @@ Vous pouvez styliser les icônes comme les autres éléments HTML. Par exemple :
 
 > Disponible depuis v0.18
 
-Certaines mises en page peuvent fournir de multiples points de contributions utilisant [Les emplacements nommés de Vue](https://v3.vuejs.org/guide/component-slots.html). 
+Certaines mises en page peuvent fournir de multiples points de contributions utilisant [Les emplacements nommés de Vue](https://v3.vuejs.org/guide/component-slots.html).
 
 Par exemple, dans [la mise en page `two-cols`](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts/two-cols.vue), vous pouvez avoir deux colonnes à gauche (emplacement `par défaut`) et à droite (emplacement de `droite`) côte à côte.
 
@@ -375,7 +375,7 @@ $\sqrt{3x-1}+(1+x)^2$
 
 ### Block
 
-Utilisez deux (`$$`) pour le rendu en bloc. Ce mode utilise des symboles plus grands et centre 
+Utilisez deux (`$$`) pour le rendu en bloc. Ce mode utilise des symboles plus grands et centre
 le résultat.
 
 ```md
@@ -404,8 +404,8 @@ Les blocs de code marqués comme `mermaid` seront convertis en digrammes, par ex
 ~~~md
 //```mermaid
 sequenceDiagram
-  Alice->John: Hello John, how are you?
-  Note over Alice,John: A typical interaction
+Alice->John: Hello John, how are you?
+Note over Alice,John: A typical interaction
 //```
 ~~~
 
