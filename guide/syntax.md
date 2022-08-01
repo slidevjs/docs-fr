@@ -102,13 +102,9 @@ function add(
 //```
 ~~~
 
-<<<<<<< HEAD
-Pour ignorer la mise en surbrillance des lignes, vous pouvez définir le numéro de ligne sur "0". Par exemple
-=======
-This will first highlight `a: Ref<number> | number` and `b: Ref<number> | number`, and then `return computed(() => unref(a) + unref(b))` after one click, and lastly, the whole block. Learn more in the [clicks animations guide](/guide/animations).
+Cela mettra d'abord en évidence `a: Ref <number> | number` et `b: Ref <number> | number`, puis `return computed (() => unref (a) + unref (b))` après un clic, et enfin, tout le bloc. Pour en savoir plus, consultez le [guide des animations de clics](/guide/animations).
 
-To skip highlighting any lines, you can set the line number to `0`. For example
->>>>>>> 8c6068ac1dd3da821a6d4ef1d039063dcb34bc25
+Pour ignorer la mise en surbrillance des lignes, vous pouvez définir le numéro de ligne sur "0". Par exemple
 
 ~~~ts {0}
 //```ts {0}
@@ -121,11 +117,8 @@ function add(
 //```
 ~~~
 
-<<<<<<< HEAD
-Cela mettra d'abord en évidence `a: Ref <number> | number` et `b: Ref <number> | number`, puis `return computed (() => unref (a) + unref (b))` après un clic, et enfin, tout le bloc. Pour en savoir plus, consultez le [guide des animations de clics](/guide/animations).
-=======
-If the code doesn't fit into one slide, you can pass an extra maxHeight option which will set fixed height
-and enable scrolling
+Si le code ne rentre pas dans une diapositive, vous pouvez passer une option maxHeight supplémentaire qui définira une hauteur fixe
+et activer le défilement
 
 ~~~ts {2|3|7|12}
 //```ts {2|3|7|12} {maxHeight:'100'}
@@ -139,7 +132,6 @@ function add(
 const c = add(1, 2)
 //```
 ~~~
->>>>>>> 8c6068ac1dd3da821a6d4ef1d039063dcb34bc25
 
 ### Éditeur Monaco
 
