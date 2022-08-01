@@ -102,13 +102,9 @@ function add(
 //```
 ~~~
 
-<<<<<<< HEAD
-Pour ignorer la mise en surbrillance des lignes, vous pouvez définir le numéro de ligne sur "0". Par exemple
-=======
-This will first highlight `a: Ref<number> | number` and `b: Ref<number> | number`, and then `return computed(() => unref(a) + unref(b))` after one click, and lastly, the whole block. Learn more in the [clicks animations guide](/guide/animations).
+Cela mettra d'abord en évidence `a: Ref <number> | number` et `b: Ref <number> | number`, puis `return computed (() => unref (a) + unref (b))` après un clic, et enfin, tout le bloc. Pour en savoir plus, consultez le [guide des animations de clics](/guide/animations).
 
-To skip highlighting any lines, you can set the line number to `0`. For example
->>>>>>> e385300710ea3ef7a726c926b1933fd80d40744e
+Pour ignorer la mise en surbrillance des lignes, vous pouvez définir le numéro de ligne sur "0". Par exemple
 
 ~~~ts {0}
 //```ts {0}
@@ -121,11 +117,8 @@ function add(
 //```
 ~~~
 
-<<<<<<< HEAD
-Cela mettra d'abord en évidence `a: Ref <number> | number` et `b: Ref <number> | number`, puis `return computed (() => unref (a) + unref (b))` après un clic, et enfin, tout le bloc. Pour en savoir plus, consultez le [guide des animations de clics](/guide/animations).
-=======
-If the code doesn't fit into one slide, you can pass an extra maxHeight option which will set fixed height
-and enable scrolling
+Si le code ne rentre pas dans une diapositive, vous pouvez passer une option maxHeight supplémentaire qui définira une hauteur fixe
+et activer le défilement
 
 ~~~ts {2|3|7|12}
 //```ts {2|3|7|12} {maxHeight:'100'}
@@ -139,7 +132,6 @@ function add(
 const c = add(1, 2)
 //```
 ~~~
->>>>>>> e385300710ea3ef7a726c926b1933fd80d40744e
 
 ### Éditeur Monaco
 
@@ -274,7 +266,7 @@ Vous pouvez styliser les icônes comme les autres éléments HTML. Par exemple :
 
 > Disponible depuis v0.18
 
-Certaines mises en page peuvent fournir de multiples points de contributions utilisant [Les emplacements nommés de Vue](https://v3.vuejs.org/guide/component-slots.html). 
+Certaines mises en page peuvent fournir de multiples points de contributions utilisant [Les emplacements nommés de Vue](https://v3.vuejs.org/guide/component-slots.html).
 
 Par exemple, dans [la mise en page `two-cols`](https://github.com/slidevjs/slidev/blob/main/packages/client/layouts/two-cols.vue), vous pouvez avoir deux colonnes à gauche (emplacement `par défaut`) et à droite (emplacement de `droite`) côte à côte.
 
@@ -383,7 +375,7 @@ $\sqrt{3x-1}+(1+x)^2$
 
 ### Block
 
-Utilisez deux (`$$`) pour le rendu en bloc. Ce mode utilise des symboles plus grands et centre 
+Utilisez deux (`$$`) pour le rendu en bloc. Ce mode utilise des symboles plus grands et centre
 le résultat.
 
 ```md
@@ -412,8 +404,8 @@ Les blocs de code marqués comme `mermaid` seront convertis en digrammes, par ex
 ~~~md
 //```mermaid
 sequenceDiagram
-  Alice->John: Hello John, how are you?
-  Note over Alice,John: A typical interaction
+Alice->John: Hello John, how are you?
+Note over Alice,John: A typical interaction
 //```
 ~~~
 
