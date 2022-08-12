@@ -20,9 +20,15 @@ info: false
 
 # téléchargement de pdf activé dans la version SPA, peut également être une URL personnalisée
 download: false
+<<<<<<< HEAD
 # nom de fichier du fichier d'exportation
 exportFilename: 'slidev-exported.pdf'
 # surligneur de syntaxe, peut être 'prism' ou 'shiki'
+=======
+# filename of the export file
+exportFilename: 'slidev-exported'
+# syntax highlighter, can be 'prism' or 'shiki'
+>>>>>>> e9156da7e3b01f48ac2a90552936da50c797d88d
 highlighter: 'prism'
 # afficher les numéros de ligne dans les blocs de code
 lineNumbers: false
