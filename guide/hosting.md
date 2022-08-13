@@ -2,7 +2,7 @@
 
 ## Créer des applications monopage (SPA)
 
-Vous pouvez également intégrer les diapositives dans une SPA auto-hébergée :
+Vous pouvez également intégrer les diapositives dans une SPA autohébergée :
 
 ```bash
 $ slidev build
@@ -89,14 +89,16 @@ Créez `vercel.json` dans la racine de votre projet avec le contenu suivant.
 }
 ```
 
-Accédez ensuite à votre tableau de bord Vercel, créez un nouveau site avec le repositorie.
+Accédez ensuite à votre tableau de bord Vercel, créez un nouveau site avec le repository.
 
 ## GitHub Pages
 
 - [GitHub Pages](https://pages.github.com/)
 
-Créez `.github/workflows/deploy.yml` avec le contenu suivant pour déployer vos diapositives sur les pages GitHub via les actions GitHub.
-
+Pour déployer vos diapositives sur GitHub Pages :
+- téléchargez tous les fichiers du projet dans votre repository (c'est-à-dire nommé `name_of_repo`)
+- créez `.github/workflows/deploy.yml` avec le contenu suivant pour déployer vos diapositives sur GitHub Pages via GitHub Actions. Dans ce fichier, remplacez `<name_of_repo>` par `name_of_repo`.
+- 
 ```yaml
 name: Deploy pages
 on: push
@@ -110,8 +112,10 @@ jobs:
           node-version: '14'
       - name: Install dependencies
         run: npm install
+      - name: Install slidev
+        run:  npm i -g @slidev/cli
       - name: Build
-        run: npm run build
+        run: slidev build --base <name_of_repo>
       - name: Deploy pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
@@ -119,3 +123,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
+- Dans votre repository, allez dans Paramètres > Pages. Sous « Build and Deployment », sélectionnez « Deploy from a branch », sélectionnez « gh-pages » et « root ». Cliquez sur enregistrer.
+- Enfin, une fois tous les flux de travail exécutés, un lien vers les diapositives doit apparaître sous Paramètres > Pages.
