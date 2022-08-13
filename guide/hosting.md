@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 # Hébergement statique
-=======
-
-# Static Hosting
->>>>>>> e9156da7e3b01f48ac2a90552936da50c797d88d
 
 ## Créer des applications monopage (SPA)
 
-Vous pouvez également intégrer les diapositives dans une SPA auto-hébergée :
+Vous pouvez également intégrer les diapositives dans une SPA autohébergée :
 
 ```bash
 $ slidev build
@@ -94,20 +89,16 @@ Créez `vercel.json` dans la racine de votre projet avec le contenu suivant.
 }
 ```
 
-Accédez ensuite à votre tableau de bord Vercel, créez un nouveau site avec le repositorie.
+Accédez ensuite à votre tableau de bord Vercel, créez un nouveau site avec le repository.
 
 ## GitHub Pages
 
 - [GitHub Pages](https://pages.github.com/)
 
-<<<<<<< HEAD
-Créez `.github/workflows/deploy.yml` avec le contenu suivant pour déployer vos diapositives sur les pages GitHub via les actions GitHub.
-=======
-To deploy your slides on GitHub Pages:
-- upload all the files of the project in your repo (i.e. named `name_of_repo`)
-- create `.github/workflows/deploy.yml` with following content to deploy your slides to GitHub Pages via GitHub Actions. In this file, replace `<name_of_repo>`with `name_of_repo`.
->>>>>>> e9156da7e3b01f48ac2a90552936da50c797d88d
-
+Pour déployer vos diapositives sur GitHub Pages :
+- téléchargez tous les fichiers du projet dans votre repository (c'est-à-dire nommé `name_of_repo`)
+- créez `.github/workflows/deploy.yml` avec le contenu suivant pour déployer vos diapositives sur GitHub Pages via GitHub Actions. Dans ce fichier, remplacez `<name_of_repo>` par `name_of_repo`.
+- 
 ```yaml
 name: Deploy pages
 on: push
@@ -132,5 +123,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
-- In your repository, go to Setting>Pages. Under "Build and deployment", select "Deploy from a branch", select  "gh- pages" and "root". Click on save.
-- Finally, after all workflows is executed, a link to the slides should appear under Setting>Pages.
+- Dans votre repository, allez dans Paramètres > Pages. Sous « Build and Deployment », sélectionnez « Deploy from a branch », sélectionnez « gh-pages » et « root ». Cliquez sur enregistrer.
+- Enfin, une fois tous les flux de travail exécutés, un lien vers les diapositives doit apparaître sous Paramètres > Pages.
