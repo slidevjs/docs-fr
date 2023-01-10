@@ -30,9 +30,15 @@ download: true
 ---
 ```
 
+<<<<<<< HEAD
 Slidev générera un fichier pdf avec la construction et un bouton de téléchargement sera affiché dans le SPA.
 
 Vous pouvez également fournir une URL personnalisée au PDF. Dans ce cas, le processus de rendu sera ignoré.
+=======
+Slidev will generate a PDF file along with the build, and a download button will be displayed in the SPA.
+
+You can also provide a custom URL for the PDF. In that case, the rendering process will be skipped.
+>>>>>>> a89202a9190ecc9fbbd155cbeed518e8424e54e3
 
 ```md
 ---
@@ -51,7 +57,11 @@ Pour en savoir plus, consultez [Showcases](/showcases).
 
 ## Hébergement
 
+<<<<<<< HEAD
 Nous vous recommandons d'utiliser `npm init slidev@lastest` pour échafauder votre projet, qui contient les fichiers de configuration nécessaires pour héberger les services prêts à l'emploi.
+=======
+We recommend to use `npm init slidev@latest` to scaffold your project, which contains the necessary configuration files for hosting services out-of-the-box.
+>>>>>>> a89202a9190ecc9fbbd155cbeed518e8424e54e3
 
 ### Netlify
 
@@ -73,7 +83,11 @@ Créez `netlify.toml` dans la racine de votre projet avec le contenu suivant.
   status = 200
 ```
 
+<<<<<<< HEAD
 Ensuite, accédez à votre tableau de bord Netlify, créez un nouveau site avec le repositorie.
+=======
+Then go to your Netlify dashboard and create a new site with the repository.
+>>>>>>> a89202a9190ecc9fbbd155cbeed518e8424e54e3
 
 ### Vercel
 
@@ -89,16 +103,27 @@ Créez `vercel.json` dans la racine de votre projet avec le contenu suivant.
 }
 ```
 
+<<<<<<< HEAD
 Accédez ensuite à votre tableau de bord Vercel, créez un nouveau site avec le repository.
+=======
+Then go to your Vercel dashboard and create a new site with the repository.
+>>>>>>> a89202a9190ecc9fbbd155cbeed518e8424e54e3
 
 ## GitHub Pages
 
 - [GitHub Pages](https://pages.github.com/)
 
+<<<<<<< HEAD
 Pour déployer vos diapositives sur GitHub Pages :
 - téléchargez tous les fichiers du projet dans votre repository (c'est-à-dire nommé `name_of_repo`)
 - créez `.github/workflows/deploy.yml` avec le contenu suivant pour déployer vos diapositives sur GitHub Pages via GitHub Actions. Dans ce fichier, remplacez `<name_of_repo>` par `name_of_repo`.
 - 
+=======
+To deploy your slides on GitHub Pages:
+- upload all the files of the project in your repo (i.e. named `name_of_repo`)
+- create `.github/workflows/deploy.yml` with following content to deploy your slides to GitHub Pages via GitHub Actions. In this file, replace `<name_of_repo>` with `name_of_repo`.
+
+>>>>>>> a89202a9190ecc9fbbd155cbeed518e8424e54e3
 ```yaml
 name: Deploy pages
 on: push
@@ -123,5 +148,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
+<<<<<<< HEAD
 - Dans votre repository, allez dans Paramètres > Pages. Sous « Build and Deployment », sélectionnez « Deploy from a branch », sélectionnez « gh-pages » et « root ». Cliquez sur enregistrer.
 - Enfin, une fois tous les flux de travail exécutés, un lien vers les diapositives doit apparaître sous Paramètres > Pages.
+=======
+- In your repository, go to Settings>Pages. Under "Build and deployment", select "Deploy from a branch", select "gh-pages" and "root". Click on save.
+- Finally, after all workflows are executed, a link to the slides should appear under Settings>Pages.
+>>>>>>> a89202a9190ecc9fbbd155cbeed518e8424e54e3
