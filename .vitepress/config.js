@@ -165,7 +165,15 @@ const Customizations = [
     link: '/custom/config-mermaid',
   },
   {
+<<<<<<< HEAD
     text: 'Configurer les Raccourcis',
+=======
+    text: 'Configure Parser',
+    link: '/custom/config-parser',
+  },
+  {
+    text: 'Configure Shortcuts',
+>>>>>>> 2e53e8c41664c5aa920ca84e738e95c8a05fb349
     link: '/custom/config-shortcuts',
   },
   {
@@ -252,7 +260,8 @@ module.exports = {
     editLinkText: 'Suggérer un changement sur cette page',
 
     algolia: {
-      apiKey: '1a5c5a504139c58f428974c78c55291d',
+      appId: 'LCBV6MIFS6',
+      apiKey: '1ff173fe73b20edc962c1c24c0b1c160',
       indexName: 'slidev',
       searchParameters: {
         // for translations maintainers: change the filter to your locale code (subdomain name)
