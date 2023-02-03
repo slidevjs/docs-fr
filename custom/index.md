@@ -18,7 +18,13 @@ titleTemplate: '%s - Slidev'
 # informations pour vos diapositives, peut être une chaîne de démarquage
 info: false
 
+<<<<<<< HEAD
 # téléchargement de pdf activé dans la version SPA, peut également être une URL personnalisée
+=======
+# enable presenter mode, can be boolean, 'dev' or 'build'
+presenter: true
+# enabled pdf downloading in SPA build, can also be a custom url
+>>>>>>> 38e076f9a7c55cbd4d7b58579eecb54e77e9723a
 download: false
 # nom de fichier du fichier d'exportation
 exportFilename: 'slidev-exported'

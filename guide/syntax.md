@@ -121,7 +121,7 @@ Si le code ne rentre pas dans une diapositive, vous pouvez passer une option max
 et activer le défilement
 
 ~~~ts {2|3|7|12}
-//```ts {2|3|7|12} {maxHeight:'100'}
+//```ts {2|3|7|12} {maxHeight:'100px'}
 function add(
   a: Ref<number> | number,
   b: Ref<number> | number
