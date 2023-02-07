@@ -1,6 +1,8 @@
 # Exportation
 
-## PDF
+## Slides
+
+### PDF
 
 > L'exportation au format PDF ou PNG repose sur [Playwright](https://playwright.dev) pour le rendu. Vous devrez donc installer [`playwright-chromium`](https://playwright.dev/docs/installation#download-single-browser-binary) pour utiliser cette fonctionnalité.
 > Si vous effectuez une exportation dans un environnement CI, [le guide du dramaturge CI](https://playwright.dev/docs/ci) peut être utile.
@@ -23,18 +25,48 @@ Après quelques secondes, vos diapositives seront prêtes dans `./slides-exports
 
 > Disponible depuis v0.21
 
+<<<<<<< HEAD
 Par défaut, Slide export une page par diapositive avec les animations de clics désactivées. Si vous souhaitez exporter des diapositives avec plusieurs étapes dans plusieurs pages, passez l'option `--with-clicks`.
+=======
+#### Export Clicks Steps
+
+> Available since v0.21
+
+By default, Slidev exports one page per slide with clicks animations disabled. If you want export slides with multiple steps into multiple pages, pass the `--with-clicks` options.
+>>>>>>> 9cb6406db9a1c6f2173bfecb05a29ede60989b99
 
 ```bash
 $ slidev export --with-clicks
 ```
 
-## PNGs
+### PNGs
 
 En passant l'option `--format png`, Slidev exportera des images PNG pour chaque diapositive au lieu d'un PDF.
 
 ```bash
 $ slidev export --format png
+```
+
+### Export a range of slides
+
+By default, all slides in the presentation are exported. If you want to export a specific slide or a range of slides you can set the `--range` option and specify which slides you would like to export. 
+
+```bash
+$ slidev export --range 1,6-8,10
+```
+
+This option accepts both specific slide numbers and ranges.
+
+The example above would export slides 1,6,7,8, and 10. 
+
+## Presenter notes
+
+> Available since v0.36.8
+
+Export only the presenter notes (the last comment block for each slide) into a text document in PDF.
+
+```bash
+$ slidev export-notes
 ```
 
 ## Single-Page Application (SPA)
