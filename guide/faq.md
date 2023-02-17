@@ -43,7 +43,11 @@ La troisième colonne (10% de largeur jusqu'au conteneur parent)
 </div>
 ```
 
+<<<<<<< HEAD
 En savoir plus sur [les grilles Windi CSS](https://windicss.org/utilities/grid.html).
+=======
+Learn more about [Windi CSS Grids](https://windicss.org/utilities/layout/grid.html).
+>>>>>>> 7f25ea87516174a4aad5140a81bf55677df906c1
 
 ## Positionnement
 
