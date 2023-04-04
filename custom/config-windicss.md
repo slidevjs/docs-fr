@@ -7,7 +7,7 @@ Markdown prend naturellement en charge les balises HTML intégrées. Vous pouvez
 Par exemple :
 
 ```html
-<div class="grid pt-4 gap-4 grids-cols-[100px,1fr]">
+<div class="grid pt-4 gap-4 grid-cols-[100px,1fr]">
 
 ### Nom
 
