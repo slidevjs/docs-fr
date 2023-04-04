@@ -24,7 +24,7 @@ La seconde colonne
 Pour allez plus loin, vous pouvez personnaliser la taille de chaque colonne comme :
 
 ```html
-<div class="grid grid-cols-[200px,1fr,10%] gap-4">
+<div class="grid grid-cols-[200px_1fr_10%] gap-4">
 <div>
     
 La première colonne (200px)
@@ -43,7 +43,11 @@ La troisième colonne (10% de largeur jusqu'au conteneur parent)
 </div>
 ```
 
+<<<<<<< HEAD
 En savoir plus sur [les grilles Windi CSS](https://windicss.org/utilities/grid.html).
+=======
+Learn more about [Windi CSS Grids](https://windicss.org/utilities/layout/grid.html).
+>>>>>>> 86744c7f6c0257bbc850cc76bc921ff08eb82107
 
 ## Positionnement
 

@@ -165,7 +165,15 @@ const Customizations = [
     link: '/custom/config-mermaid',
   },
   {
+<<<<<<< HEAD
     text: 'Configurer les Raccourcis',
+=======
+    text: 'Configure Parser',
+    link: '/custom/config-parser',
+  },
+  {
+    text: 'Configure Shortcuts',
+>>>>>>> 86744c7f6c0257bbc850cc76bc921ff08eb82107
     link: '/custom/config-shortcuts',
   },
   {
@@ -176,6 +184,17 @@ const Customizations = [
     text: 'Couches Globales',
     link: '/custom/global-layers',
   }
+]
+
+const BuiltIn = [
+  {
+    text: 'Components',
+    link: '/builtin/components',
+  },
+  {
+    text: 'Layouts',
+    link: '/builtin/layouts',
+  },
 ]
 
 const Resources = [
@@ -211,6 +230,7 @@ const slidebars = [
     children: Customizations,
   },
   {
+<<<<<<< HEAD
     text: 'Intégrations',
     children: [
       {
@@ -222,6 +242,10 @@ const slidebars = [
         link: '/builtin/layouts',
       },
     ],
+=======
+    text: 'Built-in',
+    children: BuiltIn,
+>>>>>>> 86744c7f6c0257bbc850cc76bc921ff08eb82107
   },
 ]
 
@@ -252,7 +276,8 @@ module.exports = {
     editLinkText: 'Suggérer un changement sur cette page',
 
     algolia: {
-      apiKey: '1a5c5a504139c58f428974c78c55291d',
+      appId: 'LCBV6MIFS6',
+      apiKey: '1ff173fe73b20edc962c1c24c0b1c160',
       indexName: 'slidev',
       searchParameters: {
         // for translations maintainers: change the filter to your locale code (subdomain name)
@@ -278,7 +303,15 @@ module.exports = {
         items: Customizations,
       },
       {
+<<<<<<< HEAD
         text: 'Ressources',
+=======
+        text: 'Built-in',
+        items: BuiltIn,
+      },
+      {
+        text: 'Resources',
+>>>>>>> 86744c7f6c0257bbc850cc76bc921ff08eb82107
         items: Resources,
       },
       {

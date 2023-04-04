@@ -121,7 +121,7 @@ Si le code ne rentre pas dans une diapositive, vous pouvez passer une option max
 et activer le défilement
 
 ~~~ts {2|3|7|12}
-//```ts {2|3|7|12} {maxHeight:'100'}
+//```ts {2|3|7|12} {maxHeight:'100px'}
 function add(
   a: Ref<number> | number,
   b: Ref<number> | number
@@ -145,7 +145,31 @@ console.log('HelloWorld')
 
 En savoir plus sur la [configuration de Monaco](/custom/config-monaco).
 
+<<<<<<< HEAD
 ## Styles intégrés
+=======
+### Monaco diff
+
+Monaco can also generate a diff between two code blocks. Use `{monaco-diff}` to turn the block into a [diff Monaco editor](https://microsoft.github.io/monaco-editor/playground.html?source=v0.36.1#example-creating-the-diffeditor-multi-line-example) and use `~~~` to separate both original and modified version of the code!
+
+```md
+//```ts {monaco-diff}
+This line is removed on the right.
+just some text
+abcd
+efgh
+Some more text
+~~~
+just some text
+abcz
+zzzzefgh
+Some more text.
+This line is removed on the left.
+//```
+```
+
+## Embedded Styles
+>>>>>>> 86744c7f6c0257bbc850cc76bc921ff08eb82107
 
 Vous pouvez utiliser la balise `<style>` dans votre Markdown directement pour remplacer les styles de la **diapositive actuelle**.
 
@@ -163,7 +187,11 @@ h1 {
 # La prochaine diapositive n'est pas affectée
 ```
 
+<<<<<<< HEAD
 La balise `<style>` dans Markdown est toujours [scoped](https://vue-loader.vuejs.org/guide/scoped-css.html). Pour avoir des remplacements de style globaux, consultez la [section de personnalisation](/custom/directory-structure#style).
+=======
+`<style>` tag in Markdown is always [scoped](https://vuejs.org/api/sfc-css-features.html#scoped-css). As an outstanding result, a selector with the child combinator (`.a > .b`) is unusable as such; see the previous link. To have global style overrides, check out the [customization section](/custom/directory-structure#style).
+>>>>>>> 86744c7f6c0257bbc850cc76bc921ff08eb82107
 
 Propulsé par [Windi CSS](https://windicss.org), vous pouvez utiliser directement des css imbriqués et des [répertoires](https://windicss.org/features/directives.html) (par exemple, `@apply`)
 
