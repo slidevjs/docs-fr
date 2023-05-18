@@ -18,11 +18,30 @@ titleTemplate: '%s - Slidev'
 # informations pour vos diapositives, peut être une chaîne de démarquage
 info: false
 
+<<<<<<< HEAD
 # téléchargement de pdf activé dans la version SPA, peut également être une URL personnalisée
+=======
+# enable presenter mode, can be boolean, 'dev' or 'build'
+presenter: true
+# enabled pdf downloading in SPA build, can also be a custom url
+>>>>>>> 7acc3394a2458462d04fe918c5d45c5414a749e6
 download: false
 # nom de fichier du fichier d'exportation
 exportFilename: 'slidev-exported'
+<<<<<<< HEAD
 # surligneur de syntaxe, peut être 'prism' ou 'shiki'
+=======
+# export options
+# use export CLI options in camelCase format
+# Learn more: https://sli.dev/guide/exporting.html
+export:
+  format: pdf
+  timeout: 30000
+  dark: false
+  withClicks: false
+  withToc: false
+# syntax highlighter, can be 'prism' or 'shiki'
+>>>>>>> 7acc3394a2458462d04fe918c5d45c5414a749e6
 highlighter: 'prism'
 # afficher les numéros de ligne dans les blocs de code
 lineNumbers: false
@@ -70,11 +89,40 @@ drawings:
   persist: false
   presenterOnly: false
   syncAll: true
+<<<<<<< HEAD
+=======
+
+# HTML tag attributes
+htmlAttrs:
+  dir: 'ltr'
+  lang: 'en'
+---
+>>>>>>> 7acc3394a2458462d04fe918c5d45c5414a749e6
 ```
 
 Consultez les [définitions de type](https://github.com/slidevjs/slidev/blob/main/packages/types/src/types.ts#L29) pour plus d'options.
 
+<<<<<<< HEAD
 ## Structure du répertoire
+=======
+## Per slide configuration
+
+In addition, every slide accepts the following configuration in the Frontmatter block:
+
+* `clicks` (`number`): Custom clicks count (learn more [here](/guide/animations.html#custom-clicks-count)).
+* `disabled` (`boolean`): Completely disable the slide.
+* `hide` (`boolean`): Hide sub-slides when using `src` (learn more [here](/guide/syntax.html#multiple-entries)).
+* `hideInToc` (`boolean`): Hide the slide for the `<Toc>` components (learn more [here](/builtin/components.html#toc)).
+* `layout` (`string`): Defines the layout component applied to the slide (learn more [here](/guide/syntax.html#front-matter-layouts) and [here](/builtin/layouts.html)).
+* `level` (`number`): Override the title level for the `<Title>` and `<Toc>` components (only if `title` has also been declared, learn more [here](/builtin/components.html#titles)).
+* `preload` (`boolean`, default `true`): preload the next slide (learn more [here](/guide/animations.html#motion)).
+* `routeAlias` (`string`): create a route alias that can be used in the URL or with the `<Link>` component (learn more [here](/builtin/components.html#link)).
+* `src` (`string`): Includes a markdown file (learn more [here](/guide/syntax.html#multiple-entries)).
+* `title` (`string`): Override the title for the `<Title>` and `<Toc>` components (learn more [here](/builtin/components.html#titles)).
+* `transition` (`string | TransitionProps`): Defines the transition between the slide and the next one (learn more [here](/guide/animations.html#slide-transitions)).
+
+## Directory Structure
+>>>>>>> 7acc3394a2458462d04fe918c5d45c5414a749e6
 
 Slidev utilise des conventions de structure de répertoires pour minimiser la surface de configuration et rendre les extensions de fonctionnalités flexibles et intuitives.
 
