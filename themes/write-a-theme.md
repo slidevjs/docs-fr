@@ -64,7 +64,7 @@ Un thème peut fournir des [configurations par défaut](/custom/#frontmatter-con
 // package.json
 {
   "slidev": {
-    "default": {
+    "defaults": {
       "aspectRatio": "16/9",
       "canvasWidth": 980,
       "fonts": {
@@ -128,7 +128,7 @@ N'oubliez pas non plus de spécifier les surligneurs pris en charge dans votre `
 // package.json
 {
   "slidev": {
-    "highlighter": "shiki" // or "prism" or "all"
+    "highlighter": "shiki" // or "prism" or "both"
   }
 }
 ```
