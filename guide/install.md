@@ -18,7 +18,17 @@ Avec Yarn :
 $ yarn create slidev
 ```
 
+<<<<<<< HEAD
 Suivez les invités et il ouvrira le diaporama à `http://localhost:3030/` automatiquement pour vous.
+=======
+With PNPM:
+
+```bash
+$ pnpm create slidev
+```
+
+Follow the prompts and it will open up the slideshow at `http://localhost:3030/` automatically for you.
+>>>>>>> 19d3ad78801d41f8e35b2c2f4cbeecc8b90afaea
 
 Il contient également la configuration de base et une courte démo avec des instructions sur la façon de démarrer avec Slidev.
 
