@@ -12,12 +12,21 @@ Ensuite, vous pouvez le modifier et jouer avec. Vous pouvez également vous réf
 
 Un thème peut contribuer aux points suivants :
 
+<<<<<<< HEAD
 - Styles globaux
 - Fournir des configurations par défaut (police, schéma de couleurs, surligneurs, etc.)
 - Fournir des mises en page personnalisées ou remplacer celle existante
 - Fournir des composants personnalisés ou remplacer l'existant
 - Étendre les configurations de WindiCSS 
 - Configurer des outils comme Monaco et Prism
+=======
+- Global styles
+- Provide default configurations (fonts, color schema, highlighters, etc.)
+- Provide custom layouts or override the existing one
+- Provide custom components or override the existing one
+- Extend UnoCSS/Windi CSS configurations
+- Configure tools like Monaco and Prism
+>>>>>>> 19d3ad78801d41f8e35b2c2f4cbeecc8b90afaea
 
 ## Conventions
 
@@ -64,7 +73,7 @@ Un thème peut fournir des [configurations par défaut](/custom/#frontmatter-con
 // package.json
 {
   "slidev": {
-    "default": {
+    "defaults": {
       "aspectRatio": "16/9",
       "canvasWidth": 980,
       "fonts": {
@@ -128,7 +137,7 @@ N'oubliez pas non plus de spécifier les surligneurs pris en charge dans votre `
 // package.json
 {
   "slidev": {
-    "highlighter": "shiki" // or "prism" or "all"
+    "highlighter": "shiki" // or "prism" or "both"
   }
 }
 ```
