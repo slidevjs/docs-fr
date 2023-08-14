@@ -175,7 +175,38 @@ Cela apparait sur la gauche
 Cela apparait sur la droite
 ```
 
+<<<<<<< HEAD
 ## Mises en page customisées
+=======
+### `tow-cols-header`
+
+Separates the upper and lower lines of the page content, and the second line separates the left and right columns.
+
+#### Usage
+
+
+```md
+---
+layout: two-cols-header
+---
+
+This spans both
+
+:::left:::
+
+# Left
+
+This shows on the left
+
+::right::
+
+# Right
+
+This shows on the right
+```
+
+## Custom Layouts
+>>>>>>> a6243d6b7389324ffcacb2e5b7e628eda6c656a5
 
 Créer un répertoire `layouts/` sous la racine de votre projet, et placez simplement vos composants Vue personnalisés sous celui-ci.
 
