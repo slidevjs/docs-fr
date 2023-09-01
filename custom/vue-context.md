@@ -25,6 +25,14 @@ La page actuelle est : {{ $slidev.nav.currentPage }}
 
 ## Propriétés
 
+### `$clicks`
+
+`$clicks` hold a number of clicks on the current slide. Can be used conditionally to show different content on clicks.
+
+```html
+<div v-if="$clicks > 3">Content</div>
+```
+
 ### `$slidev.nav`
 
 Un objet réactif contenant les propriétés et les contrôles de la navigation des diapositives. Par exemple :
@@ -40,12 +48,18 @@ $slidev.nav.go(10) // aller à la diapositive #10
 ```js
 $slidev.nav.currentPage // numéro de la diapositive actuelle
 
+<<<<<<< HEAD
 $slidev.nav.currentLayout // ID de mise en page actuelle
 
 $slidev.nav.clicks // nombre de clics en cours
+=======
+$slidev.nav.currentLayout // current layout id
+>>>>>>> 2fe32c406cbcd27bcfe2100a4d8c08d7cc42adc4
 ```
 
 Pour plus de propriétés disponibles, reportez-vous aux exportations [nav.ts](https://github.com/slidevjs/slidev/blob/main/packages/client/logic/nav.ts).
+
+> Note: `$slidev.nav.clicks` is a global state while `$clicks` is local to each slide. It's recommended to **use `$clicks` over `$slidev.nav.clicks`** to avoid clicks changed been triggered on page transitions.
 
 ### `$slidev.configs`
 
@@ -76,3 +90,9 @@ themeConfig:
 ```
 {{ $slidev.themeConfigs.primary }} // '#213435'
 ```
+
+### `$nav`
+
+> Available since v0.43.0
+
+A shorthand of `$slidev.nav`.
