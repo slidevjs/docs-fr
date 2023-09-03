@@ -18,7 +18,17 @@ Avec Yarn :
 $ yarn create slidev
 ```
 
+<<<<<<< HEAD
 Suivez les invités et il ouvrira le diaporama à `http://localhost:3030/` automatiquement pour vous.
+=======
+With PNPM:
+
+```bash
+$ pnpm create slidev
+```
+
+Follow the prompts and it will open up the slideshow at `http://localhost:3030/` automatically for you.
+>>>>>>> 6e0af1f2744db999dfeb58e8528478dea41a1240
 
 Il contient également la configuration de base et une courte démo avec des instructions sur la façon de démarrer avec Slidev.
 
@@ -197,6 +207,7 @@ Exportez les diapositives au format PDF (ou autre format).
 
 Options:
 
+<<<<<<< HEAD
 * `--output` (`string`, défaut : use `exportFilename` (voir https://sli.dev/custom/#frontmatter-configures) ou utiliser `[entry]-export`): chemin vers la sortie.
 * `--base` (`'pdf', 'png', 'md'`, défaut : `'pdf'`): format de sortie.
 * `--timeout` (`number`, défaut : `30000`): délai d'attente pour le rendu de la page d'impression (voir https://playwright.dev/docs/api/class-page#page-goto).
@@ -204,6 +215,15 @@ Options:
 * `--dark` (`boolean`, défaut : `false`): exporter en tant que thème sombre.
 * `--with-clicks`, `-c` (`boolean`, défaut : `false`): exporter des pages pour chaque clic (voir https://sli.dev/guide/animations.html#click-animations).
 * `--theme`, `-t` (`string`): thème de remplacement.
+=======
+* `--output` (`string`, default: use `exportFilename` (see https://sli.dev/custom/#frontmatter-configures) or use `[entry]-export`): path to the output.
+* `--format` (`'pdf', 'png', 'md'`, default: `'pdf'`): output format.
+* `--timeout` (`number`, default: `30000`): timeout for rendering the print page (see https://playwright.dev/docs/api/class-page#page-goto).
+* `--range` (`string`): page ranges to export (example: `'1,4-5,6'`).
+* `--dark` (`boolean`, default: `false`): export as dark theme.
+* `--with-clicks`, `-c` (`boolean`, default: `false`): export pages for every clicks (see https://sli.dev/guide/animations.html#click-animations).
+* `--theme`, `-t` (`string`): override theme.
+>>>>>>> 6e0af1f2744db999dfeb58e8528478dea41a1240
 
 ### `slidev format [entry]`
 
