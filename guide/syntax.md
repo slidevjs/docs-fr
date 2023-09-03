@@ -2,7 +2,11 @@
 
 Les diapositives sont écrites dans **un seul fichier markdown** (par défaut `./slides.md`).
 
+<<<<<<< HEAD
 Vous pouvez utiliser [les fonctionnalités Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) comme vous le feriez normalement, avec le support supplémentaire du HTML intégré et des composants Vue. Le style à l'aide de [Windi CSS](https://windicss.org) est également pris en charge. Utilisez `---` avec une nouvelle ligne pour séparer vos diapositives.
+=======
+You can use [the Markdown features](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) as you normally would, with the additional support of inlined HTML and Vue Components. Styling using [UnoCSS](/custom/config-unocss) is also supported. Use `---` padded with a new line to separate your slides. 
+>>>>>>> 6e0af1f2744db999dfeb58e8528478dea41a1240
 
 ~~~md
 # Slidev
@@ -76,7 +80,11 @@ Nous supportons [Prism](http://prismjs.com) et [Shiki](https://github.com/shiki/
 
 ### Mise en évidence de ligne
 
+<<<<<<< HEAD
 Pour mettre en évidence des lignes spécifiques, ajoutez simplement des numéros de ligne entre crochets `{}`. Les numéros de ligne commencent à compter de 1.
+=======
+To highlight specific lines, simply add line numbers within bracket `{}`. Line numbers start counting from 1 by default.
+>>>>>>> 6e0af1f2744db999dfeb58e8528478dea41a1240
 
 ~~~ts
 //```ts {2,3}
@@ -89,7 +97,37 @@ function add(
 //```
 ~~~
 
+<<<<<<< HEAD
 Pour changer la surbrillance en plusieurs étapes, vous pouvez utiliser `|` pour les séparer. Par exemple
+=======
+You can enable line number to all slides by setting `lineNumbers: true` on the config or enable each code block individually by setting `lines:true`. In case you want to disable the numbering for an specific block when `lineNumbers: true` you can set `lines:false` for that block:
+
+~~~ts
+//```ts {2,3} {lines:true}
+function add(
+  a: Ref<number> | number,
+  b: Ref<number> | number
+) {
+  return computed(() => unref(a) + unref(b))
+}
+//```
+~~~
+
+You can also set the starting line for each code block and highlight the lines accordingly, defaults to 1:
+
+~~~ts
+//```ts {6,7} {lines:true, startLine:5}
+function add(
+  a: Ref<number> | number,
+  b: Ref<number> | number
+) {
+  return computed(() => unref(a) + unref(b))
+}
+//```
+~~~
+
+To change the highlight in multiple steps, you can use `|` to separate them. For example
+>>>>>>> 6e0af1f2744db999dfeb58e8528478dea41a1240
 
 ~~~ts
 //```ts {2-3|5|all}
@@ -121,7 +159,7 @@ Si le code ne rentre pas dans une diapositive, vous pouvez passer une option max
 et activer le défilement
 
 ~~~ts {2|3|7|12}
-//```ts {2|3|7|12} {maxHeight:'100'}
+//```ts {2|3|7|12} {maxHeight:'100px'}
 function add(
   a: Ref<number> | number,
   b: Ref<number> | number
@@ -145,7 +183,31 @@ console.log('HelloWorld')
 
 En savoir plus sur la [configuration de Monaco](/custom/config-monaco).
 
+<<<<<<< HEAD
 ## Styles intégrés
+=======
+### Monaco diff
+
+Monaco can also generate a diff between two code blocks. Use `{monaco-diff}` to turn the block into a [diff Monaco editor](https://microsoft.github.io/monaco-editor/playground.html?source=v0.36.1#example-creating-the-diffeditor-multi-line-example) and use `~~~` to separate both original and modified version of the code!
+
+```md
+//```ts {monaco-diff}
+This line is removed on the right.
+just some text
+abcd
+efgh
+Some more text
+~~~
+just some text
+abcz
+zzzzefgh
+Some more text.
+This line is removed on the left.
+//```
+```
+
+## Embedded Styles
+>>>>>>> 6e0af1f2744db999dfeb58e8528478dea41a1240
 
 Vous pouvez utiliser la balise `<style>` dans votre Markdown directement pour remplacer les styles de la **diapositive actuelle**.
 
@@ -163,9 +225,15 @@ h1 {
 # La prochaine diapositive n'est pas affectée
 ```
 
+<<<<<<< HEAD
 La balise `<style>` dans Markdown est toujours [scoped](https://vue-loader.vuejs.org/guide/scoped-css.html). Pour avoir des remplacements de style globaux, consultez la [section de personnalisation](/custom/directory-structure#style).
 
 Propulsé par [Windi CSS](https://windicss.org), vous pouvez utiliser directement des css imbriqués et des [répertoires](https://windicss.org/features/directives.html) (par exemple, `@apply`)
+=======
+`<style>` tag in Markdown is always [scoped](https://vuejs.org/api/sfc-css-features.html#scoped-css). As an outstanding result, a selector with the child combinator (`.a > .b`) is unusable as such; see the previous link. To have global style overrides, check out the [customization section](/custom/directory-structure#style).
+
+Powered by [UnoCSS](/custom/config-unocss), you can directly use nested css and [directives](https://windicss.org/features/directives.html) (e.g. `@apply`)
+>>>>>>> 6e0af1f2744db999dfeb58e8528478dea41a1240
 
 ```md
 # Slidev
@@ -516,3 +584,27 @@ src: ./content.md
 src: ./content.md
 ---
 ```
+
+## MDC Syntax
+
+> Available since v0.43.0
+
+Slidev has and experimental support for [MDC (Markdown Components) Syntax](https://content.nuxtjs.org/guide/writing/mdc) powered by [`markdown-it-mdc`](https://github.com/antfu/markdown-it-mdc).
+
+You can enable it by add `mdc: true` to the frontmatter of your markdown file.
+
+```md
+---
+mdc: true
+---
+
+This is a [red text]{style="color:red"} :inline-component{prop="value"}
+
+![](/image.png){width=500px lazy}
+
+::block-component{prop="value"}
+The **default** slot
+::
+```
+
+Learn more about [the syntax](https://content.nuxtjs.org/guide/writing/mdc).
