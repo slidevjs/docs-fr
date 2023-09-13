@@ -13,7 +13,7 @@ Vous pouvez en savoir plus sur la raison d'être du projet dans la section [Pour
 - 📝 [**basé sur Markdown**](/guide/syntax.html) - utilisez vos éditeurs et flux de travail préférés
 - 🧑‍💻 [**Convivial pour les développeurs**](/guide/syntax.html#code-blocks) - coloration syntaxique intégrée, codage en direct, etc.
 - 🎨 [**Themable**](/themes/gallery.html) - le thème peut être partagé et utilisé avec les packages npm
-- 🌈 [**Élégant**](/guide/syntax.html#embedded-styles) - utilitaires à la demande via [Windi CSS](https://windicss.org/) ou [UnoCSS](https:// github.com/unocss/unocss).
+- 🌈 [**Élégant**](/guide/syntax.html#embedded-styles) - utilitaires à la demande via [UnoCSS](https://github.com/unocss/unocss) ou [Windi CSS](https://windicss.org/).
 - 🤹 [**Interactive**](/custom/directory-structure.html#components) - intégration transparente des composants Vue
 - 🎙 [**Mode Présentateur**](/guide/presenter-mode.html) - utilisez une autre fenêtre, ou même votre téléphone pour contrôler vos diapositives
 - 🎨 [**Dessin**](/guide/drawing.html) - dessinez et annotez sur vos diapositives
