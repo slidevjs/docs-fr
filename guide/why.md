@@ -32,7 +32,11 @@ En savoir plus sur [surligneurs](/custom/highlighters) et [configuration Monaco]
 
 ## Rapide
 
+<<<<<<< HEAD
 Slidev est alimenté par [Vite](https://vitejs.dev/), [Vue 3](https://v3.vuejs.org/) et [Windi CSS](https://windicss.org/), qui vous offrent la plus merveilleuse expérience de création. Chaque modification que vous apportez sera répercutée sur vos diapositives **instantanément**.
+=======
+Slidev is powered by [Vite](https://vitejs.dev/), [Vue 3](https://v3.vuejs.org/) and [UnoCSS](https://unocss.dev/), which give you the most wonderful authoring experience. Every change you made will reflect to your slides **instantly**.
+>>>>>>> 32ffb9e79f43a405236e06473aaf65d3cf6e9aa7
 
 En savoir plus sur [notre pile technologique](/guide/#pile-technologique).
 
