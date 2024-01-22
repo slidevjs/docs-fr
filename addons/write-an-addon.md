@@ -6,11 +6,19 @@
 
 Un addon peut contribuer aux points suivants :
 
+<<<<<<< HEAD
 - Styles globaux (à utiliser avec prudence c'est plus le rôle de [themes](/themes/use))
 - Fournir des mises en page personnalisées ou remplacer celle existante
 - Fournir des composants personnalisés ou remplacer celui existant
 - Étendre les configurations Windi CSS
 - Configurer des outils comme Monaco et Prism
+=======
+- Global styles (use with caution has it is more the role of [themes](/themes/use))
+- Provide custom layouts or override the existing one
+- Provide custom components or override the existing one
+- Extend UnoCSS/Windi CSS configurations
+- Configure tools like Monaco and Prism
+>>>>>>> 9b64ca249c101e7e425d7ca81aebba12658b9b97
 
 ## Conventions
 
