@@ -2,7 +2,11 @@
 
 ## Aperçu
 
+<<<<<<< HEAD
 Slidev <sup>(slide + dev, `/slʌɪdɪv/`)</sup> est un créateur et présentateur de diapositives basé sur le Web. Il est conçu pour que les développeurs se concentrent sur l'écriture de contenu dans Markdown tout en ayant la puissance des composants HTML et Vue pour fournir des mises en page et des conceptions parfaites au pixel près avec des démos interactives intégrées dans vos présentations.
+=======
+Slidev <sup>(slide + dev, **/slaɪdɪv/**)</sup> is a web-based slides maker and presenter. It's designed for developers to focus on writing content in Markdown while also having the power of HTML and Vue components to deliver pixel-perfect layouts and designs with embedded interactive demos in your presentations.
+>>>>>>> 145fc07cd89b05477358f72609931fdf9c7d68cf
 
 Il utilise un fichier de démarque riche en fonctionnalités pour générer de belles diapositives avec une expérience de rechargement instantané, ainsi que de nombreuses intégrations intégrées telles que le codage en direct, l'exportation de PDF, l'enregistrement de présentations, etc. Comme il est alimenté par le Web, vous pouvez tout faire avec Slidev - les possibilités sont infinies.
 
@@ -10,6 +14,7 @@ Vous pouvez en savoir plus sur la raison d'être du projet dans la section [Pour
 
 ### Caractéristiques
 
+<<<<<<< HEAD
 - 📝 [**basé sur Markdown**](/guide/syntax.html) - utilisez vos éditeurs et flux de travail préférés
 - 🧑‍💻 [**Convivial pour les développeurs**](/guide/syntax.html#code-blocks) - coloration syntaxique intégrée, codage en direct, etc.
 - 🎨 [**Themable**](/themes/gallery.html) - le thème peut être partagé et utilisé avec les packages npm
@@ -25,6 +30,23 @@ Vous pouvez en savoir plus sur la raison d'être du projet dans la section [Pour
 - 📤 [**Portable**](/guide/exporting.html) - exportez en PDF, PNG ou même un SPA hébergeable
 - ⚡️ [**Fast**](https://vitejs.dev) - rechargement instantané alimenté par [Vite](https://vitejs.dev)
 - 🛠 [**Hackable**](/custom/config-vite.html) - en utilisant les plugins Vite, les composants Vue ou tout package npm
+=======
+- 📝 [**Markdown-based**](/guide/syntax.html) - use your favorite editors and workflow
+- 🧑‍💻 [**Developer Friendly**](/guide/syntax.html#code-blocks) - built-in syntax highlighting, live coding, etc.
+- 🎨 [**Themable**](/themes/gallery.html) - theme can be shared and used with npm packages
+- 🌈 [**Stylish**](/guide/syntax.html#embedded-styles) - on-demand utilities via [UnoCSS](https://github.com/unocss/unocss) or [Windi CSS](https://windicss.org/).
+- 🤹 [**Interactive**](/custom/directory-structure.html#components) - embedding Vue components seamlessly
+- 🎙 [**Presenter Mode**](/guide/presenter-mode.html) - use another window, or even your phone to control your slides
+- 🎨 [**Drawing**](/guide/drawing.html) - draw and annotate on your slides
+- 🧮 [**LaTeX**](/guide/syntax.html#latex) - built-in LaTeX math equations support
+- 📰 [**Diagrams**](/guide/syntax.html#diagrams) - creates diagrams with textual descriptions 
+- 🌟 [**Icons**](/guide/syntax.html#icons) - Access to icons from any iconset directly
+- 💻 [**Editors**](/guide/editors.html) - integrated editor, or [extension for VS Code](https://github.com/slidevjs/slidev-vscode)
+- 🎥 [**Recording**](/guide/recording.html) - built-in recording and camera view
+- 📤 [**Portable**](/guide/exporting.html) - export into PDF, PNGs, or even a hostable SPA
+- ⚡️ [**Fast**](https://vitejs.dev) - instant reloading powered by [Vite](https://vitejs.dev)
+- 🛠 [**Hackable**](/custom/config-vite.html) - using Vite plugins, Vue components, or any npm packages
+>>>>>>> 145fc07cd89b05477358f72609931fdf9c7d68cf
 
 ### Pile technologique
 
@@ -63,7 +85,17 @@ Avec Yarn :
 $ yarn create slidev
 ```
 
+<<<<<<< HEAD
 Suivez les instructions et commencez à créer vos diapositives maintenant ! Pour plus de détails sur la syntaxe de démarquage, lisez le [guide de syntaxe](/guide/syntax).
+=======
+With pnpm:
+
+```bash
+$ pnpm create slidev
+```
+
+Follow the prompts and start making your slides now! For more details about the markdown syntax, read through the [syntax guide](/guide/syntax).
+>>>>>>> 145fc07cd89b05477358f72609931fdf9c7d68cf
 
 ### Interface de ligne de commande
 
