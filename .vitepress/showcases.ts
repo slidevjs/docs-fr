@@ -115,7 +115,7 @@ export const showcases: ShowCaseInfo[] = [
       name: 'Alexander Eble',
       link: 'https://github.com/alexanderdavide',
     },
-    slidesLink: 'https://git-most-wanted.alex-eble.de',
+    slidesLink: 'https://alexeble.de/talks/git-most-wanted/',
     sourceLink: 'https://github.com/alexanderdavide/git-most-wanted',
     at: 'Internal Tech Talk',
     datetime: '2022-03-11',
@@ -131,6 +131,64 @@ export const showcases: ShowCaseInfo[] = [
     sourceLink: 'https://github.com/webup/openfunction-talks/tree/main/202-node-async',
     at: 'OpenFunction Tutorial Sharing',
     datetime: '2022-05-08',
+  },
+    {
+    title: 'Is it Okay to Pursue Functional Programming on Frontend?',
+    author: {
+      name: 'Minsu Kim , Changhui Lee',
+    },
+    at: '2022 JSConf Korea',
+    slidesLink: 'https://moonlit-nougat-422445.netlify.app/1',
+    sourceLink: 'https://github.com/alstn2468/2022-jsconf-presentation',
+    cover: 'https://raw.githubusercontent.com/alstn2468/2022-jsconf-presentation/main/public/images/og.png',
+    datetime: '2022-09-16',
+  },
+  {
+    title: 'Blazing slidev ppt template with naive-ui',
+    author: {
+      name: 'godkun',
+    },
+    at: 'personal sharing',
+    slidesLink: 'https://ppt.godkun.top',
+    sourceLink: 'https://github.com/godkun/ppt-template',
+    cover: 'https://github.com/godkun/ppt-template/raw/main/public/show.gif',
+    datetime: '2022-10-24',
+  },
+  {
+    title: 'Building a Polite Popup with Nuxt 3',
+    author: {
+      name: 'Michael Hoffmann',
+      link: 'https://github.com/mokkapps',
+    },
+    at: 'Vue.js Nation 2023',
+    slidesLink: 'https://vuejsnation-2023-talk-polite-popup.netlify.app',
+    sourceLink: 'https://github.com/Mokkapps/vuejsnation-2023-lightning-talk-polite-popup-nuxt-3-slides',
+    cover: 'https://raw.githubusercontent.com/Mokkapps/vuejsnation-2023-lightning-talk-polite-popup-nuxt-3-slides/main/screenshots/001.png',
+    datetime: '2023-01-25',
+  },
+  {
+    title: 'Dev Environment as Code',
+    cover: 'https://cdn.jsdelivr.net/gh/alexanderdavide/dev-environment-as-code@assets/slides-export/001.png',
+    author: {
+      name: 'Alexander Eble',
+      link: 'https://github.com/alexanderdavide',
+    },
+    slidesLink: 'https://alexeble.de/talks/dev-environment-as-code/',
+    sourceLink: 'https://github.com/alexanderdavide/dev-environment-as-code',
+    at: 'Internal Tech Talk',
+    datetime: '2022-12-01',
+  },
+  {
+    title: 'Exploring Social Engineering',
+    cover: 'https://raw.githubusercontent.com/zyf722/exploring-social-engineering-slides/main/assets/Screenshot_Cover.png',
+    author: {
+      name: 'zyf722',
+      link: 'https://github.com/zyf722',
+    },
+    slidesLink: 'https://zyf722.github.io/exploring-social-engineering-slides/',
+    sourceLink: 'https://github.com/zyf722/exploring-social-engineering-slides',
+    at: 'Presentation on Social Engineering in Computers in Society class',
+    datetime: '2023-10-20',
   },
   // Add yours here!
   {
