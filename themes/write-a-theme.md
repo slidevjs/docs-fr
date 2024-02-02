@@ -12,12 +12,21 @@ Ensuite, vous pouvez le modifier et jouer avec. Vous pouvez également vous réf
 
 Un thème peut contribuer aux points suivants :
 
+<<<<<<< HEAD
 - Styles globaux
 - Fournir des configurations par défaut (police, schéma de couleurs, surligneurs, etc.)
 - Fournir des mises en page personnalisées ou remplacer celle existante
 - Fournir des composants personnalisés ou remplacer l'existant
 - Étendre les configurations de WindiCSS 
 - Configurer des outils comme Monaco et Prism
+=======
+- Global styles
+- Provide default configurations (fonts, color schema, highlighters, etc.)
+- Provide custom layouts or override the existing one
+- Provide custom components or override the existing one
+- Extend UnoCSS/Windi CSS configurations
+- Configure tools like Monaco and Prism
+>>>>>>> 79a4d453cf7d626368487ec247f6becebd0a20d5
 
 ## Conventions
 
@@ -52,7 +61,11 @@ En option, vous pouvez également ajouter des scripts à votre `package.json`
 
 Pour publier votre thème, lancez simplement `npm publish` et vous êtes prêt à partir. Il n'y a pas de processus de construction requis (ce qui signifie que vous pouvez publier directement les fichiers `.vue` et `.ts`, Slidev est assez intelligent pour les comprendre).
 
+<<<<<<< HEAD
 Les points de contribution de thème suivent les mêmes conventions que la personnalisation locale, veuillez vous référer à [la documentation pour les conventions](/custom/).
+=======
+Theme contribution points follow the same conventions as local customization, please refer to [the docs for the naming conventions](/custom/).
+>>>>>>> 79a4d453cf7d626368487ec247f6becebd0a20d5
 
 ## Configurations par défaut
 
@@ -64,7 +77,7 @@ Un thème peut fournir des [configurations par défaut](/custom/#frontmatter-con
 // package.json
 {
   "slidev": {
-    "default": {
+    "defaults": {
       "aspectRatio": "16/9",
       "canvasWidth": 980,
       "fonts": {
@@ -118,7 +131,11 @@ Slidev bascule une classe `dark` sur l'élément `html` de la page pour changer 
 
 ## Surligneur
 
+<<<<<<< HEAD
 Les couleurs de mise en évidence de la syntaxe sont également fournies dans le thème. Nous prenons en charge à la fois [Prism](https://prismjs.com/) et [Shiki](https://github.com/shikijs/shiki). Pour plus d'informations, veuillez consulter [la documentation sur la coloration syntaxique](/custom/highlighters).
+=======
+Syntax highlighting colors are also provided in the theme. We support both [Prism](https://prismjs.com/), [Shiki](https://github.com/shikijs/shiki). For more information please refer to [the syntax highlighting docs](/custom/highlighters).
+>>>>>>> 79a4d453cf7d626368487ec247f6becebd0a20d5
 
 Vous pouvez prendre en charge l'un d'entre eux, ou les deux. Reportez-vous au thème par défaut pour des exemples de configurations [`./styles/code.css`](https://github.com/slidevjs/slidev/blob/main/packages/create-theme/template/styles/code.css) / [`./setup/shiki.ts`](https://github.com/slidevjs/slidev/blob/main/packages/create-theme/template/setup/shiki.ts).
 
@@ -128,7 +145,7 @@ N'oubliez pas non plus de spécifier les surligneurs pris en charge dans votre `
 // package.json
 {
   "slidev": {
-    "highlighter": "shiki" // or "prism" or "all"
+    "highlighter": "shiki" // or "prism" or "both"
   }
 }
 ```
