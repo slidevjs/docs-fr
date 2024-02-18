@@ -28,6 +28,10 @@ Déplacez votre souris vers le coin inférieur gauche de la page Slidev, la barr
 
 ## Présentation des diapositives
 
+<<<<<<< HEAD
 En appuyant sur <kbd>o</kbd> ou en cliquant sur le bouton <carbon-user-speaker class="inline-icon-btn"/> dans la barre de navigation, vous pouvez avoir un aperçu de vos diapositives afin de pouvoir passer de l'une à l'autre facilement.
+=======
+By pressing <kbd>o</kbd> or clicking the <carbon-apps class="inline-icon-btn"/> button in the navigation bar, you can have the overview of your slides so you can jump between them easily.
+>>>>>>> 081241c66e4b17a1a524facc9585f0b6f74f5699
 
 ![](/screenshots/slides-overview.png)
