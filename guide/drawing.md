@@ -6,7 +6,7 @@ Nous avons [drauu](https://github.com/antfu/drauu) intégré pour le dessin et l
 
 Pour commencer, cliquez sur l'icône <carbon-pen class="inline-icon-btn"/> dans la barre d'outils et commencez à dessiner. Il est également disponible dans le [Mode Présentateur](/guide/presenter-mode). Les dessins et les annotations que vous avez créés seront **synchronisés** automatiquement sur toutes les instances en temps réel.
 
-<Tweet id="1424027510342250499" />
+<TheTweet id="1424027510342250499" />
 
 ## Utiliser avec stylet
 
@@ -18,7 +18,7 @@ La configuration frontmatter suivante vous permet de conserver vos dessins en ta
 
 ```md
 ---
-drawings: 
+drawings:
   persist: true
 ---
 ```
@@ -29,7 +29,7 @@ Entièrement :
 
 ```md
 ---
-drawings: 
+drawings:
   enabled: false
 ---
 ```
@@ -38,7 +38,7 @@ Uniquement en développement :
 
 ```md
 ---
-drawings: 
+drawings:
   enabled: dev
 ---
 ```
@@ -47,7 +47,7 @@ Uniquement en mode Présentateur :
 
 ```md
 ---
-drawings: 
+drawings:
   presenterOnly: true
 ---
 ```
@@ -58,9 +58,13 @@ Par défaut, Slidev synchronise vos dessins sur toutes les instances. Si vous pa
 
 ```md
 ---
-drawings: 
+drawings:
   syncAll: false
 ---
 ```
 
+<<<<<<< HEAD
 Avec cette configuration, seul le dessin de l'instance du présentateur pourra se synchroniser avec les autres.
+=======
+With this config, only the drawing from the presenter instance will be able to sync with others.
+>>>>>>> 7a04557f35275398f1e4314e782f6a42936f7152
