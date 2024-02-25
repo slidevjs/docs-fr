@@ -2,8 +2,11 @@
 
 ## Mises en page intégrées
 
+<<<<<<< HEAD
 > Comme les thèmes peuvent remplacer le comportement des mises en page, le meilleur moyen de connaître exactement l'usage, les paramètres et les exemples est de se référer à leur documentation
 
+=======
+>>>>>>> aa8c4cadc05aeca1e672a8297d644c558b294402
 ### `center`
 
 Affiche le contenu au milieu de l'écran.
@@ -79,6 +82,23 @@ image: ./path/to/the/image
 ---
 ```
 
+You can change the default background size (`cover`) by adding the `backgroundSize` attribute:
+
+```yaml
+---
+layout: image
+image: ./path/to/the/image
+backgroundSize: contain
+---
+```
+
+```yaml
+---
+layout: image-left
+image: ./path/to/the/image
+backgroundSize: 20em 70%
+---
+```
 
 ### `iframe-left`
 
@@ -131,7 +151,6 @@ url: https://github.com/slidevjs/slidev
 ---
 ```
 
-
 ### `intro`
 
 Pour introduire la présentation, habituellement avec le titre de présentation, une courte description, l'auteur, etc.
@@ -158,7 +177,6 @@ Séparer le contenu de la page en deux colonnes.
 
 #### Usage
 
-
 ```md
 ---
 layout: two-cols
@@ -175,7 +193,37 @@ Cela apparait sur la gauche
 Cela apparait sur la droite
 ```
 
+<<<<<<< HEAD
 ## Mises en page customisées
+=======
+### `two-cols-header`
+
+Separates the upper and lower lines of the page content, and the second line separates the left and right columns.
+
+#### Usage
+
+```md
+---
+layout: two-cols-header
+---
+
+This spans both
+
+::left::
+
+# Left
+
+This shows on the left
+
+::right::
+
+# Right
+
+This shows on the right
+```
+
+## Custom Layouts
+>>>>>>> aa8c4cadc05aeca1e672a8297d644c558b294402
 
 Créer un répertoire `layouts/` sous la racine de votre projet, et placez simplement vos composants Vue personnalisés sous celui-ci.
 
