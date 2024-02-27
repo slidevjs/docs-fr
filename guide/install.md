@@ -2,16 +2,25 @@
 
 ## Modèle de démarrage
 
+<<<<<<< HEAD
 > Slidev nécessite [**Node.js> = 14.0**](https://nodejs.org/)
+=======
+> Slidev requires [**Node.js >=18.0**](https://nodejs.org/)
+>>>>>>> 55df176a16c5693491d5823c68f1af798e1f718f
 
 La meilleure façon de commencer est d'utiliser notre modèle de démarrage officiel.
 
+<<<<<<< HEAD
 Avec NPM :
+=======
+::: code-group
+>>>>>>> 55df176a16c5693491d5823c68f1af798e1f718f
 
-```bash
-$ npm init slidev@latest
+```bash [npm]
+npm init slidev@latest
 ```
 
+<<<<<<< HEAD
 Avec Yarn :
 
 ```bash
@@ -19,6 +28,19 @@ $ yarn create slidev
 ```
 
 Suivez les invités et il ouvrira le diaporama à `http://localhost:3030/` automatiquement pour vous.
+=======
+```bash [yarn]
+yarn create slidev
+```
+
+```bash [pnpm]
+pnpm create slidev
+```
+
+:::
+
+Follow the prompts and it will open up the slideshow at `http://localhost:3030/` automatically for you.
+>>>>>>> 55df176a16c5693491d5823c68f1af798e1f718f
 
 Il contient également la configuration de base et une courte démo avec des instructions sur la façon de démarrer avec Slidev.
 
@@ -27,15 +49,20 @@ Il contient également la configuration de base et une courte démo avec des ins
 Si vous préférez toujours installer Slidev manuellement ou souhaitez l'intégrer dans vos projets existants, vous pouvez faire :
 
 ```bash
+<<<<<<< HEAD
 $ npm install @slidev/cli @slidev/theme-défaut 
+=======
+npm install @slidev/cli @slidev/theme-default
+>>>>>>> 55df176a16c5693491d5823c68f1af798e1f718f
 ```
 ```bash
-$ touch slides.md
+touch slides.md
 ```
 ```bash
-$ npx slidev
+npx slidev
 ```
 
+<<<<<<< HEAD
 > Veuillez noter que si vous utilisez [pnpm](https://pnpm.io), vous devrez activer l'option [shamefully-hoist](https://pnpm.io/npmrc#shamefully-hoist) pour que Slidev fonctionne correctement :
 >
 > ```bash
@@ -43,6 +70,9 @@ $ npx slidev
 > ```
 
 ## Installer globalement
+=======
+## Install Globally
+>>>>>>> 55df176a16c5693491d5823c68f1af798e1f718f
 
 Vous pouvez installer SLidev globallement avec la commande suivante :
 
@@ -51,13 +81,13 @@ Vous pouvez installer SLidev globallement avec la commande suivante :
 Vous pouvez installer Slidev globalement avec la commande suivante
 
 ```bash
-$ npm i -g @slidev/cli
+npm i -g @slidev/cli
 ```
 
 Et puis utilisez `slidev` partout sans créer de projet à chaque fois.
 
 ```bash
-$ slidev
+npx slidev
 ```
 
 Cette commande essaiera également d'utiliser local `@slidev/cli` s'il a été trouvé dans les `node_modules`.
@@ -76,12 +106,20 @@ docker run --name slidev --rm -it \
     tangramor/slidev:latest
 ```
 
+<<<<<<< HEAD
 Si votre dossier de travail est vide, il générera un modèle `slides.md` et d'autres fichiers associés sous votre dossier de travail, et lancera le serveur sur le port `3030`.
+=======
+If your work folder is empty, it will generate a template `slides.md` and other related files under your work folder, and launch the server on port `3030`.
+>>>>>>> 55df176a16c5693491d5823c68f1af798e1f718f
 
 Vous pouvez accéder à vos diapositives à partir de `http://localhost:3030/`
 
+<<<<<<< HEAD
 
 ### Créer une image déployable
+=======
+### Build deployable image
+>>>>>>> 55df176a16c5693491d5823c68f1af798e1f718f
 
 Ou vous pouvez créer votre propre projet slidev sur une image docker avec Dockerfile :
 
@@ -98,22 +136,36 @@ Et lancez le conteneur : `docker run --name myslides --rm --user node -p 3030:30
 
 Vous pouvez visiter vos diapositives à partir de `http://localhost:3030/`
 
+<<<<<<< HEAD
 
 ### Construire une SPA hébergeable (application monopage)
+=======
+### Build hostable SPA (Single Page Application)
+>>>>>>> 55df176a16c5693491d5823c68f1af798e1f718f
 
 Exécutez la commande `docker exec -i slidev npx slidev build` sur le conteneur en cours d'exécution `slidev`. Il générera des fichiers HTML statiques sous le dossier `dist`.
 
+<<<<<<< HEAD
 
 #### Héberger sur Github Page
 
 Vous pouvez héberger `dist` dans un site Web statique tel que [Github Pages](https://tangramor.github.io/slidev_docker/) ou des pages Gitlab.
+=======
+#### Host on Github Pages
+
+You can host `dist` in a static web site such as [Github Pages](https://tangramor.github.io/slidev_docker/) or Gitlab Pages.
+>>>>>>> 55df176a16c5693491d5823c68f1af798e1f718f
 
 Parce que dans les pages Github, l'URL peut contenir un sous-dossier, vous devez donc modifier le `index.html` généré pour changer `href="/assets/xxx` en `href="./assets/xxx`. Ou vous pouvez utiliser l'option `--base=/<sous-dossier>/` pendant le processus de construction, comme : `docker exec -i slidev npx slidev build --base=/slidev_docker/`.
 
 Et pour éviter le processus de construction de Jekyll, vous devez ajouter un fichier vide `.nojekyll`.
 
+<<<<<<< HEAD
 
 #### Hébergé par docker
+=======
+#### Host by docker
+>>>>>>> 55df176a16c5693491d5823c68f1af798e1f718f
 
 Vous pouvez également l'héberger par vous-même avec docker :
 
@@ -168,12 +220,22 @@ Démarrez un serveur local pour Slidev.
 
 Options:
 
+<<<<<<< HEAD
 * `--port`, `-p` (`number`, défaut : `3030`): numéro de port.
 * `--open`, `-o` (`boolean`, défaut : `false`): ouvrir dans le navigateur.
 * `--remote [password]` (`string`): écouter l'hôte public et activer le contrôle à distance, si une valeur est transmise, le mode présentateur est privé et accessible uniquement en transmettant le mot de passe donné dans le paramètre `password` de la requête d'URL.
 * `--log` (`'error', 'warn', 'info', 'silent'`, défaut : `'warn'`): niveau de log.
 * `--force`, `-f` (`boolean`, défaut  `false`): forcer l'optimiseur à ignorer le cache et à regrouper.
 * `--theme`, `-t` (`string`): thème de remplacement.
+=======
+* `--port`, `-p` (`number`, default: `3030`): port number.
+* `--open`, `-o` (`boolean`, default: `false`): open in browser.
+* `--remote [password]` (`string`): listen to public host and enable remote control, if a value is passed then the presenter mode is private and only accessible by passing the given password in the URL query `password` parameter.
+* `--bind` (`string`, default: `0.0.0.0`): specify which IP addresses the server should listen on in the remote mode.
+* `--log` (`'error', 'warn', 'info', 'silent'`, default: `'warn'`): Log level.
+* `--force`, `-f` (`boolean`, default: `false`): force the optimizer to ignore the cache and re-bundle.
+* `--theme`, `-t` (`string`): override theme.
+>>>>>>> 55df176a16c5693491d5823c68f1af798e1f718f
 
 ### `slidev build [entry]`
 
@@ -197,6 +259,7 @@ Exportez les diapositives au format PDF (ou autre format).
 
 Options:
 
+<<<<<<< HEAD
 * `--output` (`string`, défaut : use `exportFilename` (voir https://sli.dev/custom/#frontmatter-configures) ou utiliser `[entry]-export`): chemin vers la sortie.
 * `--base` (`'pdf', 'png', 'md'`, défaut : `'pdf'`): format de sortie.
 * `--timeout` (`number`, défaut : `30000`): délai d'attente pour le rendu de la page d'impression (voir https://playwright.dev/docs/api/class-page#page-goto).
@@ -204,6 +267,15 @@ Options:
 * `--dark` (`boolean`, défaut : `false`): exporter en tant que thème sombre.
 * `--with-clicks`, `-c` (`boolean`, défaut : `false`): exporter des pages pour chaque clic (voir https://sli.dev/guide/animations.html#click-animations).
 * `--theme`, `-t` (`string`): thème de remplacement.
+=======
+* `--output` (`string`, default: use `exportFilename` (see https://sli.dev/custom/#frontmatter-configures) or use `[entry]-export`): path to the output.
+* `--format` (`'pdf', 'png', 'md'`, default: `'pdf'`): output format.
+* `--timeout` (`number`, default: `30000`): timeout for rendering the print page (see https://playwright.dev/docs/api/class-page#page-goto).
+* `--range` (`string`): page ranges to export (example: `'1,4-5,6'`).
+* `--dark` (`boolean`, default: `false`): export as dark theme.
+* `--with-clicks`, `-c` (`boolean`, default: `false`): export pages for every clicks (see https://sli.dev/guide/animations.html#click-animations).
+* `--theme`, `-t` (`string`): override theme.
+>>>>>>> 55df176a16c5693491d5823c68f1af798e1f718f
 
 ### `slidev format [entry]`
 
