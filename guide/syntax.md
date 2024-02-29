@@ -1,8 +1,20 @@
+<<<<<<< HEAD
 # Syntaxe de Markdown
 
 Les diapositives sont écrites dans **un seul fichier markdown** (par défaut `./slides.md`).
 
 Vous pouvez utiliser [les fonctionnalités Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) comme vous le feriez normalement, avec le support supplémentaire du HTML intégré et des composants Vue. Le style à l'aide de [Windi CSS](https://windicss.org) est également pris en charge. Utilisez `---` avec une nouvelle ligne pour séparer vos diapositives.
+=======
+---
+outline: deep
+---
+
+# Markdown Syntax
+
+Slides are written within **a single markdown file** (by default `./slides.md`).
+
+You can use [the Markdown features](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) as you normally would, with the additional support of inlined HTML and Vue Components. Styling using [UnoCSS](/custom/config-unocss) is also supported. Use `---` padded with a new line to separate your slides.
+>>>>>>> 15820b064d1f419ed06cd798ae4b6dfe0c230e94
 
 ~~~md
 # Slidev
@@ -30,9 +42,13 @@ Vous pouvez directement utiliser les composants Windi CSS et Vue pour styliser e
 </div>
 ~~~
 
-## Front Matter & Layouts
+## Frontmatter & Layouts
 
+<<<<<<< HEAD
 Vous pouvez spécifier des mises en page et d'autres métadonnées pour chaque diapositive en convertissant les séparateurs en [blocs de présentation](https://jekyllrb.com/docs/front-matter/). Chaque avant-propos commence par un triple tiret et se termine par un autre. Les textes entre eux sont des objets de données au format [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/). Par exemple :
+=======
+Specify layouts and other metadata for each slide by converting the separators into [frontmatter blocks](https://jekyllrb.com/docs/front-matter/). Each frontmatter starts with a triple-dash and ends with another. Texts between them are data objects in [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) format. For example:
+>>>>>>> 15820b064d1f419ed06cd798ae4b6dfe0c230e94
 
 ~~~md
 ---
@@ -62,66 +78,139 @@ Il s'agit d'une page par défaut sans métadonnées supplémentaires.
 
 Reportez-vous à [personnalisations](/custom/) pour plus de détails.
 
+<<<<<<< HEAD
 ## Blocs de code
+=======
+> The custom syntax might not be compactible with some formatters like Prettier. To improve that, we also support using a direct `yaml` code block to define the frontmatter:
+>
+> ~~~markdown
+> ---
+> layout: cover
+> ---
+>
+> # Slidev
+>
+> This is the cover page.
+>
+> ---
+>
+> ```yaml
+> # The first yaml block will be treated as the frontmatter of that slide
+> layout: center
+> background: './images/background-1.png'
+> class: 'text-white'
+> ```
+>
+> # Page 2
+>
+> This is a page with the layout `center` and a background image.
+> ~~~
+>
+> (Available since v0.44.0)
+
+## Code Blocks
+>>>>>>> 15820b064d1f419ed06cd798ae4b6dfe0c230e94
 
 L'une des principales raisons pour lesquelles je construis Slidev est de faire en sorte que mon code apparaisse parfaitement dans les diapositives. Donc, comme vous vous y attendiez, vous pouvez utiliser le bloc de code aromatisé Markdown pour mettre en évidence votre code.
 
-~~~ts
-//```ts
+~~~md
+```ts
 console.log('Hello, World!')
-//```
+```
 ~~~
 
+<<<<<<< HEAD
 Nous supportons [Prism](http://prismjs.com) et [Shiki](https://github.com/shiki/shiki) en tant que surligneurs de syntaxe. Se référer à [la section Surligneurs](/custom/highlighters) pour plus de détails.
+=======
+We support [Prism](https://prismjs.com), [Shiki](https://github.com/shikijs/shiki) as syntax highlighters. Refer to [the highlighters section](/custom/highlighters) for more details.
+>>>>>>> 15820b064d1f419ed06cd798ae4b6dfe0c230e94
 
 ### Mise en évidence de ligne
 
+<<<<<<< HEAD
 Pour mettre en évidence des lignes spécifiques, ajoutez simplement des numéros de ligne entre crochets `{}`. Les numéros de ligne commencent à compter de 1.
+=======
+To highlight specific lines, simply add line numbers within bracket `{}`. Line numbers start counting from 1 by default.
+>>>>>>> 15820b064d1f419ed06cd798ae4b6dfe0c230e94
 
-~~~ts
-//```ts {2,3}
+~~~md
+```ts {2,3}
 function add(
   a: Ref<number> | number,
   b: Ref<number> | number
 ) {
   return computed(() => unref(a) + unref(b))
 }
-//```
+```
 ~~~
 
+<<<<<<< HEAD
 Pour changer la surbrillance en plusieurs étapes, vous pouvez utiliser `|` pour les séparer. Par exemple
+=======
+You can enable line number to all slides by setting `lineNumbers: true` on the config or enable each code block individually by setting `lines:true`. You can also set the starting line for each code block and highlight the lines accordingly, defaults to 1:
+>>>>>>> 15820b064d1f419ed06cd798ae4b6dfe0c230e94
 
-~~~ts
-//```ts {2-3|5|all}
+~~~md
+```ts {6,7}{lines:true, startLine:5}
 function add(
   a: Ref<number> | number,
   b: Ref<number> | number
 ) {
   return computed(() => unref(a) + unref(b))
 }
-//```
+```
 ~~~
 
+<<<<<<< HEAD
 Cela mettra d'abord en évidence `a: Ref <number> | number` et `b: Ref <number> | number`, puis `return computed (() => unref (a) + unref (b))` après un clic, et enfin, tout le bloc. Pour en savoir plus, consultez le [guide des animations de clics](/guide/animations).
 
 Pour ignorer la mise en surbrillance des lignes, vous pouvez définir le numéro de ligne sur "0". Par exemple
 
 ~~~ts {0}
 //```ts {0}
+=======
+To change the highlight in multiple clicks, you can use `|` to separate them:
+
+~~~md
+```ts {2-3|5|all}
+>>>>>>> 15820b064d1f419ed06cd798ae4b6dfe0c230e94
 function add(
   a: Ref<number> | number,
   b: Ref<number> | number
 ) {
   return computed(() => unref(a) + unref(b))
 }
-//```
+```
 ~~~
 
+<<<<<<< HEAD
 Si le code ne rentre pas dans une diapositive, vous pouvez passer une option maxHeight supplémentaire qui définira une hauteur fixe
 et activer le défilement
+=======
+This will first highlight `a: Ref<number> | number` and `b: Ref<number> | number`, and then `return computed(() => unref(a) + unref(b))` after one click, and lastly, the whole block.
+>>>>>>> 15820b064d1f419ed06cd798ae4b6dfe0c230e94
 
-~~~ts {2|3|7|12}
-//```ts {2|3|7|12} {maxHeight:'100'}
+You can set the line number to `hide` to hide the code block or `none` to not highlight any line:
+
+~~~md
+```ts {hide|none}
+function add(
+  a: Ref<number> | number,
+  b: Ref<number> | number
+) {
+  return computed(() => unref(a) + unref(b))
+}
+```
+~~~
+
+::: tip
+Learn more in the [clicks animations guide](./animations#positioning).
+:::
+
+If the code doesn't fit into one slide, you use the `maxHeight` to set fixed height and enable scrolling:
+
+~~~md
+```ts {2|3|7|12}{maxHeight:'100px'}
 function add(
   a: Ref<number> | number,
   b: Ref<number> | number
@@ -130,22 +219,76 @@ function add(
 }
 /// ...as many lines as you want
 const c = add(1, 2)
-//```
+```
 ~~~
 
+<<<<<<< HEAD
 ### Éditeur Monaco
+=======
+### TwoSlash Integration
+
+This feature is only available when you [set `highlighter` to `shiki`](/custom/highlighters)
+
+[TwoSlash](https://twoslash.netlify.app/) is a powerful tool for rendering TypeScript code blocks with type information on hover or inlined. It's quite useful for preparing slides for JavaScript/TypeScript-related topics.
+
+To use it, you can add `twoslash` to the code block's language identifier:
+
+~~~md
+```ts twoslash
+import { ref } from 'vue'
+
+const count = ref(0)
+//            ^?
+```
+~~~
+
+It will be rendered as:
+
+```ts twoslash
+import { ref } from 'vue'
+
+const count = ref(0)
+//            ^?
+```
+
+### Monaco Editor
+>>>>>>> 15820b064d1f419ed06cd798ae4b6dfe0c230e94
 
 Chaque fois que vous souhaitez apporter des modifications à la présentation, ajoutez simplement `{monaco}` après l'identifiant de la langue - cela transforme le bloc en un éditeur Monaco complet!
 
-~~~ts
-//```ts {monaco}
+~~~md
+```ts {monaco}
 console.log('HelloWorld')
-//```
+```
 ~~~
 
 En savoir plus sur la [configuration de Monaco](/custom/config-monaco).
 
+<<<<<<< HEAD
 ## Styles intégrés
+=======
+#### Monaco Diff
+
+Monaco can also generate a diff between two code blocks. Use `{monaco-diff}` to turn the block into a [diff Monaco editor](https://microsoft.github.io/monaco-editor/playground.html?source=v0.36.1#example-creating-the-diffeditor-multi-line-example) and use `~~~` to separate both original and modified version of the code!
+
+````md
+```ts {monaco-diff}
+This line is removed on the right.
+just some text
+abcd
+efgh
+Some more text
+~~~
+just some text
+abcz
+zzzzefgh
+Some more text.
+This line is removed on the left.
+```
+````
+
+## Embedded Styles
+>>>>>>> 15820b064d1f419ed06cd798ae4b6dfe0c230e94
 
 Vous pouvez utiliser la balise `<style>` dans votre Markdown directement pour remplacer les styles de la **diapositive actuelle**.
 
@@ -163,9 +306,15 @@ h1 {
 # La prochaine diapositive n'est pas affectée
 ```
 
+<<<<<<< HEAD
 La balise `<style>` dans Markdown est toujours [scoped](https://vue-loader.vuejs.org/guide/scoped-css.html). Pour avoir des remplacements de style globaux, consultez la [section de personnalisation](/custom/directory-structure#style).
 
 Propulsé par [Windi CSS](https://windicss.org), vous pouvez utiliser directement des css imbriqués et des [répertoires](https://windicss.org/features/directives.html) (par exemple, `@apply`)
+=======
+`<style>` tag in Markdown is always [scoped](https://vuejs.org/api/sfc-css-features.html#scoped-css). As an outstanding result, a selector with the child combinator (`.a > .b`) is unusable as such; see the previous link. To have global style overrides, check out the [customization section](/custom/directory-structure#style).
+
+Powered by [UnoCSS](/custom/config-unocss), you can directly use nested css and [directives](https://unocss.dev/transformers/directives) (e.g. `--uno:` or `@apply`)
+>>>>>>> 15820b064d1f419ed06cd798ae4b6dfe0c230e94
 
 ```md
 # Slidev
@@ -175,7 +324,7 @@ Propulsé par [Windi CSS](https://windicss.org), vous pouvez utiliser directemen
 <style>
 blockquote {
   code {
-    @apply text-teal-500 dark:text-teal-400;
+    --uno: text-teal-500 dark:text-teal-400;
   }
 }
 </style>
@@ -197,7 +346,11 @@ Pour les ressources locales, placez-les dans le [dossier `public`](/custom/direc
 ![Image locale](/pic.png)
 ```
 
+<<<<<<< HEAD
 Si vous souhaitez appliquer des tailles ou des styles personnalisés, vous pouvez les convertir en balise `<img>`
+=======
+For you want to apply custom sizes or styles, you can convert them to the `<img>` tag
+>>>>>>> 15820b064d1f419ed06cd798ae4b6dfe0c230e94
 
 ```html
 <img src="/pic.png" class="m-40 h-40 rounded shadow" />
@@ -235,16 +388,29 @@ Ceci est une autre note
 
 ## Icônes
 
+<<<<<<< HEAD
 Slidev vous permet d'accéder à presque tous les jeux d'icônes open-source populaires **directement** dans votre markdown. Propulsé par [`unplugin-icons`](https://github.com/antfu/unplugin-icons) et [Iconify](https://iconify.design/).
+=======
+Slidev allows you to have the accessing to almost all the popular open-source iconsets **directly** in your markdown after installing the corresponding package. Powered by [`unplugin-icons`](https://github.com/antfu/unplugin-icons) and [Iconify](https://iconify.design/).
+>>>>>>> 15820b064d1f419ed06cd798ae4b6dfe0c230e94
 
 Le nom suit la conversion de [Iconify](https://iconify.design/) `{collection-name}-{icon-name}`. Par exemple:
 
+<<<<<<< HEAD
 - `<mdi-account-circle />` - <mdi-account-circle /> de [Material Design Icons](https://github.com/Templarian/MaterialDesign)
 - `<carbon-badge />` - <carbon-badge /> de [Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/icons)
 - `<uim-rocket />` - <uim-rocket /> de [Unicons Monochrome](https://github.com/Iconscout/unicons)
 - `<twemoji-chat-avec-des-larmes-de-joie />` - <twemoji-cat-with-tears-of-joy /> de [Twemoji](https://github.com/twitter/twemoji)
 - `<logos-vue />` - <logos-vue /> de [Logos SVG](https://github.com/gilbarbara/logos)
 - Et beaucoup plus...
+=======
+- `<mdi-account-circle />` - <mdi-account-circle /> from [Material Design Icons](https://github.com/Templarian/MaterialDesign) - [`@iconify-json/mdi`](https://npmjs.com/package/@iconify-json/mdi)
+- `<carbon-badge />` - <carbon-badge /> from [Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/icons) - [`@iconify-json/carbon`](https://npmjs.com/package/@iconify-json/carbon)
+- `<uim-rocket />` - <uim-rocket /> from [Unicons Monochrome](https://github.com/Iconscout/unicons) - [`@iconify-json/uim`](https://npmjs.com/package/@iconify-json/uim)
+- `<twemoji-cat-with-tears-of-joy />` - <twemoji-cat-with-tears-of-joy /> from [Twemoji](https://github.com/twitter/twemoji) - [`@iconify-json/twemoji`](https://npmjs.com/package/@iconify-json/twemoji)
+- `<logos-vue />` - <logos-vue /> from [SVG Logos](https://github.com/gilbarbara/logos) - [`@iconify-json/logos`](https://npmjs.com/package/@iconify-json/logos)
+- And much more...
+>>>>>>> 15820b064d1f419ed06cd798ae4b6dfe0c230e94
 
 Vous pouvez parcourir et rechercher toutes les icônes disponibles avec [Icônes](https://icones.js.org/).
 
@@ -341,6 +507,39 @@ Cela apparaît sur la droite
 Cela apparaît sur la gauche
 ```
 
+## Import Code Snippets
+
+> Available since v0.47.0
+
+You can import code snippets from existing files via following syntax:
+
+```md
+<<< @/snippets/snippet.js
+```
+
+:::tip
+The value of `@` corresponds to your package's root directory. It's recommended to put snippets in `@/snippets`, for compatibility with the Monaco editor. Alternatively, you can also import from relative paths.
+:::
+
+You can also use a [VS Code region](https://code.visualstudio.com/docs/editor/codebasics#_folding) to only include the corresponding part of the code file:
+
+```md
+<<< @/snippets/snippet.js#region-name
+```
+
+To explicitly specify the language of the imported code, you can add a language identifier after:
+
+```md
+<<< @/snippets/snippet.js ts
+```
+
+Any code block features like [line highlighting](#line-highlighting) and [Monaco editor](#monaco-editor) are also supported:
+
+```md
+<<< @/snippets/snippet.js {2,3|5}{lines:true}
+<<< @/snippets/snippet.js ts {monaco}{height:200px}
+```
+
 ## Configurations
 
 Toutes les configurations nécessaires peuvent être définies dans le fichier Markdown. Par exemple :
@@ -363,7 +562,7 @@ En savoir plus sur les [configurations frontmatter](/custom/#frontmatter-configu
 
 Slidev est livré avec le support LaTeX prêt à l'emploi, alimenté par [KaTeX](https://katex.org/).
 
-<Tweet id="1392246507793915904" />
+<TheTweet id="1392246507793915904" />
 
 ### Rendu en ligne
 
@@ -378,7 +577,7 @@ $\sqrt{3x-1}+(1+x)^2$
 Utilisez deux (`$$`) pour le rendu en bloc. Ce mode utilise des symboles plus grands et centre
 le résultat.
 
-```md
+```latex
 $$
 \begin{array}{c}
 
@@ -395,7 +594,30 @@ $$
 
 En savoir plus: [Démo](https://sli.dev/demo/starter/8) | [KaTeX](https://katex.org/) | [`markdown-it-katex`](https://github.com/waylonflinn/markdown-it-katex)
 
+<<<<<<< HEAD
 ## Diagrammes
+=======
+### LaTex line highlighting
+
+> Available since v0.43.1
+
+To highlight specific lines, simply add line numbers within bracket `{}`. Line numbers start counting from 1 by default.
+
+```latex
+$$ {1|3|all}
+\begin{array}{c}
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
+= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
+\nabla \cdot \vec{\mathbf{B}} & = 0
+\end{array}
+$$
+```
+
+The `at` and `finally` options of [code blocks](#line-highlighting) are also available for LaTeX blocks.
+
+## Diagrams
+>>>>>>> 15820b064d1f419ed06cd798ae4b6dfe0c230e94
 
 Vous pouvez également créer des diagrammes / graphiques à partir de descriptions textuelles dans votre Markdown, alimenté par [Mermaid](https://mermaid-js.github.io/mermaid).
 
@@ -516,3 +738,27 @@ src: ./content.md
 src: ./content.md
 ---
 ```
+
+## MDC Syntax
+
+> Available since v0.43.0
+
+Slidev supports optional [MDC (Markdown Components) Syntax](https://content.nuxtjs.org/guide/writing/mdc) powered by [`markdown-it-mdc`](https://github.com/antfu/markdown-it-mdc).
+
+You can enable it by adding `mdc: true` to the frontmatter of your markdown file.
+
+```mdc
+---
+mdc: true
+---
+
+This is a [red text]{style="color:red"} :inline-component{prop="value"}
+
+![](/image.png){width=500px lazy}
+
+::block-component{prop="value"}
+The **default** slot
+::
+```
+
+Learn more about [the syntax](https://content.nuxt.com/guide/writing/mdc).
