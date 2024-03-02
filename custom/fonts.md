@@ -9,12 +9,21 @@ Dans votre fontmatter, configurez comme suit :
 ```yaml
 ---
 fonts:
+<<<<<<< HEAD
   # le texte
   sans: 'Robot'
   # utiliser avec la classe css `font-serif` de windicss
   serif: 'Robot Slab'
   # pour les blocs de code, le code en ligne, etc.
   mono: 'Fira Code'
+=======
+  # basically the text
+  sans: Robot
+  # use with `font-serif` css class from UnoCSS
+  serif: Robot Slab
+  # for code blocks, inline code, etc.
+  mono: Fira Code
+>>>>>>> e8054222645741a1f15a6138c2b0b6a091fb43a1
 ---
 ```
 
@@ -24,15 +33,24 @@ Les polices seront **importées automatiquement depuis [Google Fonts](https://fo
 
 ## Polices locales
 
+<<<<<<< HEAD
 Par défaut, Slidev suppose que toutes les polices spécifiées via les configurations `fonts` proviennent de Google Fonts. Si vous souhaitez utiliser des polices locales, spécifiez `fonts.local` pour désactiver l'importation automatique. 
+=======
+By default, Slidev assumes all the fonts specified via `fonts` configurations come from Google Fonts. If you want to use local fonts, specify the `fonts.local` to opt-out the auto-importing.
+>>>>>>> e8054222645741a1f15a6138c2b0b6a091fb43a1
 
 ```yaml
 ---
 fonts:
   # comme font-family en css, vous pouvez utiliser `,` pour séparer plusieurs polices de secours
   sans: 'Helvetica Neue,Robot'
+<<<<<<< HEAD
   # marquer 'Helvetica Neue' comme police locale
   local: 'Helvetica Neue'
+=======
+  # mark 'Helvetica Neue' as local font
+  local: Helvetica Neue
+>>>>>>> e8054222645741a1f15a6138c2b0b6a091fb43a1
 ---
 ```
 
@@ -43,8 +61,13 @@ Par défaut, Slidev importe trois poids "200", "400", "600" pour chaque police. 
 ```yaml
 ---
 fonts:
+<<<<<<< HEAD
   sans: 'Robot'
   # défaut
+=======
+  sans: Robot
+  # default
+>>>>>>> e8054222645741a1f15a6138c2b0b6a091fb43a1
   weights: '200,400,600'
   # importer des polices italiques, par défaut `false`
   italic: false
@@ -60,13 +83,17 @@ Pour la plupart des scénarios, il vous suffit de spécifier la "police spécial
 ```yaml
 ---
 fonts:
-  sans: 'Robot'
-  serif: 'Robot Slab'
-  mono: 'Fira Code'
+  sans: Robot
+  serif: Robot Slab
+  mono: Fira Code
 ---
 ```
 
+<<<<<<< HEAD
 aura pour résultat
+=======
+will result in
+>>>>>>> e8054222645741a1f15a6138c2b0b6a091fb43a1
 
 ```css
 .font-sans {
@@ -86,7 +113,7 @@ Si vous souhaitez désactiver les polices de secours, configurez comme suit
 ---
 fonts:
   mono: 'Fira Code, monospace'
-  fallback: false
+  fallbacks: false
 ---
 ```
 
@@ -100,8 +127,6 @@ Actuellement, seules les polices Google sont prises en charge, nous prévoyons d
 ```yaml
 ---
 fonts:
-  provider: 'none'
+  provider: none
 ---
 ```
-
-
