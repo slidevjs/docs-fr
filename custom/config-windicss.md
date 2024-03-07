@@ -2,12 +2,20 @@
 
 <Environment type="node" />
 
+<<<<<<< HEAD
 Markdown prend naturellement en charge les balises HTML intégrées. Vous pouvez donc styliser votre contenu comme vous le souhaitez. Pour plus de commodité, nous avons [Windi CSS](https://github.com/windicss/windicss) intégré, vous pouvez donc styliser le balisage directement à l'aide des utilitaires de classe.
+=======
+::: warning
+Since Slidev v0.47.0, we no longer support Windi CSS. Please migrate to [UnoCSS](/custom/config-unocss).
+:::
+
+Markdown naturally supports embedded HTML markups. You can therefore style your content the way you want.
+>>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 Par exemple :
 
 ```html
-<div class="grid pt-4 gap-4 grids-cols-[100px,1fr]">
+<div class="grid pt-4 gap-4 grid-cols-[100px,1fr]">
 
 ### Nom
 

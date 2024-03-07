@@ -4,8 +4,13 @@ Les addons sont des ensembles de composants supplémentaires, de mises en page, 
 
 Ils sont assez similaires à [themes](/themes/use), mais en général :
 
+<<<<<<< HEAD
 * ils n'affectent pas les styles globaux de vos diapositives
 * vous pouvez utiliser plusieurs addons dans une présentation
+=======
+- they don't affect the global styles of your slides
+- you can use multiple addons in one presentation
+>>>>>>> 948b75ddb1f4429a20b0d68bd24bebbaedf0bcd2
 
 Pour utiliser les addons, vous devez les installer manuellement via :
 
@@ -31,7 +36,7 @@ Ou dans votre fichier `package.json` :
   "slidev": {
     "addons": [
       "slidev-addon-package1",
-      "slidev-addon-package2",
+      "slidev-addon-package2"
     ]
   }
 }
