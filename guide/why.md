@@ -2,7 +2,11 @@
 
 Il existe de nombreux fabricants de diapositives WYSIWYG polyvalents et riches en fonctionnalités, tels que [Microsoft PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint) et [Apple Keynote](https://www.apple.com/keynote/). Ils fonctionnent plutôt bien pour créer de belles diapositives avec des animations, des graphiques et bien d'autres choses, tout en étant très intuitifs et faciles à apprendre. Alors pourquoi prendre la peine de faire Slidev?
 
+<<<<<<< HEAD
 Slidev vise à fournir la flexibilité et l'interactivité aux développeurs pour rendre leurs présentations encore plus intéressantes, expressives et attrayantes en utilisant les outils et les technologies avec lesquels ils sont déjà familiers.
+=======
+Slidev aims to provide the flexibility and interactivity for developers to make their presentations even more interesting, expressive, and attractive by using the tools and technologies they are already familiar with.
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 Lorsque vous travaillez avec des éditeurs WYSIWYG, il est facile de se laisser distraire par les options de style. Slidev remédie à cela en séparant le contenu et les éléments visuels. Cela vous permet de vous concentrer sur une chose à la fois, tout en pouvant réutiliser les thèmes de la communauté. Slidev ne cherche pas à remplacer entièrement les autres constructeurs de diapositives. Il se concentre plutôt sur la restauration de la communauté des développeurs.
 
@@ -26,13 +30,21 @@ Consultez la [galerie de thèmes](/themes/gallery) ou [apprenez à écrire un th
 
 ## Adapté aux développeurs
 
+<<<<<<< HEAD
 Slidev fournit un support de première classe pour les extraits de code pour les développeurs. Il prend en charge à la fois [Prism](https://prismjs.com/) et [Shiki](https://github.com/shikijs/shiki) pour obtenir une coloration syntaxique parfaite des pixels, tout en étant capable de modifier le code à tout moment temps. Avec [Monaco editor](https://microsoft.github.io/monaco-editor/) intégré, il vous permet également de faire du codage / démonstration en direct dans votre présentation avec la saisie semi-automatique, le survol de type et même la prise en charge de la vérification de type TypeScript.
+=======
+Slidev provides first-class support for code snippets for developers. It supports [Shiki](https://github.com/shikijs/shiki) to get pixel-perfect syntax highlighting, while still being able to modify the code at any time. With [Monaco editor](https://microsoft.github.io/monaco-editor/) built-in, it also empowers you to do live coding / demonstration in your presentation with autocompletion, type hovering, and even TypeScript type check support.
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 En savoir plus sur [surligneurs](/custom/highlighters) et [configuration Monaco](/custom/config-monaco).
 
 ## Rapide
 
+<<<<<<< HEAD
 Slidev est alimenté par [Vite](https://vitejs.dev/), [Vue 3](https://v3.vuejs.org/) et [Windi CSS](https://windicss.org/), qui vous offrent la plus merveilleuse expérience de création. Chaque modification que vous apportez sera répercutée sur vos diapositives **instantanément**.
+=======
+Slidev is powered by [Vite](https://vitejs.dev/), [Vue 3](https://v3.vuejs.org/) and [UnoCSS](https://unocss.dev/), which give you the most wonderful authoring experience. Every change you made will reflect to your slides **instantly**.
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 En savoir plus sur [notre pile technologique](/guide/#pile-technologique).
 
@@ -48,7 +60,11 @@ En savoir plus sur [enregistrement ici](/guide/recording).
 
 ## Portable
 
+<<<<<<< HEAD
 Exportez vos diapositives au format PDF, PNG ou même dans une application monopage hébergée (SPA) avec une seule commande et partagez-les n'importe où.
+=======
+Export your slides into PDF, PPTX, PNGs, or even a hostable Single-page Application (SPA) with a single command, and share them anywhere.
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 Apprenez-en plus à ce sujet dans la [documentation d'exportation](/guide/exporting).
 
@@ -66,6 +82,4 @@ $ npm init slidev
 
 Ou en avoir un aperçu rapide :
 
-<div class="aspect-9/16 relative">
-<iframe class="rounded w-full shadow-md border-none" src="https://www.youtube.com/embed/eW7v-2ZKZOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+<iframe class="aspect-16/9 rounded-xl w-full shadow-md border-none" src="https://www.youtube.com/embed/eW7v-2ZKZOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

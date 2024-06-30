@@ -1,18 +1,38 @@
+<<<<<<< HEAD
 # Hébergement statique
 
 ## Créer des applications monopage (SPA)
 
 Vous pouvez également intégrer les diapositives dans une SPA autohébergée :
+=======
+# Static Hosting
+
+## Build Single Page Applications (SPA)
+
+You can build the slides into a self-hostable SPA:
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ```bash
 $ slidev build
 ```
 
+<<<<<<< HEAD
 L'application générée sera disponible sous `dist/` et vous pourrez ensuite l'héberger sur [Pages GitHub](https://pages.github.com/), [Netlify](https://netlify.app/), [Vercel](https://vercel.com/), ou ce que vous voulez. Vous pouvez maintenant partager vos diapositives avec le reste du monde avec un seul lien.
+=======
+The generated application will be available under `dist/`.
+
+You can test the generated build using a web server (Apache, NGINX, Caddy...etc.) or in the project you can directly run: `npx vite preview`.
+
+Then you can host it on [GitHub Pages](https://pages.github.com/), [Netlify](https://netlify.app/), [Vercel](https://vercel.com/), or whatever other web server or service that you want. Now you can share your slides with the rest of the world with a single link.
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ### Chemin de base
 
+<<<<<<< HEAD
 Pour déployer vos slides sous des sous-routes, vous devrez passer l'option `--base`. Par exemple :
+=======
+To deploy your slides under sub-routes, you will need to pass the `--base` option. The `--base` path **must begin and end** with a slash `/`; for example:
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ```bash
 $ slidev build --base /talks/my-cool-talk/
@@ -20,7 +40,11 @@ $ slidev build --base /talks/my-cool-talk/
 
 Reportez-vous à la [documentation de Vite](https://vitejs.dev/guide/build.html#public-base-path) pour plus de détails.
 
+<<<<<<< HEAD
 ### Fournir un PDF téléchargeable
+=======
+### Provide a Downloadable PDF
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 Vous pouvez fournir un PDF téléchargeable aux spectateurs de votre SPA avec la configuration suivante :
 
@@ -30,9 +54,15 @@ download: true
 ---
 ```
 
+<<<<<<< HEAD
 Slidev générera un fichier pdf avec la construction et un bouton de téléchargement sera affiché dans le SPA.
 
 Vous pouvez également fournir une URL personnalisée au PDF. Dans ce cas, le processus de rendu sera ignoré.
+=======
+Slidev will generate a PDF file along with the build, and a download button will be displayed in the SPA.
+
+You can also provide a custom URL for the PDF. In that case, the rendering process will be skipped.
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ```md
 ---
@@ -40,7 +70,54 @@ download: 'https://myside.com/my-talk.pdf'
 ---
 ```
 
+<<<<<<< HEAD
 ## Exemples
+=======
+This can also be done with the CLI option `--download` (`boolean` only).
+
+```bash
+$ slidev build --download
+```
+
+When using the download option, you can also provide the export options:
+
+- By using [CLI export options](/guide/exporting.html)
+- Or [frontmatter export options](/custom/#frontmatter-configures)
+
+### Output directory
+
+You can change the output directory using `--out`.
+
+```bash
+$ slidev build --out my-build-folder
+```
+
+### Watch mode
+
+By passing the `--watch` option the build will run in watch mode and will rebuild anytime the source changes.
+
+```bash
+$ slidev build --watch
+```
+
+### Multiple entries
+
+You can build multiple slide decks at once.
+
+```bash
+$ slidev build slides1.md slides2.md
+```
+
+Or
+
+```bash
+$ slidev build *.md
+```
+
+In this case, each input file will generate a folder containing the build in the output directory.
+
+## Examples
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 Voici quelques exemples de SPA exportées :
 
@@ -51,7 +128,11 @@ Pour en savoir plus, consultez [Showcases](/showcases).
 
 ## Hébergement
 
+<<<<<<< HEAD
 Nous vous recommandons d'utiliser `npm init slidev@lastest` pour échafauder votre projet, qui contient les fichiers de configuration nécessaires pour héberger les services prêts à l'emploi.
+=======
+We recommend to use `npm init slidev@latest` to scaffold your project, which contains the necessary configuration files for hosting services out-of-the-box.
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ### Netlify
 
@@ -59,21 +140,25 @@ Nous vous recommandons d'utiliser `npm init slidev@lastest` pour échafauder vot
 
 Créez `netlify.toml` dans la racine de votre projet avec le contenu suivant.
 
-```ts
-[build.environment]
-  NODE_VERSION = "14"
-
+```toml
 [build]
-  publish = "dist"
-  command = "npm run build"
+publish = 'dist'
+command = 'npm run build'
+
+[build.environment]
+NODE_VERSION = '20'
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+from = '/*'
+to = '/index.html'
+status = 200
 ```
 
+<<<<<<< HEAD
 Ensuite, accédez à votre tableau de bord Netlify, créez un nouveau site avec le repositorie.
+=======
+Then go to your Netlify dashboard and create a new site with the repository.
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ### Vercel
 
@@ -89,39 +174,78 @@ Créez `vercel.json` dans la racine de votre projet avec le contenu suivant.
 }
 ```
 
+<<<<<<< HEAD
 Accédez ensuite à votre tableau de bord Vercel, créez un nouveau site avec le repository.
+=======
+Then go to your Vercel dashboard and create a new site with the repository.
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
-## GitHub Pages
+### GitHub Pages
 
 - [GitHub Pages](https://pages.github.com/)
 
+<<<<<<< HEAD
 Pour déployer vos diapositives sur GitHub Pages :
 - téléchargez tous les fichiers du projet dans votre repository (c'est-à-dire nommé `name_of_repo`)
 - créez `.github/workflows/deploy.yml` avec le contenu suivant pour déployer vos diapositives sur GitHub Pages via GitHub Actions. Dans ce fichier, remplacez `<name_of_repo>` par `name_of_repo`.
 - 
+=======
+To deploy your slides on GitHub Pages:
+
+- upload all the files of the project in your repo (i.e. named `name_of_repo`)
+- create `.github/workflows/deploy.yml` with the following content to deploy your slides to GitHub Pages via GitHub Actions.
+
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 ```yaml
 name: Deploy pages
-on: push
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
         with:
-          node-version: '14'
+          node-version: 'lts/*'
+
       - name: Install dependencies
         run: npm install
-      - name: Install slidev
-        run:  npm i -g @slidev/cli
+
       - name: Build
-        run: slidev build --base <name_of_repo>
-      - name: Deploy pages
-        uses: crazy-max/ghaction-github-pages@v2
+        run: npm run build -- --base /${{github.event.repository.name}}/
+
+      - uses: actions/configure-pages@v4
+
+      - uses: actions/upload-pages-artifact@v3
         with:
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: dist
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
 ```
+<<<<<<< HEAD
 - Dans votre repository, allez dans Paramètres > Pages. Sous « Build and Deployment », sélectionnez « Deploy from a branch », sélectionnez « gh-pages » et « root ». Cliquez sur enregistrer.
 - Enfin, une fois tous les flux de travail exécutés, un lien vers les diapositives doit apparaître sous Paramètres > Pages.
+=======
+
+- In your repository, go to Settings>Pages. Under "Build and deployment", select "Github Actions".
+- Finally, after all workflows are executed, a link to the slides should appear under Settings>Pages.
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3

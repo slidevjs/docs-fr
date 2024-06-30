@@ -1,17 +1,22 @@
 <script setup lang="ts">
-import { ref, onMounted, watch } from 'vue'
-// @ts-ignore
+import { onMounted, ref, watch } from 'vue'
+
+// @ts-expect-error missing types
 import TypeIt from 'typeit'
 import Markdown from 'markdown-it'
 import type { SlidevMarkdown } from '@slidev/types'
-// @ts-ignore
-import Cover from '@slidev/theme-default/layouts/cover.vue'
+
+// @ts-expect-error missing types
 import { parse } from '@slidev/parser'
+import Cover from '@slidev/theme-default/layouts/cover.vue'
 import Default from '@slidev/client/layouts/default.vue'
 import Center from '@slidev/client/layouts/center.vue'
 import SlideContainer from '@slidev/client/internals/SlideContainer.vue'
 import '@slidev/client/styles/layouts-base.css'
 import '@slidev/theme-default/styles/layouts.css'
+
+import DemoEditor from './DemoEditor.vue'
+import DemoSlide from './DemoSlide.vue'
 
 const page = ref(0)
 const paused = ref(false)
@@ -66,18 +71,26 @@ if (typeof window !== 'undefined') {
 }
 
 onMounted(() => {
-  new TypeIt(block.value, {
+  // @ts-expect-error wrong types provided by TypeIt
+  new TypeIt(block.value!, {
     speed: 50,
     startDelay: 900,
     afterStep: () => {
+      // eslint-disable-next-line unicorn/prefer-dom-node-text-content
       code.value = JSON.parse(JSON.stringify(block.value!.innerText.replace('|', '')))
     },
   })
+<<<<<<< HEAD:.vitepress/theme/components/demo/Demo.vue
     .type('<br><span class="token title"># Bienvenue sur Slidev!</span><br><br>', { delay: 400 })
     .type('Diapositives de présentation pour Développeurs', { delay: 400 })
     .move('START', { speed: 0 })
+=======
+    .type('<br><span class="token title"># Welcome to Slidev!</span><br><br>', { delay: 400 })
+    .type('Presentation Slides for Developers', { delay: 400 })
+    .move(null, { to: 'START', speed: 0 })
+>>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3:.vitepress/theme/components/Demo.vue
     .type('<br>')
-    .move('START')
+    .move(null, { to: 'START' })
     .exec(pause)
     .type('<span class="token punctuation">---<br><br>---</span>')
     .move(-4)
@@ -95,7 +108,7 @@ onMounted(() => {
     .type(COVER_URL, { speed: 0 })
     .exec(resume)
     .pause(1000)
-    .move('END', { speed: 0 })
+    .move(null, { to: 'END', speed: 0 })
     .exec(pause)
     .type('<br><br><span class="token punctuation">---</span><br><br>', { delay: 400 })
     .exec(resume)
@@ -112,12 +125,12 @@ onMounted(() => {
 <template>
   <div>
     <DemoEditor>
-      <div class="text-sm opacity-50">
+      <div class="text-sm opacity-50 text-center">
         ./slides.md
       </div>
 
-      <div class="language-md !bg-transparent">
-        <pre ref="block" class="text-left whitespace-normal font-mono bg-transparent"></pre>
+      <div class="language-md !bg-transparent px4 py1">
+        <pre ref="block" class="text-left whitespace-pre-wrap font-mono bg-transparent" />
       </div>
     </DemoEditor>
 
@@ -125,16 +138,16 @@ onMounted(() => {
       <div
         class="flex h-full dark:bg-[#181819] transition-transform transform duration-500"
         style="width: 200%"
-        :class="page === 1 ? '-translate-x-1/2': ''"
+        :class="page === 1 ? '-translate-x-1/2' : ''"
       >
         <SlideContainer class="w-full h-full">
           <component :is="getLayout(0)" v-bind="getAttrs(0)">
-            <div v-html="getHTML(0)"></div>
+            <div v-html="getHTML(0)" />
           </component>
         </SlideContainer>
         <SlideContainer class="w-full h-full">
           <component :is="getLayout(1)" v-bind="getAttrs(1)">
-            <div v-html="getHTML(1)"></div>
+            <div v-html="getHTML(1)" />
           </component>
         </SlideContainer>
       </div>
