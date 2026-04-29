@@ -426,7 +426,7 @@ Le Markdown de base et le HTML sont également supportés dans les notes lorsque
 
 > Disponible depuis v0.48
 
-Pour certaines diapositives, vous pourriez avoir des notes plus longues qui pourraient être difficiles à suivre. Slidev supporte des marqueurs de clic qui permettent de surligner et de faire défiler automatiquement vers la section de notes correspondant à votre contenu. Placez les marqueurs `[click]` au début de n'importe quelle ligne dans vos notes pour le moment où vous devez passer à un autre [clic](/guide/animations#click-animations). Vous pouvez sauter `n` clics en utilisant `[click:{n+1}]`. Par exemple :
+Pour certaines diapositives, vous pourriez avoir des notes plus longues qui pourraient être difficiles à suivre. Slidev supporte des marqueurs de clic qui permettent de surligner et de faire défiler automatiquement vers la section de notes correspondant à votre contenu. Placez les marqueurs `\[click\]` au début de n'importe quelle ligne dans vos notes pour le moment où vous devez passer à un autre [clic](/guide/animations#click-animations). Vous pouvez sauter `n` clics en utilisant `\[click:{n+1}\]`. Par exemple :
 
 ```md
 <!--
