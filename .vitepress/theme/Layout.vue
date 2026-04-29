@@ -1,5 +1,10 @@
 <template>
-  <div class="theme" :class="pageClasses">
+  <div class="deprecate-banner">
+    Cette traduction est obsolète, veuillez consulter le
+    <a href="https://sli.dev/">document en anglais</a>.
+  </div>
+
+  <div class="theme" :class="pageClasses" style="margin-top:20px;transform:translateX(0)">
     <NavBar
       v-if="showNavbar"
       :show-sidebar="showSidebar"
@@ -135,3 +140,27 @@ const pageClasses = computed(() => {
   ]
 })
 </script>
+
+<style>
+.deprecate-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: -32px;
+  padding: 4px;
+  min-height: 32px;
+  background-color: rgb(250,200,89);
+  color: black;
+  text-align: center;
+}
+
+.deprecate-banner a {
+  text-decoration: underline;
+  color: rgb(4,96,132);
+}
+
+:root {
+  margin-top: 32px;
+  transform: translateX(0);
+}
+</style>
