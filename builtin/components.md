@@ -1,35 +1,14 @@
-<<<<<<< HEAD
-# Composants
-=======
 ---
 outline: [2, 3]
 ---
 
-# Components
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+# Composants
 
 ## Composants Intégrés
 
-<<<<<<< HEAD
-> Les documentations de cette section sont toujours en cours d'élaboration. Avant cela, vous pouvez directement jeter un coup d'oeil au [code source](https://github.com/slidevjs/slidev/blob/main/packages/client/builtin)
-
-### `Toc`
-
-Insérez une table des matières.
-
-Si vous souhaitez qu'une diapositive n'apparaisse pas dans le composant `<Toc>`, vous pouvez utiliser dans le bloc de présentation de la diapositive :
-```yml
----
-hideInToc: true
----
-```
-
-Les titres sont affichés à l'aide du composant [`<Titres>`](#titles)
-=======
 ### `Arrow`
 
-Draw an arrow.
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Dessine une flèche.
 
 #### Usage
 
@@ -37,79 +16,69 @@ Draw an arrow.
 <Arrow x1="10" y1="20" x2="100" y2="200" />
 ```
 
-Or:
+Ou :
 
 ```md
 <Arrow v-bind="{ x1:10, y1:10, x2:200, y2:200 }" />
 ```
 
-Parameters:
+Paramètres :
 
-<<<<<<< HEAD
-* `columns` (`string | number`, défaut : `1`): Le nombre de colonnes de l'affichage
-* `listClass` (`string | string[]`, défaut : `''`): Classes à appliquer à la table des matières
-* `maxDepth` (`string | number`, défaut : `Infinity`): Le niveau de profondeur maximum du titre à afficher
-* `minDepth` (`string | number`, défaut : `1`): Le niveau de profondeur minimum du titre à afficher
-* `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`, défaut : `'all'`):
-  * `'all'`: Afficher tous les articles
-  * `'onlyCurrentTree'`: Afficher uniquement les éléments qui sont dans l'arborescence actuelle (élément actif, parents et enfants de l'élément actif)
-  * `'onlySiblings'`: Afficher uniquement les éléments qui sont dans l'arborescence actuelle et leurs frères et sœurs directs
-=======
-- `x1` (`string | number`, required): start point x position
-- `y1` (`string | number`, required): start point y position
-- `x2` (`string | number`, required): end point x position
-- `y2` (`string | number`, required): end point x position
-- `width` (`string | number`, default: `2`): line width
-- `color` (`string`, default: `'currentColor'`): line color
-- `two-way` (`boolean`, default: `false`): draw a two-way arrow
+- `x1` (`string | number`, requis) : position x du point de départ
+- `y1` (`string | number`, requis) : position y du point de départ
+- `x2` (`string | number`, requis) : position x du point d'arrivée
+- `y2` (`string | number`, requis) : position y du point d'arrivée
+- `width` (`string | number`, défaut : `2`) : épaisseur de ligne
+- `color` (`string`, défaut : `'currentColor'`) : couleur de ligne
+- `two-way` (`boolean`, défaut : `false`) : dessine une flèche bidirectionnelle
 
 ### `VDragArrow`
 
-An `Arrow` component that can be dragged.
+Un composant `Arrow` qui peut être déplacé.
 
 #### Usage
 
-See https://sli.dev/guide/draggable.html#draggable-arrow
+Voir https://sli.dev/guide/draggable.html#draggable-arrow
 
-Parameters not related to position are the same as [the `Arrow` component](#arrow).
+Les paramètres non liés à la position sont les mêmes que [le composant `Arrow`](#arrow).
 
 ### `AutoFitText`
 
-> Experimental
+> Expérimental
 
-Box inside which the font size will automatically adapt to fit the content. Similar to PowerPoint or Keynote TextBox.
+Boîte à l'intérieur de laquelle la taille de police s'adaptera automatiquement au contenu. Similaire à la zone de texte de PowerPoint ou Keynote.
 
 #### Usage
 
 ```md
-<AutoFitText :max="200" :min="100" modelValue="Some text"/>
+<AutoFitText :max="200" :min="100" modelValue="Du texte"/>
 ```
 
-Parameters:
+Paramètres :
 
-- `max` (`string | number`, default `100`): Maximum font size
-- `min` (`string | number`, default `30`): Minimum font size
-- `modelValue` (`string`, default `''`): text content
+- `max` (`string | number`, défaut `100`) : taille de police maximale
+- `min` (`string | number`, défaut `30`) : taille de police minimale
+- `modelValue` (`string`, défaut `''`) : contenu textuel
 
 ### `LightOrDark`
 
-Use it to display one thing or another depending on the active light or dark theme.
+Utilisez-le pour afficher une chose ou une autre selon que le thème clair ou sombre est actif.
 
 #### Usage
 
-Use it with the two named Slots `#dark` and `#light`:
+Utilisez-le avec les deux slots nommés `#dark` et `#light` :
 
 ```md
 <LightOrDark>
-  <template #dark>Dark mode is on</template>
-  <template #light>Light mode is on</template>
+  <template #dark>Le mode sombre est actif</template>
+  <template #light>Le mode clair est actif</template>
 </LightOrDark>
 ```
 
-Provided props on `LightOrDark` component will be available using scoped slot props:
+Les props fournies sur le composant `LightOrDark` seront disponibles via les props de slot à portée limitée :
 
 ```md
-<LightOrDark width="100" alt="some image">
+<LightOrDark width="100" alt="une image">
   <template #dark="props">
     <img src="/dark.png" v-bind="props"/>
   </template>
@@ -119,7 +88,7 @@ Provided props on `LightOrDark` component will be available using scoped slot pr
 </LightOrDark>
 ```
 
-You can provide markdown in the slots, but you will need to surround the content with blank lines:
+Vous pouvez fournir du markdown dans les slots, mais vous devrez entourer le contenu de lignes vides :
 
 ```md
 <LightOrDark>
@@ -135,7 +104,6 @@ You can provide markdown in the slots, but you will need to surround the content
   </template>
 </LightOrDark>
 ```
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ### `Link`
 
@@ -143,61 +111,50 @@ Insérez un lien que vous pouvez utiliser pour accéder à une diapositive donn�
 
 #### Usage
 
-<<<<<<< HEAD
-~~~md
+```md
 <Link to="42">Aller à la diapositive 42</Link>
 <Link to="42" title="Aller à la diapositive 42"/>
-~~~
-=======
-```md
-<Link to="42">Go to slide 42</Link>
-<Link to="42" title="Go to slide 42"/>
-<Link to="solutions" title="Go to solutions"/>
+<Link to="solutions" title="Aller aux solutions"/>
 ```
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
-Paramètres:
+Paramètres :
 
-<<<<<<< HEAD
-* `to` (`string | number`): Le chemin de la diapositive vers laquelle naviguer (les diapositives commencent à partir de "1")
-* `title` (`string`): Le titre à afficher
-=======
-- `to` (`string | number`): The path of the slide to navigate to (slides starts from `1`)
-- `title` (`string`): The title to display
+- `to` (`string | number`) : le chemin de la diapositive vers laquelle naviguer (les diapositives commencent à `1`)
+- `title` (`string`) : le titre à afficher
 
-One can use a string as `to`, provided the corresponding route exists, e.g.
+On peut utiliser une chaîne comme `to`, à condition que la route correspondante existe, par exemple :
 
 ```md
 ---
 routeAlias: solutions
 ---
 
-# Now some solutions!
+# Voici quelques solutions !
 ```
 
 ### `PoweredBySlidev`
 
-Renders "Powered by Slidev" with a link to the Slidev website.
+Rend « Powered by Slidev » avec un lien vers le site de Slidev.
 
 ### `RenderWhen`
 
-Render slot only when the context match (for example when we are in presenter view).
+Rend le slot uniquement lorsque le contexte correspond (par exemple lorsque nous sommes en vue présentateur).
 
 #### Usage
 
 ```md
-<RenderWhen context="presenter">This will only be rendered in presenter view.</RenderWhen>
+<RenderWhen context="presenter">Ceci ne sera rendu qu'en vue présentateur.</RenderWhen>
 ```
 
-Context type: `'main' | 'slide' | 'overview' | 'presenter' | 'previewNext'`
+Type de contexte : `'main' | 'slide' | 'overview' | 'presenter' | 'previewNext'`
 
-Parameters:
+Paramètres :
 
-- `context` (`Context | Context[]`): context or array of contexts you want the slot to be rendered
+- `context` (`Context | Context[]`) : contexte ou tableau de contextes dans lesquels vous voulez que le slot soit rendu
 
 ### `SlideCurrentNo`
 
-Current slide number.
+Numéro de la diapositive actuelle.
 
 #### Usage
 
@@ -207,69 +164,52 @@ Current slide number.
 
 ### `SlidesTotal`
 
-Total number of slides.
+Nombre total de diapositives.
 
 #### Usage
 
 ```md
 <SlidesTotal />
 ```
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ### `Titles`
 
-Insérez le titre principal d'une diapositive analysée au format HTML.
+Insère le titre principal d'une diapositive analysée au format HTML.
 
 Les titres et les niveaux de titre sont automatiquement récupérés à partir du premier élément de titre de chaque diapositive.
 
-<<<<<<< HEAD
-Vous pouvez remplacer ce comportement automatique pour une diapositive à l'aide de la syntaxe frontale :
-=======
-You can override this automatic behaviour for a slide by using the front matter syntax:
+Vous pouvez remplacer ce comportement automatique pour une diapositive en utilisant la syntaxe front matter :
 
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 ```yml
 ---
-title: Amazing slide title
+title: Titre de diapositive incroyable
 level: 2
 ---
 ```
 
 #### Usage
 
-<<<<<<< HEAD
-Le composant `<Titles>` est un composant virtuel avec lequel vous pouvez importer :
-=======
-The `<Titles>` component is a virtual component you can import with:
+Le composant `<Titles>` est un composant virtuel que vous pouvez importer avec :
 
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 ```js
 import Titles from '/@slidev/titles.md'
 ```
 
-<<<<<<< HEAD
-Ensuite, vous pouvez l'utiliser avec :
-~~~md
-=======
-Then you can use it with:
+Puis vous pouvez l'utiliser avec :
 
 ```md
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 <Titles no="42" />
 ```
 
-Paramètres:
+Paramètres :
 
-<<<<<<< HEAD
-* `no` (`string | number`): Le numéro de la diapositive à partir de laquelle afficher le titre (les diapositives commencent à partir de `1`)
-=======
-- `no` (`string | number`): The number of the slide to display the title from (slides starts from `1`)
+- `no` (`string | number`) : le numéro de la diapositive à partir de laquelle afficher le titre (les diapositives commencent à `1`)
 
 ### `Toc`
 
-Insert a Table Of Content.
+Insère une table des matières.
 
-If you want a slide to not appear in the `<Toc>` component, you can use in the front matter block of the slide:
+Si vous souhaitez qu'une diapositive n'apparaisse pas dans le composant `<Toc>`, vous pouvez utiliser dans le bloc front matter de la diapositive :
 
 ```yml
 ---
@@ -277,7 +217,7 @@ hideInToc: true
 ---
 ```
 
-Titles are displayed using the [`<Titles>` component](#titles)
+Les titres sont affichés à l'aide du composant [`<Titles>`](#titles)
 
 #### Usage
 
@@ -285,20 +225,20 @@ Titles are displayed using the [`<Titles>` component](#titles)
 <Toc />
 ```
 
-Parameters:
+Paramètres :
 
-- `columns` (`string | number`, default: `1`): The number of columns of the display
-- `listClass` (`string | string[]`, default: `''`): Classes to apply to the table of contents list
-- `maxDepth` (`string | number`, default: `Infinity`): The maximum depth level of title to display
-- `minDepth` (`string | number`, default: `1`): The minimum depth level of title to display
-- `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`, default: `'all'`):
-  - `'all'`: Display all items
-  - `'onlyCurrentTree'`: Display only items that are in current tree (active item, parents and children of active item)
-  - `'onlySiblings'`: Display only items that are in current tree and their direct siblings
+- `columns` (`string | number`, défaut : `1`) : le nombre de colonnes de l'affichage
+- `listClass` (`string | string[]`, défaut : `''`) : classes à appliquer à la liste de la table des matières
+- `maxDepth` (`string | number`, défaut : `Infinity`) : le niveau de profondeur maximum du titre à afficher
+- `minDepth` (`string | number`, défaut : `1`) : le niveau de profondeur minimum du titre à afficher
+- `mode` (`'all' | 'onlyCurrentTree'| 'onlySiblings'`, défaut : `'all'`):
+  - `'all'` : Afficher tous les éléments
+  - `'onlyCurrentTree'` : Afficher uniquement les éléments qui sont dans l'arborescence actuelle (élément actif, parents et enfants de l'élément actif)
+  - `'onlySiblings'` : Afficher uniquement les éléments qui sont dans l'arborescence actuelle et leurs frères et sœurs directs
 
 ### `Transform`
 
-Apply scaling or transforming to elements.
+Applique une mise à l'échelle ou une transformation aux éléments.
 
 #### Usage
 
@@ -308,14 +248,14 @@ Apply scaling or transforming to elements.
 </Transform>
 ```
 
-Parameters:
+Paramètres :
 
-- `scale` (`number | string`, default `1`): transform scale value
-- `origin` (`string`, default `'top left'`): transform origin value
+- `scale` (`number | string`, défaut `1`) : valeur de l'échelle de transformation
+- `origin` (`string`, défaut `'top left'`) : valeur de l'origine de transformation
 
 ### `Tweet`
 
-Embed a tweet.
+Intègre un tweet.
 
 #### Usage
 
@@ -323,76 +263,76 @@ Embed a tweet.
 <Tweet id="20" />
 ```
 
-Parameters:
+Paramètres :
 
-- `id` (`number | string`, required): id of the tweet
-- `scale` (`number | string`, default `1`): transform scale value
-- `conversation` (`string`, default `'none'`): [tweet embed parameter](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
-- `cards` (`'hidden' | 'visible'`, default `'visible'`): [tweet embed parameter](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
+- `id` (`number | string`, requis) : id du tweet
+- `scale` (`number | string`, défaut `1`) : valeur de l'échelle de transformation
+- `conversation` (`string`, défaut `'none'`) : [paramètre d'intégration de tweet](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
+- `cards` (`'hidden' | 'visible'`, défaut `'visible'`) : [paramètre d'intégration de tweet](https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference)
 
-### `VAfter`, `VClick` and `VClicks`
+### `VAfter`, `VClick` et `VClicks`
 
-See https://sli.dev/guide/animations.html
+Voir https://sli.dev/guide/animations.html
 
 ### `VSwitch`
 
-Switch between multiple slots based on clicks.
+Basculer entre plusieurs slots en fonction des clics.
 
-See https://sli.dev/guide/animations.html#enter-leave
+Voir https://sli.dev/guide/animations.html#enter-leave
 
-- If the `unmount` prop is set to `true`, the previous slot will be unmounted when switching to the next slot. Default is `false`.
-- Use the `tag` and `childTag` props to change the default tag of the component and its children. Default is `div`.
-- Use the `transition` prop to change the transition effect. Default is `false` (disabled).
+- Si la prop `unmount` est définie sur `true`, le slot précédent sera démonté lors du basculement vers le slot suivant. La valeur par défaut est `false`.
+- Utilisez les props `tag` et `childTag` pour changer la balise par défaut du composant et de ses enfants. La valeur par défaut est `div`.
+- Utilisez la prop `transition` pour changer l'effet de transition. La valeur par défaut est `false` (désactivé).
 
 ### `VDrag`
 
-See https://sli.dev/guide/draggable.html
+Voir https://sli.dev/guide/draggable.html
 
 ### `SlidevVideo`
 
-Embed a video.
+Intègre une vidéo.
 
 #### Usage
 
 ```md
 <SlidevVideo v-click autoplay controls>
-  <!-- Anything that can go in a HTML video element. -->
+  <!-- Tout ce qui peut aller dans un élément vidéo HTML. -->
   <source src="/myMovie.mp4" type="video/mp4" />
   <source src="/myMovie.webm" type="video/webm" />
   <p>
-    Your browser does not support videos. You may download it
-    <a href="/myMovie.mp4">here</a>.
+    Votre navigateur ne supporte pas les vidéos. Vous pouvez la télécharger
+    <a href="/myMovie.mp4">ici</a>.
   </p>
 </SlidevVideo>
 ```
 
-Check [HTML video element's doc](https://developer.mozilla.org/docs/Web/HTML/Element/Video) to see what can be included in this component's slot.
+Consultez la [documentation de l'élément vidéo HTML](https://developer.mozilla.org/docs/Web/HTML/Element/Video) pour voir ce qui peut être inclus dans le slot de ce composant.
 
-Parameters:
+Paramètres :
 
-- `controls` (`boolean`, default: `false`): show the video controls
-- `autoplay` (`boolean | 'once'`, default: `false`):
-  - `true` or `'once'`: start the video only once and does not restart it once ended or paused
-  - `false`: never automatically start the video (rely on `controls` instead)
-- `autoreset` (`'slide' | 'click'`, default: `undefined`):
-  - `'slide'`: go back to the start of the video when going back to the slide
-  - `'click'`: go back to the start of the video when going back to the component's click turn
-- `poster` (`string | undefined`, default: `undefined`):
-  - The source of the image to print when the video is not playing.
-- `printPoster` (`string | undefined`, default: `undefined`):
-  - The override for `poster` when printing.
-- `timestamp` (`string | number`, default: `0`):
-  - The starting time of the video in seconds.
-- `printTimestamp` (`string | number | 'last' | undefined`, default: `undefined`):
-  - The override for `timestamp` when printing.
+- `controls` (`boolean`, défaut : `false`) : affiche les contrôles de la vidéo
+- `autoplay` (`boolean | 'once'`, défaut : `false`) :
+  - `true` ou `'once'` : démarre la vidéo une seule fois et ne la redémarre pas une fois terminée ou mise en pause
+  - `false` : ne démarre jamais automatiquement la vidéo (se repose sur `controls` à la place)
+- `autoreset` (`'slide' | 'click'`, défaut : `undefined`) :
+  - `'slide'` : revient au début de la vidéo lors du retour à la diapositive
+  - `'click'` : revient au début de la vidéo lors du retour au tour de clic du composant
+- `poster` (`string | undefined`, défaut : `undefined`) :
+  - La source de l'image à afficher lorsque la vidéo ne joue pas.
+- `printPoster` (`string | undefined`, défaut : `undefined`) :
+  - La surcharge pour `poster` lors de l'impression.
+- `timestamp` (`string | number`, défaut : `0`) :
+  - Le temps de démarrage de la vidéo en secondes.
+- `printTimestamp` (`string | number | 'last' | undefined`, défaut : `undefined`) :
+  - La surcharge pour `timestamp` lors de l'impression.
 
 ::: warning
-When exporting, the video may fail to load because Chromium does not support some video formats. In this case, you can specify the executable path of the browser. See [Chromium executable path](/guide/exporting.html#executable-path) for more information.
+Lors de l'exportation, la vidéo peut échouer à se charger car Chromium ne supporte pas certains formats vidéo. Dans ce cas, vous pouvez spécifier le chemin exécutable du navigateur. Voir [Chemin exécutable de Chromium](/guide/exporting.html#executable-path) pour plus d'informations.
 :::
 
 ### `Youtube`
 
-Embed a youtube video.
+Intègre une vidéo YouTube.
 
 #### Usage
 
@@ -400,20 +340,19 @@ Embed a youtube video.
 <Youtube id="luoMHjh-XcQ" />
 ```
 
-Parameters:
+Paramètres :
 
-- `id` (`string`, required): id of the youtube video
-- `width` (`number`): width of the video
-- `height` (`number`): height of the video
+- `id` (`string`, requis) : id de la vidéo YouTube
+- `width` (`number`) : largeur de la vidéo
+- `height` (`number`) : hauteur de la vidéo
 
-You can also make the video start at specific time if you add `?start=1234` to the id value (where 1234 are seconds),
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Vous pouvez également faire démarrer la vidéo à un moment précis si vous ajoutez `?start=1234` à la valeur de l'id (où 1234 sont des secondes).
 
 ## Composants Customisés
 
-Créer un répertoire `components/` sous la racine de votre projet, et placez simplement vos composants Vue personnalisés sous celui-ci, puis vous pouvez l'utiliser avec le même nom dans votre fichier markdown!
+Créez un répertoire `components/` sous la racine de votre projet, et placez simplement vos composants Vue personnalisés sous celui-ci, puis vous pouvez les utiliser avec le même nom dans votre fichier markdown !
 
-Pour en savoir plus, consultez la section [Customisation](/custom/directory-structure#components).
+Pour en savoir plus, consultez la section [Personnalisation](/custom/directory-structure#components).
 
 ## Composants fournis par thème
 

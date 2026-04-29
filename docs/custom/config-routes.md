@@ -1,12 +1,12 @@
-# Configure Routes
+# Configurer les routes
 
 <Environment type="client" />
 
-Add your pages to the Slidev app.
+Ajoutez vos pages à l'application Slidev.
 
-## Usage
+## Utilisation
 
-Create `./setup/routes.ts` with the following content:
+Créez `./setup/routes.ts` avec le contenu suivant :
 
 ```ts
 import { defineRoutesSetup } from '@slidev/types'
@@ -22,4 +22,4 @@ export default defineRoutesSetup((routes) => {
 })
 ```
 
-Learn more about routes in the [Vue Router documentation](https://router.vuejs.org/).
+En savoir plus sur les routes dans la [documentation de Vue Router](https://router.vuejs.org/).

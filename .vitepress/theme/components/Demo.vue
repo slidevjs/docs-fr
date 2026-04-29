@@ -80,15 +80,9 @@ onMounted(() => {
       code.value = JSON.parse(JSON.stringify(block.value!.innerText.replace('|', '')))
     },
   })
-<<<<<<< HEAD:.vitepress/theme/components/demo/Demo.vue
-    .type('<br><span class="token title"># Bienvenue sur Slidev!</span><br><br>', { delay: 400 })
-    .type('Diapositives de présentation pour Développeurs', { delay: 400 })
-    .move('START', { speed: 0 })
-=======
-    .type('<br><span class="token title"># Welcome to Slidev!</span><br><br>', { delay: 400 })
-    .type('Presentation Slides for Developers', { delay: 400 })
+    .type('<br><span class="token title"># Bienvenue sur Slidev !</span><br><br>', { delay: 400 })
+    .type('Diapositives de présentation pour développeurs', { delay: 400 })
     .move(null, { to: 'START', speed: 0 })
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3:.vitepress/theme/components/Demo.vue
     .type('<br>')
     .move(null, { to: 'START' })
     .exec(pause)

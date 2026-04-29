@@ -1,25 +1,25 @@
-# Configure UnoCSS
+# Configurer UnoCSS
 
 <Environment type="node" />
 
-[UnoCSS](https://unocss.dev) is now the default CSS framework for Slidev since v0.42.0. UnoCSS is an fast atomic CSS engine that has full flexibility and extensibility.
+[UnoCSS](https://unocss.dev) est désormais le framework CSS par défaut pour Slidev depuis la v0.42.0. UnoCSS est un moteur de CSS atomique rapide qui offre une flexibilité et une extensibilité totales.
 
-By default, Slidev enables the following presets out-of-box:
+Par défaut, Slidev active les presets suivants prêts à l'emploi :
 
-- [@unocss/preset-uno](https://unocss.dev/presets/uno) - Tailwind / Windi CSS compatible utilities
-- [@unocss/preset-attributify](https://unocss.dev/presets/attributify) - Attributify mode
-- [@unocss/preset-icons](https://unocss.dev/presets/icons) - Use any icons as class
-- [@unocss/preset-web-fonts](https://unocss.dev/presets/web-fonts) - Use web fonts at ease
-- [@unocss/transformer-directives](https://unocss.dev/transformers/directives) - Use `@apply` in CSS
+- [@unocss/preset-uno](https://unocss.dev/presets/uno) - Utilitaires compatibles Tailwind / Windi CSS
+- [@unocss/preset-attributify](https://unocss.dev/presets/attributify) - Mode attributify
+- [@unocss/preset-icons](https://unocss.dev/presets/icons) - Utiliser n'importe quelles icônes en tant que classe
+- [@unocss/preset-web-fonts](https://unocss.dev/presets/web-fonts) - Utiliser les polices web facilement
+- [@unocss/transformer-directives](https://unocss.dev/transformers/directives) - Utiliser `@apply` dans le CSS
 
-Slidev also adds shortcuts as can be seen in its [source code](https://github.com/slidevjs/slidev/blob/main/packages/client/uno.config.ts).
+Slidev ajoute également des raccourcis comme on peut le voir dans son [code source](https://github.com/slidevjs/slidev/blob/main/packages/client/uno.config.ts).
 
-You can therefore style your content the way you want. For example:
+Vous pouvez donc styliser votre contenu comme vous le souhaitez. Par exemple :
 
 ```html
 <div class="grid pt-4 gap-4 grid-cols-[100px,1fr]">
 
-### Name
+### Nom
 
 - Item 1
 - Item 2
@@ -29,18 +29,18 @@ You can therefore style your content the way you want. For example:
 
 ## Configurations
 
-You can create `uno.config.ts` under the root of your project to extend the builtin configurations
+Vous pouvez créer `uno.config.ts` à la racine de votre projet pour étendre les configurations intégrées
 
 ```ts
 import { defineConfig } from 'unocss'
 
 export default defineConfig({
   shortcuts: {
-    // custom the default background
+    // personnaliser l'arrière-plan par défaut
     'bg-main': 'bg-white text-[#181818] dark:(bg-[#121212] text-[#ddd])',
   },
   // ...
 })
 ```
 
-Learn more about [UnoCSS configurations](https://unocss.dev/guide/config-file)
+En savoir plus sur les [configurations UnoCSS](https://unocss.dev/guide/config-file)

@@ -27,29 +27,29 @@ La page actuelle est : {{ $slidev.nav.currentPage }}
 
 ### `$clicks`
 
-`$clicks` hold a number of clicks on the current slide. Can be used conditionally to show different content on clicks.
+`$clicks` contient le nombre de clics sur la diapositive actuelle. Peut être utilisé conditionnellement pour afficher différents contenus selon les clics.
 
 ```html
-<div v-if="$clicks > 3">Content</div>
+<div v-if="$clicks > 3">Contenu</div>
 ```
 
 ### `$page`
 
-`$page` holds the number of the current page, 1-indexed.
+`$page` contient le numéro de la page actuelle, indexé à partir de 1.
 
 ```md
-Page: {{ $page }}
+Page : {{ $page }}
 
-Is current page active: {{ $page === $slidev.nav.currentPage }}
+La page actuelle est active : {{ $page === $slidev.nav.currentPage }}
 ```
 
 ### `$renderContext`
 
-`$renderContext` holds the current render context, can be `slide`, `overview`, `presenter` or `previewNext`
+`$renderContext` contient le contexte de rendu actuel, peut être `slide`, `overview`, `presenter` ou `previewNext`
 
 ```md
 <div v-if="$renderContext === 'slide'">
-  This content will only be rendered in slides view
+  Ce contenu ne sera rendu que dans la vue des diapositives
 </div>
 ```
 
@@ -68,18 +68,12 @@ $slidev.nav.go(10) // aller à la diapositive #10
 ```js
 $slidev.nav.currentPage // numéro de la diapositive actuelle
 
-<<<<<<< HEAD
 $slidev.nav.currentLayout // ID de mise en page actuelle
-
-$slidev.nav.clicks // nombre de clics en cours
-=======
-$slidev.nav.currentLayout // current layout id
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 ```
 
 Pour plus de propriétés disponibles, reportez-vous aux exportations [nav.ts](https://github.com/slidevjs/slidev/blob/main/packages/client/logic/nav.ts).
 
-> Note: `$slidev.nav.clicks` is a global state while `$clicks` is local to each slide. It's recommended to **use `$clicks` over `$slidev.nav.clicks`** to avoid clicks changed been triggered on page transitions.
+> Note : `$slidev.nav.clicks` est un état global tandis que `$clicks` est local à chaque diapositive. Il est recommandé d'**utiliser `$clicks` plutôt que `$slidev.nav.clicks`** pour éviter que les changements de clics ne soient déclenchés lors des transitions de page.
 
 ### `$slidev.configs`
 
@@ -113,17 +107,17 @@ themeConfig:
 
 ### `$nav`
 
-> Available since v0.43.0
+> Disponible depuis v0.43.0
 
-A shorthand of `$slidev.nav`.
+Un raccourci pour `$slidev.nav`.
 
-## Composable Usage
+## Utilisation des Composables
 
-> Available since v0.48.0
+> Disponible depuis v0.48.0
 
-### Context
+### Contexte
 
-If you want to get the context programmatically (also type-safely), you can import composables from `@slidev/client`:
+Si vous souhaitez obtenir le contexte par programmation (également de manière typée), vous pouvez importer les composables depuis `@slidev/client` :
 
 ```vue
 <script setup>
@@ -140,11 +134,11 @@ onSlideLeave(() => { /* ... */ })
 ```
 
 > [!NOTE]
-> Previously, you might see the usage of importing nested modules like `import { isDark } from '@slidev/client/logic/dark.ts'`, this is **NOT RECOMMENDED** as they are internal implementation details and might be broken in the future. Try always to use the public API from `@slidev/client` whenever possible.
+> Auparavant, vous pouviez voir l'utilisation de modules imbriqués comme `import { isDark } from '@slidev/client/logic/dark.ts'`, ceci est **DÉCONSEILLÉ** car ce sont des détails d'implémentation internes et pourraient être modifiés à l'avenir. Essayez toujours d'utiliser l'API publique de `@slidev/client` autant que possible.
 
 ### Types
 
-If you want to get a type programmatically, you can import types like `TocItem` from `@slidev/types`:
+Si vous souhaitez obtenir un type par programmation, vous pouvez importer des types comme `TocItem` depuis `@slidev/types` :
 
 ```vue
 <script setup>

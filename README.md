@@ -1,15 +1,11 @@
 # [fr.sli.dev](https://fr.sli.dev)
 
-<<<<<<< HEAD
-French documentation for [Slidev](https://github.com/slidevjs/slidev)
-=======
 > [!IMPORTANT]
-> This repository is a mirror of the `docs/` directory in [slidevjs/slidev](https://github.com/slidevjs/slidev/tree/main/docs). Mainly for other translations repositories to sync.
+> Ce dépôt est un miroir du répertoire `docs/` dans [slidevjs/slidev](https://github.com/slidevjs/slidev/tree/main/docs). Principalement pour que les autres dépôts de traduction puissent se synchroniser.
 >
-> **‼️ Please DO NOT submit pull requests here ‼️**. Instead, send them to the [main repository](https://github.com/slidevjs/slidev), and they will be synced here automatically.
+> **‼️ Veuillez NE PAS soumettre de pull requests ici ‼️**. Envoyez-les plutôt au [dépôt principal](https://github.com/slidevjs/slidev), et ils seront synchronisés ici automatiquement.
 
-Mirrored documentation site for [Slidev](https://github.com/slidevjs/slidev)
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Documentation française pour [Slidev](https://github.com/slidevjs/slidev)
 
 ## Translations
 
@@ -26,7 +22,7 @@ Mirrored documentation site for [Slidev](https://github.com/slidevjs/slidev)
 | Ελληνικά       | [docs-el](https://github.com/slidevjs/docs-el) | [el.sli.dev](https://el.sli.dev) | [@GeopJr](https://github.com/GeopJr)                                  |
 | 日本語         | [docs-ja](https://github.com/slidevjs/docs-el) | [ja.sli.dev](https://ja.sli.dev) | [@IkumaTadokoro](https://github.com/IkumaTadokoro)                    |
 
-## Start Server Locally
+## Démarrer le serveur localement
 
 ```
 npm i -g pnpm
@@ -35,10 +31,10 @@ pnpm i
 pnpm run dev
 ```
 
-And then visit `http://localhost:3000`
+Puis visitez `http://localhost:3000`
 
-Or install the [Vite extension for VS Code](https://marketplace.visualstudio.com/items?itemName=antfu.vite) to edit side-by-side.
+Ou installez l'[extension Vite pour VS Code](https://marketplace.visualstudio.com/items?itemName=antfu.vite) pour éditer côte à côte.
 
-## Help on Translating
+## Aide pour la traduction
 
-See [TRANSLATIONS.md](/TRANSLATIONS.md)
+Voir [TRANSLATIONS.md](/TRANSLATIONS.md)

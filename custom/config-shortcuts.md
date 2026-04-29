@@ -6,13 +6,9 @@
 
 <Environment type="client" />
 
-<<<<<<< HEAD
-Créez `./setup/shortcuts.ts` avec le contenu suivant :
-=======
-## Getting started
+## Pour commencer
 
-Create `./setup/shortcuts.ts` with the following content:
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Créez `./setup/shortcuts.ts` avec le contenu suivant :
 
 ```ts
 import type { NavOperations, ShortcutOptions } from '@slidev/types'
@@ -39,13 +35,9 @@ Avec la configuration, vous pouvez fournir le paramètre personnalisé pour les 
 
 La fonction de configuration reçoit un objet avec certaines méthodes de navigation et renvoie un tableau contenant une configuration de raccourci. Reportez-vous aux définitions de type pour plus de détails.
 
-<<<<<<< HEAD
-Le type `key` n'autorise que les chaînes, mais vous pouvez toujours lier plusieurs clés en utilisant la convention suivante :
-=======
-## Advanced key binding
+## Liaison de touches avancée
 
-The `key` type only allows for strings, but you can still bind multiple keys by using following convention:
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Le type `key` n'autorise que les chaînes, mais vous pouvez toujours lier plusieurs touches en utilisant la convention suivante :
 
 ```ts
 import type { NavOperations, ShortcutOptions } from '@slidev/types'
@@ -63,12 +55,9 @@ export default defineShortcutsSetup((nav: NavOperations, base: ShortcutOptions[]
 })
 ```
 
-<<<<<<< HEAD
-Reportez-vous à [useMagicKeys | VueUse](https://vueuse.org/core/useMagicKeys/) pour plus de détails sur l'événement de pression de touche.
-=======
-## Advanced navigation features
+## Fonctionnalités de navigation avancées
 
-The `nav` navigation operations allows you to access some functionalities than basic _next slide_ or _previous slide_. See the following for use-cases:
+Les opérations de navigation `nav` vous permettent d'accéder à certaines fonctionnalités allant au-delà du simple _diapositive suivante_ ou _diapositive précédente_. Voir les cas d'utilisation suivants :
 
 ```ts
 import { NavOperations, defineShortcutsSetup } from '@slidev/types'
@@ -78,9 +67,9 @@ export default defineShortcutsSetup((nav: NavOperations) => {
     {
       key: 'e',
 
-      // Set the `e` keyboard shortcut to be used as a bookmark
-      // or quick-access of sorts, to navigate specifically to
-      // slide number 42
+      // Définir le raccourci clavier `e` comme un marque-page
+      // ou un accès rapide, pour naviguer spécifiquement
+      // vers la diapositive numéro 42
       fn: () => nav.go(42),
       autoRepeat: true,
     }
@@ -88,5 +77,4 @@ export default defineShortcutsSetup((nav: NavOperations) => {
 })
 ```
 
-Refer to [useMagicKeys | VueUse](https://vueuse.org/core/useMagicKeys/) for more details about key pressed event.
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Reportez-vous à [useMagicKeys | VueUse](https://vueuse.org/core/useMagicKeys/) pour plus de détails sur l'événement de pression de touche.

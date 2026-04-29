@@ -1,10 +1,10 @@
-# Configure Context Menu
+# Configurer le menu contextuel
 
 <Environment type="client" />
 
-Customize the context menu items in Slidev.
+Personnalisez les éléments du menu contextuel dans Slidev.
 
-Create `./setup/context-menu.ts` with the following content:
+Créez `./setup/context-menu.ts` avec le contenu suivant :
 
 ```ts
 import { defineContextMenuSetup } from '@slidev/types'
@@ -17,10 +17,10 @@ export default defineContextMenuSetup((items) => {
     ...items.value,
     {
       small: false,
-      icon: Icon3DCursor, // Used as `title` if `small` is `true`
-      label: 'Custom Menu Item', // or a Vue component
+      icon: Icon3DCursor, // Utilisé comme `title` si `small` est `true`
+      label: 'Élément de menu personnalisé', // ou un composant Vue
       action() {
-        alert('Custom Menu Item Clicked!')
+        alert('Élément de menu personnalisé cliqué !')
       },
       disabled: isPresenter.value,
     },
@@ -28,6 +28,6 @@ export default defineContextMenuSetup((items) => {
 })
 ```
 
-This will append a new menu item to the context menu.
+Cela ajoutera un nouvel élément de menu au menu contextuel.
 
-To disable context menu globally, set `contextMenu` to `false` in the frontmatter. `contextMenu` can also be set to `dev` or `build` to only enable the context menu in development or build mode.
+Pour désactiver le menu contextuel globalement, définissez `contextMenu` sur `false` dans le frontmatter. `contextMenu` peut également être défini sur `dev` ou `build` pour n'activer le menu contextuel qu'en mode développement ou build.

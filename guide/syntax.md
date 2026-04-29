@@ -1,20 +1,12 @@
-<<<<<<< HEAD
-# Syntaxe de Markdown
-
-Les diapositives sont écrites dans **un seul fichier markdown** (par défaut `./slides.md`).
-
-Vous pouvez utiliser [les fonctionnalités Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) comme vous le feriez normalement, avec le support supplémentaire du HTML intégré et des composants Vue. Le style à l'aide de [Windi CSS](https://windicss.org) est également pris en charge. Utilisez `---` avec une nouvelle ligne pour séparer vos diapositives.
-=======
 ---
 outline: deep
 ---
 
-# Markdown Syntax
+# Syntaxe de Markdown
 
-Slides are written within **a single markdown file** (by default `./slides.md`).
+Les diapositives sont écrites dans **un seul fichier markdown** (par défaut `./slides.md`).
 
-You can use [the Markdown features](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) as you normally would, with the additional support of inlined HTML and Vue Components. Styling using [UnoCSS](/custom/config-unocss) is also supported. Use `---` padded with a new line to separate your slides.
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Vous pouvez utiliser [les fonctionnalités Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) comme vous le feriez normalement, avec le support supplémentaire du HTML intégré et des composants Vue. Le style à l'aide de [UnoCSS](/custom/config-unocss) est également pris en charge. Utilisez `---` avec une nouvelle ligne pour séparer vos diapositives.
 
 ````md
 # Slidev
@@ -35,7 +27,7 @@ console.log('Hello, World!')
 
 # Page 3
 
-Vous pouvez directement utiliser les composants Windi CSS et Vue pour styliser et enrichir vos diapositives.
+Vous pouvez directement utiliser les composants UnoCSS et Vue pour styliser et enrichir vos diapositives.
 
 <div class="p-3">
   <Tweet id="20" />
@@ -44,11 +36,7 @@ Vous pouvez directement utiliser les composants Windi CSS et Vue pour styliser e
 
 ## Frontmatter & Layouts
 
-<<<<<<< HEAD
 Vous pouvez spécifier des mises en page et d'autres métadonnées pour chaque diapositive en convertissant les séparateurs en [blocs de présentation](https://jekyllrb.com/docs/front-matter/). Chaque avant-propos commence par un triple tiret et se termine par un autre. Les textes entre eux sont des objets de données au format [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/). Par exemple :
-=======
-Specify layouts and other metadata for each slide by converting the separators into [frontmatter blocks](https://jekyllrb.com/docs/front-matter/). Each frontmatter starts with a triple-dash and ends with another. Texts between them are data objects in [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started/) format. For example:
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 <!-- eslint-skip -->
 
@@ -75,27 +63,17 @@ Ceci est une page avec la mise en page «centre» et une image d'arrière-plan.
 
 # Page 3
 
-<<<<<<< HEAD
 Il s'agit d'une page par défaut sans métadonnées supplémentaires.
-~~~
-=======
-This is a default page without any additional metadata.
 ```
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 Reportez-vous à [personnalisations](/custom/) pour plus de détails.
 
-<<<<<<< HEAD
-## Blocs de code
-
-L'une des principales raisons pour lesquelles je construis Slidev est de faire en sorte que mon code apparaisse parfaitement dans les diapositives. Donc, comme vous vous y attendiez, vous pouvez utiliser le bloc de code aromatisé Markdown pour mettre en évidence votre code.
-=======
 ### Prettier Support
 
-> Available since v0.44
+> Disponible depuis v0.44
 
-The custom syntax might not be compactible with some formatters like Prettier.
-You can either install the [Prettier Plugin](/guide/editors#prettier-plugin) or use a direct `yaml` code block to define the frontmatter instead:
+La syntaxe personnalisée pourrait ne pas être compatible avec certains formateurs comme Prettier.
+Vous pouvez soit installer le [Plugin Prettier](/guide/editors#prettier-plugin), soit utiliser un bloc de code `yaml` direct pour définir le frontmatter à la place :
 
 ````md
 ---
@@ -104,12 +82,12 @@ layout: cover
 
 # Slidev
 
-This is the cover page.
+Ceci est la page de garde.
 
 ---
 
 ```yaml
-# The first yaml block will be treated as the frontmatter of that slide
+# Le premier bloc yaml sera traité comme le frontmatter de cette diapositive
 layout: center
 background: /background-1.png
 class: 'text-white'
@@ -117,13 +95,12 @@ class: 'text-white'
 
 # Page 2
 
-This is a page with the layout `center` and a background image.
+Ceci est une page avec la mise en page `center` et une image d'arrière-plan.
 ````
 
-## Code Blocks
+## Blocs de code
 
-One big reason that led to the creation of Slidev was the need to perfectly display code in slides. Consequently, you can use Markdown-flavored code blocks to highlight your code.
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+L'une des principales raisons pour lesquelles je construis Slidev est de faire en sorte que mon code apparaisse parfaitement dans les diapositives. Donc, comme vous vous y attendiez, vous pouvez utiliser le bloc de code aromatisé Markdown pour mettre en évidence votre code.
 
 ````md
 ```ts
@@ -131,19 +108,11 @@ console.log('Hello, World!')
 ```
 ````
 
-<<<<<<< HEAD
-Nous supportons [Prism](http://prismjs.com) et [Shiki](https://github.com/shiki/shiki) en tant que surligneurs de syntaxe. Se référer à [la section Surligneurs](/custom/highlighters) pour plus de détails.
-=======
-Slidev has [Shiki](https://github.com/shikijs/shiki) built in as the syntax highlighter. Refer to [the highlighters section](/custom/highlighters) for more details.
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Slidev a [Shiki](https://github.com/shikijs/shiki) intégré en tant que surligneur de syntaxe. Se référer à [la section Surligneurs](/custom/highlighters) pour plus de détails.
 
 ### Mise en évidence de ligne
 
-<<<<<<< HEAD
-Pour mettre en évidence des lignes spécifiques, ajoutez simplement des numéros de ligne entre crochets `{}`. Les numéros de ligne commencent à compter de 1.
-=======
-To highlight specific lines, simply add line numbers within brackets `{}`. Line numbers start counting from 1 by default.
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Pour mettre en évidence des lignes spécifiques, ajoutez simplement des numéros de ligne entre crochets `{}`. Les numéros de ligne commencent à compter de 1 par défaut.
 
 ````md
 ```ts {2,3}
@@ -156,11 +125,7 @@ function add(
 ```
 ````
 
-<<<<<<< HEAD
-Pour changer la surbrillance en plusieurs étapes, vous pouvez utiliser `|` pour les séparer. Par exemple
-=======
-To change what's highlighted with multiple clicks, you can use `|` to separate each stage:
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Pour changer la surbrillance en plusieurs étapes, vous pouvez utiliser `|` pour les séparer. Par exemple :
 
 ````md
 ```ts {2-3|5|all}
@@ -173,15 +138,9 @@ function add(
 ```
 ````
 
-<<<<<<< HEAD
-Cela mettra d'abord en évidence `a: Ref <number> | number` et `b: Ref <number> | number`, puis `return computed (() => unref (a) + unref (b))` après un clic, et enfin, tout le bloc. Pour en savoir plus, consultez le [guide des animations de clics](/guide/animations).
+Cela mettra d'abord en évidence `a: Ref<number> | number` et `b: Ref<number> | number`, puis `return computed(() => unref(a) + unref(b))` après un clic, et enfin, tout le bloc.
 
-Pour ignorer la mise en surbrillance des lignes, vous pouvez définir le numéro de ligne sur "0". Par exemple
-=======
-This will first highlight `a: Ref<number> | number` and `b: Ref<number> | number`, and then `return computed(() => unref(a) + unref(b))` after one click, and lastly, the whole block.
-
-You can set the line number to `hide` to hide the code block or `none` to not highlight any line:
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Vous pouvez définir le numéro de ligne sur `hide` pour masquer le bloc de code ou `none` pour ne surligner aucune ligne :
 
 ````md
 ```ts {hide|none}
@@ -194,18 +153,13 @@ function add(
 ```
 ````
 
-<<<<<<< HEAD
-Si le code ne rentre pas dans une diapositive, vous pouvez passer une option maxHeight supplémentaire qui définira une hauteur fixe
-et activer le défilement
-=======
 ::: tip
-Learn more in the [click animations guide](./animations#positioning).
+Apprenez-en plus dans le [guide des animations de clic](./animations#positioning).
 :::
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
-### Line Numbers
+### Numéros de ligne
 
-You can enable line numbering for all slides by setting `lineNumbers: true` in the global config or enable each code block individually by setting `lines: true`. You can also set the starting line for each code block and highlight the lines accordingly; it defaults to 1:
+Vous pouvez activer la numérotation des lignes pour toutes les diapositives en définissant `lineNumbers: true` dans la configuration globale, ou activer chaque bloc de code individuellement en définissant `lines: true`. Vous pouvez également définir la ligne de départ pour chaque bloc de code et surligner les lignes en conséquence ; la valeur par défaut est 1 :
 
 ````md
 ```ts {6,7}{lines:true,startLine:5}
@@ -218,9 +172,9 @@ function add(
 ```
 ````
 
-### Max Height
+### Hauteur maximale
 
-If the code doesn't fit into one slide, you use the `maxHeight` to set fixed height and enable scrolling:
+Si le code ne rentre pas dans une diapositive, vous pouvez utiliser `maxHeight` pour définir une hauteur fixe et activer le défilement :
 
 ````md
 ```ts {2|3|7|12}{maxHeight:'100px'}
@@ -230,20 +184,20 @@ function add(
 ) {
   return computed(() => unref(a) + unref(b))
 }
-/// ...as many lines as you want
+/// ...autant de lignes que vous voulez
 const c = add(1, 2)
 ```
 ````
 
-### TwoSlash Integration
+### Intégration TwoSlash
 
-> Available since v0.46
+> Disponible depuis v0.46
 
-This feature is only available when you [set `highlighter` to `shiki`](/custom/highlighters)
+Cette fonctionnalité n'est disponible que lorsque vous [définissez `highlighter` sur `shiki`](/custom/highlighters)
 
-[TwoSlash](https://twoslash.netlify.app/) is a powerful tool for rendering TypeScript code blocks with type information on hover or inlined. It's quite useful for preparing slides for JavaScript/TypeScript-related topics.
+[TwoSlash](https://twoslash.netlify.app/) est un outil puissant pour rendre les blocs de code TypeScript avec des informations de type au survol ou intégrées. C'est très utile pour préparer des diapositives sur des sujets liés à JavaScript/TypeScript.
 
-To use it, you can add `twoslash` to the code block's language identifier:
+Pour l'utiliser, vous pouvez ajouter `twoslash` à l'identifiant de langue du bloc de code :
 
 ````md
 ```ts twoslash
@@ -254,7 +208,7 @@ const count = ref(0)
 ```
 ````
 
-It will be rendered as:
+Il sera rendu comme :
 
 ```ts twoslash
 import { ref } from 'vue'
@@ -268,13 +222,13 @@ const count = ref(0)
 
 ### Shiki Magic Move
 
-> Available since v0.48
+> Disponible depuis v0.48
 
-[Shiki Magic Move](https://github.com/shikijs/shiki-magic-move) enables you to have granular transition between code changes, similar to Keynote's Magic Move. You can check [the playground](https://shiki-magic-move.netlify.app/) to see how it works.
+[Shiki Magic Move](https://github.com/shikijs/shiki-magic-move) vous permet d'avoir des transitions granulaires entre les changements de code, similaires au Magic Move de Keynote. Vous pouvez consulter [le playground](https://shiki-magic-move.netlify.app/) pour voir comment cela fonctionne.
 
 <video src="https://github.com/slidevjs/slidev/assets/11247099/79927794-27ba-4342-9911-9996cec889d6" controls rounded shadow w-full></video>
 
-In Slidev, we bind the magic-move to the [clicks system](/guide/animations#click-animations). The syntax is to wrap multiple code blocks representing each step with <code>````md magic-move</code> (mind it's **4** backticks), this will be transformed into one code block, that morphs to each step as you click.
+Dans Slidev, nous lions le magic-move au [système de clics](/guide/animations#click-animations). La syntaxe consiste à envelopper plusieurs blocs de code représentant chaque étape avec <code>````md magic-move</code> (attention, il y a **4** backticks), cela sera transformé en un seul bloc de code, qui se métamorphose à chaque étape au fur et à mesure que vous cliquez.
 
 `````md
 ````md magic-move
@@ -290,18 +244,18 @@ console.log(`Step ${3}` as string)
 ````
 `````
 
-It's also possible to mix Magic Move with [line highlighting](#line-highlighting) and [line numbers](#line-numbers), for example:
+Il est également possible de mélanger Magic Move avec [la mise en évidence de ligne](#mise-en-evidence-de-ligne) et [les numéros de ligne](#numeros-de-ligne), par exemple :
 
 `````md
 ````md magic-move {at:4, lines: true} // [!code hl]
-```js {*|1|2-5} // [!code hl]
+```js {*|1|2} // [!code hl]
 let count = 1
 function add() {
   count++
 }
 ```
 
-Non-code blocks in between as ignored, you can put some comments.
+Les blocs non-code entre les deux sont ignorés, vous pouvez y mettre des commentaires.
 
 ```js {*}{lines: false} // [!code hl]
 let count = 1
@@ -314,7 +268,7 @@ const add = () => count += 1
 
 ### Éditeur Monaco
 
-Chaque fois que vous souhaitez apporter des modifications à la présentation, ajoutez simplement `{monaco}` après l'identifiant de la langue - cela transforme le bloc en un éditeur Monaco complet!
+Chaque fois que vous souhaitez apporter des modifications à la présentation, ajoutez simplement `{monaco}` après l'identifiant de la langue - cela transforme le bloc en un éditeur Monaco complet !
 
 ````md
 ```ts {monaco}
@@ -324,12 +278,9 @@ console.log('HelloWorld')
 
 En savoir plus sur la [configuration de Monaco](/custom/config-monaco).
 
-<<<<<<< HEAD
-## Styles intégrés
-=======
 #### Monaco Diff
 
-Monaco can also generate a diff between two code blocks. Use `{monaco-diff}` to turn the block into a [diff Monaco editor](https://microsoft.github.io/monaco-editor/playground.html?source=v0.36.1#example-creating-the-diffeditor-multi-line-example) and use `~~~` to separate both original and modified version of the code!
+Monaco peut également générer un diff entre deux blocs de code. Utilisez `{monaco-diff}` pour transformer le bloc en un [éditeur diff Monaco](https://microsoft.github.io/monaco-editor/playground.html?source=v0.36.1#example-creating-the-diffeditor-multi-line-example) et utilisez `~~~` pour séparer la version originale et modifiée du code !
 
 ````md
 ```ts {monaco-diff}
@@ -347,40 +298,41 @@ This line is removed on the left.
 ```
 ````
 
-It provides the editor with a "Run" button, and shows the result of the code execution right below the code block. You may also modify the code and the result will be re-evaluated on the fly.
+#### Exécution Monaco
 
-By default it will automatically run the code when the slide is loaded; if you want to instead explicitly trigger the run, you can set `{autorun:false}`.
+Il fournit à l'éditeur un bouton « Exécuter », et affiche le résultat de l'exécution du code juste en dessous du bloc de code. Vous pouvez également modifier le code et le résultat sera réévalué à la volée.
+
+Par défaut, il exécutera automatiquement le code lorsque la diapositive est chargée ; si vous souhaitez plutôt déclencher explicitement l'exécution, vous pouvez définir `{autorun:false}`.
 
 ````md
 ```ts {monaco-run} {autorun:false}
-console.log('Click the play button to run me')
+console.log('Cliquez sur le bouton de lecture pour m\'exécuter')
 ```
 ````
 
-If you want to only show the output in certain clicks, you can use the `showOutputAt` prop. The value is the same as `v-click`.
+Si vous souhaitez n'afficher le résultat qu'à certains clics, vous pouvez utiliser la prop `showOutputAt`. La valeur est la même que `v-click`.
 
 ````md
 ```ts {monaco-run} {showOutputAt:'+1'}
-console.log('Shown after 1 click')
+console.log('Affiché après 1 clic')
 ```
 ````
 
-Currently Slidev supports running JavaScript and TypeScript code out-of-box. Refer to [Custom Code Runners](/custom/config-code-runners) for custom languages support.
+Actuellement, Slidev supporte l'exécution de JavaScript et TypeScript directement. Référez-vous à [Exécuteurs de Code Personnalisés](/custom/config-code-runners) pour le support des langages personnalisés.
 
-#### Writable Monaco Editor
+#### Éditeur Monaco Writable
 
-> Available since v0.49.5
+> Disponible depuis v0.49.5
 
-You can also use the [Import Code Snippets](#import-code-snippets) syntax combining with the `{monaco-write}` directive, to link your Monaco Editor with a file on your filesystem. This will allow you to edit the code directly in the editor and save the changes back to the file.
+Vous pouvez également utiliser la syntaxe [Importer des Extraits de Code](#importer-des-extraits-de-code) combinée avec la directive `{monaco-write}`, pour lier votre éditeur Monaco avec un fichier sur votre système de fichiers. Cela vous permettra de modifier le code directement dans l'éditeur et d'enregistrer les modifications dans le fichier.
 
 ```md
 <<< ./some-file.ts {monaco-write}
 ```
 
-When using this, be sure to back up your files beforehand, as the changes will be saved directly to the file.
+Lorsque vous utilisez cela, assurez-vous de sauvegarder vos fichiers au préalable, car les modifications seront enregistrées directement dans le fichier.
 
-## Embedded Styles
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+## Styles intégrés
 
 Vous pouvez utiliser la balise `<style>` dans votre Markdown directement pour remplacer les styles de la **diapositive actuelle**.
 
@@ -398,15 +350,9 @@ h1 {
 # La prochaine diapositive n'est pas affectée
 ```
 
-<<<<<<< HEAD
-La balise `<style>` dans Markdown est toujours [scoped](https://vue-loader.vuejs.org/guide/scoped-css.html). Pour avoir des remplacements de style globaux, consultez la [section de personnalisation](/custom/directory-structure#style).
+La balise `<style>` dans Markdown est toujours [scoped](https://vuejs.org/api/sfc-css-features.html#scoped-css). En conséquence, un sélecteur avec un combinateur enfant (`.a > .b`) n'est pas utilisable en tant que tel ; voir le lien précédent. Pour avoir des remplacements de style globaux, consultez la [section de personnalisation](/custom/directory-structure#style).
 
-Propulsé par [Windi CSS](https://windicss.org), vous pouvez utiliser directement des css imbriqués et des [répertoires](https://windicss.org/features/directives.html) (par exemple, `@apply`)
-=======
-The `<style>` tag in Markdown is always [scoped](https://vuejs.org/api/sfc-css-features.html#scoped-css). As a result, a selector with a child combinator (`.a > .b`) is unusable as such; see the previous link. To have global style overrides, check out the [customization section](/custom/directory-structure#style).
-
-Powered by [UnoCSS](/custom/config-unocss), you can directly use nested css and [directives](https://unocss.dev/transformers/directives) (e.g. `--uno:` or `@apply`)
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Propulsé par [UnoCSS](/custom/config-unocss), vous pouvez utiliser directement des css imbriqués et des [directives](https://unocss.dev/transformers/directives) (par exemple, `--uno:` ou `@apply`)
 
 ```md
 # Slidev
@@ -426,11 +372,7 @@ blockquote {
 
 Tout comme vous le feriez dans Markdown, vous pouvez utiliser des images pointant vers une URL distante ou locale.
 
-<<<<<<< HEAD
-Pour les assets statiques, le [`vite-plugin-remote-assets`](https://github.com/antfu/vite-plugin-remote-assets) intégré les mettra en cache sur le disque à la première exécution afin que vous puissiez avoir un chargement instantané même pour de grandes images plus tard.
-=======
-For remote assets, the built-in [`vite-plugin-remote-assets`](https://github.com/antfu/vite-plugin-remote-assets) will cache them onto the disk at first run, ensuring instant loading even for large images later on.
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Pour les assets distants, le [`vite-plugin-remote-assets`](https://github.com/antfu/vite-plugin-remote-assets) intégré les mettra en cache sur le disque à la première exécution afin que vous puissiez avoir un chargement instantané même pour de grandes images plus tard.
 
 ```md
 ![Image distante](https://sli.dev/favicon.png)
@@ -442,11 +384,7 @@ Pour les ressources locales, placez-les dans le [dossier `public`](/custom/direc
 ![Image locale](/pic.png)
 ```
 
-<<<<<<< HEAD
 Si vous souhaitez appliquer des tailles ou des styles personnalisés, vous pouvez les convertir en balise `<img>`
-=======
-For you want to apply custom sizes or styles, you can convert them to the `<img>` tag
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ```html
 <img src="/pic.png" class="m-40 h-40 rounded shadow" />
@@ -454,11 +392,7 @@ For you want to apply custom sizes or styles, you can convert them to the `<img>
 
 ## Remarques
 
-<<<<<<< HEAD
-Vous pouvez également prendre des notes pour chaque diapositive. Ils apparaîtront en [Mode Présentateur](/guide/presenter-mode) pour que vous puissiez vous y référer pendant les présentations.
-=======
-You can also create presenter notes for each slide. They will show up in [Presenter Mode](/guide/presenter-mode) for you to reference during presentations.
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Vous pouvez également créer des notes de présentateur pour chaque diapositive. Elles apparaîtront en [Mode Présentateur](/guide/presenter-mode) pour que vous puissiez vous y référer pendant les présentations.
 
 Dans Markdown, le dernier bloc de commentaire de chaque diapositive sera traité comme une note.
 
@@ -486,57 +420,44 @@ Ceci est une autre note
 -->
 ```
 
-Basic Markdown and HTML are also supported in notes when the Presenter renders note content.
+Le Markdown de base et le HTML sont également supportés dans les notes lorsque le Présentateur rend le contenu des notes.
 
-### Click Markers
+### Marqueurs de Clic
 
-> Available since v0.48
+> Disponible depuis v0.48
 
-For some slides you might have longer notes that could be hard to find your place. Slidev supports click markers that allow highlighting and auto-scrolling to the section of notes from your corresponding content. Put `[click]` markers at the beginning of any line in your notes for the timing you need to go to another [click](/guide/animations#click-animations). You may skip `n` clicks by using `[click:{n+1}]`. For example:
+Pour certaines diapositives, vous pourriez avoir des notes plus longues qui pourraient être difficiles à suivre. Slidev supporte des marqueurs de clic qui permettent de surligner et de faire défiler automatiquement vers la section de notes correspondant à votre contenu. Placez les marqueurs `[click]` au début de n'importe quelle ligne dans vos notes pour le moment où vous devez passer à un autre [clic](/guide/animations#click-animations). Vous pouvez sauter `n` clics en utilisant `[click:{n+1}]`. Par exemple :
 
 ```md
 <!--
-Content before the first click
+Contenu avant le premier clic
 
-[click] This will be highlighted after the first click
+[click] Cela sera surligné après le premier clic
 
-Also highlighted after the first click
+Également surligné après le premier clic
 
-- [click] This list element will be highlighted after the second click
+- [click] Cet élément de liste sera surligné après le deuxième clic
 
-[click:3] Last click (skip two clicks)
+[click:3] Dernier clic (sauter deux clics)
 -->
 ```
 
-Slidev divides the content between the click markers and highlights it in presenter notes, synchronized with your slide progress.
+Slidev divise le contenu entre les marqueurs de clic et le surligne dans les notes du présentateur, synchronisé avec la progression de votre diapositive.
 
 <!-- TODO: add a video -->
 
 ## Icônes
 
-<<<<<<< HEAD
-Slidev vous permet d'accéder à presque tous les jeux d'icônes open-source populaires **directement** dans votre markdown. Propulsé par [`unplugin-icons`](https://github.com/antfu/unplugin-icons) et [Iconify](https://iconify.design/).
+Slidev vous permet d'accéder à presque tous les jeux d'icônes open-source populaires **directement** dans votre markdown après avoir installé le package correspondant. Propulsé par [`unplugin-icons`](https://github.com/antfu/unplugin-icons) et [Iconify](https://iconify.design/).
 
-Le nom suit la conversion de [Iconify](https://iconify.design/) `{collection-name}-{icon-name}`. Par exemple:
+Le nom suit la convention de [Iconify](https://iconify.design/) `{collection-name}-{icon-name}`. Par exemple :
 
-- `<mdi-account-circle />` - <mdi-account-circle /> de [Material Design Icons](https://github.com/Templarian/MaterialDesign)
-- `<carbon-badge />` - <carbon-badge /> de [Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/icons)
-- `<uim-rocket />` - <uim-rocket /> de [Unicons Monochrome](https://github.com/Iconscout/unicons)
-- `<twemoji-chat-avec-des-larmes-de-joie />` - <twemoji-cat-with-tears-of-joy /> de [Twemoji](https://github.com/twitter/twemoji)
-- `<logos-vue />` - <logos-vue /> de [Logos SVG](https://github.com/gilbarbara/logos)
+- `<mdi-account-circle />` - <mdi-account-circle /> de [Material Design Icons](https://github.com/Templarian/MaterialDesign) - [`@iconify-json/mdi`](https://npmjs.com/package/@iconify-json/mdi)
+- `<carbon-badge />` - <carbon-badge /> de [Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/icons) - [`@iconify-json/carbon`](https://npmjs.com/package/@iconify-json/carbon)
+- `<uim-rocket />` - <uim-rocket /> de [Unicons Monochrome](https://github.com/Iconscout/unicons) - [`@iconify-json/uim`](https://npmjs.com/package/@iconify-json/uim)
+- `<twemoji-cat-with-tears-of-joy />` - <twemoji-cat-with-tears-of-joy /> de [Twemoji](https://github.com/twitter/twemoji) - [`@iconify-json/twemoji`](https://npmjs.com/package/@iconify-json/twemoji)
+- `<logos-vue />` - <logos-vue /> de [SVG Logos](https://github.com/gilbarbara/logos) - [`@iconify-json/logos`](https://npmjs.com/package/@iconify-json/logos)
 - Et beaucoup plus...
-=======
-Slidev allows you to have access to virtually all open-source icon sets **directly** in your markdown after installing the corresponding package. Powered by [`unplugin-icons`](https://github.com/antfu/unplugin-icons) and [Iconify](https://iconify.design/).
-
-The naming follows [Iconify](https://iconify.design/)'s convention of `{collection-name}-{icon-name}`. For example:
-
-- `<mdi-account-circle />` - <mdi-account-circle /> from [Material Design Icons](https://github.com/Templarian/MaterialDesign) - [`@iconify-json/mdi`](https://npmjs.com/package/@iconify-json/mdi)
-- `<carbon-badge />` - <carbon-badge /> from [Carbon](https://github.com/carbon-design-system/carbon/tree/main/packages/icons) - [`@iconify-json/carbon`](https://npmjs.com/package/@iconify-json/carbon)
-- `<uim-rocket />` - <uim-rocket /> from [Unicons Monochrome](https://github.com/Iconscout/unicons) - [`@iconify-json/uim`](https://npmjs.com/package/@iconify-json/uim)
-- `<twemoji-cat-with-tears-of-joy />` - <twemoji-cat-with-tears-of-joy /> from [Twemoji](https://github.com/twitter/twemoji) - [`@iconify-json/twemoji`](https://npmjs.com/package/@iconify-json/twemoji)
-- `<logos-vue />` - <logos-vue /> from [SVG Logos](https://github.com/gilbarbara/logos) - [`@iconify-json/logos`](https://npmjs.com/package/@iconify-json/logos)
-- And much more...
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 Vous pouvez parcourir et rechercher toutes les icônes disponibles avec [Icônes](https://icones.js.org/).
 
@@ -595,11 +516,7 @@ Cela apparaît sur la droite
 </div>
 </div>
 
-<<<<<<< HEAD
 Nous fournissons également une syntaxe abrégée `::name::` pour le nom de l'emplacement. L'exemple suivant fonctionne exactement de la même manière que le précédent.
-=======
-We also provide a shorthand syntactical sugar `::name::` for slot name. The following works exactly the same as the previous example.
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ```md
 ---
@@ -617,11 +534,7 @@ Cela apparaît sur la gauche
 Cela apparaît sur la droite
 ```
 
-<<<<<<< HEAD
-Vous pouvez également spécifier explicitement l'emplacement par défaut et fournir dans un ordre personnalisé
-=======
-You can also explicitly specify the default slot and provide in the custom order.
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Vous pouvez également spécifier explicitement l'emplacement par défaut et fournir dans un ordre personnalisé.
 
 ```md
 ---
@@ -641,29 +554,25 @@ Cela apparaît sur la droite
 Cela apparaît sur la gauche
 ```
 
-## Import Code Snippets
+## Importer des Extraits de Code
 
-> Available since v0.47.0
+> Disponible depuis v0.47.0
 
-You can import code snippets from existing files via following syntax:
+Vous pouvez importer des extraits de code depuis des fichiers existants via la syntaxe suivante :
 
 ```md
 <<< @/snippets/snippet.js
 ```
 
 ::: tip
-The value of `@` corresponds to the source root, the directory where the `slides.md` is located.
+La valeur de `@` correspond à la racine source, le répertoire où se trouve le `slides.md`.
 :::
 
-This feature is vendored from VitePress, learn more about it in [VitePress's documentation](https://vitepress.dev/guide/markdown#import-code-snippets).
+Cette fonctionnalité est intégrée depuis VitePress, apprenez-en plus dans la [documentation de VitePress](https://vitepress.dev/guide/markdown#import-code-snippets).
 
 ## Configurations
 
-<<<<<<< HEAD
 Toutes les configurations nécessaires peuvent être définies dans le fichier Markdown. Par exemple :
-=======
-All configurations can be defined in the Markdown file. For example:
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ```md
 ---
@@ -693,10 +602,9 @@ Entourez votre LaTeX d'un seul `$` de chaque côté pour un rendu en ligne.
 $\sqrt{3x-1}+(1+x)^2$
 ```
 
-### Block
+### Bloc
 
-Utilisez deux (`$$`) pour le rendu en bloc. Ce mode utilise des symboles plus grands et centre
-le résultat.
+Utilisez deux (`$$`) pour le rendu en bloc. Ce mode utilise des symboles plus grands et centre le résultat.
 
 ```latex
 $$
@@ -713,16 +621,13 @@ $$
 $$
 ```
 
-En savoir plus: [Démo](https://sli.dev/demo/starter/8) | [KaTeX](https://katex.org/) | [`markdown-it-katex`](https://github.com/waylonflinn/markdown-it-katex)
+En savoir plus : [Démo](https://sli.dev/demo/starter/8) | [KaTeX](https://katex.org/) | [`markdown-it-katex`](https://github.com/waylonflinn/markdown-it-katex)
 
-<<<<<<< HEAD
-## Diagrammes
-=======
-### LaTex line highlighting
+### Mise en évidence de ligne LaTeX
 
-> Available since v0.43.1
+> Disponible depuis v0.43.1
 
-To highlight specific lines, simply add line numbers within bracket `{}`. Line numbers start counting from 1 by default.
+Pour mettre en évidence des lignes spécifiques, ajoutez simplement des numéros de ligne entre crochets `{}`. Les numéros de ligne commencent à compter de 1 par défaut.
 
 ```latex
 $$ {1|3|all}
@@ -735,10 +640,9 @@ $$ {1|3|all}
 $$
 ```
 
-The `at` and `finally` options of [code blocks](#line-highlighting) are also available for LaTeX blocks.
+Les options `at` et `finally` des [blocs de code](#mise-en-evidence-de-ligne) sont également disponibles pour les blocs LaTeX.
 
-## Diagrams
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+## Diagrammes
 
 Vous pouvez également créer des diagrammes / graphiques à partir de descriptions textuelles dans votre Markdown, alimenté par [Mermaid](https://mermaid-js.github.io/mermaid).
 
@@ -747,17 +651,10 @@ Les blocs de code marqués comme `mermaid` seront convertis en digrammes, par ex
 ````md
 ```mermaid
 sequenceDiagram
-<<<<<<< HEAD
-Alice->John: Hello John, how are you?
-Note over Alice,John: A typical interaction
-//```
-~~~
-=======
   Alice->John: Hello John, how are you?
   Note over Alice,John: A typical interaction
 ```
 ````
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 Vous pouvez en outre lui transmettre un objet d'options pour spécifier la mise à l'échelle et la thématisation. La syntaxe de l'objet est un littéral d'objet JavaScript, vous devrez ajouter des guillemets (`` '') pour les chaînes et utiliser une virgule (`,`) entre les clés.
 
@@ -770,19 +667,11 @@ C -->|Two| E[Result 2]
 ```
 ````
 
-En savoir plus: [Démo](https://sli.dev/demo/starter/9) | [Mermaid](https://mermaid-js.github.io/mermaid)
+En savoir plus : [Démo](https://sli.dev/demo/starter/9) | [Mermaid](https://mermaid-js.github.io/mermaid)
 
 ## Entrées multiples
 
-Depuis la version v0.15.0, nous avons livré le support multi-entrées. Cela signifie que vous pouvez diviser votre `slides.md` en plusieurs fichiers and les organiser comme vous le souhaitez.
-
-<<<<<<< HEAD
-> Disponible depuis v0.15
-
-Vous pouvez diviser votre `slides.md` en plusieurs fichiers et les organiser comme vous le souhaitez.
-=======
-You can split your `slides.md` into multiple files and organize them however you'd like.
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Depuis la version v0.15.0, nous avons livré le support multi-entrées. Cela signifie que vous pouvez diviser votre `slides.md` en plusieurs fichiers et les organiser comme vous le souhaitez.
 
 `slides.md` :
 
@@ -811,11 +700,7 @@ Cette page provient d'un autre fichier
 
 ### Fusion de frontmatter
 
-<<<<<<< HEAD
-Vous pouvez fournir des frontmatters depuis l'entrée principale mais également depuis une page markdown externe. S'il y a les mêmes clés, celles de l'**entrée principale ont la priorité la plus élevée**. Par exemple
-=======
-You can provide frontmatter instructions from both your main entry and external markdown pages. If there are duplicate keys in them, the ones from the **main entry have the higher priority**. For example:
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Vous pouvez fournir des frontmatters depuis l'entrée principale mais également depuis une page markdown externe. S'il y a les mêmes clés, celles de l'**entrée principale ont la priorité la plus élevée**. Par exemple :
 
 `slides.md` :
 
@@ -854,11 +739,7 @@ class: text-center
 Page de couverture
 ```
 
-<<<<<<< HEAD
 ### Réutilisation de la page
-=======
-### Page Reuse
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 Avec la prise en charge des entrées multiples, la réutilisation des pages peut être simple. Par exemple :
 
@@ -881,13 +762,13 @@ src: ./content.md
 ---
 ```
 
-## MDC Syntax
+## Syntaxe MDC
 
-> Available since v0.43.0
+> Disponible depuis v0.43.0
 
-Slidev supports optional [MDC (Markdown Components) Syntax](https://content.nuxtjs.org/guide/writing/mdc) powered by [`markdown-it-mdc`](https://github.com/antfu/markdown-it-mdc).
+Slidev supporte optionnellement la [Syntaxe MDC (Markdown Components)](https://content.nuxtjs.org/guide/writing/mdc) propulsée par [`markdown-it-mdc`](https://github.com/antfu/markdown-it-mdc).
 
-You can enable it by adding `mdc: true` to the frontmatter of your markdown file.
+Vous pouvez l'activer en ajoutant `mdc: true` au frontmatter de votre fichier markdown.
 
 ```mdc
 ---
@@ -903,4 +784,4 @@ The **default** slot
 ::
 ```
 
-Learn more about [MDC Syntax](https://content.nuxt.com/guide/writing/mdc).
+En savoir plus sur la [Syntaxe MDC](https://content.nuxt.com/guide/writing/mdc).

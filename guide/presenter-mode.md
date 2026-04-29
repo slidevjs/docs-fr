@@ -1,20 +1,16 @@
 # Mode présentateur
 
-<<<<<<< HEAD
-Cliquez sur le bouton <carbon-user-speaker class="inline-icon-btn"/> dans le panneau de navigation ou visitez manuellement `http://localhost:3030/presenter` pour accéder au mode présentateur. Chaque fois que vous entrez en mode présentateur, les autres instances de page resteront automatiquement synchronisées avec le présentateur.
-=======
-Click the <carbon-user-speaker class="inline-icon-btn"/> button in the navigation panel, or visit `http://localhost:3030/presenter` manually, to enter the presenter mode. To present, you'll want to open two browser windows, one for the presenter and one for the audience. Generally maximizing the slideshow window on your projector screen, then controlling it from your laptop's screen is how people present with Slidev.
+Cliquez sur le bouton <carbon-user-speaker class="inline-icon-btn"/> dans le panneau de navigation, ou visitez manuellement `http://localhost:3030/presenter`, pour accéder au mode présentateur. Pour présenter, vous voudrez ouvrir deux fenêtres de navigateur, une pour le présentateur et une pour le public. Généralement, en maximisant la fenêtre du diaporama sur l'écran du projecteur, puis en la contrôlant depuis l'écran de votre portable, c'est comme ça que les gens présentent avec Slidev.
 
-Whenever you change slides in the presenter mode, all other page instances will automatically change as well, to stay in sync with the presenter.
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Chaque fois que vous changez de diapositive en mode présentateur, toutes les autres instances de page changeront automatiquement également, pour rester synchronisées avec le présentateur.
 
 ![](/screenshots/presenter-mode.png)
 
-## Disabling
+## Désactivation
 
-Presenter mode is enabled by default.
+Le mode présentateur est activé par défaut.
 
-You can disable this feature with the following config:
+Vous pouvez désactiver cette fonctionnalité avec la configuration suivante :
 
 ```md
 ---
@@ -22,7 +18,7 @@ presenter: false
 ---
 ```
 
-Alternately you can enable it only for `dev` or `build` modes by setting the mode you want in the config:
+Vous pouvez également l'activer uniquement pour les modes `dev` ou `build` en définissant le mode souhaité dans la configuration :
 
 ```md
 ---
@@ -30,12 +26,12 @@ presenter: dev
 ---
 ```
 
-In that case the presenter will only be available when running `slidev` but not when running `slidev build`.
+Dans ce cas, le mode présentateur ne sera disponible que lors de l'exécution de `slidev` mais pas lors de l'exécution de `slidev build`.
 
-## Remote restricted access
+## Accès restreint à distance
 
-You can run your presentation with remote access by running `slidev --remote`.
+Vous pouvez exécuter votre présentation avec un accès distant en lançant `slidev --remote`.
 
-If you want to share your slides with other people but you don't want them to access the presenter mode (either because you're ashamed of your presenter notes, or because you don't want them to mess up your presentation), you can provide a password to protect the presenter server by running `slidev --remote=your_password`.
+Si vous souhaitez partager vos diapositives avec d'autres personnes mais que vous ne voulez pas qu'elles accèdent au mode présentateur (soit parce que vous avez honte de vos notes de présentateur, soit parce que vous ne voulez pas qu'elles perturbent votre présentation), vous pouvez fournir un mot de passe pour protéger le serveur du présentateur en lançant `slidev --remote=votre_mot_de_passe`.
 
-In that case you will need to provide the password when accessing `/presenter/*` routes.
+Dans ce cas, vous devrez fournir le mot de passe lors de l'accès aux routes `/presenter/*`.

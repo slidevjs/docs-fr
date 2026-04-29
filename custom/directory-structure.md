@@ -115,13 +115,9 @@ import './code.css'
 import './layouts.css'
 ```
 
-<<<<<<< HEAD
-Les styles seront traités par [Windi CSS](http://windicss.org/) et [PostCSS](https://postcss.org/), vous pouvez donc utiliser l'imbrication css et [at-directives](https://windicss.org/features/directives.html) prêt à l'emploi. Par exemple :
-=======
-Styles will be processed by [UnoCSS](https://unocss.dev/) and [PostCSS](https://postcss.org/), so you can use css nesting and [at-directives](https://unocss.dev/transformers/directives#apply) out-of-box. For example:
+Les styles seront traités par [UnoCSS](https://unocss.dev/) et [PostCSS](https://postcss.org/), vous pouvez donc utiliser l'imbrication css et les [at-directives](https://unocss.dev/transformers/directives#apply) prêt à l'emploi. Par exemple :
 
 <!-- eslint-skip -->
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 ```less
 .slidev-layout {
@@ -141,11 +137,7 @@ Styles will be processed by [UnoCSS](https://unocss.dev/) and [PostCSS](https://
 }
 ```
 
-<<<<<<< HEAD
-[En savoir plus sur la syntaxe](https://windicss.org/features/directives.html).
-=======
-[Learn more about the syntax](https://unocss.dev/transformers/directives#apply).
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+[En savoir plus sur la syntaxe](https://unocss.dev/transformers/directives#apply).
 
 ## `index.html`
 
@@ -193,9 +185,4 @@ Le fichier `index.html` final hébergé sera :
 
 Conventions : `global-top.vue` | `global-bottom.vue`
 
-<<<<<<< HEAD
-En savoir plus: [Couches globales](/custom/global-layers)
-
-=======
-Learn more: [Global Layers](/custom/global-layers)
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+En savoir plus : [Couches globales](/custom/global-layers)

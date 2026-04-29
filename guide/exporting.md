@@ -2,29 +2,18 @@
 
 ## Slides
 
-<<<<<<< HEAD
-> L'exportation au format PDF ou PNG repose sur [Playwright](https://playwright.dev) pour le rendu. Vous devrez donc installer [`playwright-chromium`](https://playwright.dev/docs/installation#download-single-browser-binary) pour utiliser cette fonctionnalité.
-> Si vous effectuez une exportation dans un environnement CI, [le guide du dramaturge CI](https://playwright.dev/docs/ci) peut être utile.
-
-Installez `playwright-chrome`
-=======
 ### PDF
 
-> Exporting to PDF, PPTX, or PNG relies on [Playwright](https://playwright.dev) for rendering. You will therefore need to install [`playwright-chromium`](https://npmjs.com/package/playwright-chromium) to use this feature.
-> If you are exporting within a CI environment, [the playwright CI guide](https://playwright.dev/docs/ci) can be helpful.
+> L'exportation au format PDF, PPTX ou PNG repose sur [Playwright](https://playwright.dev) pour le rendu. Vous devrez donc installer [`playwright-chromium`](https://npmjs.com/package/playwright-chromium) pour utiliser cette fonctionnalité.
+> Si vous effectuez une exportation dans un environnement CI, [le guide Playwright CI](https://playwright.dev/docs/ci) peut être utile.
 
-1. Install `playwright-chromium`:
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+1. Installez `playwright-chromium` :
 
 ```bash
 $ npm i -D playwright-chromium
 ```
 
-<<<<<<< HEAD
-Exportez maintenant vos diapositives au format PDF à l'aide de la commande suivante
-=======
-2. Now export your slides to PDF using the following command:
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+2. Exportez maintenant vos diapositives au format PDF à l'aide de la commande suivante :
 
 ```bash
 $ slidev export
@@ -32,18 +21,15 @@ $ slidev export
 
 Après quelques secondes, vos diapositives seront prêtes dans `./slides-exports.pdf`.
 
-<<<<<<< HEAD
-### Étapes d'exportation des clics
-=======
-### PNGs and Markdown
+### PNG et Markdown
 
-When passing in the `--format png` option, Slidev will export PNG images for each slide instead of a PDF:
+En passant l'option `--format png`, Slidev exportera des images PNG pour chaque diapositive au lieu d'un PDF :
 
 ```bash
 $ slidev export --format png
 ```
 
-You can also compile a markdown file composed of compiled png using `--format md`:
+Vous pouvez également compiler un fichier markdown composé d'images PNG compilées en utilisant `--format md` :
 
 ```bash
 $ slidev export --format md
@@ -51,117 +37,105 @@ $ slidev export --format md
 
 ### PPTX (Microsoft PowerPoint)
 
-Slidev can also export your slides as a PPTX file:
+Slidev peut également exporter vos diapositives sous forme de fichier PPTX :
 
 ```bash
 $ slidev export --format pptx
 ```
 
-Note that all the slides in the PPTX file will be exported as images, so the text will not be selectable. Presenter notes will be conveyed into the PPTX file on a per-slide basis.
+Notez que toutes les diapositives du fichier PPTX seront exportées en tant qu'images, donc le texte ne sera pas sélectionnable. Les notes du présentateur seront intégrées dans le fichier PPTX pour chaque diapositive.
 
-In this mode, the `--with-clicks` option is enabled by default. To disable it, use `--with-clicks false`.
+Dans ce mode, l'option `--with-clicks` est activée par défaut. Pour la désactiver, utilisez `--with-clicks false`.
 
-### Dark mode
+### Mode sombre
 
-In case you want to export your slides using the dark version of the theme, use the `--dark` option:
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Si vous souhaitez exporter vos diapositives en utilisant la version sombre du thème, utilisez l'option `--dark` :
 
 > Disponible depuis v0.21
 
-<<<<<<< HEAD
-Par défaut, Slide export une page par diapositive avec les animations de clics désactivées. Si vous souhaitez exporter des diapositives avec plusieurs étapes dans plusieurs pages, passez l'option `--with-clicks`.
-=======
-### Export Clicks Steps
+### Étapes d'exportation des clics
 
-> Available since v0.21
+> Disponible depuis v0.21
 
-By default, Slidev exports one page per slide with clicks animations disabled. If you want to export slides with multiple steps into multiple pages, pass the `--with-clicks` option:
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Par défaut, Slidev exporte une page par diapositive avec les animations de clics désactivées. Si vous souhaitez exporter des diapositives avec plusieurs étapes sur plusieurs pages, passez l'option `--with-clicks` :
 
 ```bash
 $ slidev export --with-clicks
 ```
 
-### PDF outline
+### Plan PDF
 
-<<<<<<< HEAD
-En passant l'option `--format png`, Slidev exportera des images PNG pour chaque diapositive au lieu d'un PDF.
-=======
-> Available since v0.36.10
+> Disponible depuis v0.36.10
 
-You can generate the PDF outline by passing the `--with-toc` option:
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Vous pouvez générer le plan du PDF en passant l'option `--with-toc` :
 
 ```bash
 $ slidev export --with-toc
 ```
 
-### Output filename
+### Nom du fichier de sortie
 
-You can specify the output filename with the `--output` option:
+Vous pouvez spécifier le nom du fichier de sortie avec l'option `--output` :
 
 ```bash
-$ slidev export --output my-pdf-export
+$ slidev export --output mon-export-pdf
 ```
 
-Or in the frontmatter configuration:
+Ou dans la configuration du frontmatter :
 
 ```yaml
 ---
-exportFilename: my-pdf-export
+exportFilename: mon-export-pdf
 ---
 ```
 
-### Export a range of slides
+### Exporter une plage de diapositives
 
-By default, all slides in the presentation are exported. If you want to export a specific slide or a range of slides you can set the `--range` option and specify which slides you would like to export:
+Par défaut, toutes les diapositives de la présentation sont exportées. Si vous souhaitez exporter une diapositive spécifique ou une plage de diapositives, vous pouvez définir l'option `--range` et spécifier quelles diapositives vous souhaitez exporter :
 
 ```bash
 $ slidev export --range 1,6-8,10
 ```
 
-This option accepts both specific slide numbers and ranges.
+Cette option accepte à la fois des numéros de diapositive spécifiques et des plages.
 
-The example above would export slides 1,6,7,8, and 10.
+L'exemple ci-dessus exporterait les diapositives 1, 6, 7, 8 et 10.
 
-### Multiple entries
+### Entrées multiples
 
-You can also export multiple slides at once:
+Vous pouvez également exporter plusieurs présentations à la fois :
 
 ```bash
 $ slidev export slides1.md slides2.md
 ```
 
-Or
+Ou
 
 ```bash
 $ slidev export *.md
 ```
 
-In this case, each input file will generate its own PDF file.
+Dans ce cas, chaque fichier d'entrée générera son propre fichier PDF.
 
-## Presenter notes
+## Notes du présentateur
 
-> Available since v0.36.8
+> Disponible depuis v0.36.8
 
-Export only the presenter notes (the last comment block for each slide) into a text document in PDF:
+Exportez uniquement les notes du présentateur (le dernier bloc de commentaire pour chaque diapositive) dans un document texte en PDF :
 
 ```bash
 $ slidev export-notes
 ```
 
-This command also accept multiple entries like for the [export command](#multiple-entries)
+Cette commande accepte également plusieurs entrées comme pour la [commande d'exportation](#entrées-multiples)
 
 ## Single-Page Application (SPA)
 
-<<<<<<< HEAD
 Voir [Hébergement statique](/guide/hosting).
-=======
-See [Static Hosting](/guide/hosting).
 
-## Exportable Docker Image
+## Image Docker exportable
 
-To support the export feature, there is a [docker image](/guide/install#install-on-docker) (maintained by [@tangramor](https://github.com/tangramor)) with tag **playwright**. Run following command in your work folder:
+Pour prendre en charge la fonctionnalité d'exportation, il existe une [image docker](/guide/install#install-on-docker) (maintenue par [@tangramor](https://github.com/tangramor)) avec le tag **playwright**. Exécutez la commande suivante dans votre dossier de travail :
 
 ```bash
 docker run --name slidev --rm -it \
@@ -171,52 +145,51 @@ docker run --name slidev --rm -it \
     tangramor/slidev:playwright
 ```
 
-Then you can use the export feature like the following under your work folder:
+Vous pouvez ensuite utiliser la fonctionnalité d'exportation comme suit dans votre dossier de travail :
 
 ```bash
 docker exec -i slidev npx slidev export --timeout 2m --output slides.pdf
 ```
 
-## Troubleshooting
+## Résolution des problèmes
 
-### Timeouts
+### Dépassements de délai (Timeouts)
 
-For big presentations you might want to increase the Playwright timeout with `--timeout`:
+Pour les grandes présentations, vous pouvez augmenter le délai d'attente de Playwright avec `--timeout` :
 
 ```bash
 $ slidev export --timeout 60000
 ```
 
-### Wait
+### Attente
 
-Some parts of your slides may require a longer time to render. You can use the `--wait` option to have an extra delay before exporting:
+Certaines parties de vos diapositives peuvent nécessiter plus de temps pour le rendu. Vous pouvez utiliser l'option `--wait` pour ajouter un délai supplémentaire avant l'exportation :
 
 ```bash
 $ slidev export --wait 10000
 ```
 
-There is also a `--wait-until` option to wait for a state before exporting each slide:
+Il existe également une option `--wait-until` pour attendre un état avant d'exporter chaque diapositive :
 
 ```bash
 $ slidev export --wait-until none
 ```
 
-Possible values:
+Valeurs possibles :
 
-- `'networkidle'` - (_default_) consider operation to be finished when there are no network connections for at least `500` ms. Don't use this method for testing, rely on web assertions to assess readiness instead.
-- `'domcontentloaded'` - consider operation to be finished when the `DOMContentLoaded` event is fired.
-- `'load'` - consider operation to be finished when the `load` event is fired.
-- `'none'` - do not wait for any event.
+- `'networkidle'` - (_par défaut_) considère l'opération comme terminée lorsqu'il n'y a plus de connexions réseau pendant au moins `500` ms. N'utilisez pas cette méthode pour les tests, fiez-vous plutôt aux assertions web pour évaluer la disponibilité.
+- `'domcontentloaded'` - considère l'opération comme terminée lorsque l'événement `DOMContentLoaded` est déclenché.
+- `'load'` - considère l'opération comme terminée lorsque l'événement `load` est déclenché.
+- `'none'` - n'attend aucun événement.
 
 ::: warning
-When specifying values other than `'networkidle'`, please make sure the printed slides are complete and correct. If some contents are missing, you may need to use the `--wait` option.
+Lorsque vous spécifiez des valeurs autres que `'networkidle'`, assurez-vous que les diapositives imprimées sont complètes et correctes. Si certains contenus sont manquants, vous devrez peut-être utiliser l'option `--wait`.
 :::
 
-### Executable path
+### Chemin de l'exécutable
 
-Chromium may miss some features like codecs that are required to decode some videos. You can set the browser executable path for Playwright to your Chrome or Edge using `--executable-path`:
+Chromium peut manquer certaines fonctionnalités comme les codecs nécessaires pour décoder certaines vidéos. Vous pouvez définir le chemin de l'exécutable du navigateur pour Playwright vers votre Chrome ou Edge en utilisant `--executable-path` :
 
 ```bash
-$ slidev export --executable-path [path_to_chromium]
+$ slidev export --executable-path [chemin_vers_chromium]
 ```
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3

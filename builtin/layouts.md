@@ -2,11 +2,6 @@
 
 ## Mises en page intégrées
 
-<<<<<<< HEAD
-> Comme les thèmes peuvent remplacer le comportement des mises en page, le meilleur moyen de connaître exactement l'usage, les paramètres et les exemples est de se référer à leur documentation
-
-=======
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 ### `center`
 
 Affiche le contenu au milieu de l'écran.
@@ -41,13 +36,8 @@ Affiche une image sur le côté gauche de l'écran, le contenu sera placé sur l
 ---
 layout: image-left
 
-<<<<<<< HEAD
 # la source de l'image
-image: ./path/to/the/image
-=======
-# the image source
 image: /path/to/the/image
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 # un nom de classe customisé du contenu
 class: my-cool-content-on-the-right
@@ -64,13 +54,8 @@ Affiche une image sur le côté droit de l'écran, le contenu sera placé sur le
 ---
 layout: image-right
 
-<<<<<<< HEAD
 # la source de l'image
-image: ./path/to/the/image
-=======
-# the image source
 image: /path/to/the/image
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 # un nom de classe customisé du contenu
 class: my-cool-content-on-the-left
@@ -87,17 +72,12 @@ Affiche une image comme contenu principal de la page.
 ---
 layout: image
 
-<<<<<<< HEAD
 # la source de l'image
-image: ./path/to/the/image
-=======
-# the image source
 image: /path/to/the/image
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 ---
 ```
 
-You can change the default background size (`cover`) by adding the `backgroundSize` attribute:
+Vous pouvez changer la taille d'arrière-plan par défaut (`cover`) en ajoutant l'attribut `backgroundSize` :
 
 ```yaml
 ---
@@ -208,12 +188,9 @@ Cela apparait sur la gauche
 Cela apparait sur la droite
 ```
 
-<<<<<<< HEAD
-## Mises en page customisées
-=======
 ### `two-cols-header`
 
-Separates the upper and lower lines of the page content, and the second line separates the left and right columns.
+Sépare la ligne supérieure et inférieure du contenu de la page, et la deuxième ligne sépare les colonnes gauche et droite.
 
 #### Usage
 
@@ -222,23 +199,22 @@ Separates the upper and lower lines of the page content, and the second line sep
 layout: two-cols-header
 ---
 
-This spans both
+Cela s'étend sur les deux colonnes
 
 ::left::
 
 # Left
 
-This shows on the left
+Cela apparait sur la gauche
 
 ::right::
 
 # Right
 
-This shows on the right
+Cela apparait sur la droite
 ```
 
-## Custom Layouts
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+## Mises en page customisées
 
 Créer un répertoire `layouts/` sous la racine de votre projet, et placez simplement vos composants Vue personnalisés sous celui-ci.
 

@@ -1,10 +1,10 @@
-# Slide Overview
+# Vue d'ensemble des diapositives
 
-> Available since v0.48.0
+> Disponible depuis la v0.48.0
 
 <video src="https://github.com/slidevjs/slidev/assets/11247099/01bbf5b3-f916-4646-9ea4-cf269c0567cb"
 controls rounded shadow></video>
 
-You can visit an overview of all of your slides by clicking the <carbon-apps class="inline-icon-btn"/> button in the navigation panel and then <carbon-list-boxes class="inline-icon-btn"/> on the top right, or by visiting `http://localhost:3030/overview` directly.
+Vous pouvez consulter une vue d'ensemble de toutes vos diapositives en cliquant sur le bouton <carbon-apps class="inline-icon-btn"/> dans le panneau de navigation, puis sur <carbon-list-boxes class="inline-icon-btn"/> en haut à droite, ou en visitant directement `http://localhost:3030/overview`.
 
-The overview page gives you a linear list of all your slides, with all of your notes on the side. You can double click on the notes to edit the notes directly, or drag the clicks sliders to preview the steps in your slides.
+La page de vue d'ensemble vous donne une liste linéaire de toutes vos diapositives, avec toutes vos notes sur le côté. Vous pouvez double-cliquer sur les notes pour les modifier directement, ou faire glisser les curseurs de clic pour prévisualiser les étapes dans vos diapositives.

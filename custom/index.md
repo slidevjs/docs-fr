@@ -1,10 +1,6 @@
 # Customisations
 
-<<<<<<< HEAD
-Slidev est entièrement personnalisable, du style aux configurations d'outillage. Il vous permet de configurer les outils ci-dessous ([Vite](/custom/config-vite), [Windi CSS](/custom/config-windicss), [Monaco](/custom/config-monaco), etc.)
-=======
-Slidev is fully customizable, from styling to tooling configurations. It allows you to configure the tools underneath ([Vite](/custom/config-vite), [UnoCSS](/custom/config-unocss), [Monaco](/custom/config-monaco), etc.)
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Slidev est entièrement personnalisable, du style aux configurations d'outillage. Il vous permet de configurer les outils ci-dessous ([Vite](/custom/config-vite), [UnoCSS](/custom/config-unocss), [Monaco](/custom/config-monaco), etc.)
 
 ## Configurations du frontmatter
 
@@ -12,103 +8,65 @@ Vous pouvez configurer Slidev dans le frontmatter de votre première diapositive
 
 ```yaml
 ---
-<<<<<<< HEAD
 # identifiant du thème ou nom du package
 # En savoir plus : https://sli.dev/themes/use.html
-theme: 'default'
+theme: default
 # titre de votre diapositive, sera automatiquement déduit du premier en-tête s'il n'est pas spécifié
-title: 'Slidev'
+title: Slidev
 # titleTemplate pour la page Web, `%s` sera remplacé par le titre de la page
 titleTemplate: '%s - Slidev'
 # informations pour vos diapositives, peut être une chaîne de démarquage
-=======
-# theme id or package name
-# Learn more: https://sli.dev/themes/use.html
-theme: default
-# title of your slide, will auto infer from the first header if not specified
-title: Slidev
-# titleTemplate for the webpage, `%s` will be replaced by the page's title
-titleTemplate: '%s - Slidev'
-# information for your slides, can be a markdown string.
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 info: false
-# author field for exported PDF or PPTX
+# champ auteur pour le PDF ou PPTX exporté
 author: Your Name Here
-# keywords field for exported PDF, comma-delimited.
+# champ mots-clés pour le PDF exporté, séparés par des virgules
 keywords: keyword1,keyword2
 
-<<<<<<< HEAD
+# mode présentateur activé, peut être booléen, 'dev' ou 'build'
+presenter: true
 # téléchargement de pdf activé dans la version SPA, peut également être une URL personnalisée
 download: false
 # nom de fichier du fichier d'exportation
-exportFilename: 'slidev-exported'
-# surligneur de syntaxe, peut être 'prism' ou 'shiki'
-highlighter: 'prism'
-# afficher les numéros de ligne dans les blocs de code
-lineNumbers: false
-# activer l'éditeur monaco, peut être booléen, 'dev' ou 'build'
-monaco: 'dev'
-# télécharger les actifs distants en local à l'aide de vite-plugin-remote-assets, peut être booléen, 'dev' ou 'build'
-=======
-# enable presenter mode, can be boolean, 'dev' or 'build'
-presenter: true
-# enabled pdf downloading in SPA build, can also be a custom url
-download: false
-# filename of the export file
 exportFilename: slidev-exported
-# export options
-# use export CLI options in camelCase format
-# Learn more: https://sli.dev/guide/exporting.html
+# options d'exportation
+# utilisez les options CLI d'exportation au format camelCase
+# En savoir plus : https://sli.dev/guide/exporting.html
 export:
   format: pdf
   timeout: 30000
   dark: false
   withClicks: false
   withToc: false
-# syntax highlighter, can be 'prism', 'shiki'
+# surligneur de syntaxe, peut être 'prism', 'shiki'
 highlighter: shiki
-# show line numbers in code blocks
+# afficher les numéros de ligne dans les blocs de code
 lineNumbers: false
-# enable monaco editor, can be boolean, 'dev' or 'build'
+# activer l'éditeur monaco, peut être booléen, 'dev' ou 'build'
 monaco: true
-# Where to load monaco types from, can be 'cdn', 'local' or 'none'
+# d'où charger les types monaco, peut être 'cdn', 'local' ou 'none'
 monacoTypesSource: local
-# explicitly specify extra local packages to import the types for
+# spécifier explicitement des packages locaux supplémentaires pour importer les types
 monacoTypesAdditionalPackages: []
-# explicitly specify extra local modules as dependency of monaco runnable
+# spécifier explicitement des modules locaux supplémentaires comme dépendance de monaco exécutable
 monacoRunAdditionalDeps: []
-# download remote assets in local using vite-plugin-remote-assets, can be boolean, 'dev' or 'build'
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+# télécharger les actifs distants en local à l'aide de vite-plugin-remote-assets, peut être booléen, 'dev' ou 'build'
 remoteAssets: false
 # contrôle si les textes des diapositives sont sélectionnables
 selectable: true
-<<<<<<< HEAD
 # activer l'enregistrement de diapositives, peut être booléen, 'dev' ou 'build'
-record: 'dev'
-
-# forcer le schéma de couleur pour les diapositives, peut être 'auto', 'light' ou 'dark'
-colorSchema: 'auto'
-# mode routeur pour vue-router, peut être 'history' ou 'hash'
-routerMode: 'history'
-# ratio d'aspect pour les diapositives
-aspectRatio: '16/9'
-# largeur réelle du canvas, unité en px
-=======
-# enable slide recording, can be boolean, 'dev' or 'build'
 record: dev
-# enable Slidev's context menu, can be boolean, 'dev' or 'build'
+# activer le menu contextuel de Slidev, peut être booléen, 'dev' ou 'build'
 contextMenu: true
-# enable wake lock, can be boolean, 'dev' or 'build'
+# activer le verrouillage de l'écran, peut être booléen, 'dev' ou 'build'
 wakeLock: true
 
-# force color schema for the slides, can be 'auto', 'light', or 'dark'
+# forcer le schéma de couleur pour les diapositives, peut être 'auto', 'light' ou 'dark'
 colorSchema: auto
-# router mode for vue-router, can be "history" or "hash"
+# mode routeur pour vue-router, peut être 'history' ou 'hash'
 routerMode: history
-# aspect ratio for the slides
+# ratio d'aspect pour les diapositives
 aspectRatio: 16/9
-# real width of the canvas, unit in px
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+# largeur réelle du canvas, unité en px
 canvasWidth: 980
 # utilisé pour la personnalisation du thème, injectera les styles racine comme `--slidev-theme-x` pour l'attribut `x`
 themeConfig:
@@ -137,71 +95,44 @@ drawings:
   persist: false
   presenterOnly: false
   syncAll: true
-<<<<<<< HEAD
-=======
 
-# HTML tag attributes
+# attributs de balise HTML
 htmlAttrs:
   dir: ltr
   lang: en
 ---
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 ```
 
 Consultez les [définitions de type](https://github.com/slidevjs/slidev/blob/main/packages/types/src/types.ts#L29) pour plus d'options.
 
-<<<<<<< HEAD
+## Configuration par diapositive
+
+En outre, chaque diapositive accepte la configuration suivante dans le bloc Frontmatter :
+
+- `clicks` (`number`) : Nombre de clics personnalisé (en savoir plus [ici](/guide/animations.html#custom-total-clicks-count)).
+- `disabled` (`boolean`) : Désactiver complètement et masquer la diapositive.
+- `hide` (`boolean`) : Identique à `disabled`.
+- `hideInToc` (`boolean`) : Masquer la diapositive pour les composants `<Toc>` (en savoir plus [ici](/builtin/components.html#toc)).
+- `layout` (`string`) : Définit le composant de mise en page appliqué à la diapositive (en savoir plus [ici](/guide/syntax.html#front-matter-layouts) et [ici](/builtin/layouts.html)).
+- `level` (`number`) : Remplace le niveau de titre pour les composants `<Title>` et `<Toc>` (uniquement si `title` a également été déclaré, en savoir plus [ici](/builtin/components.html#titles)).
+- `preload` (`boolean`, par défaut `true`) : Précharger la diapositive suivante (en savoir plus [ici](/guide/animations.html#motion)).
+- `routeAlias` (`string`) : Crée un alias de route qui peut être utilisé dans l'URL ou avec le composant `<Link>` (en savoir plus [ici](/builtin/components.html#link)).
+- `src` (`string`) : Inclut un fichier markdown (en savoir plus [ici](/guide/syntax.html#multiple-entries)).
+- `title` (`string`) : Remplace le titre pour les composants `<Title>` et `<Toc>` (en savoir plus [ici](/builtin/components.html#titles)).
+- `transition` (`string | TransitionProps`) : Définit la transition entre la diapositive et la suivante (en savoir plus [ici](/guide/animations.html#slide-transitions)).
+- `zoom` (`number`) : Échelle de zoom personnalisée. Utile pour les diapositives avec beaucoup de contenu.
+- `dragPos` (`Record<string,string>`) : Utilisé comme positions des éléments déplaçables (en savoir plus [ici](/guide/draggable.html)).
+
 ## Structure du répertoire
-=======
-## Per slide configuration
-
-In addition, every slide accepts the following configuration in the Frontmatter block:
-
-- `clicks` (`number`): Custom clicks count (learn more [here](/guide/animations.html#custom-total-clicks-count)).
-- `disabled` (`boolean`): Completely disable and hide the slide.
-- `hide` (`boolean`): The same as `disabled`.
-- `hideInToc` (`boolean`): Hide the slide for the `<Toc>` components (learn more [here](/builtin/components.html#toc)).
-- `layout` (`string`): Defines the layout component applied to the slide (learn more [here](/guide/syntax.html#front-matter-layouts) and [here](/builtin/layouts.html)).
-- `level` (`number`): Override the title level for the `<Title>` and `<Toc>` components (only if `title` has also been declared, learn more [here](/builtin/components.html#titles)).
-- `preload` (`boolean`, default `true`): Preload the next slide (learn more [here](/guide/animations.html#motion)).
-- `routeAlias` (`string`): Create a route alias that can be used in the URL or with the `<Link>` component (learn more [here](/builtin/components.html#link)).
-- `src` (`string`): Includes a markdown file (learn more [here](/guide/syntax.html#multiple-entries)).
-- `title` (`string`): Override the title for the `<Title>` and `<Toc>` components (learn more [here](/builtin/components.html#titles)).
-- `transition` (`string | TransitionProps`): Defines the transition between the slide and the next one (learn more [here](/guide/animations.html#slide-transitions)).
-- `zoom` (`number`): Custom zoom scale. Useful for slides with a lot of content.
-- `dragPos` (`Record<string,string>`): Used as positions of draggable elements (learn more [here](/guide/draggable.html).
-
-## Directory Structure
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 Slidev utilise des conventions de structure de répertoires pour minimiser la surface de configuration et rendre les extensions de fonctionnalités flexibles et intuitives.
 
 Reportez-vous à la section [Structure des répertoires](/custom/directory-structure).
 
-## `vite.config.ts`
-
-<<<<<<< HEAD
-Reportez-vous à la section [Configurer Vite](/custom/config-vite).
-
-## `windicss.config.ts`
-
-Reportez-vous à la section [Configurer Windi CSS](/custom/config-windicss).
-
-## Configuration des outils
-
 - [Surligneurs](/custom/highlighters)
 - [Configurer Vue](/custom/config-vue)
 - [Configurer Vite](/custom/config-vite)
-- [Configurer Windi CSS](/custom/config-windicss)
+- [Configurer UnoCSS](/custom/config-unocss)
 - [Configurer Monaco](/custom/config-monaco)
 - [Configurer KaTeX](/custom/config-katex)
 - [Configurer Mermaid](/custom/config-mermaid)
-=======
-- [Highlighters](/custom/highlighters)
-- [Configure Vue](/custom/config-vue)
-- [Configure Vite](/custom/config-vite)
-- [Configure UnoCSS](/custom/config-unocss)
-- [Configure Monaco](/custom/config-monaco)
-- [Configure KaTeX](/custom/config-katex)
-- [Configure Mermaid](/custom/config-mermaid)
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3

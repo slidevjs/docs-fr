@@ -4,13 +4,8 @@ Les addons sont des ensembles de composants supplémentaires, de mises en page, 
 
 Ils sont assez similaires à [themes](/themes/use), mais en général :
 
-<<<<<<< HEAD
 * ils n'affectent pas les styles globaux de vos diapositives
 * vous pouvez utiliser plusieurs addons dans une présentation
-=======
-- they don't affect the global styles of your slides
-- you can use multiple addons in one presentation
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 Pour utiliser les addons, vous devez les installer manuellement via :
 
@@ -42,8 +37,8 @@ Ou dans votre fichier `package.json` :
 }
 ```
 
-## Examples
+## Exemples
 
-- [slidev-addon-qrcode](https://github.com/kravetsone/slidev-addon-qrcode) is an addon that allows you to embed QR codes in your slides.
+- [slidev-addon-qrcode](https://github.com/kravetsone/slidev-addon-qrcode) est un addon qui vous permet d'intégrer des codes QR dans vos diapositives.
 
-- [slidev-addon-remoji](https://github.com/twitwi/slidev-addon-remoji) is an addon that replaces emoji with icons in your slides for consistency / printing purposes.
+- [slidev-addon-remoji](https://github.com/twitwi/slidev-addon-remoji) est un addon qui remplace les emojis par des icônes dans vos diapositives pour plus de cohérence / à des fins d'impression.

@@ -1,40 +1,28 @@
 # Couches globales
 
-<<<<<<< HEAD
 > Disponible depuis v0.17
 
 Les couches globales vous permettent d'avoir des composants personnalisés qui **persistent** sur les diapositives. Cela pourrait être utile pour avoir des pieds de page, des animations de diapositives croisées, des effets globaux, etc.
-=======
-Global layers allow you to have custom components that **persist** across slides. This could be useful for having footers, cross-slide animations, global effects, etc.
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 Slidev fournit deux couches pour cet usage, créez `global-top.vue`, `global-bottom.vue` ou `custom-nav-controls.vue` sous la racine de votre projet et il reprendra automatiquement.
 
-<<<<<<< HEAD
-Relation des couches :
-
-- Global Top (`global-top.vue`)
-- Diapositives
-- Global Bottom (`global-bottom.vue`)
-=======
-There are also layers for **each** slide: `layouts/slide-top.vue` and `layouts/slide-bottom.vue`. The usage is similar to the global layers, but they are applied to every slide, so there may be more than one instance of them.
+Il existe également des couches pour **chaque** diapositive : `layouts/slide-top.vue` et `layouts/slide-bottom.vue`. L'utilisation est similaire aux couches globales, mais elles sont appliquées à chaque diapositive, il peut donc y avoir plusieurs instances d'entre elles.
 
 ::: tip
-When exporting, the `--per-slide` option should be used to ensure the global layers are applied to each slide correctly.
+Lors de l'exportation, l'option `--per-slide` doit être utilisée pour s'assurer que les couches globales sont appliquées correctement à chaque diapositive.
 :::
 
-## Layers relationship
+## Relation des couches
 
-At z-axis, from top to bottom:
+Sur l'axe z, de haut en bas :
 
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 - NavControls
-  - Customized Navigation Controls (`custom-nav-controls.vue`)
-- Global Top (`global-top.vue`) - single instance
-- Slide Top (`slide-top.vue`) - instance per slide
-- Slide Content
-- Slide Bottom (`slide-bottom.vue`) - instance per slide
-- Global Bottom (`global-bottom.vue`) - single instance
+  - Contrôles de navigation personnalisés (`custom-nav-controls.vue`)
+- Global Top (`global-top.vue`) - instance unique
+- Slide Top (`slide-top.vue`) - instance par diapositive
+- Contenu de la diapositive
+- Slide Bottom (`slide-bottom.vue`) - instance par diapositive
+- Global Bottom (`global-bottom.vue`) - instance unique
 
 ## Exemple
 
@@ -98,7 +86,7 @@ Pour l'activer conditionnellement, vous pouvez l'appliquer avec le [Contexte Glo
 
 ```html
 <!-- custom-nav-controls -->
-<!-- hide the button in Presenter model -->
+<!-- masquer le bouton en mode Présentateur -->
 <template>
   <button v-if="!$nav.isPresenter" class="icon-btn" title="Next" @click="$nav.next">
     <carbon:arrow-right />

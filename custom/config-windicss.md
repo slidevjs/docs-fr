@@ -2,15 +2,11 @@
 
 <Environment type="node" />
 
-<<<<<<< HEAD
-Markdown prend naturellement en charge les balises HTML intégrées. Vous pouvez donc styliser votre contenu comme vous le souhaitez. Pour plus de commodité, nous avons [Windi CSS](https://github.com/windicss/windicss) intégré, vous pouvez donc styliser le balisage directement à l'aide des utilitaires de classe.
-=======
 ::: warning
-Since Slidev v0.47.0, we no longer support Windi CSS. Please migrate to [UnoCSS](/custom/config-unocss).
+Depuis Slidev v0.47.0, Windi CSS n'est plus supporté. Veuillez migrer vers [UnoCSS](/custom/config-unocss).
 :::
 
-Markdown naturally supports embedded HTML markups. You can therefore style your content the way you want.
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Markdown prend naturellement en charge les balises HTML intégrées. Vous pouvez donc styliser votre contenu comme vous le souhaitez.
 
 Par exemple :
 

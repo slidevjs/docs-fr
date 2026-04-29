@@ -1,26 +1,26 @@
-# Configure and Extend the Parser
+# Configurer et étendre le parseur
 
-Slidev parses your presentation file (e.g. `slides.md`) in three steps:
+Slidev analyse votre fichier de présentation (par exemple `slides.md`) en trois étapes :
 
-1. A "preparsing" step is carried out: the file is split into slides using the `---` separator, and considering the possible frontmatter blocks.
-2. Each slide is parsed with an external library.
-3. Slidev resolves the special frontmatter property `src: ....`, which allows to include other md files.
+1. Une étape de « pré-analyse » est effectuée : le fichier est divisé en diapositives en utilisant le séparateur `---`, et en tenant compte des éventuels blocs de frontmatter.
+2. Chaque diapositive est analysée avec une bibliothèque externe.
+3. Slidev résout la propriété spéciale du frontmatter `src: ....`, qui permet d'inclure d'autres fichiers md.
 
-## Markdown Parser
+## Parseur Markdown
 
-Configuring the markdown parser used in step 2 can be done by [configuring Vite internal plugins](/custom/config-vite#configure-internal-plugins).
+La configuration du parseur Markdown utilisé à l'étape 2 peut être effectuée en [configurant les plugins internes de Vite](/custom/config-vite#configure-internal-plugins).
 
-## Preparser Extensions
+## Extensions du pré-parseur
 
-> Available since v0.37.0.
+> Disponible depuis la v0.37.0.
 
 :::warning
-Important: when modifying the preparser configuration, you need to stop and start slidev again (restart might not be sufficient).
+Important : lors de la modification de la configuration du pré-parseur, vous devez arrêter et redémarrer slidev (un redémarrage simple pourrait ne pas suffire).
 :::
 
-The preparser (step 1 above) is highly extensible and allows to implement custom syntaxes for your md files. Extending the preparser is considered **an advanced feature** and is susceptible to break [editor integrations](/guide/editors) due to implicit changes in the syntax.
+Le pré-parseur (étape 1 ci-dessus) est hautement extensible et permet d'implémenter des syntaxes personnalisées pour vos fichiers md. Étendre le pré-parseur est considéré comme **une fonctionnalité avancée** et est susceptible de casser les [intégrations éditeur](/guide/editors) en raison de modifications implicites de la syntaxe.
 
-To customize it, create a `./setup/preparser.ts` file with the following content:
+Pour le personnaliser, créez un fichier `./setup/preparser.ts` avec le contenu suivant :
 
 ```ts
 import { definePreparserSetup } from '@slidev/types'
@@ -39,21 +39,21 @@ export default definePreparserSetup(({ filepath, headmatter, mode }) => {
 })
 ```
 
-This example systematically replaces any `@@@` line by a line with `hello`. It illustrates the structure of a preparser configuration file and some of the main concepts the preparser involves:
+Cet exemple remplace systématiquement toute ligne `@@@` par une ligne avec `hello`. Il illustre la structure d'un fichier de configuration du pré-parseur et certains des concepts principaux impliqués par le pré-parseur :
 
-- `definePreparserSetup` must be called with a function as parameter.
-- The function receives the file path (of the root presentation file), the headmatter (from the md file) and, since v0.48.0, a mode (dev, build or export). It could use this information (e.g., enable extensions based on the presentation file or whether we are exporting a PDF).
-- The function must return a list of preparser extensions.
-- An extension can contain:
-  - a `transformRawLines(lines)` function that runs just after parsing the headmatter of the md file and receives a list of all lines (from the md file). The function can mutate the list arbitrarily.
-  - a `transformSlide(content, frontmatter)` function that is called for each slide, just after splitting the file, and receives the slide content as a string and the frontmatter of the slide as an object. The function can mutate the frontmatter and must return the content string (possibly modified, possibly `undefined` if no modifications have been done).
-  - a `name`
+- `definePreparserSetup` doit être appelé avec une fonction en paramètre.
+- La fonction reçoit le chemin du fichier (du fichier de présentation racine), le headmatter (du fichier md) et, depuis la v0.48.0, un mode (dev, build ou export). Elle peut utiliser ces informations (par exemple, activer des extensions en fonction du fichier de présentation ou du fait que nous exportons un PDF).
+- La fonction doit retourner une liste d'extensions du pré-parseur.
+- Une extension peut contenir :
+  - une fonction `transformRawLines(lines)` qui s'exécute juste après l'analyse du headmatter du fichier md et reçoit une liste de toutes les lignes (du fichier md). La fonction peut muter la liste arbitrairement.
+  - une fonction `transformSlide(content, frontmatter)` qui est appelée pour chaque diapositive, juste après la division du fichier, et reçoit le contenu de la diapositive sous forme de chaîne de caractères et le frontmatter de la diapositive sous forme d'objet. La fonction peut muter le frontmatter et doit retourner la chaîne de contenu (éventuellement modifiée, éventuellement `undefined` si aucune modification n'a été effectuée).
+  - un `name`
 
-## Example Preparser Extensions
+## Exemples d'extensions du pré-parseur
 
-### Use case 1: compact syntax top-level presentation
+### Cas d'usage 1 : syntaxe compacte pour une présentation de premier niveau
 
-Imagine a situation where (part of) your presentation is mainly showing cover images and including other md files. You might want a compact notation where for instance (part of) `slides.md` is as follows:
+Imaginez une situation où (une partie de) votre présentation montre principalement des images de couverture et inclut d'autres fichiers md. Vous pourriez vouloir une notation compacte où par exemple (une partie de) `slides.md` est comme suit :
 
 <!-- eslint-skip -->
 
@@ -69,7 +69,7 @@ Imagine a situation where (part of) your presentation is mainly showing cover im
 see you next time
 ```
 
-To allow these `@src:` and `@cover:` syntaxes, create a `./setup/preparser.ts` file with the following content:
+Pour autoriser ces syntaxes `@src:` et `@cover:`, créez un fichier `./setup/preparser.ts` avec le contenu suivant :
 
 ```ts
 import { definePreparserSetup } from '@slidev/types'
@@ -112,12 +112,12 @@ export default definePreparserSetup(() => {
 })
 ```
 
-And that's it.
+Et c'est tout.
 
-### Use case 2: using custom frontmatter to wrap slides
+### Cas d'usage 2 : utilisation d'un frontmatter personnalisé pour envelopper les diapositives
 
-Imagine a case where you often want to scale some of your slides but still want to use a variety of existing layouts so create a new layout would not be suited.
-For instance, you might want to write your `slides.md` as follows:
+Imaginez un cas où vous souhaitez souvent mettre à l'échelle certaines de vos diapositives tout en voulant utiliser une variété de mises en page existantes, de sorte que créer une nouvelle mise en page ne serait pas adapté.
+Par exemple, vous pourriez vouloir écrire votre `slides.md` comme suit :
 
 <!-- eslint-skip -->
 
@@ -148,9 +148,9 @@ _scale: 2.5
 see you next time
 ```
 
-Here we used an underscore in `_scale` to avoid possible conflicts with existing frontmatter properties (indeed, the case of `scale`, without underscore would cause potential problems).
+Ici, nous avons utilisé un underscore dans `_scale` pour éviter d'éventuels conflits avec les propriétés de frontmatter existantes (en effet, le cas de `scale`, sans underscore, pourrait causer des problèmes potentiels).
 
-To handle this `_scale: ...` syntax in the frontmatter, create a `./setup/preparser.ts` file with the following content:
+Pour gérer cette syntaxe `_scale: ...` dans le frontmatter, créez un fichier `./setup/preparser.ts` avec le contenu suivant :
 
 ```ts
 import { definePreparserSetup } from '@slidev/types'
@@ -174,4 +174,4 @@ export default definePreparserSetup(() => {
 })
 ```
 
-And that's it.
+Et c'est tout.

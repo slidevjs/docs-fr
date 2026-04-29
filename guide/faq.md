@@ -4,11 +4,7 @@
 
 Étant donné que Slidev est basé sur le Web, vous pouvez appliquer n'importe quelle disposition de grille à votre guise. [Grilles CSS](https://css-tricks.com/snippets/css/complete-guide-grid/), [flexboxes](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), ou même [Masonry](https://css-tricks.com/native-css-masonry-layout-in-css-grid/), vous obtenez tous les contrôles.
 
-<<<<<<< HEAD
-Puisque nous avons [Windi CSS](https://windicss.org/) intégré, voici un moyen simple de référence :
-=======
-Since [UnoCSS](https://unocss.dev/) is built-in, here's one way that you can reference:
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
+Puisqu'UnoCSS est intégré, voici un moyen simple de référence :
 
 ```html
 <div class="grid grid-cols-2 gap-4">
@@ -47,13 +43,9 @@ La troisième colonne (10% de largeur jusqu'au conteneur parent)
 </div>
 ```
 
-<<<<<<< HEAD
-En savoir plus sur [les grilles Windi CSS](https://windicss.org/utilities/grid.html).
+En savoir plus sur [les grilles UnoCSS](https://unocss.dev/).
 
 ## Positionnement
-=======
-## Positioning
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3
 
 Les diapositives sont définies dans des tailles fixes (par défaut `980x552px`) et à l'échelle pour s'adapter à l'écran de l'utilisateur. Vous pouvez utiliser en toute sécurité la position absolue dans vos diapositives car elles évolueront avec l'écran.
 

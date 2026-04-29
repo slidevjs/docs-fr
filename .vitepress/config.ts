@@ -30,25 +30,20 @@ const Guide: DefaultTheme.NavItemWithLink[] = [
     link: '/guide/animations',
   },
   {
-<<<<<<< HEAD:.vitepress/config.js
-    text: 'Exportation',
-    link: '/guide/exporting',
-=======
-    text: 'Draggable Elements',
+    text: 'Éléments déplaçables',
     link: '/guide/draggable',
   },
   {
-    text: 'Presenter Mode',
+    text: 'Mode présentateur',
     link: '/guide/presenter-mode',
   },
   {
-    text: 'Slides Overview',
+    text: 'Aperçu des diapositives',
     link: '/guide/overview',
   },
   {
-    text: 'Drawing & Annotations',
+    text: 'Dessins & Annotations',
     link: '/guide/drawing',
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3:.vitepress/config.ts
   },
   {
     text: 'Hébergement statique',
@@ -57,14 +52,6 @@ const Guide: DefaultTheme.NavItemWithLink[] = [
   {
     text: 'Enregistrer la présentation',
     link: '/guide/recording',
-  },
-  {
-    text: 'Mode présentateur',
-    link: '/guide/presenter-mode',
-  },
-  {
-    text: 'Dessins & Annotations',
-    link: '/guide/drawing',
   },
   {
     text: 'Intégrations de l\'éditeur',
@@ -78,11 +65,11 @@ const Guide: DefaultTheme.NavItemWithLink[] = [
 
 const BuiltIn: DefaultTheme.NavItemWithLink[] = [
   {
-    text: 'Components',
+    text: 'Composants',
     link: '/builtin/components',
   },
   {
-    text: 'Layouts',
+    text: 'Mises en page',
     link: '/builtin/layouts',
   },
 ]
@@ -113,53 +100,7 @@ const Addon: DefaultTheme.NavItemWithLink[] = [
   },
 ]
 
-<<<<<<< HEAD:.vitepress/config.js
-const Translations = [
-  {
-    text: 'Français',
-  },
-  {
-    text: 'English',
-    link: 'https://sli.dev{{pathname}}',
-  },
-  {
-    text: '简体中文',
-    link: 'https://cn.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Español',
-    link: 'https://es.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Русский',
-    link: 'https://ru.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Việt Nam',
-    link: 'https://vn.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Deutsch',
-    link: 'https://de.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Português (BR)',
-    link: 'https://br.sli.dev{{pathname}}',
-  },
-  {
-    text: 'Ελληνικά',
-    link: 'https://el.sli.dev{{pathname}}',
-  },
-  {
-    text: '日本語',
-    link: 'https://ja.sli.dev{{pathname}}',
-  },
-]
-
-const Customizations = [
-=======
 const Customizations: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildren)[] = [
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3:.vitepress/config.ts
   {
     text: 'Personnalisations',
     link: '/custom/',
@@ -185,13 +126,8 @@ const Customizations: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildr
     link: '/custom/config-vite',
   },
   {
-<<<<<<< HEAD:.vitepress/config.js
-    text: 'Configurer Windi CSS',
-    link: '/custom/config-windicss',
-=======
-    text: 'Configure UnoCSS',
+    text: 'Configurer UnoCSS',
     link: '/custom/config-unocss',
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3:.vitepress/config.ts
   },
   {
     text: 'Configurer Monaco',
@@ -206,35 +142,23 @@ const Customizations: (DefaultTheme.NavItemWithLink | DefaultTheme.NavItemChildr
     link: '/custom/config-mermaid',
   },
   {
-<<<<<<< HEAD:.vitepress/config.js
+    text: 'Configurer le Parser',
+    link: '/custom/config-parser',
+  },
+  {
+    text: 'Configurer les Routes',
+    link: '/custom/config-routes',
+  },
+  {
     text: 'Configurer les Raccourcis',
     link: '/custom/config-shortcuts',
   },
   {
-    text: 'Contexte Global Vue',
-=======
-    text: 'Configure Parser',
-    link: '/custom/config-parser',
-  },
-  {
-    text: 'Configure Routes',
-    link: '/custom/config-routes',
-  },
-  {
-    text: 'Configure Shortcuts',
-    link: '/custom/config-shortcuts',
-  },
-  {
-    text: 'Configure Code Runners',
-    link: '/custom/config-code-runners',
-  },
-  {
-    text: 'Configure Context Menu',
+    text: 'Configurer le Menu Contextuel',
     link: '/custom/config-context-menu',
   },
   {
-    text: 'Vue Global Context',
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3:.vitepress/config.ts
+    text: 'Contexte Global Vue',
     link: '/custom/vue-context',
   },
   {
@@ -264,47 +188,24 @@ const slidebars: DefaultTheme.SidebarItem[] = [
     items: Guide,
   },
   {
-<<<<<<< HEAD:.vitepress/config.js
     text: 'Thèmes',
-    children: Theme,
-=======
-    text: 'Themes',
     items: Theme,
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3:.vitepress/config.ts
   },
   {
     text: 'Addons',
     items: Addon,
   },
   {
-<<<<<<< HEAD:.vitepress/config.js
     text: 'Personnalisation',
-    children: Customizations,
-  },
-  {
-    text: 'Intégrations',
-    children: [
-      {
-        text: 'Composants',
-        link: '/builtin/components',
-      },
-      {
-        text: 'Mises en page',
-        link: '/builtin/layouts',
-      },
-    ],
-=======
-    text: 'Customizations',
     items: Customizations,
   },
   {
-    text: 'Built-in',
+    text: 'Intégrations',
     items: BuiltIn,
   },
   {
-    text: 'Resources',
+    text: 'Ressources',
     items: Resources,
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3:.vitepress/config.ts
   },
 ]
 
@@ -343,30 +244,14 @@ export default defineConfig({
   },
   cleanUrls: true,
   themeConfig: {
-<<<<<<< HEAD:.vitepress/config.js
-    repo: 'slidevjs/docs-fr',
-    logo: '/logo.svg',
-    docsBranch: 'main',
-    editLinks: true,
-    editLinkText: 'Suggérer un changement sur cette page',
-
-    algolia: {
-      apiKey: '1a5c5a504139c58f428974c78c55291d',
-      indexName: 'slidev',
-      searchParameters: {
-        // for translations maintainers: change the filter to your locale code (subdomain name)
-        facetFilters: ['language:fr']
-      }
-=======
     logo: '/logo.svg',
     editLink: {
       pattern: 'https://github.com/slidevjs/slidev/edit/main/docs/:path',
-      text: 'Suggest changes to this page',
+      text: 'Suggérer un changement sur cette page',
     },
 
     search: {
       provider: 'local',
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3:.vitepress/config.ts
     },
 
     nav: [
@@ -375,29 +260,17 @@ export default defineConfig({
         items: Guide,
       },
       {
-<<<<<<< HEAD:.vitepress/config.js
         text: 'Thème',
-        items: Theme,
-      },
-      {
-        text: 'Addon',
-        items: Addon,
-      },
-      {
-        text: 'Personnaliser',
-        items: Customizations,
-=======
-        text: 'Theme',
         items: [
           ...Theme,
           {
-            text: 'Built-in',
+            text: 'Intégrations',
             items: BuiltIn,
           },
         ],
       },
       {
-        text: 'Customize',
+        text: 'Personnaliser',
         items: [
           ...Customizations,
           {
@@ -405,22 +278,16 @@ export default defineConfig({
             items: Addon,
           },
         ],
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3:.vitepress/config.ts
       },
       {
         text: 'Ressources',
         items: Resources,
       },
       {
-<<<<<<< HEAD:.vitepress/config.js
-        text: 'Français',
-        items: Translations,
-=======
         text: `v${CURRENT_VERSION}`,
         items: [
-          { text: 'Release Notes', link: 'https://github.com/slidevjs/slidev/releases' },
+          { text: 'Notes de version', link: 'https://github.com/slidevjs/slidev/releases' },
         ],
->>>>>>> 21fdadc17cd2018f65c637e5727de640db5036e3:.vitepress/config.ts
       },
     ],
 
@@ -441,14 +308,14 @@ export default defineConfig({
     },
 
     footer: {
-      message: 'Released under the MIT License.',
+      message: 'Publié sous la licence MIT.',
       copyright: 'Copyright © 2020 Anthony Fu.',
     },
   },
 
   locales: {
     root: {
-      label: 'English',
+      label: 'Français',
     },
     zh: {
       label: '简体中文',
