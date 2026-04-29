@@ -121,7 +121,7 @@ En outre, chaque diapositive accepte la configuration suivante dans le bloc Fron
 - `title` (`string`) : Remplace le titre pour les composants `<Title>` et `<Toc>` (en savoir plus [ici](/builtin/components.html#titles)).
 - `transition` (`string | TransitionProps`) : Définit la transition entre la diapositive et la suivante (en savoir plus [ici](/guide/animations.html#slide-transitions)).
 - `zoom` (`number`) : Échelle de zoom personnalisée. Utile pour les diapositives avec beaucoup de contenu.
-- `dragPos` (`Record<string,string>`) : Utilisé comme positions des éléments déplaçables (en savoir plus [ici](/guide/draggable.html)).
+- `dragPos` (`Record<string,string>`) : Utilisé comme positions des éléments déplaçables (en savoir plus [ici](/docs/guide/draggable.html)).
 
 ## Structure du répertoire
 

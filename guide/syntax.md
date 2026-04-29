@@ -318,7 +318,7 @@ console.log('Affiché après 1 clic')
 ```
 ````
 
-Actuellement, Slidev supporte l'exécution de JavaScript et TypeScript directement. Référez-vous à [Exécuteurs de Code Personnalisés](/custom/config-code-runners) pour le support des langages personnalisés.
+Actuellement, Slidev supporte l'exécution de JavaScript et TypeScript directement. Référez-vous à Exécuteurs de Code Personnalisés pour le support des langages personnalisés.
 
 #### Éditeur Monaco Writable
 
