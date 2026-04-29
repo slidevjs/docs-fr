@@ -1,4 +1,4 @@
-# Configure Vite
+# Configurer Vite
 
 <Environment type="node" />
 
