@@ -12,7 +12,7 @@ const mySyntax = defineMarkdownTransformer((ctx) => {
   console.log('index in presentation', ctx.slide.index)
   ctx.s.replace(
     /^\[\[\[(.*)\]\]\]/gm,
-    (full: string, content: string) => {
+    (full, content) => {
       return `...`
     },
   )
