@@ -1,101 +1,53 @@
-# Structure du répertoire
+# Structure des répertoires
 
-Slidev utilise certaines conventions de structure de répertoires pour minimiser la surface de configuration et rendre les extensions de fonctionnalités flexibles et intuitives.
+Slidev utilise des conventions de structure de répertoires pour minimiser la surface de configuration et rendre les extensions de fonctionnalités flexibles et intuitives.
 
-La structure de base est la suivante :
+La structure de répertoires conventionnelle est :
 
 ```bash
 your-slidev/
-  ├── components/       # composants customisés
-  ├── layouts/          # mises en page customisées
-  ├── public/           # assets statiques
-  ├── setup/            # configuration personnalisée / hooks
-  ├── styles/           # style personnalisé
+  ├── components/       # composants personnalisés
+  ├── layouts/          # mises en page personnalisées
+  ├── public/           # ressources statiques
+  ├── setup/            # configuration / hooks personnalisés
+  ├── snippets/         # extraits de code
+  ├── styles/           # styles personnalisés
   ├── index.html        # injections dans index.html
-  ├── slides.md         # l'entrée principale des diapositives
-  ├── vite.config.ts    # extension de vite config
+  ├── slides.md         # entrée principale des diapositives
+  └── vite.config.ts    # extension de la configuration vite
 ```
 
-Tous sont facultatifs.
+Tous sont optionnels.
 
 ## Composants
 
-Conventions: `./components/*.{vue,js,ts,jsx,tsx,md}`
+Pattern : `./components/*.{vue,js,ts,jsx,tsx,md}`
 
-Les composants à l'intérieur de ce répertoire peuvent être directement utilisés dans les diapositives Markdown avec le même nom de composant que le nom de fichier.
-
-Par exemple :
-
-```bash
-your-slidev/
-  ├── ...
-  └── components/
-      ├── MyComponent.vue
-      └── HelloWorld.ts
-```
-
-```md
-<!-- slides.md -->
-
-# My Slide
-
-<MyComponent :count="4"/>
-
-<!-- Les deux appellations fonctionnent -->
-
-<hello-world foo="bar">
-  Slot
-</hello-world>
-```
-
-Cette fonctionnalité est alimentée par [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components), apprenez-en plus ici.
-
-Slidev fournit également des [composants intégrés](/builtin/components) que vous pouvez utiliser.
+<LinkCard link="guide/component" />
 
 ## Mises en page
 
-Conventions : `./layouts/*.{vue,js,ts,jsx,tsx}`
+Pattern : `./layouts/*.{vue,js,ts,jsx,tsx}`
 
-```
-your-slidev/
-  ├── ...
-  └── layouts/
-      ├── cover.vue
-      └── my-cool-theme.vue
-```
-
-Vous pouvez utiliser n'importe quel nom de fichier pour votre mise en page. Vous référencez ensuite votre mise en page dans votre en-tête YAML en utilisant le nom de fichier.
-
-```yaml
----
-layout: my-cool-theme
----
-```
-
-Si la mise en page que vous fournissez porte le même nom qu'une mise en page intégrée ou une mise en page de thème, votre mise en page personnalisée prévaudra sur la mise en page intégrée / thème. L'ordre de priorité est `local > thème > intégré`.
-
-Dans le composant de mise en page, utilisez `<slot />` pour le contenu de la diapositive. Par exemple :
-
-```html
-<!-- default.vue -->
-<template>
-  <div class="slidev-layout default">
-    <slot />
-  </div>
-</template>
-```
+<LinkCard link="guide/layout" />
 
 ## Public
 
-Conventions : `./public/*`
+Pattern : `./public/*`
 
-Les actifs de ce répertoire seront servis à la racine du chemin `/` pendant le développement, et copiés à la racine du répertoire dist tels quels. En savoir plus sur [le répertoire `public` de Vite](https://vitejs.dev/guide/assets.html#the-public-directory).
+Les ressources dans ce répertoire seront servies au chemin racine `/` pendant le développement, et copiées à la racine du répertoire dist telles quelles. En savoir plus sur la [Gestion des ressources](../guide/faq#assets-handling).
 
 ## Style
 
-Conventions : `./style.css` | `./styles/index.{css,js,ts}`
+Pattern : `./style.css` | `./styles/index.{css,js,ts}`
 
-Les fichiers suivant cette convention seront injectés à la racine de l'application. Si vous devez importer plusieurs entrées CSS, vous pouvez créer la structure suivante et gérer vous-même l'ordre d'importation.
+Les fichiers suivant cette convention seront injectés à la racine de l'App. Si vous devez importer plusieurs entrées CSS, vous pouvez créer la structure suivante et gérer l'ordre d'importation vous-même.
+
+:::warning
+Le CSS global ici s'applique également à l'interface du présentateur. Privilégiez le scoping des styles aux diapositives individuelles, ou enveloppez vos sélecteurs sous `.slidev-layout` pour éviter que les styles ne fuitent dans le mode présentateur.
+
+**Exemple :** Utilisez `.slidev-layout .grid { ... }` au lieu de simplement `.grid { ... }`.
+:::
 
 ```bash
 your-slidev/
@@ -115,18 +67,20 @@ import './code.css'
 import './layouts.css'
 ```
 
-Les styles seront traités par [Windi CSS](http://windicss.org/) et [PostCSS](https://postcss.org/), vous pouvez donc utiliser l'imbrication css et [at-directives](https://windicss.org/features/directives.html) prêt à l'emploi. Par exemple :
+Les styles seront traités par [UnoCSS](https://unocss.dev/) et [PostCSS](https://postcss.org/), vous pouvez donc utiliser l'imbrication CSS et les [at-directives](https://unocss.dev/transformers/directives#apply) et le Nested CSS nativement. Par exemple :
 
-```less
+<!-- eslint-skip -->
+
+```css
 .slidev-layout {
-  @apply px-14 py-10 text-[1.1rem];
+  --uno: px-14 py-10 text-[1.1rem];
 
   h1, h2, h3, h4, p, div {
-    @apply select-none;
+    --uno: select-none;
   }
 
   pre, code {
-    @apply select-text;
+    --uno: select-text;
   }
 
   a {
@@ -135,18 +89,17 @@ Les styles seront traités par [Windi CSS](http://windicss.org/) et [PostCSS](ht
 }
 ```
 
-[En savoir plus sur la syntaxe](https://windicss.org/features/directives.html).
+En savoir plus sur la syntaxe [ici](https://unocss.dev/transformers/directives#apply).
 
 ## `index.html`
 
-Conventions : `index.html`
+Pattern : `index.html`
 
-Le `index.html` offre la possibilité d'injecter des balises meta et/ou des scripts dans le `index.html` principal
+Le fichier `index.html` offre la possibilité d'injecter des balises meta et/ou des scripts dans le `index.html` principal
 
 Par exemple, pour le `index.html` personnalisé suivant :
 
-```html
-<!-- ./index.html -->
+```html [index.html]
 <head>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Nunito+Sans:wght@200;400;600&display=swap" rel="stylesheet">
@@ -157,7 +110,7 @@ Par exemple, pour le `index.html` personnalisé suivant :
 </body>
 ```
 
-Le fichier `index.html` final hébergé sera :
+Le `index.html` hébergé final sera :
 
 ```html
 <!DOCTYPE html>
@@ -166,14 +119,14 @@ Le fichier `index.html` final hébergé sera :
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/favicon.png">
-  <!-- injected head -->
+  <!-- head injecté -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Nunito+Sans:wght@200;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <div id="app"></div>
   <script type="module" src="__ENTRY__"></script>
-  <!-- injected body -->
+  <!-- body injecté -->
   <script src="./your-scripts"></script>
 </body>
 </html>
@@ -181,7 +134,6 @@ Le fichier `index.html` final hébergé sera :
 
 ## Couches globales
 
-Conventions : `global-top.vue` | `global-bottom.vue`
+Pattern : `global-top.vue` | `global-bottom.vue` | `custom-nav-controls.vue` | `slide-top.vue` | `slide-bottom.vue`
 
-En savoir plus: [Couches globales](/custom/global-layers)
-
+<LinkCard link="features/global-layers" />

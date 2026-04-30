@@ -1,20 +1,18 @@
 # Configurer les raccourcis
 
-> Disponible depuis v0.20
-
-> Since v0.35.6 (excluded), you decide which base shortcuts to keep (see `...base,` below).
-
 <Environment type="client" />
+
+## Pour commencer
 
 Créez `./setup/shortcuts.ts` avec le contenu suivant :
 
-```ts
+```ts twoslash [./setup/shortcuts.ts]
 import type { NavOperations, ShortcutOptions } from '@slidev/types'
 import { defineShortcutsSetup } from '@slidev/types'
 
 export default defineShortcutsSetup((nav: NavOperations, base: ShortcutOptions[]) => {
   return [
-    ...base, // keep the existing shortcuts
+    ...base, // conserver les raccourcis existants
     {
       key: 'enter',
       fn: () => nav.next(),
@@ -29,26 +27,10 @@ export default defineShortcutsSetup((nav: NavOperations, base: ShortcutOptions[]
 })
 ```
 
-Avec la configuration, vous pouvez fournir le paramètre personnalisé pour les raccourcis mentionnés dans [Navigation](/guide/navigation#navigation-bar). La configuration ci-dessus lie l'animation ou la diapositive suivante à <kbd>enter</kbd> et l'animation ou la diapositive précédente à <kbd>backspace</kbd>.
+Dans la fonction de configuration, vous pouvez personnaliser les raccourcis clavier en retournant un nouveau tableau de raccourcis. L'exemple ci-dessus lie l'opération `next` à <kbd>enter</kbd> et l'opération `prev` à <kbd>backspace</kbd>.
 
-La fonction de configuration reçoit un objet avec certaines méthodes de navigation et renvoie un tableau contenant une configuration de raccourci. Reportez-vous aux définitions de type pour plus de détails.
+Veuillez vous référer à la section [Actions de navigation](../guide/ui#navigation-actions) pour les raccourcis par défaut et les opérations de navigation.
 
-Le type `key` n'autorise que les chaînes, mais vous pouvez toujours lier plusieurs clés en utilisant la convention suivante :
+## Format des liaisons de touches
 
-```ts
-import type { NavOperations, ShortcutOptions } from '@slidev/types'
-import { defineShortcutsSetup } from '@slidev/types'
-
-export default defineShortcutsSetup((nav: NavOperations, base: ShortcutOptions[]) => {
-  return [
-    ...base,
-    {
-      key: 'ShiftLeft+ArrowRight',
-      fn: () => nav.next(),
-      autoRepeat: true,
-    }
-  ]
-})
-```
-
-Reportez-vous à [useMagicKeys | VueUse](https://vueuse.org/core/useMagicKeys/) pour plus de détails sur l'événement de pression de touche.
+Le `key` de chaque raccourci peut être soit une chaîne (par ex. `'Shift+Ctrl+A'`) soit un booléen calculé. Veuillez vous référer à [`useMagicKeys` de VueUse](https://vueuse.org/core/useMagicKeys/) pour

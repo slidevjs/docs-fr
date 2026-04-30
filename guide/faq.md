@@ -1,131 +1,134 @@
+---
+outline: deep
+---
+
 # FAQ
 
-## Grilles
+## Gestion des ressources {#assets-handling}
 
-Étant donné que Slidev est basé sur le Web, vous pouvez appliquer n'importe quelle disposition de grille à votre guise. [Grilles CSS](https://css-tricks.com/snippets/css/complete-guide-grid/), [flexboxes](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), ou même [Masonry](https://css-tricks.com/native-css-masonry-layout-in-css-grid/), vous obtenez tous les contrôles.
+Vous pouvez utiliser des ressources statiques comme des images et des vidéos dans vos diapositives. Comme Slidev est basé sur Vite, vous pouvez les importer directement dans vos fichiers markdown.
 
-Puisque nous avons [Windi CSS](https://windicss.org/) intégré, voici un moyen simple de référence :
+Les URLs qui peuvent être analysées statiquement comme des ressources peuvent utiliser des chemins relatifs :
 
-```html
+```md
+![alt](./image.png)
+<img src="./image.png" />
+```
+
+Dans le cas ci-dessus, les URLs seront résolues en `/BASE_URL/assets/image.png` après la construction.
+
+Cependant, les chemins relatifs dans le frontmatter et d'autres composants seront cassés après la construction :
+
+```md
+---
+background: ./image.png  # Cassé après la construction
+---
+
+<Comp src="./image.png" />
+```
+
+Dans le cas ci-dessus, les URLs ne sont pas analysables statiquement et seront conservées telles quelles, ce qui entraînera des erreurs 404 après la construction.
+
+Pour résoudre ce problème, vous pouvez placer ces ressources dans le [dossier public](../custom/directory-structure#public) et utiliser un chemin absolu pour les importer :
+
+```md
+---
+background: /image.png
+---
+
+<Comp src="/image.png" />
+```
+
+Pour plus de détails, consultez la [documentation de Vite](https://vitejs.dev/guide/assets.html).
+
+## Positionnement {#positioning}
+
+Comme Slidev est basé sur le web, CSS est la principale façon de positionner les éléments. Voici quelques conseils utiles pour positionner les éléments :
+
+### Grilles et Flexboxes
+
+Vous pouvez utiliser CSS Grids pour créer des mises en page complexes :
+
+::: code-group
+
+```md [Deux colonnes]
 <div class="grid grid-cols-2 gap-4">
-<div>
-
-La première colonne
-
-</div>
-<div>
-
-La seconde colonne
-
-</div>
+  <div>
+    La première colonne
+  </div>
+  <div>
+    La deuxième colonne
+  </div>
 </div>
 ```
 
-Pour allez plus loin, vous pouvez personnaliser la taille de chaque colonne comme :
-
-```html
-<div class="grid grid-cols-[200px,1fr,10%] gap-4">
-<div>
-    
-La première colonne (200px)
-
-</div>
-<div>
-
-La seconde colonne (ajustement automatique)
-
-</div>
-<div>
-
-La troisième colonne (10% de largeur jusqu'au conteneur parent)
-
-</div>
+```md [Cas complexe]
+<div class="grid grid-cols-[200px_1fr_10%] gap-4">
+  <div>
+    La première colonne (200px)
+  </div>
+  <div>
+    La deuxième colonne (ajustement automatique)
+  </div>
+  <div>
+    La troisième colonne (10% de largeur par rapport au conteneur parent)
+  </div>
 </div>
 ```
 
-En savoir plus sur [les grilles Windi CSS](https://windicss.org/utilities/grid.html).
+:::
 
-## Positionnement
+Et utilisez Flexboxes pour créer des mises en page plus réactives :
 
-Les diapositives sont définies dans des tailles fixes (par défaut `980x552px`) et à l'échelle pour s'adapter à l'écran de l'utilisateur. Vous pouvez utiliser en toute sécurité la position absolue dans vos diapositives car elles évolueront avec l'écran.
+::: code-group
 
-Par exemple :
+```md [Horizontal]
+<div class="flex items-center">
+  <div>
+    Premier bloc
+  </div>
+  <div>
+    Deuxième bloc
+  </div>
+</div>
+```
 
-```html
+```md [Vertical]
+<div class="flex flex-col items-center">
+  <div>
+    Contenu centré
+  </div>
+</div>
+```
+
+:::
+
+En savoir plus : [CSS Grids](https://css-tricks.com/snippets/css/complete-guide-grid/), [flexboxes](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), ou même [Masonry](https://css-tricks.com/native-css-masonry-layout-in-css-grid/).
+
+### Position absolue
+
+Vous pouvez utiliser UnoCSS pour positionner les éléments de manière absolue :
+
+```md
 <div class="absolute left-30px bottom-30px">
-Ceci est un pied de page aligné en bas à gauche
+  Ceci est un pied de page aligné en bas à gauche
 </div>
 ```
 
-Pour changer la taille réelle du canvas, vous pouvez passer les options `canvasWidth` dans votre premier frontmatter :
+Ou utilisez la fonctionnalité d'éléments déplaçables :
 
-```yaml
----
-canvasWidth: 800
----
-```
+<LinkCard link="features/draggable" />
 
-## Taille de police
+## Ajuster les tailles {#adjust-size}
 
-Si vous pensez que la taille de la police de vos diapositives est trop petite, vous pouvez l'ajuster de plusieurs manières :
+- Ajuster la taille de toutes les diapositives :
 
-### Remplacer le style local
+<LinkCard link="features/canvas-size" />
 
-Vous pouvez remplacer les styles de chaque diapositive avec la balise `<style>` en ligne.
+- Ajuster la taille de plusieurs diapositives :
 
-```md
-# Page 1
+<LinkCard link="features/zoom-slide" />
 
-<style>
-h1 {
-  font-size: 10em;
-}
-</style>
+- Ajuster la taille de certains éléments :
 
----
-
-# Page 2
-
-Cela ne sera pas affecté.
-```
-
-En savoir plus: [Styles intégrés](/guide/syntax.html#embedded-styles)
-
-### Remplacer le style global
-
-Vous pouvez fournir des styles globaux personnalisés en créant `./style.css`, par exemple
-
-```css
-/* style.css */ 
-
-h1 {
-  font-size: 10em !important;
-}
-```
-
-En savoir plus: [Style Global](/custom/directory-structure.html#style)
-
-### Mettre à l'échelle le canvas
-
-Changer la taille réelle du canvas mettra à l'échelle tout votre contenu (texte, images, composants, etc.) et les diapositives
-
-```yaml
----
-# defaut : 980
-# puisque la toile devient plus petite, la taille visuelle deviendra plus grande
-canvasWidth: 800
----
-```
-
-### Utiliser la transformation
-
-Nous fournissons un composant intégré `<Transform />`, qui est un wrapper de la propriété de transformation CSS.
-
-```md
-<Transform :scale="1.4">
-
-- Item 1
-- Item 2
-
-</Transform>
-```
+<LinkCard link="features/transform-component" />

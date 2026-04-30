@@ -1,186 +1,223 @@
 # Mises en page
 
-## Mises en page intégrées
+Cette page liste toutes les mises en page intégrées fournies par Slidev. Ces mises en page peuvent être utilisées via l'option `layout` dans les frontmatters de vos diapositives.
 
-> Comme les thèmes peuvent remplacer le comportement des mises en page, le meilleur moyen de connaître exactement l'usage, les paramètres et les exemples est de se référer à leur documentation
+Notez que <LinkInline link="guide/theme-addon" /> peut fournir des mises en page supplémentaires ou remplacer les existantes. Pour ajouter vos propres mises en page, voir <LinkInline link="guide/write-layout" />.
 
-### `center`
+## `center`
 
 Affiche le contenu au milieu de l'écran.
 
-### `cover`
+## `cover`
 
-Utilisé pour afficher la page de couverture pour la présentation, peut contenir le titre de la présentation, la contextualisation, etc.
+Utilisé pour afficher la page de couverture de la présentation, peut contenir le titre de la présentation, la contextualisation, etc.
 
-### `default`
+## `default`
 
-La mise en page la plus basique, pour afficher n'importe quel type de contenu.
+La mise en page la plus basique, pour afficher tout type de contenu.
 
-### `end`
+## `end`
 
 La page finale de la présentation.
 
-### `fact`
+## `fact`
 
-Pour montrer un fait ou des données avec beaucoup d'importance à l'écran.
+Pour afficher un fait ou des données avec une grande importance à l'écran.
 
-### `full`
+## `full`
 
 Utilise tout l'espace de l'écran pour afficher le contenu.
 
-### `image-left`
+## `image-left`
 
 Affiche une image sur le côté gauche de l'écran, le contenu sera placé sur le côté droit.
 
-#### Usage
+### Utilisation
 
 ```yaml
 ---
 layout: image-left
 
 # la source de l'image
-image: ./path/to/the/image
+image: /path/to/the/image
 
-# un nom de classe customisé du contenu
+# un nom de classe customisée pour le contenu
 class: my-cool-content-on-the-right
 ---
 ```
 
-### `image-right`
+## `image-right`
 
 Affiche une image sur le côté droit de l'écran, le contenu sera placé sur le côté gauche.
 
-#### Usage
+### Utilisation
 
 ```yaml
 ---
 layout: image-right
 
 # la source de l'image
-image: ./path/to/the/image
+image: /path/to/the/image
 
-# un nom de classe customisé du contenu
+# un nom de classe customisée pour le contenu
 class: my-cool-content-on-the-left
 ---
 ```
 
-### `image`
+## `image`
 
 Affiche une image comme contenu principal de la page.
 
-#### Usage
+### Utilisation
 
 ```yaml
 ---
 layout: image
 
 # la source de l'image
-image: ./path/to/the/image
+image: /path/to/the/image
 ---
 ```
 
+Vous pouvez changer la taille de fond par défaut (`cover`) en ajoutant l'attribut `backgroundSize` :
 
-### `iframe-left`
+```yaml
+---
+layout: image
+image: /path/to/the/image
+backgroundSize: contain
+---
+```
 
-Affiche une page Web sur le côté gauche de l'écran, le contenu sera placé sur le côté droit.
+```yaml
+---
+layout: image-left
+image: /path/to/the/image
+backgroundSize: 20em 70%
+---
+```
 
-#### Usage
+## `iframe-left`
+
+Affiche une page web sur le côté gauche de l'écran, le contenu sera placé sur le côté droit.
+
+### Utilisation
 
 ```yaml
 ---
 layout: iframe-left
 
-# la source de la page Web
+# la source de la page web
 url: https://github.com/slidevjs/slidev
 
-# un nom de classe personnalisé au contenu
+# un nom de classe customisée pour le contenu
 class: my-cool-content-on-the-right
 ---
 ```
 
-### `iframe-right`
+## `iframe-right`
 
-Affiche une page Web sur le côté droit de l'écran, le contenu sera placé sur le côté gauche.
+Affiche une page web sur le côté droit de l'écran, le contenu sera placé sur le côté gauche.
 
-#### Usage
+### Utilisation
 
 ```yaml
 ---
 layout: iframe-right
 
-# la source de la page Web
+# la source de la page web
 url: https://github.com/slidevjs/slidev
 
-# un nom de classe personnalisé au contenu
+# un nom de classe customisée pour le contenu
 class: my-cool-content-on-the-left
 ---
 ```
 
-### `iframe`
+## `iframe`
 
-Affiche une page Web comme contenu principal de la page.
+Affiche une page web comme contenu principal de la page.
 
-#### Usage
+### Utilisation
 
 ```yaml
 ---
 layout: iframe
 
-# la source de la page Web
+# la source de la page web
 url: https://github.com/slidevjs/slidev
 ---
 ```
 
+## `intro`
 
-### `intro`
+Pour introduire la présentation, généralement avec le titre de la présentation, une courte description, l'auteur, etc.
 
-Pour introduire la présentation, habituellement avec le titre de présentation, une courte description, l'auteur, etc.
+## `none`
 
-### `none`
+Une mise en page sans aucun style existant.
 
-Une mise en page sans style existant.
+## `quote`
 
-### `quote`
+Pour afficher une citation avec importance.
 
-Pour afficher une citation avec proéminence.
+## `section`
 
-### `section`
+Utilisé pour marquer le début d'une nouvelle section de la présentation.
 
-Utilisé pour marquer le début d'une nouvelle section de présentation.
+## `statement`
 
-### `statement`
+Faire une affirmation/déclaration comme contenu principal de la page.
 
-Faire une affirmation/déclaration comme contenu de la page principale.
+## `two-cols`
 
-### `two-cols`
+Sépare le contenu de la page en deux colonnes.
 
-Séparer le contenu de la page en deux colonnes.
-
-#### Usage
-
+### Utilisation
 
 ```md
 ---
 layout: two-cols
 ---
 
-# Left
+# Gauche
 
-Cela apparait sur la gauche
+Ceci s'affiche à gauche
 
 ::right::
 
-# Right
+# Droite
 
-Cela apparait sur la droite
+Ceci s'affiche à droite
 ```
 
-## Mises en page customisées
+## `two-cols-header`
 
-Créer un répertoire `layouts/` sous la racine de votre projet, et placez simplement vos composants Vue personnalisés sous celui-ci.
+Sépare les lignes supérieure et inférieure du contenu de la page, et la seconde ligne sépare les colonnes gauche et droite.
 
-Pour en savoir plus, consultez la section [Customisation](/custom/directory-structure#layouts).
+### Utilisation
 
-## Mises en page fournies par thème
+```md
+---
+layout: two-cols-header
+---
 
-Les thèmes peuvent fournir des mises en page ou remplacer celles existantes. Veuillez lire leurs documentations pour découvrir ce qu'ils fournissent.
+Ceci s'affiche sur les deux côté
+
+::left::
+
+# Gauche
+
+Ceci s'affiche à gauche
+
+::right::
+
+# Droite
+
+Ceci s'affiche à droite
+
+<style>
+.two-cols-header {
+  column-gap: 20px; /* Ajustez la taille de l'espace selon vos besoins */
+}
+</style>
+```

@@ -1,4 +1,4 @@
 node_modules
 dist
 .vitepress/@slidev
-.idea
+.vitepress/cache

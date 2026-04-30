@@ -1,14 +1,16 @@
-# Couvertures organisées
+# Couvertures sélectionnées
 
-Nous avons organisé quelques images de couverture pour démontrer notre modèle de démarrage.
+Nous avons sélectionné quelques images de couverture pour illustrer notre template de démarrage.
 
 ![](/screenshots/covers.png)
 
 ```yaml
 ---
 # image aléatoire de la collection organisée
-background: https://source.unsplash.com/collection/94734566/1920x1080
+background: https://cover.sli.dev
 ---
 ```
 
-Si vous appréciez l'un d'entre eux, consultez notre [collection Unsplash](https://unsplash.com/collections/94734566/slidev) et découvrez leurs auteurs.
+Si l'une d'entre elles vous plaît, consultez notre [collection Unsplash](https://unsplash.com/collections/94734566/slidev) et découvrez leurs auteurs.
+
+[cover.sli.dev](https://cover.sli.dev) est hébergé depuis [`slidevjs/slidev-covers`](https://github.com/slidevjs/slidev-covers).
