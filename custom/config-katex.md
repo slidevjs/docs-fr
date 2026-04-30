@@ -2,16 +2,17 @@
 
 <Environment type="node" />
 
-Créer `./setup/katex.ts` avec le contenu suivant :
+Créez `./setup/katex.ts` avec le contenu suivant :
 
-```ts
+```ts twoslash [setup/katex.ts]
 import { defineKatexSetup } from '@slidev/types'
 
 export default defineKatexSetup(() => {
   return {
+    maxExpand: 2000,
     /* ... */
   }
 })
 ```
 
-Avec la configuration, vous pouvez fournir le paramètre personnalisé pour [Options KaTex](https://katex.org/docs/options.html). Reportez-vous aux définitions de type et à leur documentation pour plus de détails.
+La valeur de retour doit être les options personnalisées pour KaTeX. Référez-vous à la [documentation de KaTeX](https://katex.org/docs/options.html) ou à la définition de type pour la liste complète des options.
